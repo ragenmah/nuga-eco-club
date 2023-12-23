@@ -211,8 +211,8 @@
     border: 1px solid;
     border-radius: 60px;
     /* height: 50px; */
-    width: 100px;
-    font-size: 16px;
+    /* width: 100px; */
+    font-size: 14px;
     align-items: center;
     font-family: 'Montserrat-light';
     letter-spacing: 0px;
@@ -220,8 +220,13 @@
     line-height: normal;
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-left: 50px;
+
+    /* background: var(--bg-div-overlay-color); */
+    /* background: rgba(red, green, blue, 0.9); */
+
 }
 
 nav {
@@ -255,6 +260,8 @@ nav ul li ul li i {
 
 nav ul {
     float: right;
+    display: flex;
+    align-items: center;
 }
 
 nav ul li {
@@ -276,8 +283,8 @@ nav ul li .link {
     font-weight: 400;
     line-height: normal;
     /* padding: 10px 10px 0px 0px; */
-    padding-left: 50px;
-    padding-top: 10px;
+    padding-left: 40px;
+    /* padding-top: 10px; */
     /* text-align: center; */
     /* border: 1px solid; */
 
@@ -354,4 +361,52 @@ nav ul li ul li:hover>ul {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+.container_search {
+    /* height: 60%; */
+    width: 100%;
+    /* background-image: linear-gradient(rgb(129, 96, 221), rgb(86, 67, 129)); */
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 100%;
+    /* max-width: 1000px; */
+    background: var(--bg-div-overlay-color);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    /* border-color: rgba(129, 96, 221); */
+    padding: 10px;
+    height: 60px;
+}
+
+.search-bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    padding: 24px 20px;
+    font-size: 16px;
+    color: #cccc;
+}
+
+.search-bar input:focus,
+input:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: whitesmoke;
+}
+
+.search-bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
 }

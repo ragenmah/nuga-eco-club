@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
@@ -18,6 +18,8 @@ const FooterMain = () => {
             </a>
           </li>
         </ul>
+        {/* <MapContainer whenCreated={setMap} /> */}
+        {/* <SimpleMap /> */}
       </footer>
     </>
   );

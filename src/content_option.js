@@ -5,9 +5,9 @@ const meta = {
 };
 
 const introdata = {
-  title: "NUGA",
+  title: "",
   animated: {
-    first: "BEST",
+    first: "Discover",
     second: "BEST",
     third: "BEST",
   },

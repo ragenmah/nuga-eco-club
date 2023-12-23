@@ -4,6 +4,10 @@ import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext, socialprofils } from "../../content_option";
 import Themetoggle from "../themetoggle";
+import { Container, Row, Col } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+
+import LanguageSwitcher from "../languageswitcher";
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
@@ -12,6 +16,8 @@ const Headermain = () => {
     setActive(!isActive);
     document.body.classList.toggle("ovhidden");
   };
+
+  const { i18n, t } = useTranslation();
 
   return (
     <>
@@ -29,35 +35,62 @@ const Headermain = () => {
             </button>
           </div>
         </div> */}
+
         <div>
           <nav>
-            <h4 className="logo">
-              {/* <img src="/static/images/Nuga.png"></img> */}
-              {/* <img src="/static/images/Eco-Club.png"></img> */}
-              <h3 className="logo__top">Nuga</h3>
+            <Link to="/" className="link">
+              <h4 className="logo">
+                {/* <img src="/static/images/Nuga.png"></img> */}
+                {/* <img src="/static/images/Eco-Club.png"></img> */}
+                <h3 className="logo__top">Nuga</h3>
 
-              <h2 className="logo__down">Eco-Club</h2>
-            </h4>
+                <h2 className="logo__down">Eco-Club</h2>
+              </h4>
+            </Link>
 
             <ul>
               <li>
+                <div className="d-flex justify-content-center">
+                  <Col>
+                    {/* <Container className="container_search"> */}
+                    <form
+                      action=""
+                      method="get"
+                      className="search-bar"
+                      traget="_blank"
+                    >
+                      <input
+                        type="text"
+                        placeholder="search any thing ..."
+                        name="q"
+                      />
+                      <button type="submit">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </form>
+                    {/* <h1>{t("hello")}</h1> */}
+                    {/* </Container> */}
+                  </Col>
+                </div>
+              </li>
+              <li>
                 <Link to="/discover" className="link">
-                  Discover
+                  {t("header.Discover")}
                 </Link>
               </li>
               <li>
                 <Link to="/portfolio" className="link">
-                  Sites
+                  {t("header.Sites")}
                 </Link>
               </li>
               <li>
                 <Link to="/about" className="link">
-                  About us
+                  {t("header.AboutUs")}
                 </Link>
               </li>
               <li>
                 <Link to="/portfolio" className="link">
-                  Team
+                  {t("header.Team")}
                 </Link>
               </li>
               <li>
@@ -65,8 +98,15 @@ const Headermain = () => {
                   Sign up{" "}
                 </a> */}
                 <Link to="/portfolio" className="">
-                  <h4 className="sign__up">Sign up</h4>
+                  <h4 className="sign__up">
+                    {t("auth.SignUp")}/{t("auth.SignIn")}
+                  </h4>
                 </Link>
+              </li>
+              <li>
+                <Col>
+                  <LanguageSwitcher />
+                </Col>
               </li>
               {/* <li className="menu_item">
                 <Link onClick={handleToggle} to="/contact" className="my-3">
@@ -76,11 +116,13 @@ const Headermain = () => {
             </ul>
           </nav>
         </div>
+        {/* <h1>{t("header.message")}</h1> */}
         <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`}>
           <div className="bg__menu h-100">
             <div className="menu__wrapper">
               <div className="menu__container p-3">
                 <ul className="the_menu">
+                  <li></li>
                   <li className="menu_item ">
                     <Link onClick={handleToggle} to="/" className="my-3">
                       Home
@@ -117,7 +159,7 @@ const Headermain = () => {
               <a href={socialprofils.github}>Github</a>
               <a href={socialprofils.twitter}>Twitter</a>
             </div>
-            <p className="copyright m-0">copyright __ {logotext}</p>
+            {/* <p className="copyright m-0">copyright __ {logotext}</p> */}
           </div>
         </div>
       </header>

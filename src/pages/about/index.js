@@ -47,6 +47,7 @@ export const About = () => {
             </Container>
           </div>
         </div>
+        {/* <FooterMain /> */}
       </section>
     </HelmetProvider>
   );

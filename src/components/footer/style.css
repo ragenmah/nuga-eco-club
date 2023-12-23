@@ -30,3 +30,12 @@
 .site__footer ul li a {
     text-decoration: none;
 }
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+/* .leaflet-container {
+    background: #bbb;
+} */

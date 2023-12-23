@@ -1,0 +1,15 @@
+{
+  "hello": "Nepal",
+  "lang": { "eng": "English", "np": "Nepali" },
+  "auth": { "SignUp": "Sign up" },
+  "header": {
+    "message": "whsadfasfelcom bha",
+    "Discover": "Discovers",
+    "Sites": "Sites",
+    "About Us": "About us",
+    "Team": "Teams"
+  },
+  "home": {
+    "body": "asasdfdsjdhf"
+  }
+}
