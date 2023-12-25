@@ -76,7 +76,7 @@ const Headermain = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="link">
+                <Link to="/teams" className="link">
                   {t("header.Team")}
                 </Link>
               </li>
@@ -85,9 +85,7 @@ const Headermain = () => {
                   Sign up{" "}
                 </a> */}
                 <Link to="/auth/signin" className="">
-                  <h4 className="sign__up">
-                    {t("auth.SignUp")}/{t("auth.SignIn")}
-                  </h4>
+                  <h4 className="sign__up">{t("header.Login/Register")}</h4>
                 </Link>
               </li>
               <li>

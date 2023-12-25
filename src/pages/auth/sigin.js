@@ -115,7 +115,6 @@ export const SigIn = () => {
                   <div className="hr"></div>
                   <div className="foot-lnk">
                     <a>
-                      {" "}
                       <label for="tab-1">Already Member?</label>
                     </a>
                   </div>

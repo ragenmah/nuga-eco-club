@@ -1,13 +1,14 @@
 {
   "hello": "Nepal",
-  "lang": { "eng": "English", "np": "Nepali" },
-  "auth": { "SignUp": "Sign up" },
+  "lang": { "eng": "EN", "np": "NP" },
+  "auth": { "SignUp": "दर्ता गर्नुहोस्", "SignIn": "साइन इन" },
   "header": {
     "message": "whsadfasfelcom bha",
-    "Discover": "Discovers",
-    "Sites": "Sites",
-    "About Us": "About us",
-    "Team": "Teams"
+    "Discover": "खोज",
+    "Sites": "साइट",
+    "AboutUs": "हाम्रो बारे",
+    "Team": "टोली",
+    "Login/Register": "साइन इन / दर्ता गर्नुहोस्"
   },
   "home": {
     "body": "asasdfdsjdhf"

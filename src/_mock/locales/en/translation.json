@@ -1,13 +1,14 @@
 {
   "hello": "NaMste",
-  "lang": { "eng": "English", "np": "Nepali" },
+  "lang": { "eng": "EN", "np": "NP" },
   "auth": { "SignUp": "Sign up", "SignIn": "Sign in" },
   "header": {
     "message": "whsadfasfelcom bha",
     "Discover": "Discover",
     "Sites": "Site",
     "AboutUs": "About us",
-    "Team": "Team"
+    "Team": "Team",
+    "Login/Register": "Sign in / Sign up"
   },
   "home": {
     "body": "asjdhf"

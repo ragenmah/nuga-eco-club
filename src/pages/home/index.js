@@ -16,7 +16,7 @@ import SearchBarBody from "../../components/searchbar/searchbar_body";
 
 export const Home = () => {
   const [map, setMap] = useState(null);
-  const [showSearch, setShowSearch] = useState(true);
+  const [showSearch, setShowSearch] = useState(false);
 
   useEffect(() => {
     if (!map) return;

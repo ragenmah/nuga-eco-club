@@ -27,6 +27,21 @@ const dataabout = {
   aboutme:
     "NUGA is a group of Climate activist, we work toward increasing knowledge  We share and learn together.",
 };
+
+const teams = [
+  {
+    name: "Manisha Maharjan",
+    position: "YAdfi",
+    img: "static/backgrounds/image2.png",
+    date: "2020",
+  },
+  {
+    name: "John Maharjan",
+    position: "YAdfi",
+    img: "static/backgrounds/image2.png",
+    date: "2020",
+  },
+];
 const worktimeline = [
   {
     jobtitle: "Designer of week",
@@ -194,4 +209,5 @@ export {
   logotext,
   aboutus,
   signIn,
+  teams,
 };
