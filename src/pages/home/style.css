@@ -197,6 +197,12 @@ section {
     justify-content: center;
 }
 
+.show-more-filter {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 @media (max-width:991.98px) {
     .intro_sec .h_bg-image {
         height: 600px;

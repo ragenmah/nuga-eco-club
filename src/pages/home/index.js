@@ -10,9 +10,13 @@ import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import * as L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { SigIn } from "../auth/sigin";
+import Selectors from "../../components/selectors/selectors";
+import SearchBarNav from "../../components/searchbar/searchbar_nav";
+import SearchBarBody from "../../components/searchbar/searchbar_body";
 
 export const Home = () => {
   const [map, setMap] = useState(null);
+  const [showSearch, setShowSearch] = useState(true);
 
   useEffect(() => {
     if (!map) return;
@@ -34,6 +38,7 @@ export const Home = () => {
       map.fitBounds(ukLayer.getBounds());
     };
     fetchGeoJSON();
+    // setShowSearch(false);
   }, [map]);
 
   return (
@@ -53,8 +58,24 @@ export const Home = () => {
               <div className="align-self-center w-100">
                 <div className="intro mx-auto">
                   <h2 className="mb-1x">{introdata.title}</h2>
+                  <div>
+                    <SearchBarBody />
+                    <br />
 
-                  <h1 className="fluidz-48 mb-1x">
+                    {showSearch ? <Selectors /> : <></>}
+                    <div
+                      className="show-more-filter"
+                      onClick={() => setShowSearch(!showSearch)}
+                    >
+                      <span>{showSearch ? "Hide" : "More"} Options</span>
+                      {!showSearch ? (
+                        <i class="fas fa-chevron-down" />
+                      ) : (
+                        <i class="fas fa-chevron-up" />
+                      )}
+                    </div>
+                  </div>
+                  {/* <h1 className="fluidz-48 mb-1x">
                     <Typewriter
                       options={{
                         strings: [
@@ -67,8 +88,8 @@ export const Home = () => {
                         deleteSpeed: 10,
                       }}
                     />
-                  </h1>
-                  <p className="mb-1x">{introdata.description}</p>
+                  </h1> */}
+                  {/* <p className="mb-1x">{introdata.description}</p>
                   <p className="mb-1x">{dataabout.title}</p>
                   <div className="intro_btn-action pb-5">
                     <Link to="/portfolio" className="text_2">
@@ -87,12 +108,13 @@ export const Home = () => {
                         <div className="ring three"></div>
                       </div>
                     </Link>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="align-self-center w-100">
                 {/* <SimpleMap /> */}
-                <SigIn />
+                {/* <SigIn /> */}
+                <SimpleMap />
               </div>
             </Container>
             {/* <Row>

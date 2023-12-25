@@ -8,6 +8,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 
 import LanguageSwitcher from "../languageswitcher";
+import SearchBarNav from "../searchbar/searchbar_nav";
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
@@ -53,21 +54,7 @@ const Headermain = () => {
                 <div className="d-flex justify-content-center">
                   <Col>
                     {/* <Container className="container_search"> */}
-                    <form
-                      action=""
-                      method="get"
-                      className="search-bar"
-                      traget="_blank"
-                    >
-                      <input
-                        type="text"
-                        placeholder="search any thing ..."
-                        name="q"
-                      />
-                      <button type="submit">
-                        <i class="fas fa-search"></i>
-                      </button>
-                    </form>
+                    <SearchBarNav />
                     {/* <h1>{t("hello")}</h1> */}
                     {/* </Container> */}
                   </Col>
@@ -97,7 +84,7 @@ const Headermain = () => {
                 {/* <a href="header9.html" className="sign__up">
                   Sign up{" "}
                 </a> */}
-                <Link to="/portfolio" className="">
+                <Link to="/auth/signin" className="">
                   <h4 className="sign__up">
                     {t("auth.SignUp")}/{t("auth.SignIn")}
                   </h4>

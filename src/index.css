@@ -7,6 +7,8 @@
   --text-color-3: rgb(204, 0, 0);
   --overlay-color: rgb(12 12 12 / 63%);
   --bg-div-overlay-color: rgba(255, 255, 255, 0.2);
+  --text-color-search: #0d0d0d;
+  --white-color: #e6e6e6;
 }
 
 [data-theme="light"] {
@@ -17,6 +19,8 @@
   --text-color-2: #000;
   --text-color-3: rgb(204, 0, 0);
   --overlay-color: rgb(255 255 255 / 70%);
+  --text-color-search: #0d0d0d;
+  --white-color: #e6e6e6;
 }
 
 @font-face {

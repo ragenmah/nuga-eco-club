@@ -33,7 +33,7 @@ export default function App() {
       <ScrollToTop>
         <Headermain />
         <AppRoutes />
-        <FooterMain />
+        {/* <FooterMain /> */}
       </ScrollToTop>
     </Router>
   );

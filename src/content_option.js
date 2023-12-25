@@ -17,6 +17,11 @@ const introdata = {
 const aboutus = {
   background_img: "static/backgrounds/image_1.png",
 };
+
+const signIn = {
+  background_img: "static/backgrounds/image_5.png",
+};
+
 const dataabout = {
   title: "we are a Dedicated Climate activist",
   aboutme:
@@ -188,4 +193,5 @@ export {
   socialprofils,
   logotext,
   aboutus,
+  signIn,
 };
