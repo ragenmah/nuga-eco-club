@@ -3,6 +3,8 @@ import { MapContainer, TileLayer, GeoJSON, FeatureGroup } from "react-leaflet";
 // import "../../_mock/nepal/nepal.json";
 import nepalGeojson from "../../_mock/nepal/nepal.json";
 import { useState } from "react";
+import "./style.css";
+
 const style = {
   fillColor: "#FEFDF9",
   weight: 1,
@@ -72,7 +74,7 @@ export const MapNepal = () => {
       weight: 1,
       opacity: 1,
       color: "white",
-      dashArray: "2",
+      dashArray: "1",
       fillOpacity: 0.5,
     };
   };
@@ -101,6 +103,7 @@ export const MapNepal = () => {
       doubleClickZoom={true}
       touchZoom={true}
       boxZoom={true}
+      className="leaflet-container rounded"
     >
       <FeatureGroup>
         <GeoJSON
@@ -135,11 +138,10 @@ export const MapNepal = () => {
         //   }
         //   ref={(el) => (this.choropleth = el.leafletElement)}
       /> */}
-      <TileLayer
-        // attribution="Map tiles by Carto, under CC BY 3.0. Data by OpenStreetMap, under ODbL."
+      {/* <TileLayer
 
         url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
-      />
+      /> */}
     </MapContainer>
   );
 };
