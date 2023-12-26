@@ -13,6 +13,7 @@ import { SigIn } from "../auth/sigin";
 import Selectors from "../../components/selectors/selectors";
 import SearchBarNav from "../../components/searchbar/searchbar_nav";
 import SearchBarBody from "../../components/searchbar/searchbar_body";
+import { MapNepal } from "../../components/maps";
 
 export const Home = () => {
   const [map, setMap] = useState(null);
@@ -114,7 +115,8 @@ export const Home = () => {
               <div className="align-self-center w-100">
                 {/* <SimpleMap /> */}
                 {/* <SigIn /> */}
-                <SimpleMap />
+                {/* <SimpleMap /> */}
+                <MapNepal />
               </div>
             </Container>
             {/* <Row>
