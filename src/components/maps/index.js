@@ -1,4 +1,3 @@
-import Choropleth from "react-leaflet-choropleth";
 import { MapContainer, TileLayer, GeoJSON, FeatureGroup } from "react-leaflet";
 // import "../../_mock/nepal/nepal.json";
 import nepalGeojson from "../../_mock/nepal/nepal.json";
