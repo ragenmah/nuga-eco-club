@@ -8,7 +8,7 @@ import i18next from "i18next";
 import languages from "./_mock/languages";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
-import i18nBackend from "i18next-http-backend";
+// import i18nBackend from "i18next-http-backend";
 
 const fallbackLng = ["en"];
 const availableLanguages = ["en", "np"];
@@ -17,7 +17,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources: languages,
-    lng: "np",
+    lng: "en",
     fallbackLng: "en",
     // whitelist: availableLanguages,
     interpolation: {

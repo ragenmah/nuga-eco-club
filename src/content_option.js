@@ -12,7 +12,7 @@ const introdata = {
     third: "BEST",
   },
   description: "Mero मुतु, sabai ko mutu",
-  your_img_url: "static/backgrounds/image2.png",
+  your_img_url: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
 };
 const aboutus = {
   background_img: "static/backgrounds/image_1.png",

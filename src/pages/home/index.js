@@ -16,31 +16,31 @@ import SearchBarBody from "../../components/searchbar/searchbar_body";
 import { MapNepal } from "../../components/maps";
 
 export const Home = () => {
-  const [map, setMap] = useState(null);
+  // const [map, setMap] = useState(null);
   const [showSearch, setShowSearch] = useState(false);
 
-  useEffect(() => {
-    if (!map) return;
-    const fetchGeoJSON = async () => {
-      const response = await fetch(
-        "https://cdn.rawgit.com/johan/world.geo.json/34c96bba/countries/GBR.geo.json"
-      );
-      const geoJSON = await response.json();
-      const osm = L.TileLayer.boundaryCanvas(
-        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-        {
-          boundary: geoJSON,
-          attribution:
-            '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, UK shape <a href="https://github.com/johan/world.geo.json">johan/word.geo.json</a>',
-        }
-      );
-      map.addLayer(osm);
-      const ukLayer = L.geoJSON(geoJSON);
-      map.fitBounds(ukLayer.getBounds());
-    };
-    fetchGeoJSON();
-    // setShowSearch(false);
-  }, [map]);
+  // useEffect(() => {
+  //   if (!map) return;
+  //   const fetchGeoJSON = async () => {
+  //     const response = await fetch(
+  //       "https://cdn.rawgit.com/johan/world.geo.json/34c96bba/countries/GBR.geo.json"
+  //     );
+  //     const geoJSON = await response.json();
+  //     const osm = L.TileLayer.boundaryCanvas(
+  //       "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  //       {
+  //         boundary: geoJSON,
+  //         attribution:
+  //           '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, UK shape <a href="https://github.com/johan/world.geo.json">johan/word.geo.json</a>',
+  //       }
+  //     );
+  //     map.addLayer(osm);
+  //     const ukLayer = L.geoJSON(geoJSON);
+  //     map.fitBounds(ukLayer.getBounds());
+  //   };
+  //   fetchGeoJSON();
+  //   // setShowSearch(false);
+  // }, [map]);
 
   return (
     <HelmetProvider>
@@ -70,9 +70,9 @@ export const Home = () => {
                     >
                       <span>{showSearch ? "Hide" : "More"} Options</span>
                       {!showSearch ? (
-                        <i class="fas fa-chevron-down" />
+                        <i className="fas fa-chevron-down" />
                       ) : (
-                        <i class="fas fa-chevron-up" />
+                        <i className="fas fa-chevron-up" />
                       )}
                     </div>
                   </div>
@@ -129,24 +129,24 @@ export const Home = () => {
   );
 };
 
-const SimpleMap = () => {
-  const mapRef = useRef(null);
-  const latitude = 51.505;
-  const longitude = -0.09;
+// const SimpleMap = () => {
+//   const mapRef = useRef(null);
+//   const latitude = 51.505;
+//   const longitude = -0.09;
 
-  return (
-    // Make sure you set the height and width of the map container otherwise the map won't show
-    <MapContainer
-      center={[latitude, longitude]}
-      zoom={13}
-      ref={mapRef}
-      style={{ height: "30vh", width: "30vw" }}
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      {/* Additional map layers or components can be added here */}
-    </MapContainer>
-  );
-};
+//   return (
+//     // Make sure you set the height and width of the map container otherwise the map won't show
+//     <MapContainer
+//       center={[latitude, longitude]}
+//       zoom={13}
+//       ref={mapRef}
+//       style={{ height: "30vh", width: "30vw" }}
+//     >
+//       <TileLayer
+//         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+//         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+//       />
+//       {/* Additional map layers or components can be added here */}
+//     </MapContainer>
+//   );
+// };
