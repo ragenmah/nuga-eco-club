@@ -15,11 +15,11 @@ const introdata = {
   your_img_url: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
 };
 const aboutus = {
-  background_img: "static/backgrounds/image_1.png",
+  background_img: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image_1.png",
 };
 
 const signIn = {
-  background_img: "static/backgrounds/image_5.png",
+  background_img: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image_5.png",
 };
 
 const dataabout = {
@@ -32,13 +32,13 @@ const teams = [
   {
     name: "Manisha Maharjan",
     position: "YAdfi",
-    img: "static/backgrounds/image2.png",
+    img: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
     date: "2020",
   },
   {
     name: "John Maharjan",
     position: "YAdfi",
-    img: "static/backgrounds/image2.png",
+    img: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
     date: "2020",
   },
 ];
