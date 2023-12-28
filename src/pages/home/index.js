@@ -55,10 +55,12 @@ export const Home = () => {
             className="h_bg-image order-1 order-lg-2 h-100 "
             style={{ backgroundImage: `url(${introdata.your_img_url})` }}
           >
+            {" "}
             <Container className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around">
               <div className="align-self-center w-100">
                 <div className="intro mx-auto">
-                  <h2 className="mb-1x">{introdata.title}</h2>
+                  <h1>{introdata.title}</h1>
+                  {/* <h2 className="mb-1x">{introdata.title}</h2> */}
                   <div>
                     <SearchBarBody />
                     <br />
@@ -70,9 +72,9 @@ export const Home = () => {
                     >
                       <span>{showSearch ? "Hide" : "More"} Options</span>
                       {!showSearch ? (
-                        <i className="fas fa-chevron-down" />
+                        <i className="fas fa-chevron-down m-1" />
                       ) : (
-                        <i className="fas fa-chevron-up" />
+                        <i className="fas fa-chevron-up m-1" />
                       )}
                     </div>
                   </div>
@@ -113,9 +115,6 @@ export const Home = () => {
                 </div>
               </div>
               <div className="align-self-center w-100">
-                {/* <SimpleMap /> */}
-                {/* <SigIn /> */}
-                {/* <SimpleMap /> */}
                 <MapNepal />
               </div>
             </Container>

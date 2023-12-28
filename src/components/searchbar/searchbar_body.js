@@ -4,7 +4,12 @@ const SearchBarBody = () => {
   return (
     <>
       <form action="" method="get" className="search-bar-body " traget="_blank">
-        <input type="text" placeholder="search any thing ..." name="q" />
+        <input
+          type="text"
+          placeholder="search any thing ..."
+          autoComplete="off"
+          name="q"
+        />
         <button type="submit" className="btn-search">
           Search
         </button>

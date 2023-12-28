@@ -1,13 +1,14 @@
 {
   "hello": "NaMste",
   "lang": { "eng": "EN", "np": "NP" },
-  "auth": { "SignUp": "Sign up", "SignIn": "Sign in" },
+  "auth": { "SignUp": "register", "SignIn": "sign in" },
   "header": {
     "message": "whsadfasfelcom bha",
     "Discover": "Discover",
-    "Sites": "Site",
+    "Sites": "Sites",
     "AboutUs": "About us",
     "Team": "Team",
+    "ContactUs": "Contact Us",
     "Login/Register": "Sign in / Sign up"
   },
   "home": {

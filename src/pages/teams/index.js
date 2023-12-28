@@ -24,7 +24,12 @@ export const Teams = () => {
                   return (
                     <figure key={i}>
                       <div class="figure-img">
-                        <img src={data.img} class="team-img" alt="khec.jpg" />
+                        <img
+                          src={data.img}
+                          class="team-img"
+                          alt="khec.jpg"
+                          width={400}
+                        />
                         <div class="overlay"></div>
                       </div>
                       <figcaption>

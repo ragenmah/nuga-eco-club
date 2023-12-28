@@ -5,21 +5,25 @@ const meta = {
 };
 
 const introdata = {
-  title: "",
+  title: "Find The Best heritage sites in just One click",
+  subTitle: "BEST PLACE TO FIND AND EXPLORE THAT ALL YOU NEED",
   animated: {
     first: "Discover",
     second: "BEST",
     third: "BEST",
   },
   description: "Mero मुतु, sabai ko mutu",
-  your_img_url: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
+  your_img_url:
+    "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
 };
 const aboutus = {
-  background_img: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image_1.png",
+  background_img:
+    "https://img.cdn-pictorem.com/uploads/collection/A/AK6KHF10JDN/900_Roshan-Raj_life-square-flr.jpg",
 };
 
 const signIn = {
-  background_img: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image_5.png",
+  background_img:
+    "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image_5.png",
 };
 
 const dataabout = {
@@ -32,13 +36,19 @@ const teams = [
   {
     name: "Manisha Maharjan",
     position: "YAdfi",
-    img: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
+    img: "static/backgrounds/image2.png",
     date: "2020",
   },
   {
     name: "John Maharjan",
     position: "YAdfi",
-    img: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
+    img: "static/backgrounds/image2.png",
+    date: "2020",
+  },
+  {
+    name: "Ragen Maharjan",
+    position: "YAdfi",
+    img: "static/images/teams/ragen.jpeg",
     date: "2020",
   },
 ];

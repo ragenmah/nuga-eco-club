@@ -23,7 +23,7 @@ export default function App() {
       <div className="cursor__dot">
         <AnimatedCursor
           innerSize={15}
-          outerSize={15}
+          outerSize={0}
           color="255, 255 ,255"
           outerAlpha={0.4}
           innerScale={0.7}

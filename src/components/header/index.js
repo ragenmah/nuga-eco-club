@@ -21,7 +21,7 @@ const Headermain = () => {
   const { i18n, t } = useTranslation();
 
   return (
-    <>
+    <div>
       <header className="fixed-top site__header">
         {/* <div className="d-flex align-items-center justify-content-between">
           <Link className="navbar-brand nav_ac" to="/">
@@ -36,7 +36,38 @@ const Headermain = () => {
             </button>
           </div>
         </div> */}
+        <div id="header-top" className="header-top">
+          <ul>
+            <li>
+              <div className="header-top-left">
+                <ul>
+                  <li className="header-top-contact">+1 234 567 8900</li>
+                  <li className="header-top-contact vertical-line">
+                    nuga@info.com
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li className="head-responsive-right pull-right">
+              <div className="header-top-right">
+                <ul>
+                  <li>
+                    <LanguageSwitcher />
+                  </li>
 
+                  <Link to="/auth/signin" className="">
+                    <li className="header-top-contact vertical-line">
+                      {t("auth.SignIn")}
+                    </li>
+                    <li className="header-top-contact vertical-line">
+                      {t("auth.SignUp")}
+                    </li>
+                  </Link>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
         <div>
           <nav>
             <Link to="/" className="link">
@@ -81,17 +112,17 @@ const Headermain = () => {
                 </Link>
               </li>
               <li>
-                {/* <a href="header9.html" className="sign__up">
-                  Sign up{" "}
-                </a> */}
-                <Link to="/auth/signin" className="">
-                  <h4 className="sign__up">{t("header.Login/Register")}</h4>
+                <Link to="/ContactUs" className="link">
+                  {t("header.ContactUs")}
                 </Link>
               </li>
               <li>
-                <Col>
-                  <LanguageSwitcher />
-                </Col>
+                {/* <Link to="/auth/signin" className="">
+                  <h4 className="sign__up">{t("header.Login/Register")}</h4>
+                </Link> */}
+              </li>
+              <li>
+                <Col></Col>
               </li>
               {/* <li className="menu_item">
                 <Link onClick={handleToggle} to="/contact" className="my-3">
@@ -152,7 +183,7 @@ const Headermain = () => {
       <div className="br-bottom"></div>
       <div className="br-left"></div>
       <div className="br-right"></div> */}
-    </>
+    </div>
   );
 };
 
