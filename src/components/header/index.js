@@ -77,7 +77,7 @@ const Headermain = () => {
                 <h2 className="logo__down">
                   {/* Eco-Club */}
                   <img
-                    src="http://localhost:3000/nuga-eco-club/static/images/logo.png"
+                    src="https://ragenmah.github.io/nuga-eco-club/static/images/logo.png"
                     height={120}
                     width={120}
                   ></img>
