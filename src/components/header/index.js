@@ -74,9 +74,15 @@ const Headermain = () => {
               <h4 className="logo">
                 {/* <img src="/static/images/Nuga.png"></img> */}
                 {/* <img src="/static/images/Eco-Club.png"></img> */}
-                <h3 className="logo__top">Nuga</h3>
-
-                {/* <h2 className="logo__down">Eco-Club</h2> */}
+                <h2 className="logo__down">
+                  {/* Eco-Club */}
+                  <img
+                    src="http://localhost:3000/nuga-eco-club/static/images/logo.png"
+                    height={120}
+                    width={120}
+                  ></img>
+                </h2>
+                {/* <h3 className="logo__top">Nuga</h3> */}
               </h4>
             </Link>
 
