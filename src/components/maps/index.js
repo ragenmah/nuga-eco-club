@@ -78,9 +78,10 @@ export const MapNepal = () => {
     };
   };
   const mapStyle = {
-    height: "55vh",
+    height: "100%",
     width: "100%",
     margin: "0 auto",
+    // zIndex: "-12",
   };
   //   const feature = features.map((feature) => {
   //     return feature;
@@ -89,9 +90,10 @@ export const MapNepal = () => {
   return (
     <MapContainer
       zoom={6.5}
-      scrollWheelZoom={true}
+      scrollWheelZoom={false}
       style={mapStyle}
-      center={[28.082, 84.078]}
+      // center={[28.082, 84.078]}
+      center={[29.082, 79.1025]}
       minZoom={2}
       zoomSnap={0.5}
       zoomDelta={0.5}
@@ -99,9 +101,9 @@ export const MapNepal = () => {
       maxBoundsViscosity={0.5}
       attributionControl={false}
       zoomControl={false}
-      doubleClickZoom={true}
-      touchZoom={true}
-      boxZoom={true}
+      doubleClickZoom={false}
+      touchZoom={false}
+      boxZoom={false}
       className="leaflet-container rounded"
     >
       <FeatureGroup>
@@ -137,10 +139,7 @@ export const MapNepal = () => {
         //   }
         //   ref={(el) => (this.choropleth = el.leafletElement)}
       /> */}
-      {/* <TileLayer
-
-        url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
-      /> */}
+      <TileLayer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png" />
     </MapContainer>
   );
 };

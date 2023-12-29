@@ -76,7 +76,7 @@ const Headermain = () => {
                 {/* <img src="/static/images/Eco-Club.png"></img> */}
                 <h3 className="logo__top">Nuga</h3>
 
-                <h2 className="logo__down">Eco-Club</h2>
+                {/* <h2 className="logo__down">Eco-Club</h2> */}
               </h4>
             </Link>
 

@@ -18,7 +18,7 @@ export const About = () => {
       <section className="About-header">
         <Helmet>
           <meta charSet="utf-8" />
-          <title> About us| {meta.title}</title>
+          <title> About us | {meta.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center ">
@@ -29,7 +29,7 @@ export const About = () => {
             <Container>
               <Col className="mb-5 mt-3 pt-md-3">
                 <Col lg="4">
-                  <h1 className="about_us_title mb-4">ABOUT US</h1>
+                  <h1 className="about_us_title mb-2">ABOUT US</h1>
                 </Col>
                 <Col lg="2">
                   <hr className="t_border my-3 ml-0 text-left" />{" "}
@@ -38,7 +38,7 @@ export const About = () => {
               <Row className="sec_sp">
                 <Col lg="5"></Col>
                 <Col lg="7">
-                  <h3 className="color_sec py-4">{dataabout.title}</h3>
+                  <h3 className=" ection-title py-4">{dataabout.title}</h3>
                   <div>
                     <p>{dataabout.aboutme}</p>
                   </div>

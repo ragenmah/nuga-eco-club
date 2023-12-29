@@ -53,32 +53,33 @@ export const Home = () => {
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-100 "
-            style={{ backgroundImage: `url(${introdata.your_img_url})` }}
+            // style={{ backgroundImage: `url(${introdata.your_img_url})` }}
           >
-            {" "}
-            <Container className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around">
-              <div className="align-self-center w-100">
-                <div className="intro mx-auto">
-                  <h1>{introdata.title}</h1>
-                  {/* <h2 className="mb-1x">{introdata.title}</h2> */}
-                  <div>
-                    <SearchBarBody />
-                    <br />
+            <MapNepal></MapNepal>
+            <div className="search-box-container">
+              <Container className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
+                <div className="align-self-center w-100">
+                  <div className="intro mx-auto">
+                    <h1>{introdata.title}</h1>
+                    {/* <h2 className="mb-1x">{introdata.title}</h2> */}
+                    <div>
+                      <SearchBarBody />
+                      <br />
 
-                    {showSearch ? <Selectors /> : <></>}
-                    <div
-                      className="show-more-filter"
-                      onClick={() => setShowSearch(!showSearch)}
-                    >
-                      <span>{showSearch ? "Hide" : "More"} Options</span>
-                      {!showSearch ? (
-                        <i className="fas fa-chevron-down m-1" />
-                      ) : (
-                        <i className="fas fa-chevron-up m-1" />
-                      )}
+                      {showSearch ? <Selectors /> : <></>}
+                      <div
+                        className="show-more-filter"
+                        onClick={() => setShowSearch(!showSearch)}
+                      >
+                        <span>{showSearch ? "Hide" : "More"} Options</span>
+                        {!showSearch ? (
+                          <i className="fas fa-chevron-down m-1" />
+                        ) : (
+                          <i className="fas fa-chevron-up m-1" />
+                        )}
+                      </div>
                     </div>
-                  </div>
-                  {/* <h1 className="fluidz-48 mb-1x">
+                    {/* <h1 className="fluidz-48 mb-1x">
                     <Typewriter
                       options={{
                         strings: [
@@ -92,7 +93,7 @@ export const Home = () => {
                       }}
                     />
                   </h1> */}
-                  {/* <p className="mb-1x">{introdata.description}</p>
+                    {/* <p className="mb-1x">{introdata.description}</p>
                   <p className="mb-1x">{dataabout.title}</p>
                   <div className="intro_btn-action pb-5">
                     <Link to="/portfolio" className="text_2">
@@ -112,12 +113,12 @@ export const Home = () => {
                       </div>
                     </Link>
                   </div> */}
+                  </div>
                 </div>
-              </div>
-              <div className="align-self-center w-100">
-                <MapNepal />
-              </div>
-            </Container>
+                <div className="align-self-center w-100 m-2"></div>
+              </Container>
+            </div>
+
             {/* <Row>
               <img src="static/backgrounds/image_1.png"></img>
             </Row> */}

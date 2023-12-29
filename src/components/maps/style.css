@@ -3,5 +3,7 @@
     font-size: .75rem;
     line-height: 1.5;
     background-color: transparent;
-
+    margin-top: 150px;
+    position: relative;
+    height: 100vh;
 }
