@@ -3,6 +3,7 @@ const meta = {
   title: "NUGA",
   description: "NUGA",
 };
+const emailAddress = "projectnuganepal@gmail.com";
 
 const introdata = {
   title: "Find The Best heritage sites in just One click",
@@ -28,35 +29,42 @@ const signIn = {
 
 const dataabout = {
   title: "we are a Dedicated Climate activist",
-  aboutme:
-    "NUGA is a group of Climate activist, we work toward increasing knowledge  We share and learn together.",
+  aboutus1:
+    'NUGA, an acronym embodying the essence of "heart," stands as a collective force of dedicated climate activists united under a common purpose. This dynamic group, committed to safeguarding nature, the environment, and heritage in the wake of climate change, operates as a hub for knowledge-sharing and mutual learning. NUGA\'s mission revolves around increasing awareness and understanding of the intricate relationship between humanity and the planet. With an innovative approach, NUGA seeks to create a digital bridge connecting the past, present, and future through the strategic incorporation of QR codes in various locations. By leveraging technology, this youth-based organization aims to inspire and educate, fostering a deep sense of responsibility for the heart of the planet—the people, resources, and culture that define it.',
+  aboutus2:
+    "As a beacon of youthful innovation, NUGA is more than an advocacy group; it is a forward-thinking entity dedicated to protecting the heart of our planet. Anchored in the belief that the environment, culture, and heritage are interconnected and must be preserved, NUGA operates as a catalyst for positive change. By focusing on the digital realm and utilizing QR codes strategically placed in different locations, NUGA not only facilitates knowledge dissemination but also builds a narrative that transcends time. This forward-looking organization envisions a sustainable future where the heart of the planet remains vibrant, resilient, and harmoniously intertwined with the values and practices of both the past and the present. NUGA's commitment to climate activism reflects the spirit of a new generation determined to ensure the longevity of our planet's essential elements.",
+  img: "static/images/teams/aboutus.jpeg",
 };
 
 const datamaps = {
-  title: "we are a available both android and ios",
+  title:
+    "Get a hands-on experience of our rich features, by downloading our mobile apps from App Store and Google Play Store.",
 };
 
 const teams = [
   {
     name: "Manisha Maharjan",
-    position: "YAdfi",
-    img: "static/backgrounds/image2.png",
-    date: "2020",
+    position: "Chief Executive Officer",
+    img: "static/images/teams/manisha.jpeg",
+    date: "",
   },
   {
     name: "John Maharjan",
-    position: "YAdfi",
-    img: "static/backgrounds/image2.png",
-    date: "2020",
+    position: "Researcher and Administrator",
+    img: "static/images/teams/john.jpeg",
+    date: "",
   },
   {
     name: "Ragen Maharjan",
-    position: "YAdfi",
+    position: "Designer & Developer",
     img: "static/images/teams/ragen.jpeg",
-    date: "2020",
+    date: "",
   },
 ];
-
+const teamData = {
+  des1: "Meet the driving force behind NUGA, where John Maharjan and Manisha Maharjan co-found this visionary project. Their leadership is rooted in a shared commitment to environmental preservation and addressing climate change's impact on nature, the environment, and heritage. With a wealth of experience and expertise, they steer NUGA towards its mission of safeguarding the heart of the planet. Alongside them is Ragen Maharjan, the creative designer shaping NUGA's visual identity with an emphasis on sustainability. Together, this dynamic team blends passion, strategic vision, and creative ingenuity to lead NUGA towards a sustainable future, bridging the past, present, and future for the well-being of our planet and its communities. Explore the profiles of our dedicated team members and join us in making a positive impact on our shared environment.",
+  des2: "Discover the faces behind NUGA – John Maharjan, Manisha Maharjan, and designer Ragen Maharjan. As co-founders, John and Manisha bring leadership and a profound commitment to environmental preservation, steering NUGA's mission to safeguard the heart of the planet. Ragen, the creative force, contributes innovative design solutions with a focus on sustainability. Together, this dynamic team is driving NUGA's transformative journey towards a sustainable future, bridging the past, present, and future for the well-being of our planet and its inhabitants. Join us in making a positive impact on the environment and explore the profiles of our dedicated team members.",
+};
 const services = [
   {
     title: "UI & UX Design",
@@ -152,10 +160,10 @@ const dataportfolio = [
 ];
 
 const contactConfig = {
-  YOUR_EMAIL: "name@domain.com",
-  YOUR_FONE: "(555)123-4567",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
+  YOUR_EMAIL: "projectnuganepal@gmail.com",
+  YOUR_FONE: "+977 9843914602",
+  description: "",
+  address: "Patan, Lalitpur",
   // creat an emailjs.com account
   // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
   YOUR_SERVICE_ID: "service_id",
@@ -183,4 +191,6 @@ export {
   aboutus,
   signIn,
   teams,
+  emailAddress,
+  teamData,
 };

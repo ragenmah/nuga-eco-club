@@ -1,3 +1,10 @@
+.contact-us-container {
+    padding-top: 10rem;
+    align-self: center;
+    width: 100%;
+    align-items: center;
+}
+
 .contact__form .form-control {
     padding: 1.375rem .75rem;
     line-height: 1.5;
@@ -33,12 +40,15 @@ button.btn.ac_btn:hover {
     0% {
         transform: translateX(-100%);
     }
+
     40% {
         transform: translateX(0%);
     }
+
     60% {
         transform: translateX(0%);
     }
+
     100% {
         transform: translateX(100%);
     }

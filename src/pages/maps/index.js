@@ -60,9 +60,9 @@ export const Maps = () => {
               <Container className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
                 <div className="align-self-center w-100">
                   <div className="intro mx-auto">
-                    <h1>{datamaps.title}</h1>
+                    <h3>{datamaps.title}</h3>
                     {/* <h2 className="mb-1x">{introdata.title}</h2> */}
-                    <Row className="d-flex justify-content-space-between ">
+                    <Row className="d-flex flex-direction-col justify-content-space-between ">
                       <img src="static/apps/playstore.png"></img>
 
                       <img src="static/apps/appstore.png"></img>

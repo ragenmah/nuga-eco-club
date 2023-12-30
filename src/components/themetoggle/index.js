@@ -11,7 +11,7 @@ const Themetoggle = () => {
     localStorage.setItem("theme", theme);
   }, [theme]);
   return (
-    <div className="" onClick={themetoggle}>
+    <div className="toggle-container" onClick={themetoggle}>
       <WiMoonAltWaningCrescent4 />
     </div>
   );

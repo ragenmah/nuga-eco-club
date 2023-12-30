@@ -41,7 +41,7 @@ const Headermain = () => {
             <li>
               <div className="header-top-left">
                 <ul>
-                  <li className="header-top-contact">+1 234 567 8900</li>
+                  <li className="header-top-contact">+977 9843914602</li>
                   <li className="header-top-contact vertical-line">
                     projectnuganepal@gmail.com
                   </li>

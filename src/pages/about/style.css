@@ -21,6 +21,15 @@
     margin-top: 200px;
 }
 
+.sec_sp {
+    background-color: var(--bg-color);
+    display: flex;
+}
+
+.section-title {
+    text-transform: uppercase;
+}
+
 .h_bg-image {
     width: 100%;
 

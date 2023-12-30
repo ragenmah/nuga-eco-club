@@ -5,6 +5,11 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
+import { OfficeLocation } from "../../components/maps/office_location";
+import { MapContainer, TileLayer, GeoJSON, FeatureGroup } from "react-leaflet";
+// import "../../_mock/nepal/nepal.json";
+import nepalGeojson from "../../_mock/nepal/nepal.json";
+import { useRef } from "react";
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
@@ -73,9 +78,17 @@ export const ContactUs = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
-          <Col lg="8">
-            <h1 className="display-4 mb-4">Contact Me</h1>
+          {/* <Col lg="8">
+            <h1 className="display-4  about_us_title mb-4">Contact Us</h1>
             <hr className="t_border my-4 ml-0 text-left" />
+          </Col> */}
+          <Col className="contact-us-container">
+            <Col lg="4">
+              <h1 className=" mb-2">CONTACT US</h1>
+            </Col>
+            <Col lg="2">
+              <hr className="t_border my-3 ml-0 text-left" />{" "}
+            </Col>
           </Col>
         </Row>
         <Row className="sec_sp">
@@ -109,12 +122,19 @@ export const ContactUs = () => {
                 ""
               )}
             </address>
-            <p>{contactConfig.description}</p>
+            <p>
+              <strong>Address:</strong>
+              {" " + contactConfig.address}
+            </p>
+            {/* <p>
+              <OfficeLocation />
+            </p> */}
+            <SimpleMap />
           </Col>
-          <Col lg="7" className="d-flex align-items-center">
+          <Col lg="7" className="d-flex align-items-center ">
             <form onSubmit={handleSubmit} className="contact__form w-100">
-              <Row>
-                <Col lg="6" className="form-group">
+              <>
+                <Col className="form-group">
                   <input
                     className="form-control"
                     id="name"
@@ -126,13 +146,27 @@ export const ContactUs = () => {
                     onChange={handleChange}
                   />
                 </Col>
-                <Col lg="6" className="form-group">
+              </>
+              <Row>
+                <Col className="form-group">
                   <input
-                    className="form-control rounded-0"
+                    className="form-control"
                     id="email"
                     name="email"
                     placeholder="Email"
-                    type="email"
+                    value={formData.phone || ""}
+                    type="text"
+                    required
+                    onChange={handleChange}
+                  />
+                </Col>
+                <Col lg="6" className="form-group">
+                  <input
+                    className="form-control rounded-0"
+                    id="phone"
+                    name="phone"
+                    placeholder="Phone"
+                    type="phone"
                     value={formData.email || ""}
                     required
                     onChange={handleChange}
@@ -143,7 +177,7 @@ export const ContactUs = () => {
                 className="form-control rounded-0"
                 id="message"
                 name="message"
-                placeholder="Message"
+                placeholder="Your Message"
                 rows="5"
                 value={formData.message}
                 onChange={handleChange}
@@ -153,7 +187,7 @@ export const ContactUs = () => {
               <Row>
                 <Col lg="12" className="form-group">
                   <button className="btn ac_btn" type="submit">
-                    {formData.loading ? "Sending..." : "Send"}
+                    {formData.loading ? "Submitting..." : "Submit"}
                   </button>
                 </Col>
               </Row>
@@ -163,5 +197,26 @@ export const ContactUs = () => {
       </Container>
       <div className={formData.loading ? "loading-bar" : "d-none"}></div>
     </HelmetProvider>
+  );
+};
+
+const SimpleMap = () => {
+  const mapRef = useRef(null);
+  const latitude = 51.505;
+  const longitude = -0.09;
+
+  return (
+    // Make sure you set the height and width of the map container otherwise the map won't show
+    <MapContainer
+      center={[27.671971, 85.321552]}
+      zoom={13}
+      ref={mapRef}
+      style={{ height: "30vh", width: "30vw" }}
+    >
+      <TileLayer
+        attribution="NugaMaps"
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+    </MapContainer>
   );
 };

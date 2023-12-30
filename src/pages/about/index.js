@@ -37,13 +37,14 @@ export const About = () => {
                 </Col>
               </Col>
               <Row className="sec_sp">
-                <Col lg="5">
-                  <img src=""></img>
+                <Col lg="4">
+                  <img src={dataabout.img} width={300}></img>
                 </Col>
-                <Col lg="7">
-                  <h3 className=" ection-title py-4">{dataabout.title}</h3>
+                <Col lg="8">
+                  <h3 className="section-title py-4">{dataabout.title}</h3>
                   <div>
-                    <p>{dataabout.aboutme}</p>
+                    <p>{dataabout.aboutus1}</p>
+                    <p>{dataabout.aboutus2}</p>
                   </div>
                 </Col>
               </Row>

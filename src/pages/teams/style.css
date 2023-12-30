@@ -1,7 +1,7 @@
 /*********teams************/
 .team-container {
 
-    margin: 200px;
+    /* margin: 200px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -77,22 +77,18 @@
     background-color: var(--secondary-color);
 }
 
-.pass-status {
-    background-color: var(--green-color);
-    color: #fddd;
-    padding: 2px;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
 
 figcaption h3 {
+    color: var(--bg-color);
     font-size: 16px;
 }
 
 figcaption h5 {
+    color: var(--bg-color);
     font-size: 14px;
 }
 
 figcaption h6 {
+    color: var(--bg-color);
     font-size: 12px;
 }
