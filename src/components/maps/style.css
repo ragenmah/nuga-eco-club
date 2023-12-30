@@ -2,8 +2,23 @@
     font-size: 12px;
     font-size: .75rem;
     line-height: 1.5;
-    background-color: transparent;
+    /* background-color: transparent; */
+    /* background-color: "var(--bg-color)"; */
+    background-color: var(--bg-color);
+    background-color: rgba(255, 0, 0, 0.0);
     margin-top: 150px;
     position: relative;
     height: 100vh;
+    animation: fadeInLeaflet 1.5s ease forwards 2s;
+    filter: var(--map-tiles-filter, none);
+}
+
+.map-bg-color {
+    background-color: var(--bg-color);
+}
+
+@media (prefers-color-scheme: dark) {
+    .map-tiles {
+        filter: var(--map-tiles-filter, none);
+    }
 }

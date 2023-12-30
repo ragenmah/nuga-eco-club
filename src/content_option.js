@@ -32,6 +32,10 @@ const dataabout = {
     "NUGA is a group of Climate activist, we work toward increasing knowledge  We share and learn together.",
 };
 
+const datamaps = {
+  title: "we are a available both android and ios",
+};
+
 const teams = [
   {
     name: "Manisha Maharjan",
@@ -50,46 +54,6 @@ const teams = [
     position: "YAdfi",
     img: "static/images/teams/ragen.jpeg",
     date: "2020",
-  },
-];
-const worktimeline = [
-  {
-    jobtitle: "Designer of week",
-    where: "YAdfi",
-    date: "2020",
-  },
-  {
-    jobtitle: "Designer of week",
-    where: "Jamalya",
-    date: "2019",
-  },
-  {
-    jobtitle: "Designer of week",
-    where: "ALquds",
-    date: "2019",
-  },
-];
-
-const skills = [
-  {
-    name: "Python",
-    value: 90,
-  },
-  {
-    name: "Djano",
-    value: 85,
-  },
-  {
-    name: "Javascript",
-    value: 80,
-  },
-  {
-    name: "React",
-    value: 60,
-  },
-  {
-    name: "Jquery",
-    value: 85,
   },
 ];
 
@@ -209,9 +173,8 @@ const socialprofils = {
 export {
   meta,
   dataabout,
+  datamaps,
   dataportfolio,
-  worktimeline,
-  skills,
   services,
   introdata,
   contactConfig,

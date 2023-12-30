@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import { introdata, meta, dataabout } from "../../content_option";
+import { meta, datamaps } from "../../content_option";
 import { Link } from "react-router-dom";
 import { Container, Row, Col } from "react-bootstrap";
 import { About } from "../about";
@@ -15,9 +15,32 @@ import SearchBarNav from "../../components/searchbar/searchbar_nav";
 import SearchBarBody from "../../components/searchbar/searchbar_body";
 import { MapNepal } from "../../components/maps";
 
-export const Home = () => {
+export const Maps = () => {
   // const [map, setMap] = useState(null);
   const [showSearch, setShowSearch] = useState(false);
+
+  // useEffect(() => {
+  //   if (!map) return;
+  //   const fetchGeoJSON = async () => {
+  //     const response = await fetch(
+  //       "https://cdn.rawgit.com/johan/world.geo.json/34c96bba/countries/GBR.geo.json"
+  //     );
+  //     const geoJSON = await response.json();
+  //     const osm = L.TileLayer.boundaryCanvas(
+  //       "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+  //       {
+  //         boundary: geoJSON,
+  //         attribution:
+  //           '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, UK shape <a href="https://github.com/johan/world.geo.json">johan/word.geo.json</a>',
+  //       }
+  //     );
+  //     map.addLayer(osm);
+  //     const ukLayer = L.geoJSON(geoJSON);
+  //     map.fitBounds(ukLayer.getBounds());
+  //   };
+  //   fetchGeoJSON();
+  //   // setShowSearch(false);
+  // }, [map]);
 
   return (
     <HelmetProvider>
@@ -32,30 +55,18 @@ export const Home = () => {
             className="h_bg-image order-1 order-lg-2 h-100 "
             // style={{ backgroundImage: `url(${introdata.your_img_url})` }}
           >
-            {/* <MapNepal></MapNepal> */}
+            <MapNepal></MapNepal>
             <div className="search-box-container">
               <Container className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
                 <div className="align-self-center w-100">
                   <div className="intro mx-auto">
-                    {/* <h1>{introdata.title}</h1> */}
+                    <h1>{datamaps.title}</h1>
                     {/* <h2 className="mb-1x">{introdata.title}</h2> */}
-                    {/* <div>
-                      <SearchBarBody />
-                      <br />
+                    <Row className="d-flex justify-content-space-between ">
+                      <img src="static/apps/playstore.png"></img>
 
-                      {showSearch ? <Selectors /> : <></>}
-                      <div
-                        className="show-more-filter"
-                        onClick={() => setShowSearch(!showSearch)}
-                      >
-                        <span>{showSearch ? "Hide" : "More"} Options</span>
-                        {!showSearch ? (
-                          <i className="fas fa-chevron-down m-1" />
-                        ) : (
-                          <i className="fas fa-chevron-up m-1" />
-                        )}
-                      </div>
-                    </div> */}
+                      <img src="static/apps/appstore.png"></img>
+                    </Row>
                     {/* <h1 className="fluidz-48 mb-1x">
                     <Typewriter
                       options={{

@@ -25,7 +25,7 @@
     padding: 5px 15px;
     margin: 0;
     border: unset;
-    background: var(--primary-color);
+    /* background: var(--primary-color); */
     font-size: 1.25rem;
     font-family: 'Montserrat-light';
     color: var(--text-color-2);
@@ -364,7 +364,7 @@ nav ul li ul li:hover>ul {
 }
 
 .header-top {
-    background-color: black;
+    background-color: var(--bg-color);
     border-bottom: 1px solid red;
     padding-top: 10px;
     width: 100%;

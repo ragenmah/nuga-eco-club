@@ -81,6 +81,7 @@ export const MapNepal = () => {
     height: "100%",
     width: "100%",
     margin: "0 auto",
+    backgroundColor: "var(--bg-color)",
     // zIndex: "-12",
   };
   //   const feature = features.map((feature) => {
@@ -114,32 +115,10 @@ export const MapNepal = () => {
         />
       </FeatureGroup>
 
-      {/* <Choropleth
-        data={nepalGeojson}
-        valueProperty={(feature) => feature}
-        //   visible={(feature) => feature.id !== active.id}
-        scale={[
-          "#333333",
-          "#252525",
-          "#525252",
-          "#737373",
-          "#969696",
-          "#bdbdbd",
-          "#d9d9d9",
-          "#f0f0f0",
-          "#f1f1f1",
-        ]}
-        steps={7}
-        mode="e"
-        style={style}
-        onEachFeature={onEachFeature}
-
-        //   onEachFeature={(feature, layer) =>
-        //     layer.bindPopup(feature.properties.label)
-        //   }
-        //   ref={(el) => (this.choropleth = el.leafletElement)}
-      /> */}
-      <TileLayer url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png" />
+      <TileLayer
+        url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
+        className="map-bg-color"
+      />
     </MapContainer>
   );
 };

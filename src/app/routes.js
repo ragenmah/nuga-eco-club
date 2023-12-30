@@ -9,6 +9,8 @@ import { Socialicons } from "../components/socialicons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { SigIn } from "../pages/auth/sigin";
 import { Teams } from "../pages/teams";
+import { Maps } from "../pages/maps";
+import { Sites } from "../pages/sites";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -24,6 +26,8 @@ const AnimatedRoutes = withRouter(({ location }) => (
       <Routes location={location}>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/maps" element={<Maps />} />
+        <Route path="/sites" element={<Sites />} />
         <Route path="/discover" element={<Discover />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/auth/signin" element={<SigIn />} />

@@ -1,21 +1,13 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import Typewriter from "typewriter-effect";
-import { introdata, meta, dataabout } from "../../content_option";
-import { Link } from "react-router-dom";
-import { Container, Row, Col } from "react-bootstrap";
-import { About } from "../about";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
-import * as L from "leaflet";
+import { introdata, meta } from "../../content_option";
+import { Container } from "react-bootstrap";
 import "leaflet/dist/leaflet.css";
-import { SigIn } from "../auth/sigin";
 import Selectors from "../../components/selectors/selectors";
-import SearchBarNav from "../../components/searchbar/searchbar_nav";
 import SearchBarBody from "../../components/searchbar/searchbar_body";
-import { MapNepal } from "../../components/maps";
 
-export const Home = () => {
+export const Sites = () => {
   // const [map, setMap] = useState(null);
   const [showSearch, setShowSearch] = useState(false);
 
@@ -32,14 +24,13 @@ export const Home = () => {
             className="h_bg-image order-1 order-lg-2 h-100 "
             // style={{ backgroundImage: `url(${introdata.your_img_url})` }}
           >
-            {/* <MapNepal></MapNepal> */}
             <div className="search-box-container">
               <Container className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
                 <div className="align-self-center w-100">
                   <div className="intro mx-auto">
-                    {/* <h1>{introdata.title}</h1> */}
+                    <h1>{introdata.title}</h1>
                     {/* <h2 className="mb-1x">{introdata.title}</h2> */}
-                    {/* <div>
+                    <div>
                       <SearchBarBody />
                       <br />
 
@@ -55,7 +46,7 @@ export const Home = () => {
                           <i className="fas fa-chevron-up m-1" />
                         )}
                       </div>
-                    </div> */}
+                    </div>
                     {/* <h1 className="fluidz-48 mb-1x">
                     <Typewriter
                       options={{
@@ -105,25 +96,3 @@ export const Home = () => {
     </HelmetProvider>
   );
 };
-
-// const SimpleMap = () => {
-//   const mapRef = useRef(null);
-//   const latitude = 51.505;
-//   const longitude = -0.09;
-
-//   return (
-//     // Make sure you set the height and width of the map container otherwise the map won't show
-//     <MapContainer
-//       center={[latitude, longitude]}
-//       zoom={13}
-//       ref={mapRef}
-//       style={{ height: "30vh", width: "30vw" }}
-//     >
-//       <TileLayer
-//         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-//         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-//       />
-//       {/* Additional map layers or components can be added here */}
-//     </MapContainer>
-//   );
-// };

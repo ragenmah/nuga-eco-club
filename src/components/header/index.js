@@ -43,7 +43,7 @@ const Headermain = () => {
                 <ul>
                   <li className="header-top-contact">+1 234 567 8900</li>
                   <li className="header-top-contact vertical-line">
-                    nuga@info.com
+                    projectnuganepal@gmail.com
                   </li>
                 </ul>
               </div>
@@ -63,6 +63,9 @@ const Headermain = () => {
                       {t("auth.SignUp")}
                     </li>
                   </Link>
+                  <li className="header-top-contact ">
+                    <Themetoggle />
+                  </li>
                 </ul>
               </div>
             </li>
@@ -103,8 +106,13 @@ const Headermain = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/portfolio" className="link">
+                <Link to="/sites" className="link">
                   {t("header.Sites")}
+                </Link>
+              </li>
+              <li>
+                <Link to="/maps" className="link">
+                  {t("header.Maps")}
                 </Link>
               </li>
               <li>
@@ -112,11 +120,11 @@ const Headermain = () => {
                   {t("header.AboutUs")}
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/teams" className="link">
                   {t("header.Team")}
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link to="/ContactUs" className="link">
                   {t("header.ContactUs")}

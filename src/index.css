@@ -9,11 +9,13 @@
   --bg-div-overlay-color: rgba(255, 255, 255, 0.2);
   --text-color-search: #0d0d0d;
   --white-color: #e6e6e6;
+  --map-tiles-filter: brightness(1) invert(0);
 }
 
 [data-theme="light"] {
   /* --bg-color: #ffffff;
   --primary-color: #ffffff; */
+  --bg-color: #ffffff;
   --primary-color: #010409;
   --secondary-color: #161b22;
   --secondary-color: #000;
@@ -23,6 +25,7 @@
   --overlay-color: rgb(255 255 255 / 70%);
   --text-color-search: #0d0d0d;
   --white-color: #e6e6e6;
+  --map-tiles-filter: brightness(0.6) invert(1) hue-rotate(200deg) saturate(1) brightness(1);
 }
 
 @font-face {

@@ -11,6 +11,7 @@ import {
   aboutus,
 } from "../../content_option";
 import FooterMain from "../../components/footer";
+import { Teams } from "../teams";
 
 export const About = () => {
   return (
@@ -36,7 +37,9 @@ export const About = () => {
                 </Col>
               </Col>
               <Row className="sec_sp">
-                <Col lg="5"></Col>
+                <Col lg="5">
+                  <img src=""></img>
+                </Col>
                 <Col lg="7">
                   <h3 className=" ection-title py-4">{dataabout.title}</h3>
                   <div>
@@ -45,6 +48,7 @@ export const About = () => {
                 </Col>
               </Row>
             </Container>
+            <Teams />
           </div>
         </div>
         {/* <FooterMain /> */}
