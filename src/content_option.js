@@ -19,7 +19,7 @@ const introdata = {
 };
 const aboutus = {
   background_img:
-    "https://img.cdn-pictorem.com/uploads/collection/A/AK6KHF10JDN/900_Roshan-Raj_life-square-flr.jpg",
+    "https://deih43ym53wif.cloudfront.net/patan-nepal-shutterstock_154770848_25d713818d.jpeg",
 };
 
 const signIn = {

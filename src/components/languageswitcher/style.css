@@ -1,8 +1,6 @@
 .select-opt {
-    /* padding: 8px; */
-    padding: 5px 9px;
-    /* background-color: transparent; */
-    border-radius: 20px;
+    padding: 5px 8px;
+    border-radius: 10px;
     margin-right: 10px;
     margin-top: 3px;
 }
@@ -12,7 +10,7 @@
     border: none;
     cursor: pointer;
     /* color: #a7b0ba; */
-    font-size: 8px;
+    font-size: 7px;
     font-weight: 300;
     color: white;
     align-self: center;
@@ -20,7 +18,7 @@
 
 .select-opt option {
     color: #a7b0ba;
-    font-size: 8px;
+    font-size: 1em;
     /* text-transform: uppercase */
 }
 

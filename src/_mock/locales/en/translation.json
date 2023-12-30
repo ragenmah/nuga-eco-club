@@ -3,7 +3,6 @@
   "lang": { "eng": "EN", "np": "NP" },
   "auth": { "SignUp": "register", "SignIn": "sign in" },
   "header": {
-    "message": "whsadfasfelcom bha",
     "Discover": "Discover",
     "Sites": "Sites",
     "AboutUs": "About us",

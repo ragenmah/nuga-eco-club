@@ -151,9 +151,10 @@ const Headermain = () => {
                 </Link> */}
               </li>
               <li>
-                {/* <Col className="px-2">
-                  <SearchBarNav />
-                </Col> */}
+                {" "}
+                <div className="px-2 pull-right">
+                  {isScrolled && <Themetoggle />}
+                </div>
               </li>
               {/* <li className="menu_item">
                 <Link onClick={handleToggle} to="/contact" className="my-3">
@@ -203,8 +204,8 @@ const Headermain = () => {
           <div className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
             <div className="d-flex">
               <a href={socialprofils.facebook}>Facebook</a>
-              <a href={socialprofils.github}>Github</a>
               <a href={socialprofils.twitter}>Twitter</a>
+              <a href={socialprofils.linkedin}>Link</a>
             </div>
             {/* <p className="copyright m-0">copyright __ {logotext}</p> */}
           </div>

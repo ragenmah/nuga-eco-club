@@ -3,11 +3,10 @@
   "lang": { "eng": "EN", "np": "NP" },
   "auth": { "SignUp": "दर्ता गर्नुहोस्", "SignIn": "साइन इन" },
   "header": {
-    "message": "whsadfasfelcom bha",
     "Discover": "खोज",
     "Sites": "साइट",
     "AboutUs": "हाम्रो बारे",
-    "Maps": "Maps",
+    "Maps": "नक्सा",
     "Team": "टोली",
     "ContactUs": "सम्पर्क",
     "Login/Register": "साइन इन / दर्ता गर्नुहोस्"

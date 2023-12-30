@@ -82,6 +82,7 @@ export const MapNepal = () => {
     width: "100%",
     margin: "0 auto",
     backgroundColor: "var(--bg-color)",
+    cursor: "none",
     // zIndex: "-12",
   };
   //   const feature = features.map((feature) => {

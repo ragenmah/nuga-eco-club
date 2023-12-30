@@ -1,16 +1,17 @@
-.theme_toggler {
-    background: var(--primary-color);
+.toggle-container {
+    background: var(--bg-color);
     z-index: 999999999;
-    left: 10px;
-    background: var(--primary-color);
-    display: flex;
-    height: 50px;
-    align-items: center;
+    right: 0;
+    margin-right: 0;
+    /* left: 10px; */
+    /* display: flex; */
+    /* height: 50px; */
+    /* align-items: center; */
     padding-left: 10px;
     /* padding-right: 20px; */
 }
 
-.theme_toggler svg {
-    width: 2em;
+.toggle-container svg {
+    width: 2rem;
     height: 2em;
 }
