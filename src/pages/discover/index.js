@@ -14,9 +14,13 @@ export const Discover = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
-          <Col lg="8">
-            <h1 className="display-4 mb-4"> Discover </h1>{" "}
-            <hr className="t_border my-4 ml-0 text-left" />
+          <Col className="contact-us-container">
+            <Col lg="4">
+              <h1 className=" mb-2">DISCOVER</h1>
+            </Col>
+            <Col lg="2">
+              <hr className="t_border my-3 ml-0 text-left" />{" "}
+            </Col>
           </Col>
         </Row>
         <div className="mb-5 po_items_ho">

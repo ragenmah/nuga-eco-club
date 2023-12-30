@@ -5,16 +5,25 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
-import { OfficeLocation } from "../../components/maps/office_location";
-import { MapContainer, TileLayer, GeoJSON, FeatureGroup } from "react-leaflet";
-// import "../../_mock/nepal/nepal.json";
-import nepalGeojson from "../../_mock/nepal/nepal.json";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import Leaflet from "leaflet";
+
+import iconUrl from "../../_mock/svgs/marker.svg";
+
 import { useRef } from "react";
+
+export const newicon = new Leaflet.Icon({
+  iconUrl,
+  iconAnchor: [5, 55],
+  popupAnchor: [10, -44],
+  iconSize: [25, 55],
+});
 
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
     email: "",
     name: "",
+    phone: "",
     message: "",
     loading: false,
     show: false,
@@ -91,6 +100,7 @@ export const ContactUs = () => {
             </Col>
           </Col>
         </Row>
+
         <Row className="sec_sp">
           <Col lg="12">
             <Alert
@@ -105,8 +115,8 @@ export const ContactUs = () => {
               <p className="my-0">{formData.alertmessage}</p>
             </Alert>
           </Col>
-          <Col lg="5" className="mb-5">
-            <h3 className="color_sec py-4">Get in touch</h3>
+          <Col lg="5" className="mb-5  ">
+            <h3 className=" py-4">Get in touch</h3>
             <address>
               <strong>Email:</strong>{" "}
               <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
@@ -125,11 +135,8 @@ export const ContactUs = () => {
             <p>
               <strong>Address:</strong>
               {" " + contactConfig.address}
-            </p>
-            {/* <p>
-              <OfficeLocation />
-            </p> */}
-            <SimpleMap />
+            </p>{" "}
+            <OfficeLocationMap />
           </Col>
           <Col lg="7" className="d-flex align-items-center ">
             <form onSubmit={handleSubmit} className="contact__form w-100">
@@ -154,7 +161,7 @@ export const ContactUs = () => {
                     id="email"
                     name="email"
                     placeholder="Email"
-                    value={formData.phone || ""}
+                    value={formData.email || ""}
                     type="text"
                     required
                     onChange={handleChange}
@@ -167,7 +174,7 @@ export const ContactUs = () => {
                     name="phone"
                     placeholder="Phone"
                     type="phone"
-                    value={formData.email || ""}
+                    value={formData.phone || ""}
                     required
                     onChange={handleChange}
                   />
@@ -200,19 +207,33 @@ export const ContactUs = () => {
   );
 };
 
-const SimpleMap = () => {
+const OfficeLocationMap = () => {
   const mapRef = useRef(null);
-  const latitude = 51.505;
-  const longitude = -0.09;
+  const latitude = 27.671971;
+  const longitude = 85.321552;
 
   return (
     // Make sure you set the height and width of the map container otherwise the map won't show
     <MapContainer
-      center={[27.671971, 85.321552]}
-      zoom={13}
+      center={[latitude, longitude]}
+      zoom={17}
       ref={mapRef}
-      style={{ height: "30vh", width: "30vw" }}
+      style={{ height: "30vh", margin: "0 auto", width: "100%" }}
+      attributionControl={false}
     >
+      <Marker position={[latitude, longitude]} icon={newicon}>
+        <Popup>
+          <div>
+            <div className="caption">
+              <br />
+              Nuga Office
+              <br />
+              <hr />
+              Patan, Kathmandu.
+            </div>
+          </div>
+        </Popup>
+      </Marker>
       <TileLayer
         attribution="NugaMaps"
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

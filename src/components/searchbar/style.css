@@ -15,7 +15,8 @@
     /* max-width: 1000px; */
 
     /* background: var(--bg-div-overlay-color); */
-    background: var(--bg-div-overlay-color);
+    /* background: var(--bg-div-overlay-color); */
+    background-color: #E6E6E6;
     display: flex;
     align-items: center;
     border-radius: 40px;
@@ -36,12 +37,17 @@
     border: 0;
     padding: 24px 20px;
     font-size: 16px;
-    color: #cccc;
+    /* color: #cccc; */
+    color: black;
+
 }
 
-.search-bar-body input {
+.search-bar ::placeholder {
     color: black;
+    opacity: 1;
+    /* Firefox */
 }
+
 
 .search-bar input:focus,
 input:focus {
@@ -59,8 +65,8 @@ input:focus {
 .search-bar .icon-search {
     border: 0;
     border-radius: 50%;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
 }
 
 .search-bar-body .btn-search {

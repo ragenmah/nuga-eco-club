@@ -2,6 +2,26 @@
     top: 0px;
     padding-left: 0px;
     padding-right: 0px;
+    /* background-color: var(--bg-color); */
+    /* border-bottom: 1px ; */
+
+}
+
+.site__header__color {
+    top: 0px;
+    margin-top: 0;
+    padding-top: 0px;
+    padding-right: 0px;
+    background-color: var(--bg-color);
+    height: 100px;
+}
+
+.nav__color {
+    width: 90%;
+    margin: 0 auto 0px;
+    padding-top: 12px;
+    /* padding-bottom: 10px; */
+    background-color: var(--bg-color);
 }
 
 .menu__button {
@@ -234,7 +254,7 @@ nav {
     /* border-top: 1px solid rgb(255, 255, 255, 0.2); */
     width: 90%;
     margin: 20px auto 0px;
-    padding-top: 10px;
+    /* padding-top: 10px; */
     padding-bottom: 10px;
 }
 
@@ -424,4 +444,9 @@ nav ul li ul li:hover>ul {
     color: #a7b0ba;
     font-size: 12px;
     font-weight: 300
+}
+
+.logoShrink {
+    height: 60px !important;
+    transition: 0.5s;
 }

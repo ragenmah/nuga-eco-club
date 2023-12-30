@@ -50,7 +50,7 @@ const teams = [
   },
   {
     name: "John Maharjan",
-    position: "Researcher and Administrator",
+    position: "Researcher & Administrator",
     img: "https://ragenmah.github.io/nuga-eco-club/static/images/teams/john.jpeg",
     date: "",
   },

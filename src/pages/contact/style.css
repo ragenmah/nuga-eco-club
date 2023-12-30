@@ -19,6 +19,10 @@
     height: calc(2.5em + .75rem + 2px);
 }
 
+.contact__form input::placeholder {
+    color: var(--secondary-color);
+}
+
 button.btn.ac_btn:hover {
     color: var(--secondary-color);
 }

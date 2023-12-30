@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
@@ -20,9 +20,17 @@ const Headermain = () => {
 
   const { i18n, t } = useTranslation();
 
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const listenScrollEvent = (e) => setIsScrolled(window.scrollY > 400);
+
+  useEffect(() => {
+    window.addEventListener("scroll", listenScrollEvent);
+  }, []);
+
   return (
     <div>
-      <header className="fixed-top site__header">
+      <header className="fixed-top site__header ">
         {/* <div className="d-flex align-items-center justify-content-between">
           <Link className="navbar-brand nav_ac" to="/">
             <img src="/static/images/Nuga.png"></img>
@@ -36,54 +44,64 @@ const Headermain = () => {
             </button>
           </div>
         </div> */}
-        <div id="header-top" className="header-top">
-          <ul>
-            <li>
-              <div className="header-top-left">
-                <ul>
-                  <li className="header-top-contact">+977 9843914602</li>
-                  <li className="header-top-contact vertical-line">
-                    projectnuganepal@gmail.com
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li className="head-responsive-right pull-right">
-              <div className="header-top-right">
-                <ul>
-                  <li>
-                    <LanguageSwitcher />
-                  </li>
+        {!isScrolled && (
+          <div id="header-top" className="header-top">
+            <ul>
+              <li>
+                <div className="header-top-left">
+                  <ul>
+                    <li className="header-top-contact">+977 9843914602</li>
+                    <li className="header-top-contact vertical-line">
+                      projectnuganepal@gmail.com
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li className="head-responsive-right pull-right">
+                <div className="header-top-right">
+                  <ul>
+                    <li>
+                      <LanguageSwitcher />
+                    </li>
 
-                  <Link to="/auth/signin" className="">
-                    <li className="header-top-contact vertical-line">
-                      {t("auth.SignIn")}
+                    <Link to="/auth/signin" className="">
+                      <li className="header-top-contact vertical-line">
+                        {t("auth.SignIn")}
+                      </li>
+                      <li className="header-top-contact vertical-line">
+                        {t("auth.SignUp")}
+                      </li>
+                    </Link>
+                    <li className="header-top-contact ">
+                      <Themetoggle />
                     </li>
-                    <li className="header-top-contact vertical-line">
-                      {t("auth.SignUp")}
-                    </li>
-                  </Link>
-                  <li className="header-top-contact ">
-                    <Themetoggle />
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <nav>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        )}
+        <div className={isScrolled && "site__header__color"}>
+          <nav className={isScrolled && "nav__color"}>
             <Link to="/" className="link">
               <h4 className="logo">
                 {/* <img src="/static/images/Nuga.png"></img> */}
                 {/* <img src="/static/images/Eco-Club.png"></img> */}
                 <h2 className="logo__down">
                   {/* Eco-Club */}
-                  <img
-                    src="https://ragenmah.github.io/nuga-eco-club/static/images/logo.png"
-                    height={120}
-                    width={120}
-                  ></img>
+                  {isScrolled ? (
+                    <img
+                      src="https://ragenmah.github.io/nuga-eco-club/static/images/logo.png"
+                      height={90}
+                      width={90}
+                    ></img>
+                  ) : (
+                    <img
+                      src="https://ragenmah.github.io/nuga-eco-club/static/images/logo.png"
+                      height={120}
+                      width={120}
+                    ></img>
+                  )}
                 </h2>
                 {/* <h3 className="logo__top">Nuga</h3> */}
               </h4>
@@ -93,10 +111,7 @@ const Headermain = () => {
               <li>
                 <div className="d-flex justify-content-center">
                   <Col>
-                    {/* <Container className="container_search"> */}
                     <SearchBarNav />
-                    {/* <h1>{t("hello")}</h1> */}
-                    {/* </Container> */}
                   </Col>
                 </div>
               </li>
@@ -127,7 +142,7 @@ const Headermain = () => {
               </li> */}
               <li>
                 <Link to="/ContactUs" className="link">
-                  {t("header.ContactUs")}
+                  {t("header.ContactUs")}{" "}
                 </Link>
               </li>
               <li>
@@ -136,7 +151,9 @@ const Headermain = () => {
                 </Link> */}
               </li>
               <li>
-                <Col></Col>
+                {/* <Col className="px-2">
+                  <SearchBarNav />
+                </Col> */}
               </li>
               {/* <li className="menu_item">
                 <Link onClick={handleToggle} to="/contact" className="my-3">

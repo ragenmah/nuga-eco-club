@@ -2,24 +2,20 @@ import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  dataabout,
-  meta,
-  worktimeline,
-  skills,
-  services,
-  aboutus,
-} from "../../content_option";
-import FooterMain from "../../components/footer";
+import { dataabout, meta, aboutus } from "../../content_option";
+import { useTranslation } from "react-i18next";
 import { Teams } from "../teams";
 
 export const About = () => {
+  const { i18n, t } = useTranslation();
   return (
     <HelmetProvider>
       <section className="About-header">
         <Helmet>
           <meta charSet="utf-8" />
-          <title> About us | {meta.title}</title>
+          <title>
+            {t("header.AboutUs")} | {meta.title}
+          </title>
           <meta name="description" content={meta.description} />
         </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center ">
