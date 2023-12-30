@@ -56,7 +56,7 @@ export const Teams = () => {
                             <img
                               src={data.img}
                               class="team-img"
-                              alt="khec.jpg"
+                              alt={data.name}
                               width={400}
                             />
                             <div class="overlay"></div>
