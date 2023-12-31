@@ -28,6 +28,36 @@ const LanguageSwitcher = () => {
         {t("lang.np")}
       </option>
     </select>
+
+    // <>
+    //   <div className="drop__down">
+    //     <ul>
+    //       <li>
+    //         <ul>
+    //           <li>
+    //             <a href="#">
+    //               <span>
+    //                 {" "}
+    //                 <img
+    //                   src="https://ragenmah.github.io/nuga-eco-club/static/flags/en-us.svg"
+    //                   alt="en"
+    //                 />
+    //                 {t("lang.eng")}
+    //               </span>
+    //             </a>
+    //             <a href="#">
+    //               <img
+    //                 src="https://ragenmah.github.io/nuga-eco-club/static/flags/ne.svg"
+    //                 alt="en"
+    //               />
+    //               {t("lang.np")}
+    //             </a>
+    //           </li>
+    //         </ul>
+    //       </li>
+    //     </ul>
+    //   </div>
+    // </>
   );
 };
 

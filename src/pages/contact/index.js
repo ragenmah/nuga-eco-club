@@ -225,11 +225,9 @@ const OfficeLocationMap = () => {
         <Popup>
           <div>
             <div className="caption">
-              <br />
               Nuga Office
-              <br />
               <hr />
-              Patan, Kathmandu.
+              Patan, Lalitpur
             </div>
           </div>
         </Popup>

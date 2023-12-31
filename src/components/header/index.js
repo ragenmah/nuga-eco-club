@@ -132,8 +132,20 @@ const Headermain = () => {
               </li>
               <li>
                 <Link to="/about" className="link">
-                  {t("header.AboutUs")}
+                  {t("header.About")}
                 </Link>
+                <ul>
+                  <li>
+                    <Link to="/about" className="link">
+                      {t("header.AboutUs")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/teams" className="link">
+                      {t("header.Team")}
+                    </Link>
+                  </li>
+                </ul>
               </li>
               {/* <li>
                 <Link to="/teams" className="link">

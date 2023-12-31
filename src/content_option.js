@@ -166,9 +166,9 @@ const contactConfig = {
   address: "Patan, Lalitpur",
   // creat an emailjs.com account
   // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-  YOUR_SERVICE_ID: "service_id",
-  YOUR_TEMPLATE_ID: "template_id",
-  YOUR_USER_ID: "user_id",
+  YOUR_SERVICE_ID: "service_c0v4q4e",
+  YOUR_TEMPLATE_ID: "template_r341hip",
+  YOUR_USER_ID: "v65VoGmye1ezkacgERTVU",
 };
 
 const socialprofils = {
