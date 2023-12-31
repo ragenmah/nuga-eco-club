@@ -14,6 +14,8 @@ import Selectors from "../../components/selectors/selectors";
 import SearchBarNav from "../../components/searchbar/searchbar_nav";
 import SearchBarBody from "../../components/searchbar/searchbar_body";
 import { MapNepal } from "../../components/maps";
+import Sliders from "../../components/sliders";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export const Home = () => {
   // const [map, setMap] = useState(null);
@@ -33,6 +35,9 @@ export const Home = () => {
             // style={{ backgroundImage: `url(${introdata.your_img_url})` }}
           >
             {/* <MapNepal></MapNepal> */}
+            <div className="slider__position">
+              <Sliders />
+            </div>
             <div className="search-box-container">
               <Container className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
                 <div className="align-self-center w-100">
@@ -105,5 +110,3 @@ export const Home = () => {
     </HelmetProvider>
   );
 };
-
-

@@ -1,0 +1,4 @@
+.slider__position {
+    position: absolute;
+    z-index: 99999;
+}

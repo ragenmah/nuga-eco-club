@@ -1,4 +1,8 @@
 const logotext = "NUGA";
+
+const logoUrl =
+  "https://ragenmah.github.io/nuga-eco-club/static/images/logo.png";
+
 const meta = {
   title: "NUGA",
   description: "NUGA",
@@ -65,21 +69,22 @@ const teamData = {
   des1: "Meet the driving force behind NUGA, where John Maharjan and Manisha Maharjan co-found this visionary project. Their leadership is rooted in a shared commitment to environmental preservation and addressing climate change's impact on nature, the environment, and heritage. With a wealth of experience and expertise, they steer NUGA towards its mission of safeguarding the heart of the planet. Alongside them is Ragen Maharjan, the creative designer shaping NUGA's visual identity with an emphasis on sustainability. Together, this dynamic team blends passion, strategic vision, and creative ingenuity to lead NUGA towards a sustainable future, bridging the past, present, and future for the well-being of our planet and its communities. Explore the profiles of our dedicated team members and join us in making a positive impact on our shared environment.",
   des2: "Discover the faces behind NUGA – John Maharjan, Manisha Maharjan, and designer Ragen Maharjan. As co-founders, John and Manisha bring leadership and a profound commitment to environmental preservation, steering NUGA's mission to safeguard the heart of the planet. Ragen, the creative force, contributes innovative design solutions with a focus on sustainability. Together, this dynamic team is driving NUGA's transformative journey towards a sustainable future, bridging the past, present, and future for the well-being of our planet and its inhabitants. Join us in making a positive impact on the environment and explore the profiles of our dedicated team members.",
 };
-const services = [
+
+const sliders = [
   {
-    title: "UI & UX Design",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+    title: "Climate Change",
+    description: "Helping in climate change",
+    img: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
   },
   {
-    title: "Mobile Apps",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+    title: "Heritage Map Explorer",
+    description: "Helping in climate change",
+    img: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image_5.png",
   },
   {
-    title: "Wordpress Design",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+    title: "Climate Changse",
+    description: "Helping in climate change",
+    img: "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
   },
 ];
 
@@ -186,7 +191,7 @@ export {
   dataabout,
   datamaps,
   dataportfolio,
-  services,
+  sliders,
   introdata,
   contactConfig,
   socialprofils,
@@ -197,4 +202,5 @@ export {
   emailAddress,
   teamData,
   markerImg,
+  logoUrl,
 };
