@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/nuga-eco-club/static/css/main.29fa383b.css",
-    "main.js": "/nuga-eco-club/static/js/main.fea2d1d4.js",
+    "main.css": "/nuga-eco-club/static/css/main.025402dc.css",
+    "main.js": "/nuga-eco-club/static/js/main.5eedc533.js",
     "static/media/Montserrat-Bold.ttf": "/nuga-eco-club/static/media/Montserrat-Bold.50f0257aa1e905f4bfaf.ttf",
     "static/media/Montserrat-Medium.ttf": "/nuga-eco-club/static/media/Montserrat-Medium.b8c6753baa964ccac1ba.ttf",
     "static/media/Montserrat-Light.ttf": "/nuga-eco-club/static/media/Montserrat-Light.7179b7d2ac9b599db5f9.ttf",
     "static/media/marker.svg": "/nuga-eco-club/static/media/marker.3b1a3255e0ebe46a77594217d4c5912a.svg",
     "index.html": "/nuga-eco-club/index.html",
-    "main.29fa383b.css.map": "/nuga-eco-club/static/css/main.29fa383b.css.map",
-    "main.fea2d1d4.js.map": "/nuga-eco-club/static/js/main.fea2d1d4.js.map"
+    "main.025402dc.css.map": "/nuga-eco-club/static/css/main.025402dc.css.map",
+    "main.5eedc533.js.map": "/nuga-eco-club/static/js/main.5eedc533.js.map"
   },
   "entrypoints": [
-    "static/css/main.29fa383b.css",
-    "static/js/main.fea2d1d4.js"
+    "static/css/main.025402dc.css",
+    "static/js/main.5eedc533.js"
   ]
 }
