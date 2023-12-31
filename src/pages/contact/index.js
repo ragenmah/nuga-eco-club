@@ -4,7 +4,7 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { contactConfig } from "../../content_option";
+import { contactConfig, markerImg } from "../../content_option";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import Leaflet from "leaflet";
 
@@ -13,7 +13,7 @@ import iconUrl from "../../_mock/svgs/marker.svg";
 import { useRef } from "react";
 
 export const newicon = new Leaflet.Icon({
-  iconUrl,
+  iconUrl: markerImg,
   iconAnchor: [5, 55],
   popupAnchor: [10, -44],
   iconSize: [25, 55],

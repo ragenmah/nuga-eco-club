@@ -171,6 +171,9 @@ const contactConfig = {
   YOUR_USER_ID: "v65VoGmye1ezkacgERTVU",
 };
 
+const markerImg =
+  "https://ragenmah.github.io/nuga-eco-club/static/markers/marker.svg";
+
 const socialprofils = {
   github: "https://github.com",
   facebook: "https://facebook.com",
@@ -193,4 +196,5 @@ export {
   teams,
   emailAddress,
   teamData,
+  markerImg,
 };
