@@ -158,9 +158,11 @@ const Headermain = () => {
                 </Link>
               </li>
               <li>
-                {/* <Link to="/auth/signin" className="">
-                  <h4 className="sign__up">{t("header.Login/Register")}</h4>
-                </Link> */}
+                {isScrolled && (
+                  <Link to="/auth/signin" className="">
+                    <h4 className="sign__up">{t("header.Login/Register")}</h4>
+                  </Link>
+                )}
               </li>
               <li>
                 {" "}
