@@ -119,6 +119,13 @@ const Headermain = () => {
                 <Link to="/discover" className="link">
                   {t("header.Discover")}
                 </Link>
+                <ul>
+                  <li>
+                    <Link to="/about" className="link">
+                      {t("header.Climate")}
+                    </Link>
+                  </li>
+                </ul>
               </li>
               <li>
                 <Link to="/sites" className="link">
@@ -130,6 +137,11 @@ const Headermain = () => {
                   {t("header.Maps")}
                 </Link>
               </li>
+              {/* <li>
+                <Link to="/maps" className="link">
+                  {t("header.Climate")}
+                </Link>
+              </li> */}
               <li>
                 <Link to="/about" className="link">
                   {t("header.About")}
