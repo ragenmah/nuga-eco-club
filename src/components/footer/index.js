@@ -53,7 +53,10 @@ const FooterMain = () => {
                     <a href="#">Terms and condition</a>
                   </li>
                   <li class="menu-item menu-item-type-post_type menu-item-object-page">
-                    <a href="#">Privacy Policy</a>
+                    <Link to="/privacy-policy" className="">
+                      Privacy Policy
+                    </Link>
+                    {/* <a href="/privay-policy">Privacy Policy</a> */}
                   </li>
                 </ul>
               </div>

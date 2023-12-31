@@ -11,14 +11,14 @@
 
 .slider-item-content h3 {
     font-size: 24px;
-    color: white;
+    /* color: var(--secondary-color); */
     text-align: left;
     /* font-family: Fredoka One; */
 }
 
 .slider-item-content p {
     font-size: 16px;
-    color: white;
+    /* color: var(--secondary-color); */
     font-weight: normal;
     text-align: left;
     /* font-family: Source Sans Pro; */
@@ -30,7 +30,9 @@
     margin-bottom: 40px;
     border-radius: 20px;
     /* width: 50%; */
-    background-color: var(--bg-color);
+    /* background-color: var(--bg-color); */
+    background-color: black;
+
     padding: 30px 30px 30px 30px;
 }
 

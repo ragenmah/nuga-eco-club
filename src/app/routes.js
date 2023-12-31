@@ -11,6 +11,7 @@ import { SigIn } from "../pages/auth/sigin";
 import { Teams } from "../pages/teams";
 import { Maps } from "../pages/maps";
 import { Sites } from "../pages/sites";
+import { Privacy } from "../pages/privacy";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -32,6 +33,8 @@ const AnimatedRoutes = withRouter(({ location }) => (
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/auth/signin" element={<SigIn />} />
         <Route path="/teams" element={<Teams />} />
+        <Route path="/privacy-policy" element={<Privacy />} />
+        <Route path="/terms-and-condition" element={<Teams />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </CSSTransition>
