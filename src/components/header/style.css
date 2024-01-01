@@ -290,6 +290,7 @@ nav ul li {
     float: left;
     list-style-type: none;
     text-transform: capitalize;
+    margin-top: 1rem;
 }
 
 nav ul li .link {
@@ -305,6 +306,7 @@ nav ul li .link {
     font-weight: 400;
     line-height: normal;
     /* padding: 10px 10px 0px 0px; */
+
     padding-left: 40px;
     /* padding-top: 10px; */
     /* text-align: center; */

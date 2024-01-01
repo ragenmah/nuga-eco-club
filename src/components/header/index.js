@@ -57,6 +57,7 @@ const Headermain = () => {
                   </ul>
                 </div>
               </li>
+              <Col>{/* <SearchBarNav /> */}</Col>
               <li className="head-responsive-right pull-right">
                 <div className="header-top-right">
                   <ul>
@@ -109,27 +110,21 @@ const Headermain = () => {
 
             <ul>
               <li>
-                <div className="d-flex justify-content-center">
-                  <Col>
-                    <SearchBarNav />
-                  </Col>
-                </div>
+                <div className="d-flex justify-content-center"></div>
               </li>
               <li>
                 <Link to="/discover" className="link">
                   {t("header.Discover")}
                 </Link>
-                <ul>
-                  <li>
-                    <Link to="/about" className="link">
-                      {t("header.Climate")}
-                    </Link>
-                  </li>
-                </ul>
               </li>
               <li>
                 <Link to="/sites" className="link">
                   {t("header.Sites")}
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="link">
+                  {t("header.Climate")}
                 </Link>
               </li>
               <li>
@@ -146,7 +141,7 @@ const Headermain = () => {
                 <Link to="/about" className="link">
                   {t("header.About")}
                 </Link>
-                <ul>
+                {/* <ul>
                   <li>
                     <Link to="/about" className="link">
                       {t("header.AboutUs")}
@@ -157,7 +152,7 @@ const Headermain = () => {
                       {t("header.Team")}
                     </Link>
                   </li>
-                </ul>
+                </ul> */}
               </li>
               {/* <li>
                 <Link to="/teams" className="link">

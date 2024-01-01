@@ -32,7 +32,7 @@ const AnimatedRoutes = withRouter(({ location }) => (
         <Route path="/discover" element={<Discover />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/auth/signin" element={<SigIn />} />
-        <Route path="/teams" element={<Teams />} />
+        {/* <Route path="/teams" element={<Teams />} /> */}
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/terms-and-condition" element={<Teams />} />
         <Route path="*" element={<Home />} />

@@ -3,6 +3,8 @@ import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
+import SearchBarNav from "../../components/searchbar/searchbar_nav";
+import SearchBarBody from "../../components/searchbar/searchbar_body";
 
 export const Discover = () => {
   return (
@@ -15,8 +17,13 @@ export const Discover = () => {
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col className="contact-us-container">
-            <Col lg="4">
-              <h1 className=" mb-2">DISCOVER</h1>
+            <Col lg="8">
+              <div className="d-flex">
+                <h1 className=" mb-2">DISCOVER</h1>{" "}
+                <Col className="p-2">
+                  <SearchBarBody />
+                </Col>
+              </div>
             </Col>
             <Col lg="2">
               <hr className="t_border my-3 ml-0 text-left" />{" "}

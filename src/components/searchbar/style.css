@@ -25,6 +25,11 @@
     height: 60px;
 }
 
+.search-bar {
+    height: 40px;
+    border-radius: 20px;
+}
+
 .search-bar-body {
     background-color: #E6E6E6;
 

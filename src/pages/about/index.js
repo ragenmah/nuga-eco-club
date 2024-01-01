@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { dataabout, meta, aboutus } from "../../content_option";
 import { useTranslation } from "react-i18next";
 import { Teams } from "../teams";
+import FooterMain from "../../components/footer";
 
 export const About = () => {
   const { i18n, t } = useTranslation();
@@ -19,15 +20,15 @@ export const About = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         {/* intro_sec */}
-        <div className=" d-block d-lg-flex align-items-center ">
+        <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
-            className="h_bg-image order-1 order-lg-2 h-100 "
+            className="h_bg-image order-1 order-lg-2 h-20 "
             style={{ backgroundImage: `url(${aboutus.background_img})` }}
           >
             <Container>
               <Col className="mb-5 mt-3 pt-md-3">
                 <Col lg="4">
-                  <h1 className="about_us_title mb-2">ABOUT US</h1>
+                  <h1 className="about_us_title mb-2">ABOUT NUGA</h1>
                 </Col>
                 <Col lg="2">
                   <hr className="t_border my-3 ml-0 text-left" />{" "}
@@ -46,11 +47,11 @@ export const About = () => {
                 </Col>
               </Row>
             </Container>
-            {/* <Teams /> */}
           </div>
         </div>
-        {/* <FooterMain /> */}
-      </section>
+      </section>{" "}
+      <Teams />
+      {/* <FooterMain /> */}
     </HelmetProvider>
   );
 };
