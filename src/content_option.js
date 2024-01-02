@@ -35,7 +35,7 @@ const introdata = {
   your_img_url:
     "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
   video_url:
-    "http://localhost:3000/nuga-eco-club/static/videos/video(540p).mp4",
+    "https://ragenmah.github.io/nuga-eco-club/static/videos/video(540p).mp4",
 };
 const aboutus = {
   background_img:
