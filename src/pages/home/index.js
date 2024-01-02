@@ -34,10 +34,48 @@ export const Home = () => {
             className="h_bg-image order-1 order-lg-2 h-100 "
             // style={{ backgroundImage: `url(${introdata.your_img_url})` }}
           >
-            {/* <MapNepal></MapNepal> */}
-            <div className="slider__position">
+            {/* <div className="slider__position">
               <Sliders />
-            </div>
+            </div> */}
+
+            <section className="showcase">
+              <div className="video-container">
+                {/* <video
+                  src={introdata.video_url}
+                  autoPlay={true}
+                  controls={false}
+                  loop={true}
+                  muted={false}
+                >
+                  <source type="video/mp4" />
+                </video> */}
+                <video
+                  autoPlay={true}
+                  controls={false}
+                  loop={true}
+                  muted
+                  playsinline
+                >
+                  <source src={introdata.video_url} type="video/mp4" />
+                  Sorry, your browser doesn't support videos.
+                </video>
+              </div>
+              <div className="content">
+                <h1>Welcome to NUGA!</h1>
+                <h4>
+                  We believe in building strong bonds, good clean design,
+                  well-crafted content, and integrated strategies.
+                </h4>
+                <h6>
+                  Nuga team is actively working to show heritage sites to the
+                  world. Join us in creating a heritage better for the future
+                  through impactful heritage based projects.
+                </h6>
+                <a href="#about" className="btn">
+                  Explore
+                </a>
+              </div>
+            </section>
             <div className="search-box-container">
               <Container className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
                 <div className="align-self-center w-100">

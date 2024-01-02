@@ -7,10 +7,24 @@ const meta = {
   title: "NUGA",
   description: "NUGA",
 };
+
 const emailAddress = "projectnuganepal@gmail.com";
 
+const languageSwitcherData = [
+  {
+    img: "https://ragenmah.github.io/nuga-eco-club/static/flags/en-us.svg",
+    title: "English",
+    value: "en",
+  },
+  {
+    img: "https://ragenmah.github.io/nuga-eco-club/static/flags/ne.svg",
+    title: "Nepali",
+    value: "np",
+  },
+];
+
 const introdata = {
-  title: "Find The Best heritage sites in just One click",
+  title: "Find The Best heritage walk in just One click",
   subTitle: "BEST PLACE TO FIND AND EXPLORE THAT ALL YOU NEED",
   animated: {
     first: "Discover",
@@ -20,6 +34,8 @@ const introdata = {
   description: "Mero मुतु, sabai ko mutu",
   your_img_url:
     "https://ragenmah.github.io/nuga-eco-club/static/backgrounds/image2.png",
+  video_url:
+    "http://localhost:3000/nuga-eco-club/static/videos/video(540p).mp4",
 };
 const aboutus = {
   background_img:
@@ -90,76 +106,45 @@ const sliders = [
 
 const dataportfolio = [
   {
-    img: "https://picsum.photos/400/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
+    // img: "https://images.unsplash.com/photo-1517400508447-f8dd518b86db?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.unsplash.com/photo-1516477485464-abbcea8f9b1f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Guide",
     link: "#",
   },
   {
-    img: "https://picsum.photos/400/800/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
+    img: "https://images.pexels.com/photos/12299679/pexels-photo-12299679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "Food",
     link: "#",
   },
   {
-    img: "https://picsum.photos/400/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
+    img: "https://images.pexels.com/photos/6492402/pexels-photo-6492402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "Accomodation",
     link: "#",
   },
   {
-    img: "https://picsum.photos/400/600/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
+    img: "https://images.pexels.com/photos/11734284/pexels-photo-11734284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "Hotels",
     link: "#",
   },
   {
-    img: "https://picsum.photos/400/300/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
+    img: "https://images.pexels.com/photos/3352873/pexels-photo-3352873.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "Homestays",
     link: "#",
   },
   {
-    img: "https://picsum.photos/400/700/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
+    img: "https://images.pexels.com/photos/11635783/pexels-photo-11635783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "Hangouts",
     link: "#",
   },
 
   {
-    img: "https://picsum.photos/400/600/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
+    img: "https://images.pexels.com/photos/6808520/pexels-photo-6808520.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "Travel",
     link: "#",
   },
   {
-    img: "https://picsum.photos/400/300/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/550/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
-    link: "#",
-  },
-  {
-    img: "https://picsum.photos/400/700/?grayscale",
-    description:
-      "The wisdom of life consists in the elimination of non-essentials.",
+    img: "https://images.unsplash.com/photo-1639189702833-8de5ecf2ca8f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: "Expense",
     link: "#",
   },
 ];
@@ -188,6 +173,7 @@ const socialprofils = {
 };
 export {
   meta,
+  languageSwitcherData,
   dataabout,
   datamaps,
   dataportfolio,

@@ -34,10 +34,10 @@ export const Discover = () => {
           {dataportfolio.map((data, i) => {
             return (
               <div key={i} className="po_item">
-                <img src={data.img} alt="" />
+                <img src={data.img} alt="" height={300} />
                 <div className="content">
                   <p>{data.description}</p>
-                  <a href={data.link}>view project</a>
+                  {/* <a href={data.link}>view now</a> */}
                 </div>
               </div>
             );

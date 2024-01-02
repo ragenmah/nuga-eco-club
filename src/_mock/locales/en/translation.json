@@ -1,6 +1,6 @@
 {
   "hello": "NaMste",
-  "lang": { "eng": "EN", "np": "NP" },
+  "lang": { "eng": "English", "np": "Nepali" },
   "auth": { "SignUp": "register", "SignIn": "sign in" },
   "header": {
     "Discover": "Discover",

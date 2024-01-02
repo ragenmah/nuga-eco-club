@@ -1,6 +1,6 @@
 {
   "hello": "Nepal",
-  "lang": { "eng": "EN", "np": "NP" },
+  "lang": { "eng": "English", "np": "Nepali" },
   "auth": { "SignUp": "दर्ता गर्नुहोस्", "SignIn": "साइन इन" },
   "header": {
     "Discover": "खोज",
