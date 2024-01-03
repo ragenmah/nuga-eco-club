@@ -4,9 +4,10 @@
   "auth": { "SignUp": "register", "SignIn": "sign in" },
   "header": {
     "Discover": "Discover",
+    "Heritage": "Heritage Walk",
     "Sites": "Sites",
-    "AboutUs": "About us",
-    "About": "About Nuga",
+    "AboutUs": "About Us",
+    "About": "About",
     "Maps": "Maps",
     "Team": "Team",
     "Climate": "Climate Emergency",

@@ -14,7 +14,7 @@
     padding-right: 0px;
     background-color: var(--bg-color);
     height: 100px;
-    border-bottom: 1px solid red;
+    /* border-bottom: 1px solid red; */
 }
 
 .nav__color {
@@ -254,8 +254,8 @@ nav {
     /* height: var(--navheight); */
     /* border-top: 1px solid rgb(255, 255, 255, 0.2); */
     width: 90%;
-    margin: 10px auto 0px;
-    /* padding-top: 10px; */
+    /* margin: 10px auto 0px; */
+
     padding-bottom: 10px;
 }
 
@@ -280,6 +280,7 @@ nav ul li ul li i {
 }
 
 nav ul {
+    padding-top: 10px;
     float: right;
     display: flex;
     align-items: center;
@@ -386,11 +387,12 @@ nav ul li ul li:hover>ul {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    padding-left: 40px;
 }
 
 .header-top {
     background-color: var(--bg-color);
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid transparent;
     padding-top: 10px;
     width: 100%;
 }

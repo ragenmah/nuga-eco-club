@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
 import SearchBarNav from "../../components/searchbar/searchbar_nav";
 import SearchBarBody from "../../components/searchbar/searchbar_body";
+import Selectors from "../../components/selectors/selectors";
 
 export const Discover = () => {
+  const [showSearch, setShowSearch] = useState(false);
+
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -21,7 +24,23 @@ export const Discover = () => {
               <div className="d-flex">
                 <h1 className=" mb-2">DISCOVER</h1>{" "}
                 <Col className="p-2">
-                  <SearchBarBody />
+                  <div>
+                    <SearchBarBody />
+                    <br />
+
+                    {showSearch ? <Selectors /> : <></>}
+                    <div
+                      className="show-more-filter"
+                      onClick={() => setShowSearch(!showSearch)}
+                    >
+                      <span>{showSearch ? "Hide" : "More"} Options</span>
+                      {!showSearch ? (
+                        <i className="fas fa-chevron-down m-1" />
+                      ) : (
+                        <i className="fas fa-chevron-up m-1" />
+                      )}
+                    </div>
+                  </div>
                 </Col>
               </div>
             </Col>

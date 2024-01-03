@@ -32,7 +32,7 @@ export const Teams = () => {
         <div className="   mt-2">
           <div
             className="h_bg-image "
-            style={{ backgroundImage: `url(${aboutus.background_img})` }}
+            // style={{ backgroundImage: `url(${aboutus.background_img})` }}
           >
             <Container>
               <Col className="mb-5  mt-3 pt-md-3">

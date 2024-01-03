@@ -82,7 +82,8 @@ const Headermain = () => {
             </ul>
           </div>
         )}
-        <div className={isScrolled && "site__header__color"}>
+        {/* <div className={isScrolled && "site__header__color"}> */}
+        <div className={"site__header__color"}>
           <nav className={isScrolled && "nav__color"}>
             <Link to="/" className="link">
               <h4 className="logo">
@@ -123,13 +124,13 @@ const Headermain = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="link">
-                  {t("header.Climate")}
+                <Link to="/maps" className="link">
+                  {t("header.Maps")}
                 </Link>
               </li>
               <li>
-                <Link to="/maps" className="link">
-                  {t("header.Maps")}
+                <Link to="/about" className="link">
+                  {t("header.Climate")}
                 </Link>
               </li>
               {/* <li>
@@ -139,7 +140,7 @@ const Headermain = () => {
               </li> */}
               <li>
                 <Link to="/about" className="link">
-                  {t("header.About")}
+                  {t("header.AboutUs")}
                 </Link>
                 {/* <ul>
                   <li>

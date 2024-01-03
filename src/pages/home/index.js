@@ -38,51 +38,13 @@ export const Home = () => {
               <Sliders />
             </div> */}
 
-            <section className="showcase">
-              <div className="video-container">
-                {/* <video
-                  src={introdata.video_url}
-                  autoPlay={true}
-                  controls={false}
-                  loop={true}
-                  muted={false}
-                >
-                  <source type="video/mp4" />
-                </video> */}
-                <video
-                  autoPlay={true}
-                  controls={false}
-                  loop={true}
-                  muted
-                  playsinline
-                >
-                  <source src={introdata.video_url} type="video/mp4" />
-                  Sorry, your browser doesn't support videos.
-                </video>
-              </div>
-              <div className="content">
-                <h1>Welcome to NUGA!</h1>
-                <h4>
-                  We believe in building strong bonds, good clean design,
-                  well-crafted content, and integrated strategies.
-                </h4>
-                <h6>
-                  Nuga team is actively working to show heritage sites to the
-                  world. Join us in creating a heritage better for the future
-                  through impactful heritage based projects.
-                </h6>
-                <a href="#about" className="btn">
-                  Explore
-                </a>
-              </div>
-            </section>
             <div className="search-box-container">
-              <Container className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
+              <div className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
                 <div className="align-self-center w-100">
                   <div className="intro mx-auto">
-                    {/* <h1>{introdata.title}</h1> */}
-                    {/* <h2 className="mb-1x">{introdata.title}</h2> */}
-                    {/* <div>
+                    <h1>{introdata.title}</h1>
+                    <h2 className="mb-1x">{introdata.title}</h2>
+                    <div>
                       <SearchBarBody />
                       <br />
 
@@ -98,7 +60,7 @@ export const Home = () => {
                           <i className="fas fa-chevron-up m-1" />
                         )}
                       </div>
-                    </div> */}
+                    </div>
                     {/* <h1 className="fluidz-48 mb-1x">
                     <Typewriter
                       options={{
@@ -135,8 +97,47 @@ export const Home = () => {
                   </div> */}
                   </div>
                 </div>
-                <div className="align-self-center w-100 m-2"></div>
-              </Container>
+                <div className="align-self-center w-100 m-2">
+                  <section className="showcase shape">
+                    <div className="video-container">
+                      {/* <video
+                  src={introdata.video_url}
+                  autoPlay={true}
+                  controls={false}
+                  loop={true}
+                  muted={false}
+                >
+                  <source type="video/mp4" />
+                </video> */}
+                      <video
+                        autoPlay={true}
+                        controls={false}
+                        loop={true}
+                        muted
+                        playsinline
+                      >
+                        <source src={introdata.video_url} type="video/mp4" />
+                        Sorry, your browser doesn't support videos.
+                      </video>
+                    </div>
+                    <div className="content">
+                      {/* <h1>Welcome to NUGA!</h1>
+                      <h4>
+                        We believe in building strong bonds, good clean design,
+                        well-crafted content, and integrated strategies.
+                      </h4>
+                      <h6>
+                        Nuga team is actively working to show heritage sites to
+                        the world. Join us in creating a heritage better for the
+                        future through impactful heritage based projects.
+                      </h6>
+                      <a href="#about" className="btn">
+                        Explore
+                      </a> */}
+                    </div>
+                  </section>
+                </div>
+              </div>
             </div>
 
             {/* <Row>

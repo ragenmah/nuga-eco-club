@@ -23,7 +23,7 @@ export const About = () => {
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-20 "
-            style={{ backgroundImage: `url(${aboutus.background_img})` }}
+            // style={{ backgroundImage: `url(${aboutus.background_img})` }}
           >
             <Container>
               <Col className="mb-5 mt-3 pt-md-3">
