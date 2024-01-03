@@ -23,6 +23,10 @@
     color: var(--secondary-color);
 }
 
+button.btn.ac_btn {
+    color: white;
+}
+
 button.btn.ac_btn:hover {
     color: var(--secondary-color);
 }

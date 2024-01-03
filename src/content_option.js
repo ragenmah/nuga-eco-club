@@ -85,6 +85,10 @@ const teamData = {
   des1: "Meet the driving force behind NUGA, where John Maharjan and Manisha Maharjan co-found this visionary project. Their leadership is rooted in a shared commitment to environmental preservation and addressing climate change's impact on nature, the environment, and heritage. With a wealth of experience and expertise, they steer NUGA towards its mission of safeguarding the heart of the planet. Alongside them is Ragen Maharjan, the creative designer shaping NUGA's visual identity with an emphasis on sustainability. Together, this dynamic team blends passion, strategic vision, and creative ingenuity to lead NUGA towards a sustainable future, bridging the past, present, and future for the well-being of our planet and its communities. Explore the profiles of our dedicated team members and join us in making a positive impact on our shared environment.",
   des2: "Discover the faces behind NUGA – John Maharjan, Manisha Maharjan, and designer Ragen Maharjan. As co-founders, John and Manisha bring leadership and a profound commitment to environmental preservation, steering NUGA's mission to safeguard the heart of the planet. Ragen, the creative force, contributes innovative design solutions with a focus on sustainability. Together, this dynamic team is driving NUGA's transformative journey towards a sustainable future, bridging the past, present, and future for the well-being of our planet and its inhabitants. Join us in making a positive impact on the environment and explore the profiles of our dedicated team members.",
 };
+const whatWeDoData = {
+  des1: "NuGA is not just a platform; it's a community. Join us in participating in an activity, learning something new, etc. Connect with like-minded individuals who share your interests.",
+  des2: "Whether you're a user or a customer, we invite you to explore our platform, engage with our content, and experience the positive outcome that NUGA has to offer.",
+};
 
 const sliders = [
   {
@@ -107,6 +111,12 @@ const sliders = [
 const dataportfolio = [
   {
     // img: "https://images.unsplash.com/photo-1517400508447-f8dd518b86db?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    img: "https://images.pexels.com/photos/11507730/pexels-photo-11507730.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    description: "Sites",
+    link: "#",
+  },
+  {
+    // img: "https://images.unsplash.com/photo-1517400508447-f8dd518b86db?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     img: "https://images.unsplash.com/photo-1516477485464-abbcea8f9b1f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     description: "Guide",
     link: "#",
@@ -117,7 +127,7 @@ const dataportfolio = [
     link: "#",
   },
   {
-    img: "https://images.pexels.com/photos/6492402/pexels-photo-6492402.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    img: "https://images.pexels.com/photos/1531660/pexels-photo-1531660.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     description: "Accomodation",
     link: "#",
   },
@@ -189,4 +199,5 @@ export {
   teamData,
   markerImg,
   logoUrl,
+  whatWeDoData,
 };

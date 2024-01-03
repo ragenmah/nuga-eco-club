@@ -119,8 +119,8 @@ const Headermain = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/sites" className="link">
-                  {t("header.Sites")}
+                <Link to="/heritage-walk" className="link">
+                  {t("header.Heritage")}
                 </Link>
               </li>
               <li>
@@ -129,7 +129,7 @@ const Headermain = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="link">
+                <Link to="/climate-emergency" className="link">
                   {t("header.Climate")}
                 </Link>
               </li>
@@ -183,6 +183,23 @@ const Headermain = () => {
                   Sign up
                 </Link>
               </li> */}
+              <div class="search-container">
+                <form action="/search" method="get">
+                  <input
+                    className="search expandright"
+                    id="searchright"
+                    type="search"
+                    name="q"
+                    placeholder="Search"
+                  />
+                  <label className="button searchbutton" for="searchright">
+                    <span className="mglass">&#9906;</span>
+                  </label>
+                </form>
+              </div>
+              <a href="#" class="button">
+                x
+              </a>
             </ul>
           </nav>
         </div>

@@ -6,7 +6,7 @@ const SearchBarBody = () => {
       <form action="" method="get" className="search-bar-body " traget="_blank">
         <input
           type="text"
-          placeholder="search any thing ..."
+          placeholder="search your destiny ..."
           autoComplete="off"
           name="q"
         />

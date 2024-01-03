@@ -25,7 +25,7 @@ export const Sites = () => {
             // style={{ backgroundImage: `url(${introdata.your_img_url})` }}
           >
             <div className="search-box-container">
-              <Container className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
+              <div className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
                 <div className="align-self-center w-100">
                   <div className="intro mx-auto">
                     <h1>{introdata.title}</h1>
@@ -83,8 +83,13 @@ export const Sites = () => {
                   </div> */}
                   </div>
                 </div>
-                <div className="align-self-center w-100 m-2"></div>
-              </Container>
+                <div className="align-self-center w-100 m-2 shape">
+                  <img
+                    src="https://images.pexels.com/photos/5952518/pexels-photo-5952518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                    className="heritage-img"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* <Row>

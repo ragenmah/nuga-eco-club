@@ -12,6 +12,7 @@ import { Teams } from "../pages/teams";
 import { Maps } from "../pages/maps";
 import { Sites } from "../pages/sites";
 import { Privacy } from "../pages/privacy";
+import ClimateEmrgency from "../pages/climate";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -28,11 +29,11 @@ const AnimatedRoutes = withRouter(({ location }) => (
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/maps" element={<Maps />} />
-        <Route path="/sites" element={<Sites />} />
+        <Route path="/heritage-walk" element={<Sites />} />
         <Route path="/discover" element={<Discover />} />
         <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/auth/signin" element={<SigIn />} />
-        {/* <Route path="/teams" element={<Teams />} /> */}
+        <Route path="/climate-emergency" element={<ClimateEmrgency />} />
         <Route path="/privacy-policy" element={<Privacy />} />
         <Route path="/terms-and-condition" element={<Teams />} />
         <Route path="*" element={<Home />} />

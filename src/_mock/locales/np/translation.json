@@ -4,13 +4,13 @@
   "auth": { "SignUp": "दर्ता गर्नुहोस्", "SignIn": "साइन इन" },
   "header": {
     "Discover": "खोज",
-    "Heritage": "Heritage Walk",
+    "Heritage": "हेरिटेज वाक",
     "Sites": "साइट",
     "AboutUs": "हाम्रो बारे",
     "About": "नुग बारे",
     "Maps": "नक्सा",
     "Team": "टोली",
-    "Climate": "Climate",
+    "Climate": "जलवायु आपतकाल",
     "ContactUs": "सम्पर्क",
     "Login/Register": "साइन इन / दर्ता गर्नुहोस्"
   },

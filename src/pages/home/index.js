@@ -16,6 +16,8 @@ import SearchBarBody from "../../components/searchbar/searchbar_body";
 import { MapNepal } from "../../components/maps";
 import Sliders from "../../components/sliders";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import WhatWeDo from "../whatwedo";
+import { ContactUs } from "../contact";
 
 export const Home = () => {
   // const [map, setMap] = useState(null);
@@ -146,6 +148,8 @@ export const Home = () => {
           </div>
         </div>
       </section>
+      <WhatWeDo />
+      <ContactUs />
     </HelmetProvider>
   );
 };

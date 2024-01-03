@@ -23,29 +23,29 @@ export const Discover = () => {
             <Col lg="8">
               <div className="d-flex">
                 <h1 className=" mb-2">DISCOVER</h1>{" "}
-                <Col className="p-2">
-                  <div>
-                    <SearchBarBody />
-                    <br />
-
-                    {showSearch ? <Selectors /> : <></>}
-                    <div
-                      className="show-more-filter"
-                      onClick={() => setShowSearch(!showSearch)}
-                    >
-                      <span>{showSearch ? "Hide" : "More"} Options</span>
-                      {!showSearch ? (
-                        <i className="fas fa-chevron-down m-1" />
-                      ) : (
-                        <i className="fas fa-chevron-up m-1" />
-                      )}
-                    </div>
-                  </div>
-                </Col>
               </div>
             </Col>
             <Col lg="2">
-              <hr className="t_border my-3 ml-0 text-left" />{" "}
+              <hr className="t_border my-3 ml-0 text-left" />
+            </Col>
+            <Col className="p-2" lg="12">
+              <div>
+                <SearchBarBody />
+                <br />
+
+                {showSearch ? <Selectors /> : <></>}
+                <div
+                  className="show-more-filter"
+                  onClick={() => setShowSearch(!showSearch)}
+                >
+                  <span>{showSearch ? "Hide" : "More"} Options</span>
+                  {!showSearch ? (
+                    <i className="fas fa-chevron-down m-1" />
+                  ) : (
+                    <i className="fas fa-chevron-up m-1" />
+                  )}
+                </div>
+              </div>
             </Col>
           </Col>
         </Row>

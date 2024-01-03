@@ -8,6 +8,9 @@ const LanguageSwitcher = () => {
   const [isMenuVisible, setMenuVisible] = useState(false);
   const [selectedLang, setSelectedLang] = useState("en");
   const [langShort, setLangShort] = useState("en");
+  const [imgSelected, setImgSelected] = useState(
+    "https://ragenmah.github.io/nuga-eco-club/static/flags/en-us.svg"
+  );
 
   const handleLanguageChange = (e) => {
     // const newLang = e.target.value;
@@ -20,11 +23,12 @@ const LanguageSwitcher = () => {
   };
 
   const handleChangeLanguage = (e) => {
-    setSelectedLang(e);
+    setSelectedLang(e.value);
 
     // alert(e);
-    i18n.changeLanguage(e);
-    setLangShort(e);
+    i18n.changeLanguage(e.value);
+    setLangShort(e.value);
+    setImgSelected(e.img);
     setMenuVisible(!isMenuVisible);
   };
   const click = (value) => {
@@ -34,11 +38,7 @@ const LanguageSwitcher = () => {
   return (
     <div className="langpart">
       <button onClick={toggleMenu}>
-        <img
-          src="https://ragenmah.github.io/nuga-eco-club/static/flags/en-us.svg"
-          height={20}
-          alt="en"
-        ></img>
+        <img src={imgSelected} height={20} alt={langShort}></img>
         <span className="m-2">{langShort}</span>
       </button>
 
@@ -47,7 +47,7 @@ const LanguageSwitcher = () => {
           <ul>
             {languageSwitcherData.map((value, i) => (
               <li
-                onClick={() => handleChangeLanguage(value.value)}
+                onClick={() => handleChangeLanguage(value)}
                 // onClick={() => click(value)}
 
                 key={i}
