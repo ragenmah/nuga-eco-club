@@ -13,10 +13,12 @@ export const SigIn = () => {
         </Helmet>
         <div
           className="intro_sec d-block d-lg-flex align-items-center h_bg-image order-1 order-lg-2 h-100 "
-          style={{
-            backgroundImage: `url(${"https://media-cdn.tripadvisor.com/media/photo-s/05/33/d2/88/dhungedhara-that-brings.jpg"})`,
-            // boxShadow: `black`,
-          }}
+          style={
+            {
+              // backgroundImage: `url(${"https://media-cdn.tripadvisor.com/media/photo-s/05/33/d2/88/dhungedhara-that-brings.jpg"})`,
+              // boxShadow: `black`,
+            }
+          }
 
           // style={{ backgroundImage: `url(${signIn.background_img})` }}
         >

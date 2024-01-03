@@ -9,6 +9,8 @@ import { useTranslation } from "react-i18next";
 
 import LanguageSwitcher from "../languageswitcher";
 import SearchBarNav from "../searchbar/searchbar_nav";
+import Modal from "../modal";
+import { SigIn } from "../../pages/auth/sigin";
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
@@ -21,6 +23,17 @@ const Headermain = () => {
   const { i18n, t } = useTranslation();
 
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const [showModal, setShowModal] = useState(false);
+  const [hideModal, setHideModal] = useState(false);
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
+  const handleHideModal = () => {
+    setShowModal(false);
+  };
 
   const listenScrollEvent = (e) => setIsScrolled(window.scrollY > 400);
 
@@ -44,15 +57,23 @@ const Headermain = () => {
             </button>
           </div>
         </div> */}
+
+        <Modal show={showModal} handleClose={handleHideModal}>
+          <SigIn />
+        </Modal>
         {!isScrolled && (
           <div id="header-top" className="header-top">
             <ul>
               <li>
                 <div className="header-top-left">
                   <ul>
-                    <li className="header-top-contact">+977 9843914602</li>
+                    <li className="header-top-contact">
+                      <a href="tel:+977 9843914602">+977 9843914602</a>
+                    </li>
                     <li className="header-top-contact vertical-line">
-                      projectnuganepal@gmail.com
+                      <a href="mailto:projectnuganepal@gmail.com">
+                        projectnuganepal@gmail.com
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -65,14 +86,14 @@ const Headermain = () => {
                       <LanguageSwitcher />
                     </li>
 
-                    <Link to="/auth/signin" className="">
+                    <div onClick={handleShowModal} className="">
                       <li className="header-top-contact vertical-line">
                         {t("auth.SignIn")}
                       </li>
-                      <li className="header-top-contact vertical-line">
+                      {/* <li className="header-top-contact vertical-line">
                         {t("auth.SignUp")}
-                      </li>
-                    </Link>
+                      </li> */}
+                    </div>
                     <li className="header-top-contact ">
                       <Themetoggle />
                     </li>
