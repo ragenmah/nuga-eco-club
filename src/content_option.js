@@ -24,7 +24,8 @@ const languageSwitcherData = [
 ];
 
 const homePageData = {
-  welcomBannerTitle: "Welcome to NUGA",
+  welcomBannerTitle: "NUGA",
+  // welcomBannerTitle: "Welcome to NUGA",
   welcomBanner:
     "A Hub for Climate Activists! Immerse yourself in our mission to safeguard the heart of the planet. Join us in creating a sustainable future for nature, heritage, and culture.",
 };

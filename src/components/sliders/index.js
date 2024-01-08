@@ -15,13 +15,13 @@ export default function Sliders() {
         return (
           <Carousel.Item className="home-slider-item">
             <img className="d-block w-100" src={data.img} alt="slider image" />
-            <Carousel.Caption className="slider-item-content">
+            {/* <Carousel.Caption className="slider-item-content">
               <h3>{data.title}</h3>
               <p>{data.description}</p>
               <div className="slider-button">
                 <button></button>
               </div>
-            </Carousel.Caption>
+            </Carousel.Caption> */}
           </Carousel.Item>
         );
       })}

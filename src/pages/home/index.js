@@ -61,22 +61,26 @@ export const Home = () => {
               <div className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
                 <div className="align-self-center container w-100">
                   <div className="intro mx-auto">
-                    <h1>{homePageData.welcomBannerTitle}</h1>
-                    <h6>{homePageData.welcomBanner}</h6>
-                    <Link to="/contact">
-                      <div id="button_h" className="ac_btn btn">
+                    <div class="loader">
+                      <h1>{homePageData.welcomBannerTitle}</h1>
+                      <h6>{homePageData.welcomBanner}</h6>
+                    </div>
+                    {/* <h1>{homePageData.welcomBannerTitle}</h1>
+                    <h6>{homePageData.welcomBanner}</h6> */}
+                    {/* <Link to="/contact">
+                      <div id="button_h" className="ac_btn btn mt-5">
                         Join Us
                         <div className="ring one"></div>
                         <div className="ring two"></div>
                         <div className="ring three"></div>
                       </div>
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
                 <div className="align-self-center w-100 m-2">
                   <section className="showcase shape">
                     <div className="video-container">
-                      <video
+                      {/* <video
                         autoPlay={true}
                         controls={false}
                         loop={true}
@@ -85,8 +89,10 @@ export const Home = () => {
                       >
                         <source src={introdata.video_url} type="video/mp4" />
                         Sorry, your browser doesn't support videos.
-                      </video>
+                      </video> */}
+                      {/* <Sliders /> */}
                     </div>
+
                     <div className="content"></div>
                   </section>
                 </div>
@@ -100,7 +106,7 @@ export const Home = () => {
         </div>
       </section>
       <WhatWeDo />
-      <section className="banner">
+      {/* <section className="banner">
         <div className="banner-container">
           <img src="https://images.pexels.com/photos/4028819/pexels-photo-4028819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"></img>
         </div>
@@ -112,68 +118,19 @@ export const Home = () => {
             sustainable future.
           </h5>
         </div>
-      </section>
-      <HowWeDo />
+      </section> */}
+      {/* <HowWeDo /> */}
       <MapNepal />
-      <div className="section pt-0">
-        <Container className="mt-n10 mt-lg-n12 z-2">
-          <Row className="justify-content-center">
-            <Col xs={12}>
-              <Image
-                src="https://images.pexels.com/photos/4028819/pexels-photo-4028819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                alt="Mockup presentation"
-                width={100}
-              />
-            </Col>
-          </Row>
-          <Row className="justify-content-center mt-5 mt-lg-6">
-            <Col xs={6} md={3} className="text-center mb-4">
-              <div className="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
-                {/* <FontAwesomeIcon icon={faPager} className="text-secondary" /> */}
-              </div>
-              <h3 className="fw-bolder">10</h3>
-              <p className="text-gray">Example Pages</p>
-            </Col>
-            <Col xs={6} md={3} className="text-center mb-4">
-              <div className="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
-                {/* <FontAwesomeIcon icon={faReact} className="text-secondary" /> */}
-              </div>
-              <h3 className="fw-bolder">100+</h3>
-              <p className="text-gray">React Components</p>
-            </Col>
-            <Col xs={6} md={3} className="text-center">
-              <div className="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
-                {/* <FontAwesomeIcon icon={faSass} className="text-secondary" /> */}
-              </div>
-              <h3 className="fw-bolder">Workflow</h3>
-              <p className="text-gray">Sass & react-app</p>
-            </Col>
-            <Col xs={6} md={3} className="text-center">
-              <div className="icon icon-shape icon-lg bg-white shadow-lg border-light rounded-circle mb-4">
-                {/* <FontAwesomeIcon
-                  color="secondary"
-                  icon={faBootstrap}
-                  className="text-secondary"
-                /> */}
-              </div>
-              <h3 className="fw-bolder">Bootstrap 5</h3>
-              <p className="text-gray">CSS Framework</p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
 
       <Container>
         <Row className="justify-content-between align-items-center mb-5 mb-lg-7">
           <Col lg={5} className="order-lg-2 mb-5 mb-lg-0">
-            <h2>Powered by React.js</h2>
+            <h2>QR Code Feature</h2>
             <p className="mb-3 lead fw-bold">
-              The most popular front-end library in the world
+              We provide QR code scan feature.
             </p>
             <p className="mb-4">
-              Volt React is an admin dashboard template that is built using
-              React.js components using react hooks and a data-driven structure
-              that can kick-start your app in no time.
+              Experience the convenience of our QR code feature!
             </p>
             {/* <Button
               as={Link}
@@ -196,27 +153,27 @@ export const Home = () => {
           </Col>
           <Col lg={6} className="order-lg-1">
             <Image
-              src="https://images.pexels.com/photos/4028819/pexels-photo-4028819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="Calendar Preview"
-              width={200}
+              src="http://localhost:3001/nuga-eco-club/static/qr/nuga_qr_scan.jpg"
+              alt="qr code scan"
+              // width={400}
+              height={400}
             />
           </Col>
         </Row>
+
+        <HowWeDo />
         <Row className="justify-content-between align-items-center mb-5 mb-lg-7">
           <Col lg={5}>
-            <h2>React.js Components</h2>
-            <p className="mb-3 lead fw-bold">
+            <h2>Tourism and Climate Action Resources</h2>
+            {/* <p className="mb-3 lead fw-bold">
               100+ premium UI elements based on Bootstrap 5
+            </p> */}
+            <p className="mt-3 mb-4 ">
+              Promoting tourism and climate action involves providing resources
+              that educate, encourage sustainable practices, and highlight the
+              impact of tourism on the environment.
             </p>
-            <p className="mb-4">
-              We've built over 100 React.js powered components to be used
-              throughout your application saving you time kickstarting your
-              project.
-            </p>
-            <p className="mb-4">
-              Check out the components and use our live React.js component
-              editor to try the code.
-            </p>
+
             {/* <Button
               as={Link}
               to={Routes.Forms.path}

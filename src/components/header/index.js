@@ -78,6 +78,23 @@ const Headermain = () => {
                   </ul>
                 </div>
               </li>
+              {/* <div class="search-container">
+                <form action="/search" method="get">
+                  <input
+                    className="search expandright"
+                    id="searchright"
+                    type="search"
+                    name="q"
+                    placeholder="Search"
+                  />
+                  <label className="button searchbutton" for="searchright">
+                    <span className="mglass">&#9906;</span>
+                  </label>
+                </form>
+              </div>
+              <a href="#" class="button">
+                x
+              </a> */}
               <Col>{/* <SearchBarNav /> */}</Col>
               <li className="head-responsive-right pull-right">
                 <div className="header-top-right">
@@ -204,23 +221,6 @@ const Headermain = () => {
                   Sign up
                 </Link>
               </li> */}
-              <div class="search-container">
-                <form action="/search" method="get">
-                  <input
-                    className="search expandright"
-                    id="searchright"
-                    type="search"
-                    name="q"
-                    placeholder="Search"
-                  />
-                  <label className="button searchbutton" for="searchright">
-                    <span className="mglass">&#9906;</span>
-                  </label>
-                </form>
-              </div>
-              <a href="#" class="button">
-                x
-              </a>
             </ul>
           </nav>
         </div>

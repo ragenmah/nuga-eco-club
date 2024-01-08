@@ -5,8 +5,15 @@
 
 .home-slider {
     width: 100vw;
+    height: 70vh;
     /* margin-left: 20%; */
     /* margin-right: 10%; */
+}
+
+.home-slider-item img {
+    height: 90vh;
+    width: 100vw;
+    object-fit: cover;
 }
 
 .slider-item-content h3 {
@@ -43,10 +50,11 @@
     align-items: start
 }
 
-.carousel-control-next {
+.carousel-control-next,
+.carousel-control-prev {
     /* text-align: left;
     margin-top: 50px; */
-    /* display: none; */
+    display: none;
 }
 
 .carousel .carousel-indicators button {

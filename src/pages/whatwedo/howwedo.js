@@ -13,8 +13,9 @@ const HowWeDo = () => {
         >
           <Container>
             <Col className="mb-5 d-block mt-5 pt-md-3">
-              <Col lg="4">
-                <h1 className="teams_title mb-2">How We do it</h1>
+              <Col lg="12">
+                {/* <h1 className="teams_title mb-2">Latest News and updates</h1> */}
+                <h1 className="teams_title mb-2">Featured Heritage Spots</h1>
               </Col>
               <Col lg="2">
                 <hr className="t_border my-3 ml-0 text-left" />{" "}

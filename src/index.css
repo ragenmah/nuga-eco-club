@@ -109,6 +109,7 @@ code {
 
 .cursor__dot div {
   z-index: 999999 !important;
+  cursor: default;
 }
 
 .cursor__dot div:last-child {
