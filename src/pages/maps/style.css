@@ -122,10 +122,12 @@ section {
 
 .ac_btn a {
     text-decoration: none;
+    color: var(--secondary-color);
 }
 
 .ac_btn:hover {
-    box-shadow: 8px 8px 0px var(--text-color), -8px -8px 0px var(--text-color);
+    box-shadow: 3px 3px 0px var(--text-color), -3px -3px 0px var(--text-color);
+
 }
 
 .ac_btn:hover .one {
@@ -152,7 +154,7 @@ section {
     background: transparent;
     top: 0;
     left: 0;
-    transform: translate3d(0px, 90px, 0px);
+    transform: translate3d(0px, 70px, 0px);
 }
 
 .ac_btn .one {

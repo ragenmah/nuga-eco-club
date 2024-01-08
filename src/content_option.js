@@ -23,6 +23,12 @@ const languageSwitcherData = [
   },
 ];
 
+const homePageData = {
+  welcomBannerTitle: "Welcome to NUGA",
+  welcomBanner:
+    "A Hub for Climate Activists! Immerse yourself in our mission to safeguard the heart of the planet. Join us in creating a sustainable future for nature, heritage, and culture.",
+};
+
 const introdata = {
   title: "Find The Best heritage walk in just One click",
   subTitle: "BEST PLACE TO FIND AND EXPLORE THAT ALL YOU NEED",
@@ -86,7 +92,7 @@ const teamData = {
   des2: "Discover the faces behind NUGA – John Maharjan, Manisha Maharjan, and designer Ragen Maharjan. As co-founders, John and Manisha bring leadership and a profound commitment to environmental preservation, steering NUGA's mission to safeguard the heart of the planet. Ragen, the creative force, contributes innovative design solutions with a focus on sustainability. Together, this dynamic team is driving NUGA's transformative journey towards a sustainable future, bridging the past, present, and future for the well-being of our planet and its inhabitants. Join us in making a positive impact on the environment and explore the profiles of our dedicated team members.",
 };
 const whatWeDoData = {
-  des1: "NuGA is not just a platform; it's a community. Join us in participating in an activity, learning something new, etc. Connect with like-minded individuals who share your interests.",
+  des1: "NUGA is dedicated to bridging the past, present, and future through climate activism. We strive to protect the interconnected elements that define the heart of the planet - its people, resources, and culture. Explore our initiatives, engage with us, and be a part of positive environmental change.",
   des2: "Whether you're a user or a customer, we invite you to explore our platform, engage with our content, and experience the positive outcome that NUGA has to offer.",
 };
 
@@ -200,4 +206,5 @@ export {
   markerImg,
   logoUrl,
   whatWeDoData,
+  homePageData,
 };

@@ -3,18 +3,18 @@ import { whatWeDoData } from "../../content_option";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const WhatWeDo = () => {
+const HowWeDo = () => {
   return (
     <section className="">
-      <div className="   mt-2">
+      <div className="mt-5">
         <div
-          className=""
+          className="hg_bg-image"
           // style={{ backgroundImage: `url(${aboutus.background_img})` }}
         >
           <Container>
-            <Col className="mb-5  mt-3 pt-md-3">
+            <Col className="mb-5 d-block mt-5 pt-md-3">
               <Col lg="4">
-                <h1 className="teams_title mb-2">What We Do</h1>
+                <h1 className="teams_title mb-2">How We do it</h1>
               </Col>
               <Col lg="2">
                 <hr className="t_border my-3 ml-0 text-left" />{" "}
@@ -46,4 +46,4 @@ const WhatWeDo = () => {
   );
 };
 
-export default WhatWeDo;
+export default HowWeDo;
