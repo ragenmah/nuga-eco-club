@@ -153,7 +153,7 @@ export const Home = () => {
           </Col>
           <Col lg={6} className="order-lg-1">
             <Image
-              src="http://localhost:3001/nuga-eco-club/static/qr/nuga_qr_scan.jpg"
+              src="https://ragenmah.github.io/nuga-eco-club//static/qr/nuga_qr_scan.jpg"
               alt="qr code scan"
               // width={400}
               height={400}
