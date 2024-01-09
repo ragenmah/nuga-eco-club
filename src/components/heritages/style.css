@@ -1,0 +1,54 @@
+.service-item {
+    height: 400px;
+    /* width: 400px; */
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    border-top-right-radius: 50px;
+    transition: all .3s;
+    background-size: cover;
+}
+
+.service-item .icon {
+    /* margin-left: 0px;
+    margin-bottom: 30px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+    transition: all .3s; */
+}
+
+.service-item h4 {
+    transition: all .3s;
+    font-size: 20px;
+    font-weight: 700;
+    /* margin-bottom: 15px; */
+    margin-top: 100%;
+    bottom: 10px;
+    color: white;
+}
+
+.service-item .text-button a {
+    transition: all .3s;
+    font-size: 15px;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    color: white;
+}
+
+.service-item:hover h4,
+.service-item:hover p,
+.service-item:hover .text-button a {
+    color: #fff;
+}
+
+.service-item:hover {
+    background-image: url(http://localhost:3000/nuga-eco-club/static/images/service-bg.jpg);
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}

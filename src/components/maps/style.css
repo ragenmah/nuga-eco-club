@@ -22,3 +22,7 @@
         filter: var(--map-tiles-filter, none);
     }
 }
+
+.interaction_map_container {
+    margin-bottom: 200px;
+}

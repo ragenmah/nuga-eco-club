@@ -137,7 +137,7 @@ input:focus {
 }
 
 .search_field_input::placeholder {
-    color: var(--secondary-color);
+    color: black;
 }
 
 .main-search .search_field_bar .btn-search {
@@ -148,7 +148,8 @@ input:focus {
     position: absolute;
     right: 0;
     top: 10;
-    color: var(--bg-color);
+    color: white;
+    /* color: var(--bg-color); */
 }
 
 .close-btn {

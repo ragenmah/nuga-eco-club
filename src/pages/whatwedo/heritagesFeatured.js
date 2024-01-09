@@ -2,11 +2,12 @@ import React from "react";
 import { whatWeDoData } from "../../content_option";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
-const HowWeDo = () => {
+import Heritages from "../../components/heritages";
+import "./style.css";
+const HeritageFeatured = () => {
   return (
-    <section className="">
-      <div className="mt-5">
+    <section className="heritage-container mb-5">
+      <div className="mt-5 ">
         <div
           className="hg_bg-image"
           // style={{ backgroundImage: `url(${aboutus.background_img})` }}
@@ -21,12 +22,12 @@ const HowWeDo = () => {
                 <hr className="t_border my-3 ml-0 text-left" />{" "}
               </Col>
             </Col>
-            <Row className="sec_sp mt-1 ">
+            {/* <Row className="sec_sp mt-1 ">
               <Col>
                 <h3 className="section-title py-2">{}</h3>
                 <div>
                   <p> {whatWeDoData.des1}</p>
-                  {/* <p> {whatWeDoData.des2}</p> */}
+                  <p> {whatWeDoData.des2}</p>
                 </div>
               </Col>
               <Link to="/about">
@@ -37,7 +38,8 @@ const HowWeDo = () => {
                   <div className="ring three"></div>
                 </div>
               </Link>
-            </Row>
+            </Row> */}
+            <Heritages />
           </Container>
           {/* <br />
           <br /> */}
@@ -47,4 +49,4 @@ const HowWeDo = () => {
   );
 };
 
-export default HowWeDo;
+export default HeritageFeatured;

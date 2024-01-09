@@ -10,8 +10,9 @@ import {
 import nepalGeojson from "../../_mock/nepal/nepal.json";
 import kathmanduGeojson from "../../_mock/nepal/kathmandu.json";
 import { useState, useRef } from "react";
-// import "./style.css";
+import "./style.css";
 import Leaflet from "leaflet";
+import { Container, Row, Col } from "react-bootstrap";
 
 const style = {
   fillColor: "#FEFDF9",
@@ -104,29 +105,23 @@ export const OfficeLocation = () => {
 
   return (
     <>
-      <div className="search-box-container">
-        <div className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
-          <div className="align-self-center container w-100">
-            <div className="intro mx-auto">
-              <h1></h1>
-              <h6></h6>
-              {/* <Link to="/contact">
-                      <div id="button_h" className="ac_btn btn mt-5">
-                        Join Us
-                        <div className="ring one"></div>
-                        <div className="ring two"></div>
-                        <div className="ring three"></div>
-                      </div>
-                    </Link> */}
-            </div>
-          </div>
-          <div className="align-self-center w-100 m-2">
-            <section className="showcase ">
+      <Container className="interaction_map_container mb-5">
+        <Row className=" justify-content-between align-items-center mb-5">
+          <Col className="mb-5  mt-3 ">
+            <Col lg="7">
+              <h1 className="teams_title mb-2">Interaction Map</h1>
+            </Col>
+            <Col lg="2">
+              <hr className="t_border my-3 ml-0 text-left" />{" "}
+            </Col>
+          </Col>
+          <Col lg={6} className="rounded shadow pt-3 w-100">
+            <section className="showcase">
               <MapContainer
-                zoom={6.5}
+                zoom={7.6}
                 scrollWheelZoom={false}
                 style={mapStyle}
-                center={[28.082, 84.078]}
+                center={[28.3, 84.078]}
                 minZoom={2}
                 zoomSnap={0.5}
                 zoomDelta={0.5}
@@ -162,9 +157,9 @@ export const OfficeLocation = () => {
                 />
               </MapContainer>
             </section>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 };

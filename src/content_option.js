@@ -171,7 +171,9 @@ const dataportfolio = [
 
 const contactConfig = {
   YOUR_EMAIL: "projectnuganepal@gmail.com",
+  maitTo: "mailto:projectnuganepal@gmail.com",
   YOUR_FONE: "+977 9843914602",
+  telTo: "tel:+9779843914602",
   description: "",
   address: "Patan, Lalitpur",
   // creat an emailjs.com account

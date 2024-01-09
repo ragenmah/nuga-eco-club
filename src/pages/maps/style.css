@@ -110,7 +110,7 @@ section {
 
 .ac_btn {
     padding: 4px 19px;
-    color: var(--secondary-color);
+    color: var(--text-color);
     position: relative;
     border: var(--secondary-color) 2px solid;
     overflow: hidden;

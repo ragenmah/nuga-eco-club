@@ -34,7 +34,7 @@ import Sliders from "../../components/sliders";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import WhatWeDo from "../whatwedo";
 import { ContactUs } from "../contact";
-import HowWeDo from "../whatwedo/howwedo";
+import HeritageFeatured from "../whatwedo/heritagesFeatured";
 import { OfficeLocation } from "../../components/maps/office_location";
 import { Maps } from "../maps";
 
@@ -132,86 +132,66 @@ export const Home = () => {
         </div>
       </div>
 
-      <Container>
-        <Row className="justify-content-between align-items-center mb-5 mb-lg-7">
-          <Col lg={5} className="order-lg-2 mb-5 mb-lg-0">
-            <h2>QR Code Feature</h2>
-            <p className="mb-3 lead fw-bold">
-              We provide QR code scan feature.
-            </p>
-            <p className="mb-4">
-              Experience the convenience of our QR code feature!
-            </p>
-            {/* <Button
-              as={Link}
-              to={Routes.DashboardOverview.path}
-              variant="secondary"
-              target="_blank"
-            >
-              Live Demo{" "}
-              <FontAwesomeIcon icon={faExternalLinkAlt} className="ms-1" />
-            </Button>
-            <Button
-              as={HashLink}
-              to="#download"
-              variant="outline-primary"
-              className="ms-3"
-            >
-              <FontAwesomeIcon icon={faShoppingCart} className="me-1" />{" "}
-              Download
-            </Button> */}
+      <Container className="qr_code_container">
+        <Col className="mb-5 d-block mt-5 pt-md-3">
+          <Col lg="12">
+            {/* <h1 className="teams_title mb-2">Latest News and updates</h1> */}
+            <h1 className="teams_title mb-2">QR Code Feature</h1>
           </Col>
-          <Col lg={6} className="qr__code_image">
+          <Col lg="2">
+            <hr className="t_border my-3 ml-0 text-left" />{" "}
+          </Col>
+        </Col>
+        <Row className="justify-content-between align-items-center mt-5 mb-5 mb-lg-7">
+          <Col lg={5} className="qr__code_image">
             <Image
               src="https://ragenmah.github.io/nuga-eco-club//static/qr/nuga_qr_scan.jpg"
               alt="qr code scan"
               // width={400}
             />
           </Col>
-        </Row>
-
-        <HowWeDo />
-        <Row className="justify-content-between align-items-center mb-5 mb-lg-7">
-          <Col lg={5}>
-            <h2>Tourism and Climate Action Resources</h2>
-            {/* <p className="mb-3 lead fw-bold">
-              100+ premium UI elements based on Bootstrap 5
-            </p> */}
-            <p className="mt-3 mb-4 ">
-              Promoting tourism and climate action involves providing resources
-              that educate, encourage sustainable practices, and highlight the
-              impact of tourism on the environment.
+          <Col lg={6} className="order-lg-2 mb-5 mb-lg-0">
+            <p className="mb-3 lead fw-bold">
+              We provide QR code scan feature.
             </p>
+            <p className="mb-4">
+              Experience the convenience of our QR code feature!
+            </p>
+          </Col>
+        </Row>
+      </Container>
+      <HeritageFeatured />
+      <Container>
+        <Row className=" justify-content-between align-items-center mb-5 mb-lg-7">
+          <Col className="mb-5 d-block pt-md-3">
+            <Col lg="12">
+              {/* <h1 className="teams_title mb-2">Latest News and updates</h1> */}
+              <h1 className="teams_title mb-2">
+                Tourism and Climate Action Resources
+              </h1>
+            </Col>
+            <Col lg="2">
+              <hr className="t_border my-3 ml-0 text-left" />{" "}
+            </Col>
+          </Col>
 
-            {/* <Button
-              as={Link}
-              to={Routes.Forms.path}
-              variant="secondary"
-              className="mb-5 mb-lg-0"
-              target="_blank"
-            >
-              <FontAwesomeIcon icon={faReact} className="me-1" /> Components
-              examples
-            </Button> */}
-          </Col>
-          <Col lg={6} className="rounded shadow pt-3">
-            {/* <Code
-              scope={{ Form, Button }}
-              code={`<Form>
-  <Form.Group id="frameworks" className="mb-3">
-    <Form.Label>Example select</Form.Label>
-    <Form.Select>
-      <option defaultValue>Open this select menu</option>
-      <option>One</option>
-      <option>Two</option>
-      <option>Three</option>
-    </Form.Select>
-  </Form.Group>
-  <Button variant="primary" className="m-1">Primary</Button>
-</Form>`}
-              language="jsx"
-            /> */}
-          </Col>
+          <Row className="justify-content-between align-items-center mb-5 mb-lg-7">
+            {/* <Col lg={5} className="qr__code_image">
+              <Col lg={6} className="rounded shadow pt-3"></Col>
+            </Col> */}
+            <Col lg={8} className="order-lg-2 mb-lg-0">
+              <p className="mt-3 mb-4 fw-bold quote-text">
+                <span>
+                  Promoting tourism and climate action involves providing
+                  resources that educate,
+                </span>
+                <marker>
+                  &nbsp; encourage sustainable practices, and highlight the
+                  impact of tourism on the environment.
+                </marker>
+              </p>
+            </Col>
+          </Row>
         </Row>
       </Container>
       <ContactUs />

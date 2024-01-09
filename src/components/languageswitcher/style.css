@@ -37,6 +37,7 @@
 .menu ul li {
     padding-top: 10px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 /* Show the menu when the 'visible' class is applied */

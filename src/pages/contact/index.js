@@ -19,8 +19,6 @@ export const newicon = new Leaflet.Icon({
   iconSize: [25, 55],
 });
 
-
-
 export const ContactUs = () => {
   const [formData, setFormdata] = useState({
     email: "",
@@ -119,25 +117,49 @@ export const ContactUs = () => {
           </Col>
           <Col lg="5" className="mb-5  ">
             <h3 className=" py-4">Get in touch</h3>
-            <address>
-              <strong>Email:</strong>{" "}
-              <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
-                {contactConfig.YOUR_EMAIL}
-              </a>
-              <br />
-              <br />
-              {contactConfig.hasOwnProperty("YOUR_FONE") ? (
-                <p>
-                  <strong>Phone:</strong> {contactConfig.YOUR_FONE}
-                </p>
-              ) : (
-                ""
-              )}
-            </address>
-            <p>
-              <strong>Address:</strong>
-              {" " + contactConfig.address}
-            </p>{" "}
+            <div className="d-flex flex-column align-items-start justify-content-start mb-4">
+              <div className="d-flex justify-content-center align-items-center mt-1 mb-1">
+                <div className="searchicon m-0">
+                  <div className="innersearchicon">
+                    <i class="fas fa-envelope"></i>
+                  </div>
+                </div>
+
+                <div className="m-2">
+                  <a href={contactConfig.maitTo}>{contactConfig.YOUR_EMAIL}</a>
+                </div>
+              </div>
+
+              <div className="d-flex justify-content-center align-items-center mt-1 mb-1">
+                <div className="searchicon m-0">
+                  <div className="innersearchicon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                </div>
+
+                <div className="m-2">
+                  <a href={contactConfig.telTo}>
+                    {contactConfig.hasOwnProperty("YOUR_FONE") ? (
+                      <p>{contactConfig.YOUR_FONE}</p>
+                    ) : (
+                      ""
+                    )}
+                  </a>
+                </div>
+              </div>
+              <div className="d-flex justify-content-center align-items-center mt-1 mb-1">
+                <div className="searchicon m-0">
+                  <div className="innersearchicon">
+                    <i class="fas fa-location-arrow"></i>
+                  </div>
+                </div>
+
+                <div className="m-2">
+                  <p>{contactConfig.address}</p>
+                </div>
+              </div>
+            </div>
+
             <OfficeLocationMap />
           </Col>
           <Col lg="7" className="d-flex align-items-center ">
