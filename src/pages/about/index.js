@@ -36,7 +36,17 @@ export const About = () => {
               </Col>
               <Row className="sec_sp">
                 <Col lg="4">
-                  <img src={dataabout.img} width={300}></img>
+                  {/* <img src={dataabout.img} width={300}></img> */}
+                  <img
+                    src="https://ragenmah.github.io/nuga-eco-club/static/images/logo.png"
+                    height={300}
+                    // width={120}
+                  ></img>
+                  <img
+                    src="https://ragenmah.github.io/nuga-eco-club/static/images/nuga_maps.png"
+                    height={280}
+                    // width={120}
+                  ></img>
                 </Col>
                 <Col lg="8">
                   <h3 className="section-title py-4">{dataabout.title}</h3>

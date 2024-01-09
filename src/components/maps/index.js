@@ -75,6 +75,7 @@ export const MapNepal = () => {
       color: "white",
       dashArray: "1",
       fillOpacity: 0.5,
+      cursor: "pointer",
     };
   };
   const mapStyle = {
