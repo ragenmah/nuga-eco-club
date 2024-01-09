@@ -35,6 +35,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import WhatWeDo from "../whatwedo";
 import { ContactUs } from "../contact";
 import HowWeDo from "../whatwedo/howwedo";
+import { OfficeLocation } from "../../components/maps/office_location";
+import { Maps } from "../maps";
 
 export const Home = () => {
   // const [map, setMap] = useState(null);
@@ -61,10 +63,6 @@ export const Home = () => {
               <div className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
                 <div className="align-self-center container w-100">
                   <div className="intro mx-auto">
-                    <div class="loader">
-                      <h1>{homePageData.welcomBannerTitle}</h1>
-                      <h6>{homePageData.welcomBanner}</h6>
-                    </div>
                     {/* <h1>{homePageData.welcomBannerTitle}</h1>
                     <h6>{homePageData.welcomBanner}</h6> */}
                     {/* <Link to="/contact">
@@ -98,6 +96,14 @@ export const Home = () => {
                 </div>
               </div>
             </div>
+            <div class="loader mt-5">
+              <h1>{homePageData.welcomBannerTitle}</h1>
+              <h6 className="mt-5">
+                {homePageData.welcomBanner1}
+                {homePageData.welcomBanner2}
+              </h6>
+              {/* <span></span> */}
+            </div>
 
             {/* <Row>
               <img src="static/backgrounds/image_1.png"></img>
@@ -120,7 +126,11 @@ export const Home = () => {
         </div>
       </section> */}
       {/* <HowWeDo /> */}
-      <MapNepal />
+      <div className="intro_sec d-block d-lg-flex align-items-center ">
+        <div className="h_bg-image order-1 order-lg-2 h-100">
+          <OfficeLocation />
+        </div>
+      </div>
 
       <Container>
         <Row className="justify-content-between align-items-center mb-5 mb-lg-7">
@@ -151,12 +161,11 @@ export const Home = () => {
               Download
             </Button> */}
           </Col>
-          <Col lg={6} className="order-lg-1">
+          <Col lg={6} className="qr__code_image">
             <Image
               src="https://ragenmah.github.io/nuga-eco-club//static/qr/nuga_qr_scan.jpg"
               alt="qr code scan"
               // width={400}
-              height={400}
             />
           </Col>
         </Row>

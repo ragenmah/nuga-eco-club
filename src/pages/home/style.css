@@ -190,6 +190,8 @@
 
 .loader h6 {
     text-align: center;
+    /* color: rgb(66, 64, 64); */
+    font-size: 32px;
 }
 
 @keyframes animate {
@@ -208,4 +210,19 @@
     100% {
         background-position: left 2400px top 80px;
     }
+}
+
+.qr__code_image {
+    /* background-color: black; */
+    /* padding: 120px; */
+    /* border: 10px solid black; */
+}
+
+.qr__code_image img {
+    padding: 60px;
+    /* background-color: #FE932E; */
+    background-color: rgb(49, 48, 48);
+    height: 600px;
+    width: 650px;
+    /* border: 10px solid black; */
 }

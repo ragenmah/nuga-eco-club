@@ -1,7 +1,7 @@
 :root {
   --bg-color: #0c0c0c;
   --primary-color: #010409;
-  --secondary-color: #f3f3f3;
+  --secondary-color: #f4f1f1;
   --text-color: #fff;
   --text-color-2: #fff;
   --text-color-3: rgb(204, 0, 0);
@@ -10,6 +10,7 @@
   --text-color-search: #0d0d0d;
   --white-color: #e6e6e6;
   --map-tiles-filter: brightness(1) invert(0);
+  --yellow-color: #FE932E;
 }
 
 [data-theme="light"] {
@@ -24,8 +25,10 @@
   --text-color-3: rgb(204, 0, 0);
   --overlay-color: rgb(255 255 255 / 70%);
   --text-color-search: #0d0d0d;
-  --white-color: #e6e6e6;
+  --white-color: #242222;
+  /* --white-color: #e6e6e6; */
   --map-tiles-filter: brightness(0.6) invert(1) hue-rotate(200deg) saturate(1) brightness(1);
+  --yellow-color: #FE932E;
 }
 
 @font-face {

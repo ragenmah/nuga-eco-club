@@ -1,0 +1,51 @@
+.ng-quote {
+    /* margin-top: 96px; */
+    position: relative;
+}
+
+.ng-container {
+    margin: 0 auto;
+    max-width: 1640px;
+    padding: 0 32px;
+    width: 100%;
+}
+
+.quote-text {
+    /* max-width: 835px; */
+    margin-bottom: 32px;
+}
+
+.quote-text span,
+marker {
+    font-size: 40px;
+    /* font-size: 3.4375rem; */
+    /* color: rgb(56, 55, 55); */
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    line-height: 55px;
+}
+
+
+
+
+.quote-text marker {
+    /* background: none; */
+    background-image: linear-gradient(transparent 60%, var(--yellow-color) 0);
+    background-repeat: no-repeat;
+    background-size: 0 98%;
+    font-style: normal;
+    transition: background-size 1s cubic-bezier(.66, 0, .56, 1) .25s
+}
+
+.quote-text marker:after {
+    background-image: linear-gradient(transparent 60%, var(--yellow-color) 0);
+    background-repeat: no-repeat;
+    background-size: 100% 98%;
+    content: "";
+    display: inline-block;
+    width: 5px
+}
+
+.quote-text marker {
+    background-size: 100% 98%
+}

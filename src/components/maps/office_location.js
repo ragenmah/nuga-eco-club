@@ -1,8 +1,17 @@
-import { MapContainer, TileLayer, GeoJSON, FeatureGroup } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  GeoJSON,
+  FeatureGroup,
+  Marker,
+  Popup,
+} from "react-leaflet";
 // import "../../_mock/nepal/nepal.json";
 import nepalGeojson from "../../_mock/nepal/nepal.json";
+import kathmanduGeojson from "../../_mock/nepal/kathmandu.json";
 import { useState, useRef } from "react";
 // import "./style.css";
+import Leaflet from "leaflet";
 
 const style = {
   fillColor: "#FEFDF9",
@@ -17,7 +26,15 @@ const style = {
 //   width: "100%",
 //   //   margin: "0 auto",
 // };
+const markerImg =
+  "https://ragenmah.github.io/nuga-eco-club/static/markers/marker.svg";
 
+export const newicon = new Leaflet.Icon({
+  iconUrl: markerImg,
+  iconAnchor: [5, 55],
+  popupAnchor: [10, -44],
+  iconSize: [25, 55],
+});
 export const OfficeLocation = () => {
   const [onselect, setOnselect] = useState({});
   /* function determining what should happen onmouseover, this function updates our state*/
@@ -86,26 +103,68 @@ export const OfficeLocation = () => {
   };
 
   return (
-    <MapContainer
-      zoom={10}
-      scrollWheelZoom={false}
-      style={mapStyle}
-      center={[27.671971, 85.321552]}
-      minZoom={2}
-      zoomSnap={0.5}
-      zoomDelta={0.5}
-      wheelPxPerZoomLevel={120}
-      maxBoundsViscosity={0.5}
-      attributionControl={false}
-      zoomControl={true}
-      doubleClickZoom={false}
-      touchZoom={false}
-      boxZoom={false}
-    >
-      <TileLayer
-        url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
-        attribution="NugaMaps"
-      />
-    </MapContainer>
+    <>
+      <div className="search-box-container">
+        <div className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
+          <div className="align-self-center container w-100">
+            <div className="intro mx-auto">
+              <h1></h1>
+              <h6></h6>
+              {/* <Link to="/contact">
+                      <div id="button_h" className="ac_btn btn mt-5">
+                        Join Us
+                        <div className="ring one"></div>
+                        <div className="ring two"></div>
+                        <div className="ring three"></div>
+                      </div>
+                    </Link> */}
+            </div>
+          </div>
+          <div className="align-self-center w-100 m-2">
+            <section className="showcase ">
+              <MapContainer
+                zoom={6.5}
+                scrollWheelZoom={false}
+                style={mapStyle}
+                center={[28.082, 84.078]}
+                minZoom={2}
+                zoomSnap={0.5}
+                zoomDelta={0.5}
+                wheelPxPerZoomLevel={120}
+                maxBoundsViscosity={0.5}
+                attributionControl={false}
+                zoomControl={false}
+                doubleClickZoom={false}
+                touchZoom={false}
+                boxZoom={false}
+              >
+                <FeatureGroup>
+                  <GeoJSON
+                    data={nepalGeojson}
+                    style={style}
+                    onEachFeature={onEachFeature}
+                  />
+                </FeatureGroup>
+                <Marker position={[28.082, 84.078]} icon={newicon}>
+                  <Popup>
+                    <div>
+                      <div className="caption">
+                        Nuga Office
+                        <hr />
+                        Patan, Lalitpur
+                      </div>
+                    </div>
+                  </Popup>
+                </Marker>
+                <TileLayer
+                  url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
+                  attribution="NugaMaps"
+                />
+              </MapContainer>
+            </section>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };

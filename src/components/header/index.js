@@ -11,6 +11,7 @@ import LanguageSwitcher from "../languageswitcher";
 import SearchBarNav from "../searchbar/searchbar_nav";
 import Modal from "../modal";
 import { SigIn } from "../../pages/auth/sigin";
+import SearchbarTop from "../searchbar/searchbar_top";
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
@@ -25,7 +26,7 @@ const Headermain = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const [showModal, setShowModal] = useState(false);
-  const [hideModal, setHideModal] = useState(false);
+  const [showSearchTop, setShowSearchTop] = useState(false);
 
   const handleShowModal = () => {
     setShowModal(true);
@@ -33,6 +34,14 @@ const Headermain = () => {
 
   const handleHideModal = () => {
     setShowModal(false);
+  };
+
+  const handleShowSearchTop = () => {
+    setShowSearchTop(true);
+  };
+
+  const handleHideSearchTop = () => {
+    setShowSearchTop(false);
   };
 
   const listenScrollEvent = (e) => setIsScrolled(window.scrollY > 400);
@@ -61,6 +70,14 @@ const Headermain = () => {
         <Modal show={showModal} handleClose={handleHideModal}>
           <SigIn />
         </Modal>
+
+        {showSearchTop ? (
+          <SearchbarTop
+            handleHideSearchTop={(event) => handleHideSearchTop(event)}
+          />
+        ) : (
+          <></>
+        )}
         {!isScrolled && (
           <div id="header-top" className="header-top">
             <ul>
@@ -200,18 +217,24 @@ const Headermain = () => {
               </li> */}
               <li>
                 <Link to="/ContactUs" className="link">
-                  {t("header.ContactUs")}{" "}
+                  {t("header.ContactUs")}
                 </Link>
               </li>
               <li>
-                {isScrolled && (
+                <div className="searchicon" onClick={handleShowSearchTop}>
+                  <div className="innersearchicon">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+              </li>
+              <li>
+                {/* {isScrolled && (
                   <Link to="/auth/signin" className="">
                     <h4 className="sign__up">{t("header.Login/Register")}</h4>
                   </Link>
-                )}
+                )} */}
               </li>
               <li>
-                {" "}
                 <div className="px-2 pull-right">
                   {isScrolled && <Themetoggle />}
                 </div>
