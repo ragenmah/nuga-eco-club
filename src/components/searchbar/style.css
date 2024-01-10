@@ -98,8 +98,8 @@ input:focus {
     position: fixed;
     right: 0;
     top: 0;
-    /* transition: visibility .5s ease, opacity .5s ease;
-    visibility: hidden; */
+   transition: visibility .5s ease, opacity .5s ease;
+
     width: 100%;
     z-index: 150;
 }
@@ -161,9 +161,9 @@ input:focus {
     /* z-index: 010000; */
 }
 
-/* .close-btn i {
-    color: red;
-    height: 20px;
+.close-btn i {
+    /* color: black; */
+    /* height: 20px;
     width: 200px;
-    z-index: 9999;
-} */
+    z-index: 9999; */
+}

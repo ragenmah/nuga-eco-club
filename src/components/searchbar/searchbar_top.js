@@ -29,7 +29,7 @@ const SearchbarTop = ({ handleHideSearchTop }) => {
               </button>
             </form>
             <div className="close-btn" onClick={handleHideSearchTop}>
-              <i class="fas fa-times "></i>
+              <i class="fas fa-times text-dark"></i>
             </div>
           </div>
         </div>
