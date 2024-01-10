@@ -36,12 +36,20 @@ export const newicon = new Leaflet.Icon({
   popupAnchor: [10, -44],
   iconSize: [25, 55],
 });
+
+const locations = [
+  { position: [27.708936, 85.264331], name: "Syuchatar" },
+  { position: [27.658773, 85.273429], name: "kirtipur" },
+  { position: [27.692065, 85.321151], name: "Kathmandu" },
+  // Add more locations as needed
+];
+
 export const OfficeLocation = () => {
   const [onselect, setOnselect] = useState({});
   /* function determining what should happen onmouseover, this function updates our state*/
   const highlightFeature = (e) => {
     var layer = e.target;
-    const { County, Total, Male, Female, Intersex, Desnity } =
+    const { County, Total, Male, Female, Intersex, Desnity, district } =
       e.target.feature.properties;
     setOnselect({
       county: County,
@@ -83,7 +91,7 @@ export const OfficeLocation = () => {
       ? "#fc9272"
       : density > 23
       ? "#fcbba1"
-      : "black";
+      : "red";
   };
   const style = (feature) => {
     return {
@@ -120,7 +128,6 @@ export const OfficeLocation = () => {
               <section className="showcase">
                 <MapContainer
                   zoom={7.6}
-                  scrollWheelZoom={false}
                   style={mapStyle}
                   center={[27.692065, 85.321151]}
                   minZoom={2}
@@ -130,16 +137,21 @@ export const OfficeLocation = () => {
                   maxBoundsViscosity={0.5}
                   attributionControl={false}
                   zoomControl={false}
-                  doubleClickZoom={false}
+                  scrollWheelZoom={true}
+                  doubleClickZoom={true}
                   touchZoom={false}
-                  boxZoom={false}
+                  boxZoom={true}
                 >
                   <FeatureGroup>
                     <GeoJSON
                       data={nepalGeojson}
                       style={style}
                       onEachFeature={onEachFeature}
-                    />
+                    >
+                      <Popup>
+                        {(layer) => layer.features.properties.district}
+                      </Popup>
+                    </GeoJSON>
                   </FeatureGroup>
                   <Marker position={[27.692065, 85.321151]} icon={newicon}>
                     {/* <Popup>
@@ -152,11 +164,20 @@ export const OfficeLocation = () => {
                       </div>
                     </Popup> */}
                   </Marker>
-                  <TileLayer
+                  {locations.map((location, index) => (
+                    <Marker
+                      key={index}
+                      position={location.position}
+                      icon={newicon}
+                    >
+                      <Popup>{location.name}</Popup>
+                    </Marker>
+                  ))}
+                  {/* <TileLayer
                     // url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution="NugaMaps"
-                  />
+                  /> */}
                 </MapContainer>
               </section>{" "}
               <div className="rounded shadow stats___container ">
