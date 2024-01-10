@@ -5,7 +5,11 @@
     column-gap: 4rem;
     -moz-column-gap: 4rem;
     -webkit-column-gap: 4rem;
+
+    cursor: pointer;
 }
+
+
 
 .po_item {
     display: inline-block;
@@ -14,23 +18,40 @@
     text-align: center;
     margin: 0.5rem auto;
     position: relative;
-    background: var(--secondary-color);
+    /* background: var(--secondary-color); */
     padding: 6px;
-    border: 1px solid var(--secondary-color);
-    transition: 0.3s ease;
+    /* border: 1p x solid var(--secondary-color); */
+    background-color: #fff;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     /* font-size: 0; */
     min-height: 300px;
+    max-width: 100%;
+    border-radius: 10px;
+    border-top-right-radius: 50px;
+    transition: all .3s;
+    background-size: cover;
 }
 
-.po_item img {
+/* .po_item img {
     max-width: 100%;
+    border-radius: 10px;
+    border-top-right-radius: 50px;
+    transition: all .3s;
+    background-size: cover;
+} */
+
+.po_item:hover {
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
 }
 
 .po_item .content {
     position: absolute;
     /* height: 0;
     width: 0; */
-    top: 50%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* background: var(--overlay-color); */
@@ -42,12 +63,19 @@
     height: 100%;
     width: 100%;
     transition: 0.3s ease-in-out;
+    /* display: none; */
     /* opacity: 0; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
+}
+
+.po_item .content:hover {
+    /* color: red; */
+    top: 78%;
 }
 
 .content p {
     background: var(--overlay-color);
+    /* color: white; */
     padding: 10px;
 }
 
@@ -75,7 +103,7 @@
 
 .po_item .content a {
     background: var(--bg-color);
-    border: solid 1px var(--text-color);
+    /* border: solid 1px var(--text-color); */
     padding: 4px 8px;
     text-align: center;
     font-size: 1rem;
@@ -88,21 +116,25 @@
 
 
 /* article */
-.site__page{
-    margin-top:80px;
+.site__page {
+    margin-top: 80px;
 }
+
 .article-card-header__content {
     overflow: hidden;
     padding: 16px 24px 18px;
     background-color: var(--bg-color);
-    border-top:10px solid #000;
+    border-top: 10px solid #000;
 }
 
 /* .article-story-group,
 .card__content{margin-top: 600px;} */
 
 
-.card__content{margin-top: 0px;}
+.card__content {
+    margin-top: 0px;
+}
+
 .article-card-header__subhead {
     color: #72767e;
     display: block;
@@ -115,10 +147,11 @@
     text-transform: uppercase;
 }
 
-.article-card-header{
+.article-card-header {
     border: none;
     /* background-color: #000; */
 }
+
 .article-story-group__item {
     margin-bottom: 48px;
 }
@@ -132,12 +165,12 @@
     color: #151d2d;
     /* font-family: ff-meta-web-pro,sans-serif; */
     /* font-size: 28px; */
-     font-size: 32px;
+    font-size: 32px;
 
     font-weight: 700;
     /* letter-spacing: -1.5px; */
     line-height: 55px;
- 
+
     letter-spacing: 0;
     /* line-height: 1.1em; */
     margin-bottom: 20px;
@@ -164,7 +197,9 @@
     color: #72767e;
 }
 
-.adidas-campaign-page .button--primary, .adidas-campaign-page .button--primary:hover, .adidas-campaign-page .button--primary:focus {
+.adidas-campaign-page .button--primary,
+.adidas-campaign-page .button--primary:hover,
+.adidas-campaign-page .button--primary:focus {
     background-color: #000;
     color: #fff;
 }
@@ -175,7 +210,8 @@
     padding-bottom: 10px;
 }
 
-.node__content, .node--type-ppv-package.node--view-mode-full .node__content {
+.node__content,
+.node--type-ppv-package.node--view-mode-full .node__content {
     margin: 0 auto;
     width: 80%;
 }
@@ -186,17 +222,45 @@
     padding-top: 16px;
 }
 
-.article-body{
+.article-body {
     margin-top: 2rem;
 }
 
-.article-body p{
+.article-body p {
     font-size: 18px;
     font-weight: 800;
     margin-top: 2rem;
 }
 
-.references{font-size: 24px;
-font-weight: 600;
+.references {
+    font-size: 24px;
+    font-weight: 600;
 
+}
+
+
+/* discover search */
+.discover_search_container {
+    margin-top: 160px;
+    margin-bottom: 100px;
+}
+
+#listing .sidebar {
+    /* display: block; */
+    /* overflow: auto; */
+    height: calc(100vh - 80px);
+    width: 100vh;
+    /* max-width: 90%; */
+    flex: 0 0 20%;
+    position: sticky;
+    /* top: 80px; */
+    padding: 0;
+    padding-top: 15px;
+    border-right: 1px solid #eee;
+}
+
+.menu-title {
+    font-size: 40px;
+    font-weight: 700;
+    display: block;
 }

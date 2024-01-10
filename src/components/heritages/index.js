@@ -22,8 +22,8 @@ const Heritages = () => {
               <h4>Patan Durbar Square</h4>
               {/* <p></p> */}
               <div class="text-button">
-                <Link to='/detail'>
-                  Read More <i class="fa fa-chevron-right"></i>
+                <Link to="/detail">
+                  Explore <i class="fa fa-chevron-right"></i>
                 </Link>
               </div>
             </div>
@@ -42,8 +42,8 @@ const Heritages = () => {
                 free to modify or edit this layout.
               </p> */}
               <div class="text-button">
-              <Link to='/detail'>
-                  Read More <i class="fa fa-chevron-right"></i>
+                <Link to="/detail">
+                  Explore <i class="fa fa-chevron-right"></i>
                 </Link>
               </div>
             </div>
@@ -63,8 +63,8 @@ const Heritages = () => {
                 williamsburg photo booth quinoa and fashion axe.
               </p> */}
               <div class="text-button">
-              <Link to='/detail'>
-                  Read More <i class="fa fa-chevron-right"></i>
+                <Link to="/detail">
+                  Explore <i class="fa fa-chevron-right"></i>
                 </Link>
               </div>
             </div>

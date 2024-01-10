@@ -10,6 +10,7 @@
     border-top-right-radius: 50px;
     transition: all .3s;
     background-size: cover;
+    margin-bottom: 30px;
 }
 
 .service-item .icon {
@@ -46,13 +47,11 @@
 }
 
 .service-item:hover {
-    background-image: url(http://localhost:3000/nuga-eco-club/static/images/service-bg.jpg);
+    /* background-image: url(http://localhost:3000/nuga-eco-club/static/images/service-bg.jpg); */
     background-position: right top;
     background-repeat: no-repeat;
     background-size: cover;
     cursor: pointer;
 }
 
-.article-card-header__media img{
-    
-}
+.article-card-header__media img {}

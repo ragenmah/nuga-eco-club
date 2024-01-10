@@ -53,33 +53,28 @@ export const Maps = () => {
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-100 "
-          // style={{ backgroundImage: `url(${introdata.your_img_url})` }}
+            // style={{ backgroundImage: `url(${introdata.your_img_url})` }}
           >
             <MapNepal></MapNepal>
             <div className="search-box-container container-margin w-75 ">
-              <Container className=" order-2 order-lg-1 h-100 w-75 d-lg-flex justify-content-space-around ">
+              <Container className=" h-100 w-75 d-flex ">
                 <div className="align-self-center ">
                   <div className="">
                     <div className=" quote-text">
                       <span>{datamaps.title}</span>
                       <marker>{datamaps.title2}</marker>
-
                     </div>
-
 
                     <Col className="d-flex flex-row justify-content-space-between ">
                       <img src="static/apps/playstore.png" height={120}></img>
                       <br />
                       <img src="static/apps/appstore.png" height={120}></img>
                     </Col>
-
                   </div>
                 </div>
                 <div className="align-self-center w-75 m-2"></div>
               </Container>
             </div>
-
-
           </div>
         </div>
       </section>
