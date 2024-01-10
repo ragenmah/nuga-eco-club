@@ -53,88 +53,36 @@ export const Maps = () => {
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-100 "
-            // style={{ backgroundImage: `url(${introdata.your_img_url})` }}
+          // style={{ backgroundImage: `url(${introdata.your_img_url})` }}
           >
             <MapNepal></MapNepal>
-            <div className="search-box-container">
-              <Container className=" order-2 order-lg-1 h-100 d-lg-flex justify-content-space-around ">
-                <div className="align-self-center w-100">
-                  <div className="intro mx-auto">
-                    <h3>{datamaps.title}</h3>
-                    {/* <h2 className="mb-1x">{introdata.title}</h2> */}
-                    <Row className="d-flex flex-direction-col justify-content-space-between ">
-                      <img src="static/apps/playstore.png"></img>
+            <div className="search-box-container container-margin w-75 ">
+              <Container className=" order-2 order-lg-1 h-100 w-75 d-lg-flex justify-content-space-around ">
+                <div className="align-self-center ">
+                  <div className="">
+                    <div className=" quote-text">
+                      <span>{datamaps.title}</span>
+                      <marker>{datamaps.title2}</marker>
 
-                      <img src="static/apps/appstore.png"></img>
-                    </Row>
-                    {/* <h1 className="fluidz-48 mb-1x">
-                    <Typewriter
-                      options={{
-                        strings: [
-                          introdata.animated.first,
-                          introdata.animated.second,
-                          introdata.animated.third,
-                        ],
-                        autoStart: true,
-                        loop: true,
-                        deleteSpeed: 10,
-                      }}
-                    />
-                  </h1> */}
-                    {/* <p className="mb-1x">{introdata.description}</p>
-                  <p className="mb-1x">{dataabout.title}</p>
-                  <div className="intro_btn-action pb-5">
-                    <Link to="/portfolio" className="text_2">
-                      <div id="button_p" className="ac_btn btn ">
-                        Discover
-                        <div className="ring one"></div>
-                        <div className="ring two"></div>
-                        <div className="ring three"></div>
-                      </div>
-                    </Link>
-                    <Link to="/contact">
-                      <div id="button_h" className="ac_btn btn">
-                        Contact Us
-                        <div className="ring one"></div>
-                        <div className="ring two"></div>
-                        <div className="ring three"></div>
-                      </div>
-                    </Link>
-                  </div> */}
+                    </div>
+
+
+                    <Col className="d-flex flex-row justify-content-space-between ">
+                      <img src="static/apps/playstore.png" height={120}></img>
+                      <br />
+                      <img src="static/apps/appstore.png" height={120}></img>
+                    </Col>
+
                   </div>
                 </div>
-                <div className="align-self-center w-100 m-2"></div>
+                <div className="align-self-center w-75 m-2"></div>
               </Container>
             </div>
 
-            {/* <Row>
-              <img src="static/backgrounds/image_1.png"></img>
-            </Row> */}
+
           </div>
         </div>
       </section>
     </HelmetProvider>
   );
 };
-
-// const SimpleMap = () => {
-//   const mapRef = useRef(null);
-//   const latitude = 51.505;
-//   const longitude = -0.09;
-
-//   return (
-//     // Make sure you set the height and width of the map container otherwise the map won't show
-//     <MapContainer
-//       center={[latitude, longitude]}
-//       zoom={13}
-//       ref={mapRef}
-//       style={{ height: "30vh", width: "30vw" }}
-//     >
-//       <TileLayer
-//         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-//         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-//       />
-//       {/* Additional map layers or components can be added here */}
-//     </MapContainer>
-//   );
-// };

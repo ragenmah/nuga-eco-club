@@ -67,7 +67,8 @@ const dataabout = {
 
 const datamaps = {
   title:
-    "Get a hands-on experience of our rich features, by downloading our mobile apps from App Store and Google Play Store.",
+    "Get a hands-on experience of our rich features, by downloading our mobile apps ",
+    title2:"from App Store and Google Play Store."
 };
 
 const teams = [
