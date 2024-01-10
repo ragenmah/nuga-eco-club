@@ -19,7 +19,7 @@ const DetailPage = () => {
                   <div class="card__content">
                     <div class="article-card-header__wrapper">
                       <div class="article-card-header__content">
-                        <span class="h6 article-card-header__subhead">News</span>
+                        <span class="h6 article-card-header__subhead">INFO HERITAGE</span>
                         <h1 class="article-card-header__title" title="Rato Machhindranath Temple"><span
                           class="article-card-header__title-words"> Rato Machhindranath Temple
                         </span>
@@ -67,7 +67,7 @@ const DetailPage = () => {
                           src="/sites/default/files/styles/large_16x9/public/images/elneny-egypt-warm-up.png?auto=webp&amp;itok=oA6wYZ9S"
                           alt="Mohamed Elneny warming up for Egypt" typeof="foaf:Image" /> */}
                         </picture>
-                        <img src='https://images.pexels.com/photos/4534200/pexels-photo-4534200.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' width={1240} className=' img-fluid'></img>
+                        <img src='https://ktmguide.com/wp-content/uploads/2020/03/r0-1.jpg' width={1240} className=' img-fluid'></img>
                       </div>
                     </div>
 

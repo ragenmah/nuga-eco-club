@@ -53,15 +53,15 @@ import {
       });
       layer.setStyle({
         weight: 1,
-        color: "black",
+        // color: "black",
         fillOpacity: 1,
       });
     };
   
     /*resets our state i.e no properties should be displayed when a feature is not clicked or hovered over */
     const resetHighlight = (e) => {
-      setOnselect({});
-      e.target.setStyle(style(e.target.feature));
+      // setOnselect({});
+      // e.target.setStyle(style(e.target.feature));
     };
     /* this function is called when a feature in the map is hovered over or when a mouse moves out of it, the function calls two functions
    highlightFeature and resetHighlight*/
@@ -73,17 +73,17 @@ import {
     };
   
     const mapPolygonColorToDensity = (density) => {
-      return density > 3023
-        ? "#a50f15"
-        : density > 676
-        ? "#de2d26"
-        : density > 428
-        ? "#fb6a4a"
-        : density > 236
-        ? "#fc9272"
-        : density > 23
-        ? "#fcbba1"
-        :'#fcbba1'
+      // return density > 3023
+      //   ? "#a50f15"
+      //   : density > 676
+      //   ? "#de2d26"
+      //   : density > 428
+      //   ? "#fb6a4a"
+      //   : density > 236
+      //   ? "#fc9272"
+      //   : density > 23
+      //   ? "#fcbba1"
+      //   :'#fcbba1'
         // : "red";
     };
     const style = (feature) => {
@@ -97,7 +97,7 @@ import {
       };
     };
     const mapStyle = {
-      height: "400",
+      height: "100%",
       width: "100%",
       margin: "0 auto",
       // backgroundColor: "var(--bg-color)",
@@ -108,15 +108,16 @@ import {
     return (
       <>
       
-            <Col className=" pt-3 w-100">
-              <section className="showcase">
+            <Col className=" pt-1 w-100 mb-5">
+              <section className="location_marker_container">
                 <MapContainer
-                  zoom={11}
+                  zoom={17}
                  
                   scrollWheelZoom={true}
                   style={mapStyle}
-                  center={[28.3, 84.078]}
-                  
+                  center={[27.629659146657858, 85.30212730834639]}
+                  minZoom={4}
+                    maxZoom={18}
                   zoomSnap={0.5}
                   zoomDelta={0.5}
                   wheelPxPerZoomLevel={120}
@@ -131,22 +132,21 @@ import {
                     <GeoJSON
                       data={nepalGeojson}
                       style={style}
-                      onEachFeature={onEachFeature}
+                      // onEachFeature={onEachFeature}
                     />
                   </FeatureGroup>
-                  <Marker position={[28.082, 84.078]} icon={newicon}>
+                  <Marker position={[27.629659146657858, 85.30212730834639]} icon={newicon}>
                     <Popup>
                       <div>
                         <div className="caption">
-                          Nuga Office
+                          Rato Machindra nath Temple
                           <hr />
-                          Patan, Lalitpur
+                          Bungamati, Lalitpur
                         </div>
                       </div>
                     </Popup>
                   </Marker>
-                  <TileLayer  minZoom={4}
-                    maxZoom={18}
+                  <TileLayer  
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution="NugaMaps"
                   />

@@ -26,3 +26,9 @@
 .interaction_map_container {
     margin-bottom: 200px;
 }
+
+.location_marker_container {
+    height: 50vh;
+border: 1px solid black;
+
+}

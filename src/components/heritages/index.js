@@ -42,9 +42,9 @@ const Heritages = () => {
                 free to modify or edit this layout.
               </p> */}
               <div class="text-button">
-                <a href="#">
+              <Link to='/detail'>
                   Read More <i class="fa fa-chevron-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -63,9 +63,9 @@ const Heritages = () => {
                 williamsburg photo booth quinoa and fashion axe.
               </p> */}
               <div class="text-button">
-                <a href="#">
+              <Link to='/detail'>
                   Read More <i class="fa fa-chevron-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>
