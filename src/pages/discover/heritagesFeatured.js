@@ -22,23 +22,7 @@ const HeritageFeatured = () => {
                 <hr className="t_border my-3 ml-0 text-left" />{" "}
               </Col>
             </Col>
-            {/* <Row className="sec_sp mt-1 ">
-              <Col>
-                <h3 className="section-title py-2">{}</h3>
-                <div>
-                  <p> {whatWeDoData.des1}</p>
-                  <p> {whatWeDoData.des2}</p>
-                </div>
-              </Col>
-              <Link to="/about">
-                <div id="button_h" className="ac_btn btn">
-                  Read More About Us
-                  <div className="ring one"></div>
-                  <div className="ring two"></div>
-                  <div className="ring three"></div>
-                </div>
-              </Link>
-            </Row> */}
+           
             <Heritages />
           </Container>
           {/* <br />

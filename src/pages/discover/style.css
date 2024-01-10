@@ -84,3 +84,91 @@
 .po_item .content a:hover {
     text-decoration: none;
 }
+
+
+
+/* article */
+.site__page{
+    margin-top:80px;
+}
+.article-card-header__content {
+    overflow: hidden;
+    padding: 16px 24px 18px;
+}
+
+/* .article-story-group,
+.card__content{margin-top: 600px;} */
+
+
+.card__content{margin-top: 20px;}
+.article-card-header__subhead {
+    color: #72767e;
+    display: block;
+    /* font-family: ff-meta-web-pro,sans-serif; */
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0;
+    letter-spacing: .4px;
+    margin-bottom: 9px;
+    text-transform: uppercase;
+}
+.article-story-group__item {
+    margin-bottom: 48px;
+}
+
+.article-card-header__content {
+    overflow: hidden;
+    padding: 16px 24px 18px;
+}
+
+.article-card-header__title {
+    color: #151d2d;
+    /* font-family: ff-meta-web-pro,sans-serif; */
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1.1em;
+    margin-bottom: 20px;
+    position: relative;
+    text-transform: none;
+}
+
+.article-card-header__metadata {
+    align-items: center;
+    display: flex;
+    font-size: .95em;
+    margin-top: 6px;
+}
+
+.article-card-header__author {
+    color: #151d2d;
+    /* font-family: ff-meta-web-pro,sans-serif; */
+    font-weight: bold;
+    letter-spacing: 0;
+    padding-right: 0.5em;
+}
+
+.article-card-header__date {
+    color: #72767e;
+}
+
+.adidas-campaign-page .button--primary, .adidas-campaign-page .button--primary:hover, .adidas-campaign-page .button--primary:focus {
+    background-color: #000;
+    color: #fff;
+}
+
+.article-card-header__media {
+    position: relative;
+}
+
+.node__content, .node--type-ppv-package.node--view-mode-full .node__content {
+    margin: 0 auto;
+    width: 80%;
+}
+
+
+.page {
+    margin-bottom: 24px;
+    padding-top: 16px;
+}
+

@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 const Heritages = () => {
   return (
@@ -21,9 +22,9 @@ const Heritages = () => {
               <h4>Patan Durbar Square</h4>
               {/* <p></p> */}
               <div class="text-button">
-                <a href="#">
+                <Link to='/detail'>
                   Read More <i class="fa fa-chevron-right"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -34,7 +34,7 @@ import Sliders from "../../components/sliders";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import WhatWeDo from "../whatwedo";
 import { ContactUs } from "../contact";
-import HeritageFeatured from "../whatwedo/heritagesFeatured";
+import HeritageFeatured from "../discover/heritagesFeatured";
 import { OfficeLocation } from "../../components/maps/office_location";
 import { Maps } from "../maps";
 
