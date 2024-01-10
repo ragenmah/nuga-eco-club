@@ -179,6 +179,7 @@ export const Home = () => {
             {/* <Col lg={5} className="qr__code_image">
               <Col lg={6} className="rounded shadow pt-3"></Col>
             </Col> */}
+
             <Col lg={8} className="order-lg-2 mb-lg-0">
               <p className="mt-3 mb-4 fw-bold quote-text">
                 <span>
@@ -192,9 +193,28 @@ export const Home = () => {
               </p>
             </Col>
           </Row>
+          <Col>
+            Quick links
+            <p>
+              <span>Heritages</span>
+              <span>**Climate changes</span>
+            </p>
+            <span>Guides</span>
+            {/* <Link to="/ContactUs" className="">
+              <h4 className="sign__up">Guides</h4>
+            </Link> */}
+          </Col>
         </Row>
       </Container>
-      <ContactUs />
+      <div className="let__us__know">
+        <Container>
+          <h3>Didn't Find What You were looking For? </h3>
+          <Link to="/ContactUs" className="">
+            <h4 className="btn-let-us-know">Let Us Know</h4>
+          </Link>
+        </Container>
+      </div>
+      {/* <ContactUs /> */}
     </HelmetProvider>
   );
 };

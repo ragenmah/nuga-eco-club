@@ -83,7 +83,7 @@ export const OfficeLocation = () => {
       ? "#fc9272"
       : density > 23
       ? "#fcbba1"
-      : "red";
+      : "black";
   };
   const style = (feature) => {
     return {
@@ -115,49 +115,60 @@ export const OfficeLocation = () => {
               <hr className="t_border my-3 ml-0 text-left" />{" "}
             </Col>
           </Col>
-          <Col lg={6} className="rounded shadow pt-3 w-100">
-            <section className="showcase">
-              <MapContainer
-                zoom={7.6}
-                scrollWheelZoom={false}
-                style={mapStyle}
-                center={[28.3, 84.078]}
-                minZoom={2}
-                zoomSnap={0.5}
-                zoomDelta={0.5}
-                wheelPxPerZoomLevel={120}
-                maxBoundsViscosity={0.5}
-                attributionControl={false}
-                zoomControl={false}
-                doubleClickZoom={false}
-                touchZoom={false}
-                boxZoom={false}
-              >
-                <FeatureGroup>
-                  <GeoJSON
-                    data={nepalGeojson}
-                    style={style}
-                    onEachFeature={onEachFeature}
-                  />
-                </FeatureGroup>
-                <Marker position={[28.082, 84.078]} icon={newicon}>
-                  <Popup>
-                    <div>
-                      <div className="caption">
-                        Nuga Office
-                        <hr />
-                        Patan, Lalitpur
+          <Col lg={6} className=" map___container rounded shadow pt-3 w-100">
+            <div className="">
+              <section className="showcase">
+                <MapContainer
+                  zoom={7.6}
+                  scrollWheelZoom={false}
+                  style={mapStyle}
+                  center={[27.692065, 85.321151]}
+                  minZoom={2}
+                  zoomSnap={0.5}
+                  zoomDelta={0.5}
+                  wheelPxPerZoomLevel={120}
+                  maxBoundsViscosity={0.5}
+                  attributionControl={false}
+                  zoomControl={false}
+                  doubleClickZoom={false}
+                  touchZoom={false}
+                  boxZoom={false}
+                >
+                  <FeatureGroup>
+                    <GeoJSON
+                      data={nepalGeojson}
+                      style={style}
+                      onEachFeature={onEachFeature}
+                    />
+                  </FeatureGroup>
+                  <Marker position={[27.692065, 85.321151]} icon={newicon}>
+                    {/* <Popup>
+                      <div>
+                        <div className="caption">
+                          Nuga Office
+                          <hr />
+                          Patan, Lalitpur
+                        </div>
                       </div>
-                    </div>
-                  </Popup>
-                </Marker>
-                <TileLayer
-                  url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
-                  // url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                  attribution="NugaMaps"
-                />
-              </MapContainer>
-            </section>
+                    </Popup> */}
+                  </Marker>
+                  <TileLayer
+                    // url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
+                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    attribution="NugaMaps"
+                  />
+                </MapContainer>
+              </section>{" "}
+              <div className="rounded shadow stats___container ">
+                <h5>Kathmandu</h5>
+                <br />
+                Total sites: 120
+                <br />
+                Total scanned : 12300
+                <br />
+                Total read : 200
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>
