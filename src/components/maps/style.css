@@ -50,3 +50,14 @@
     padding: 10px;
     z-index: 999;
 }
+
+.district-label {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 12px;
+    font-weight: bold;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }

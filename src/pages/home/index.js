@@ -37,6 +37,7 @@ import { ContactUs } from "../contact";
 import HeritageFeatured from "../discover/heritagesFeatured";
 import { OfficeLocation } from "../../components/maps/office_location";
 import { Maps } from "../maps";
+import MyMap from "../../components/maps/example";
 
 export const Home = () => {
   // const [map, setMap] = useState(null);
@@ -128,6 +129,7 @@ export const Home = () => {
       {/* <HowWeDo /> */}
       <div className="intro_sec d-block d-lg-flex align-items-center ">
         <div className="h_bg-image order-1 order-lg-2 h-100">
+          {/* <MyMap/> */}
           <OfficeLocation />
         </div>
       </div>

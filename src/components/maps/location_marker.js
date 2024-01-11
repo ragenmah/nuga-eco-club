@@ -111,7 +111,7 @@ import {
             <Col className=" pt-1 w-100 mb-5">
               <section className="location_marker_container">
                 <MapContainer
-                  zoom={17}
+                  zoom={15}
                  
                   scrollWheelZoom={true}
                   style={mapStyle}
