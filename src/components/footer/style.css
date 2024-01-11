@@ -304,7 +304,10 @@
 
 
 
-
+.footer-img {
+    /* background-color: (--bg-color); */
+    filter: var(--back-footer-img);
+}
 
 
 /* Media Query For different screens */

@@ -13,7 +13,7 @@ import { useState, useRef } from "react";
 import "./style.css";
 import Leaflet from "leaflet";
 import { Container, Row, Col } from "react-bootstrap";
-import L from 'leaflet';
+import L from "leaflet";
 import MyMap from "./example";
 
 const style = {
@@ -49,14 +49,14 @@ const locations = [
 export const OfficeLocation = () => {
   const [onselect, setOnselect] = useState({});
   const [districtDetails, setDistrictDetails] = useState({
-    district: 'Kathmandu',
-    details: 'Details for District A',
+    district: "Kathmandu",
+    details: "Details for District A",
   });
 
   const [markerCoordinates, setMarkerCoordinates] = useState(null);
   const [selectedDistrict, setSelectedDistrict] = useState(null);
 
-  const mapRef =useRef();
+  const mapRef = useRef();
   /* function determining what should happen onmouseover, this function updates our state*/
   const highlightFeature = (e) => {
     var layer = e.target;
@@ -83,12 +83,12 @@ export const OfficeLocation = () => {
   const resetHighlight = (e) => {
     var layer = e.target;
     setDistrictDetails({
-      district: 'Kathmandu',
-      details: 'Details for District A',
-    });layer.setStyle({
+      district: "Kathmandu",
+      details: "Details for District A",
+    });
+    layer.setStyle({
       weight: 1,
       color: "yellow",
-    
     });
     e.target.setStyle(style(e.target.feature));
   };
@@ -96,30 +96,43 @@ export const OfficeLocation = () => {
  highlightFeature and resetHighlight*/
   const onEachFeature = (feature, layer) => {
     const center = layer.getBounds().getCenter();
-
+    const districtName = feature.properties.district;
     // layer.marker(center, {
     //   icon: L.divIcon({
     //     className: 'district-label',
     //     html: `<div>${feature.properties.district}</div>`,
     //   }),
     // });
-    
-    
+
     layer.setStyle({
-   
-    weight: 1,          // Set the border weight
-    // opacity: 1,         // Set the border opacity
-    color: 'red',  // Set the border color
-    // fillOpacity: 0.7,   // Set the fill opacity
-  });
-    layer.on({
-      mouseover: highlightFeature,
-      mouseout: resetHighlight,
-      click: 
-        handleDistrictClick
-      
+      weight: 1, // Set the border weight
+      // opacity: 1,         // Set the border opacity
+      color: "red", // Set the border color
+      // fillOpacity: 0.7,   // Set the fill opacity
     });
-    layer.bindPopup(`<p> ${feature.properties.district}</p>`);
+    layer.on({
+      mouseover: (e) => {
+        layer.setStyle({ fillColor: "orange" });
+        setDistrictDetails(e.target.feature.properties);
+        layer.openTooltip();
+      },
+      mouseout: () => {
+        setDistrictDetails({
+          district: "Kathmandu",
+          details: "Details for District A",
+        });
+        layer.setStyle({ fillColor: "green" });
+        layer.closeTooltip();
+      },
+      // resetHighlight,
+      click: handleDistrictClick,
+    });
+    layer.bindTooltip(districtName, {
+      permanent: false,
+      direction: "center",
+      offset: [0, -10],
+    });
+    // layer.bindPopup(`<p> ${feature.properties.district}</p>`);
   };
 
   const mapPolygonColorToDensity = (density) => {
@@ -143,27 +156,28 @@ export const OfficeLocation = () => {
       color: "black",
       // dashArray: "1",
       // fillOpacity: 0.5,
-      weight: '1',
-      border: '2px solid yellow'
+      weight: "1",
+      border: "2px solid yellow",
     };
   };
   const mapStyle = {
     height: "100%",
     width: "100%",
-    margin: "0 auto", border: '2px solid black'
+    margin: "0 auto",
+    border: "2px solid black",
     // backgroundColor: "var(--bg-color)",
     // zIndex: "-12",
   };
 
-  const handleDistrictClick = (e) => {var layer = e.target
+  const handleDistrictClick = (e) => {
+    var layer = e.target;
     setSelectedDistrict(layer.properties);
     // Set marker coordinates to a different location (replace with your desired coordinates)
-    setMarkerCoordinates([27.658773, 85.273429]);    // Access the map instance using useMap
+    setMarkerCoordinates([27.658773, 85.273429]); // Access the map instance using useMap
     // const map = L.map('map');
-    
+
     // // // Fly to the marker's coordinates with a smooth animation
     // map.flyTo(markerCoordinates, 16);
-
   };
 
   const handleMapClick = (event) => {
@@ -173,7 +187,7 @@ export const OfficeLocation = () => {
     if (markerCoordinates) {
       // Fly to the marker's coordinates with a smooth animation
       map.flyTo(markerCoordinates, 16);
-    } 
+    }
 
     // const map = mapRef.current;
 
@@ -181,7 +195,6 @@ export const OfficeLocation = () => {
     //   // Fly to the marker's coordinates with a smooth animation
     //   map.flyTo(markerCoordinates, 16);
     // }
-   
   };
   return (
     <>
@@ -198,10 +211,10 @@ export const OfficeLocation = () => {
           <Col lg={6} className=" map___container rounded shadow pt-3 w-100">
             <div className="">
               <section className="showcase">
-                <MapContainer 
+                <MapContainer
                   zoom={7.5}
                   style={mapStyle}
-                  center={[28.3949, 84.1240]}
+                  center={[28.3949, 84.124]}
                   minZoom={7.5}
                   zoomSnap={0.5}
                   zoomDelta={0.5}
@@ -226,14 +239,16 @@ export const OfficeLocation = () => {
             </div>)}
                         
                       </Popup> */}
-                       {selectedDistrict && (
-        <Popup position={selectedDistrict.geometry.coordinates[0][0]}>
-          <div>
-            <h3>{selectedDistrict.properties.district}</h3>
-            <p>{selectedDistrict.properties.details}</p>
-          </div>
-        </Popup>
-      )}
+                      {selectedDistrict && (
+                        <Popup
+                          position={selectedDistrict.geometry.coordinates[0][0]}
+                        >
+                          <div>
+                            <h3>{selectedDistrict.properties.district}</h3>
+                            <p>{selectedDistrict.properties.details}</p>
+                          </div>
+                        </Popup>
+                      )}
                     </GeoJSON>
                   </FeatureGroup>
 
@@ -260,23 +275,19 @@ export const OfficeLocation = () => {
                 </MapContainer>
               </section>{" "}
               {districtDetails && (
-          <div className="rounded shadow stats___container ">
-          <h5>{districtDetails.district}</h5>
-          <br />
-          Total sites: 120
-          <br />
-          Total scanned : 12300
-          <br />
-          Total read : 200
-        </div>
-        )}
-              
+                <div className="rounded shadow stats___container ">
+                  <h5>{districtDetails.district}</h5>
+                  <br />
+                  Total sites: 120
+                  <br />
+                  Total scanned : 12300
+                  <br />
+                  Total read : 200
+                </div>
+              )}
             </div>
           </Col>
         </Row>
-
-
-       
       </Container>
     </>
   );

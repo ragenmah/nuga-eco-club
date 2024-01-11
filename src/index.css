@@ -11,6 +11,7 @@
   --white-color: #e6e6e6;
   --map-tiles-filter: brightness(1) invert(0);
   --yellow-color: #FE932E;
+  --back-footer-img: invert(1);
 }
 
 [data-theme="light"] {
@@ -29,6 +30,8 @@
   /* --white-color: #e6e6e6; */
   --map-tiles-filter: brightness(0.6) invert(1) hue-rotate(200deg) saturate(1) brightness(1);
   --yellow-color: #FE932E;
+  --back-footer-img: invert(0) brightness(0.6) hue-rotate(200deg) saturate(1);
+
 }
 
 @font-face {

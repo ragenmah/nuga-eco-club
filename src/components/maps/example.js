@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
+import React, { useState } from "react";
+import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 
 const MyMap = () => {
   const center = [51.505, -0.09];
 
-  // Example initial GeoJSON data for polygons (replace with your actual data)
-  const initialPolygonData = {
-    type: 'FeatureCollection',
+  // Example GeoJSON data for provinces (replace with your actual data)
+  const provinceData = {
+    type: "FeatureCollection",
     features: [
       {
-        type: 'Feature',
-        properties: { name: 'Polygon 1' },
+        type: "Feature",
+        properties: { name: "Province A" },
         geometry: {
-          type: 'Polygon',
+          type: "Polygon",
           coordinates: [
             [
               [-0.1, 51.5],
@@ -24,62 +24,59 @@ const MyMap = () => {
           ],
         },
       },
-      // Add more features for other polygons
+      // Add more features for other provinces
     ],
   };
 
-  const [polygonData, setPolygonData] = useState(initialPolygonData);
+  const [selectedProvince, setSelectedProvince] = useState(null);
 
-  // Function to handle dynamic updates to polygons
-  const updatePolygons = () => {
-    // Example: Update the GeoJSON data based on some external logic
-    const updatedData = {
-      type: 'FeatureCollection',
-      features: [
-        {
-          type: 'Feature',
-          properties: { name: 'Polygon 1 (Updated)' },
-          geometry: {
-            type: 'Polygon',
-            coordinates: [
-              [
-                [-0.1, 51.5],
-                [-0.1, 51.51],
-                [-0.09, 51.51],
-                [-0.09, 51.5],
-                [-0.1, 51.5],
-              ],
-            ],
-          },
-        },
-        // Add more features for other updated polygons
-      ],
-    };
-
-    setPolygonData(updatedData);
+  const handleProvinceClick = (feature) => {
+    setSelectedProvince(feature.properties);
   };
 
   return (
     <div>
-      <MapContainer center={center} zoom={13} style={{ height: '400px', width: '50%', float: 'left' }}>
-        <TileLayer
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        />
+      <div style={{ height: "400px", width: "50%", float: "left" }}>
+        <MapContainer
+          center={center}
+          zoom={13}
+          style={{ height: "100%", width: "100%" }}
+        >
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          />
 
-        {/* GeoJSON layer for polygons */}
-        <GeoJSON
-          data={polygonData}
-          style={() => ({
-            color: 'green',
-            weight: 2,
-            fillColor: 'green',
-            fillOpacity: 0.2,
-          })}
-        />
-      </MapContainer>
+          {/* GeoJSON layer for provinces */}
+          <GeoJSON
+            data={provinceData}
+            style={() => ({
+              color: "blue",
+              weight: 2,
+              fillColor: "blue",
+              fillOpacity: 0.2,
+            })}
+            onEachFeature={(feature, layer) => {
+              const provinceName = feature.properties.name;
 
-      <button onClick={updatePolygons}>Update Polygons</button>
+              layer.on({
+                click: () => {
+                  handleProvinceClick(feature);
+                },
+              });
+            }}
+          />
+        </MapContainer>
+      </div>
+
+      <div style={{ float: "left", marginLeft: "20px" }}>
+        <h2>Province Names</h2>
+        {provinceData.features.map((feature) => (
+          <div key={feature.properties.name}>{feature.properties.name}</div>
+        ))}
+      </div>
+
+      <div style={{ clear: "both" }}></div>
     </div>
   );
 };
