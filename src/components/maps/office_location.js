@@ -14,6 +14,7 @@ import "./style.css";
 import Leaflet from "leaflet";
 import { Container, Row, Col } from "react-bootstrap";
 import L from 'leaflet';
+import MyMap from "./example";
 
 const style = {
   fillColor: "#FEFDF9",
@@ -200,7 +201,7 @@ export const OfficeLocation = () => {
                 <MapContainer 
                   zoom={7.5}
                   style={mapStyle}
-                  center={[27.692065, 85.321151]}
+                  center={[28.3949, 84.1240]}
                   minZoom={7.5}
                   zoomSnap={0.5}
                   zoomDelta={0.5}
@@ -273,6 +274,9 @@ export const OfficeLocation = () => {
             </div>
           </Col>
         </Row>
+
+
+       
       </Container>
     </>
   );

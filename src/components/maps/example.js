@@ -1,19 +1,16 @@
 import React, { useState } from 'react';
 import { MapContainer, TileLayer, GeoJSON } from 'react-leaflet';
-import L from 'leaflet';
-
-import 'leaflet/dist/leaflet.css';
 
 const MyMap = () => {
   const center = [51.505, -0.09];
 
-  // Example GeoJSON data (replace with your actual district data)
-  const districtData = {
+  // Example initial GeoJSON data for polygons (replace with your actual data)
+  const initialPolygonData = {
     type: 'FeatureCollection',
     features: [
       {
         type: 'Feature',
-        properties: { name: 'District A', details: 'Details for District A' },
+        properties: { name: 'Polygon 1' },
         geometry: {
           type: 'Polygon',
           coordinates: [
@@ -27,63 +24,63 @@ const MyMap = () => {
           ],
         },
       },
-      // Add more features for other districts
+      // Add more features for other polygons
     ],
   };
 
-  const [selectedDistrict, setSelectedDistrict] = useState(null);
+  const [polygonData, setPolygonData] = useState(initialPolygonData);
 
-  const handleDistrictClick = (feature) => {
-    setSelectedDistrict(feature.properties);
-  };
+  // Function to handle dynamic updates to polygons
+  const updatePolygons = () => {
+    // Example: Update the GeoJSON data based on some external logic
+    const updatedData = {
+      type: 'FeatureCollection',
+      features: [
+        {
+          type: 'Feature',
+          properties: { name: 'Polygon 1 (Updated)' },
+          geometry: {
+            type: 'Polygon',
+            coordinates: [
+              [
+                [-0.1, 51.5],
+                [-0.1, 51.51],
+                [-0.09, 51.51],
+                [-0.09, 51.5],
+                [-0.1, 51.5],
+              ],
+            ],
+          },
+        },
+        // Add more features for other updated polygons
+      ],
+    };
 
-  const onEachDistrict = (feature, layer) => {
-    const districtName = feature.properties.name;
-
-    // Get the bounds of the district
-    const bounds = layer.getBounds();
-
-    // Get the center of the bounds
-    const center = bounds.getCenter();
-
-    // Create a custom icon with the district name
-    const customIcon = L.divIcon({
-      className: 'district-label',
-      html: `<div>${districtName}</div>`,
-    });
-
-    // Create a marker with the custom icon and add it to the map
-    L.marker(center, { icon: customIcon }).addTo(layer);
-
-    layer.on({
-      click: () => {
-        handleDistrictClick(feature);
-      },
-      mouseover: () => {
-        // Handle mouseover events if needed
-      },
-      mouseout: () => {
-        // Optionally handle mouseout events
-      },
-    });
+    setPolygonData(updatedData);
   };
 
   return (
-    <MapContainer center={center} zoom={13} style={{ height: '400px', width: '50%', float: 'left' }}>
-      <TileLayer
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      />
+    <div>
+      <MapContainer center={center} zoom={13} style={{ height: '400px', width: '50%', float: 'left' }}>
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
 
-      <GeoJSON data={districtData} onEachFeature={onEachDistrict} />
+        {/* GeoJSON layer for polygons */}
+        <GeoJSON
+          data={polygonData}
+          style={() => ({
+            color: 'green',
+            weight: 2,
+            fillColor: 'green',
+            fillOpacity: 0.2,
+          })}
+        />
+      </MapContainer>
 
-      {selectedDistrict && (
-        <div>
-          <h3>{selectedDistrict.name}</h3>
-          <p>{selectedDistrict.details}</p>
-        </div>
-      )}
-    </MapContainer>
+      <button onClick={updatePolygons}>Update Polygons</button>
+    </div>
   );
 };
 

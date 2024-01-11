@@ -4,7 +4,7 @@ import {
     GeoJSON,
     FeatureGroup,
     Marker,
-    Popup,
+    Popup,Polyline 
   } from "react-leaflet";
   // import "../../_mock/nepal/nepal.json";
   import nepalGeojson from "../../_mock/nepal/nepal.json";
@@ -55,20 +55,15 @@ import {
     const [markerCoordinates, setMarkerCoordinates] = useState(null);
     const [selectedDistrict, setSelectedDistrict] = useState(null);
   
-    const mapRef =useRef();
+    const pathCoordinates = [
+      [27.708936, 85.264331], // Starting point
+      [27.692065, 85.321151],   // Ending point
+    ];
+
     /* function determining what should happen onmouseover, this function updates our state*/
     const highlightFeature = (e) => {
       var layer = e.target;
-      // const { County, Total, Male, Female, Intersex, Desnity, district } =
-      //   e.target.feature.properties;
-      // setOnselect({
-      //   county: County,
-      //   total: Total,
-      //   male: Male,
-      //   female: Female,
-      //   intersex: Intersex,
-      //   density: Desnity,
-      // });
+   
       setDistrictDetails(e.target.feature.properties);
       layer.setStyle({
         weight: 1,
@@ -235,7 +230,8 @@ import {
         )}
                       </GeoJSON>
                     </FeatureGroup>
-  
+                    <Polyline positions={pathCoordinates} color="blue" />
+
                     <Marker position={[27.692065, 85.321151]}  onClick={handleMapClick} icon={newicon}>
                       {/* <Popup>
                         <div>
