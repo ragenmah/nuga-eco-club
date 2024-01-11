@@ -184,7 +184,7 @@ import {
     };
     return (
       <>
-        <Container className="interaction_map_container mb-5">
+        <Container className="heritage_map_container mb-5">
           <Row className=" justify-content-between align-items-center mb-5">
             <Col className="mb-5  mt-3 ">
               <Col lg="7">
@@ -198,10 +198,10 @@ import {
               <div className="">
                 <section className="showcase">
                   <MapContainer 
-                    zoom={7.5}
+                    zoom={12}
                     style={mapStyle}
                     center={[27.692065, 85.321151]}
-                    minZoom={7.5}
+                    minZoom={12}
                     zoomSnap={0.5}
                     zoomDelta={0.5}
                     wheelPxPerZoomLevel={120}
