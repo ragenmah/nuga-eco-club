@@ -218,7 +218,7 @@ const FooterMain = () => {
           </div>
           <img
             // src="https://ragenmah.github.io/nuga-eco-club/static/images/footer.png"
-            src="http://localhost:3000/nuga-eco-club/static/images/nuga_footer.svg"
+            src="https://ragenmah.github.io/nuga-eco-club/nuga-eco-club/static/images/nuga_footer.svg"
             height={140}
             className="pull-right d-flex align-items-end footer-img"
           ></img>
