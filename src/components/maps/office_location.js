@@ -236,16 +236,8 @@ export const OfficeLocation = () => {
                     </GeoJSON>
                   </FeatureGroup>
 
-                  <Marker position={[27.692065, 85.321151]}  onClick={handleMapClick} icon={newicon}>
-                    {/* <Popup>
-                      <div>
-                        <div className="caption">
-                          Nuga Office
-                          <hr />
-                          Patan, Lalitpur
-                        </div>
-                      </div>
-                    </Popup> */}
+                  {/* <Marker position={[27.692065, 85.321151]}  onClick={handleMapClick} icon={newicon}>
+                   
                   </Marker>
                   {markerCoordinates&&<Marker position={markerCoordinates} onClick={handleMapClick} icon={newicon}>
                    
@@ -258,7 +250,7 @@ export const OfficeLocation = () => {
                     >
                       <Popup>{location.name}</Popup>
                     </Marker>
-                  ))}
+                  ))} */}
                   {/* <TileLayer
                     // url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

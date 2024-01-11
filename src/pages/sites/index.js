@@ -6,6 +6,7 @@ import { Container } from "react-bootstrap";
 import "leaflet/dist/leaflet.css";
 import Selectors from "../../components/selectors/selectors";
 import SearchBarBody from "../../components/searchbar/searchbar_body";
+import { HeritageWalkMap } from "../../components/maps/heritage_walk_map";
 
 export const Sites = () => {
   // const [map, setMap] = useState(null);
@@ -96,7 +97,8 @@ export const Sites = () => {
               <img src="static/backgrounds/image_1.png"></img>
             </Row> */}
           </div>
-        </div>
+          
+        </div><HeritageWalkMap/>
       </section>
     </HelmetProvider>
   );

@@ -60,7 +60,7 @@ export const Maps = () => {
               <Container className=" h-100 w-75 d-flex ">
                 <div className="align-self-center ">
                   <div className="">
-                    <div className=" quote-text">
+                    <div className=" quote-text text-white">
                       <span>{datamaps.title}</span>
                       <marker>{datamaps.title2}</marker>
                     </div>
