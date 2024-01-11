@@ -216,6 +216,7 @@ const FooterMain = () => {
               </a>
             </div> */}
           </div>
+          <img src="http://localhost:3000/nuga-eco-club/static/images/footer.png"></img>
           <div class="footer-copyright">
             <div class="footer-copyright-wrapper">
               <p class="footer-copyright-text">

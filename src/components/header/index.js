@@ -12,6 +12,7 @@ import SearchBarNav from "../searchbar/searchbar_nav";
 import Modal from "../modal";
 import { SigIn } from "../../pages/auth/sigin";
 import SearchbarTop from "../searchbar/searchbar_top";
+import SiginAuth from "../../pages/auth/sigin_auth";
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
@@ -67,10 +68,10 @@ const Headermain = () => {
           </div>
         </div> */}
 
-        <Modal show={showModal} handleClose={handleHideModal}>
-          <SigIn />
-        </Modal>
-
+        {/* <Modal show={showModal} handleClose={handleHideModal}>
+   
+        </Modal> */}
+        <SiginAuth show={showModal} handleClose={handleHideModal} />
         {showSearchTop ? (
           <SearchbarTop
             handleHideSearchTop={(event) => handleHideSearchTop(event)}
@@ -121,6 +122,7 @@ const Headermain = () => {
                     </li>
 
                     <div onClick={handleShowModal} className="">
+                      {/* <div className=""> */}
                       <li className="header-top-contact vertical-line">
                         {t("auth.SignIn")}
                       </li>
@@ -239,13 +241,11 @@ const Headermain = () => {
                   {isScrolled && <Themetoggle />}
                 </div>
               </li>
-              {/* <li className="menu_item">
-                <Link onClick={handleToggle} to="/contact" className="my-3">
-                  Sign up
-                </Link>
-              </li> */}
             </ul>
-          </nav>
+          </nav>{" "}
+          <a class="menu-trigger">
+            <span>Menu</span>
+          </a>
         </div>
       </header>
     </div>
