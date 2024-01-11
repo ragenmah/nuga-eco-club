@@ -218,7 +218,7 @@ const FooterMain = () => {
           </div>
           <img
             // src="https://ragenmah.github.io/nuga-eco-club/static/images/footer.png"
-            src="https://ragenmah.github.io/nuga-eco-club/nuga-eco-club/static/images/nuga_footer.svg"
+            src="https://ragenmah.github.io/nuga-eco-club/static/images/nuga_footer.svg"
             height={140}
             className="pull-right d-flex align-items-end footer-img"
           ></img>
@@ -227,7 +227,7 @@ const FooterMain = () => {
               <p class="footer-copyright-text">
                 <a class="footer-copyright-link" href="#" target="_self">
                   {" "}
-                  ©2023. | Designed By: Nuga Team. | All rights reserved.{" "}
+                  ©2024. | Designed By: Nuga Team. | All rights reserved.{" "}
                 </a>
               </p>
             </div>
