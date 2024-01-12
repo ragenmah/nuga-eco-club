@@ -27,8 +27,8 @@ export const Teams = () => {
           </Helmet>
         </section>
       </HelmetProvider> */}
-      {/* <FooterMain /> */}
-      <section className="teams-container">
+
+      <section className=" teams-container ">
         <div className="   mt-2">
           <div
             className="h_bg-image "

@@ -3,6 +3,7 @@
 .teams-container {
     margin-top: 300px;
     margin-bottom: 300px;
+
 }
 
 .teams_title {
@@ -22,12 +23,8 @@
 
 .team-container {
 
-    /* margin: 200px; */
+
     display: flex;
-    /* align-items: center;
-    justify-content: space-between;
-    flex: 3;
-    padding-bottom: 20px; */
 
 }
 

@@ -132,7 +132,7 @@ const Headermain = () => {
                   <Link
                     to="/discover"
                     className="link"
-                    onClick={handleShowNavbar}
+                    onClick={showNavbar && handleShowNavbar}
                   >
                     {t("header.Discover")}
                   </Link>
@@ -141,13 +141,17 @@ const Headermain = () => {
                   <Link
                     to="/heritage-walk"
                     className="link"
-                    onClick={handleShowNavbar}
+                    onClick={showNavbar && handleShowNavbar}
                   >
                     {t("header.Heritage")}
                   </Link>
                 </li>
                 <li>
-                  <Link to="/maps" className="link" onClick={handleShowNavbar}>
+                  <Link
+                    to="/maps"
+                    className="link"
+                    onClick={showNavbar && handleShowNavbar}
+                  >
                     {t("header.Maps")}
                   </Link>
                 </li>
@@ -155,27 +159,39 @@ const Headermain = () => {
                   <Link
                     to="/climate-emergency"
                     className="link"
-                    onClick={handleShowNavbar}
+                    onClick={showNavbar && handleShowNavbar}
                   >
                     {t("header.Climate")}
                   </Link>
                 </li>
-
                 <li>
-                  <Link to="/about" className="link" onClick={handleShowNavbar}>
+                  <Link
+                    to="/about"
+                    className="link"
+                    onClick={showNavbar && handleShowNavbar}
+                  >
                     {t("header.AboutUs")}
                   </Link>
                 </li>
-
                 <li>
                   <Link
                     to="/ContactUs"
                     className="link"
-                    onClick={handleShowNavbar}
+                    onClick={showNavbar && handleShowNavbar}
                   >
                     {t("header.ContactUs")}
                   </Link>
                 </li>
+                {showNavbar && (
+                  <li>
+                    <div
+                      onClick={handleShowModal}
+                      className={showNavbar && "active"}
+                    >
+                      <Link className="link">{t("auth.SignIn")}</Link>
+                    </div>
+                  </li>
+                )}
                 <li>
                   <div className="searchicon" onClick={handleShowSearchTop}>
                     <div className="innersearchicon">
@@ -183,7 +199,6 @@ const Headermain = () => {
                     </div>
                   </div>
                 </li>
-                <li></li>
                 <li>
                   <div className="px-2 pull-right">
                     {isScrolled && <Themetoggle />}

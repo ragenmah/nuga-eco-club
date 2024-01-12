@@ -84,7 +84,7 @@ export const Sites = () => {
                   </div> */}
                   </div>
                 </div>
-                <div className="align-self-center w-100 m-2 shape">
+                <div className="align-self-center w-100 mt-2 shape">
                   <img
                     src="https://images.pexels.com/photos/5952518/pexels-photo-5952518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                     className="heritage-img"
@@ -97,8 +97,8 @@ export const Sites = () => {
               <img src="static/backgrounds/image_1.png"></img>
             </Row> */}
           </div>
-          
-        </div><HeritageWalkMap/>
+        </div>
+        <HeritageWalkMap />
       </section>
     </HelmetProvider>
   );

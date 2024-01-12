@@ -1,6 +1,6 @@
 @media (max-width: 767px) {
 
-    .header-top-left,
+    .header-top,
     .hide-toggle {
         display: none;
     }
@@ -17,8 +17,8 @@
 
     .logo__down img {
         padding-bottom: 10px;
-        height: 120px;
-        width: 120px;
+        height: 90px;
+        width: 90px;
         float: left;
     }
 
@@ -105,5 +105,66 @@
 
         font-size: 30px;
 
+    }
+
+    .popupContainer {
+        margin: 0;
+        padding: 0;
+        left: 10%;
+        right: 10%;
+        /* top: 20%;     */
+
+    }
+
+    .main-search {
+        padding: 30px 0px;
+    }
+
+    .innerinput {
+        flex-direction: column;
+    }
+
+    .main-search .search_field_bar {
+        width: 100%;
+    }
+
+    .close-btn {
+
+        right: 20px;
+        top: 0;
+
+    }
+
+    .shape {
+        clip-path: polygon(1% 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    }
+
+    .stick_follow_icon {
+        display: none;
+    }
+
+    .heritage_map_container {
+        margin-top: 100px;
+    }
+
+    .heritage-img {
+        height: 50vh;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .heritage_map_container {
+        /* margin-left: 10px;
+        margin-right: 0%; */
+    }
+
+    .showcase {
+        padding: 0;
+    }
+
+
+    .team-container {
+
+        flex-direction: column;
     }
 }
