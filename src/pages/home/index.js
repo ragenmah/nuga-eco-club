@@ -97,7 +97,7 @@ export const Home = () => {
                 </div>
               </div>
             </div>
-            <div class="loader mt-5">
+            <div class="loader mt-5 ">
               <h1>{homePageData.welcomBannerTitle}</h1>
               <h6 className="mt-5">
                 {homePageData.welcomBanner1}
@@ -128,7 +128,7 @@ export const Home = () => {
       </section> */}
       {/* <HowWeDo /> */}
       <div className="intro_sec d-block d-lg-flex align-items-center ">
-        <div className="h_bg-image order-1 order-lg-2 h-100">
+        <div className="h_bg-image order-1 order-lg-2 h-100 animated slideInLeft">
           {/* <MyMap/> */}
           <OfficeLocation />
         </div>
@@ -156,7 +156,7 @@ export const Home = () => {
             <p className="mb-3 lead fw-bold">
               We provide QR code scan feature.
             </p>
-            <p className="mb-4">
+            <p className="mb-4 p-top">
               Experience the convenience of our QR code feature!
             </p>
           </Col>

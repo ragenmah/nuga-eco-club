@@ -15,24 +15,34 @@ const SiginAuth = ({ handleClose, show, children }) => {
             <i class="fa fa-times"></i>
           </span>
         </div>
-        <h6>Contribute yourself to NUGA</h6>
+
         <section class="popupBody">
           <div class="social_login">
             <div class="user_register">
               <form>
                 {/* <label>Email Address</label> */}
-                <input type="email" placeholder="Email Address" />
+                <h6>Contribute yourself to NUGA</h6>
+                <h6 className="conditons_container">
+                  Enter your email to sigin/register. Verify your email after
+                  providing your email.
+                </h6>
+                <input
+                  type="text"
+                  className="search_field_input mt-2"
+                  name="term"
+                  autoComplete="off"
+                  aria-label="search"
+                  placeholder="Email Address"
+                />
               </form>
             </div>
             <div class="action_btns">
               <div class="one_half">
-                <a href="#" id="login_form" class="btn">
-                  Continue
-                </a>
+                <button class="continue-btn">Continue</button>
               </div>
             </div>
             <div class="centeredText">
-              <span>More Sign In Method</span>
+              <span>OR</span>
             </div>
             <div class="">
               {/* <a href="#" class="social_box fb">
@@ -49,6 +59,16 @@ const SiginAuth = ({ handleClose, show, children }) => {
                 <span class="icon_title">Connect with Google</span>
               </a>
             </div>
+            <h6 className="conditons_container">
+              By sigining or registering, you are deemed to have agreed our{" "}
+              <a>
+                <u>Terms and Conditions</u>
+              </a>{" "}
+              and{" "}
+              <a>
+                <u>Privacy Policy</u>
+              </a>
+            </h6>
           </div>
         </section>
       </div>

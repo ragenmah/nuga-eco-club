@@ -224,6 +224,8 @@
     background-color: rgb(49, 48, 48);
     height: 512px;
     width: 600px;
+    position: relative;
+    z-index: 1;
     /* border: 10px solid black; */
 }
 
@@ -238,10 +240,18 @@
     font-weight: 700;
     letter-spacing: -1.5px;
     line-height: 55px;
+    position: relative;
+    z-index: 1;
+}
+
+.p-top {
+    position: relative;
+    z-index: 1;
 }
 
 .let__us__know {
     background-color: var(--secondary-color);
+    opacity: 0.96;
     padding: 50px;
     color: var(--bg-color);
 }

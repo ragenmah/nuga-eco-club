@@ -1,5 +1,109 @@
 @media (max-width: 767px) {
+
+    .header-top-left,
+    .hide-toggle {
+        display: none;
+    }
+
+
+    .pull-right {
+        margin-left: 0;
+        /* margin-right: 0; */
+    }
+
     .menu-trigger {
         display: block !important;
+    }
+
+    .logo__down img {
+        padding-bottom: 10px;
+        height: 120px;
+        width: 120px;
+        float: left;
+    }
+
+    .nav-elements {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: var(--bg-color);
+        width: 0px;
+        height: calc(100vh - 60px);
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+        display: flex;
+        align-items: start;
+    }
+
+    .nav-elements.active {
+        width: 270px;
+    }
+
+    .nav-elements ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-elements ul li {
+        margin-right: unset;
+        margin-top: 22px;
+    }
+
+    .loader h1 {
+        font-size: 120px;
+    }
+
+    .loader h6 {
+        font-size: 18px;
+    }
+
+    .intro_sec {
+        /* margin-top: 100px; */
+
+    }
+
+    .qr__code_image img img {
+
+        display: block;
+    }
+
+    .qr__code_image img {
+        /* height: 200px; */
+        width: 100%;
+        display: block;
+        position: relative;
+    }
+
+    .footer-img {
+        height: 70px;
+    }
+
+    .ng_container {
+        /* font-size: 16px; */
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .quote-text span,
+    marker {
+        font-size: 25px;
+        letter-spacing: -1px;
+        line-height: normal;
+    }
+
+    .fw-bold {
+
+        font-size: 1.5rem;
+        /* color: rgb(56, 55, 55); */
+
+        letter-spacing: -1.5px;
+        line-height: 55px;
+
+    }
+
+    .teams_title {
+
+        font-size: 30px;
+
     }
 }
