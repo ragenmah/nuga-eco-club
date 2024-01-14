@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 const Heritages = () => {
   return (
     <>
-      <div class="container">
-        <div class="row">
+      <div class="scroll-container container">
+        <div className="scroll-content">
+        {/* <div class="row "> */}
           <div class="col-lg-4">
             <div
               class="service-item "
@@ -70,6 +71,8 @@ const Heritages = () => {
             </div>
           </div>
         </div>
+        {/* </div> */}
+        
       </div>
     </>
   );

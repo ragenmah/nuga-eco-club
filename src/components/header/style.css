@@ -589,7 +589,7 @@ nav ul li ul li:hover>ul {
     -o-transition: all 0.4s;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
-    background-color: #2a2a2a;
+    background-color: var(--secondary-color);
     display: block;
     position: absolute;
     width: 30px;
@@ -605,12 +605,12 @@ nav ul li ul li:hover>ul {
     -o-transition: all 0.4s;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
-    background-color: #2a2a2a;
+    background-color: var(--secondary-color);
     display: block;
     position: absolute;
     width: 30px;
     height: 2px;
-    left: 0;
+    right: 0;
     width: 75%;
 }
 
@@ -654,7 +654,7 @@ nav ul li ul li:hover>ul {
     -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
     -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
     transform: translateY(6px) translateX(1px) rotate(45deg);
-    background-color: #2a2a2a;
+    background-color: var(--secondary-color);
 }
 
 
@@ -663,7 +663,7 @@ nav ul li ul li:hover>ul {
     -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
     -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
     transform: translateY(-6px) translateX(1px) rotate(-45deg);
-    background-color: #2a2a2a;
+    background-color: var(--secondary-color);
 }
 
 .menu-trigger-close {
@@ -673,6 +673,7 @@ nav ul li ul li:hover>ul {
     width: 32px;
     height: 32px;
     opacity: 0.3;
+    color: var(--secondary-color);
 }
 
 .menu-trigger-close :hover {
@@ -686,13 +687,13 @@ nav ul li ul li:hover>ul {
     content: ' ';
     height: 33px;
     width: 2px;
-    background-color: #333;
+    background-color: var(--secondary-color);
 }
 
 .menu-trigger-close :before {
-    transform: rotate(45deg);
+    transform: rotate(45deg);   background-color: var(--secondary-color);
 }
 
 .menu-trigger-close :after {
-    transform: rotate(-45deg);
+    transform: rotate(-45deg);   background-color: var(--secondary-color);
 }

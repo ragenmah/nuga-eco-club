@@ -123,7 +123,7 @@ const Headermain = () => {
                 </h2>
               </h4>
             </Link>
-            <div className={`nav-elements  ${showNavbar && "active"}`}>
+            <div className={`nav-elements  ${showNavbar && " active"}`}>
               <ul>
                 <li>
                   <div className="d-flex justify-content-center"></div>
@@ -207,12 +207,20 @@ const Headermain = () => {
               </ul>
             </div>
           </nav>
-          <a
-            class={`${showNavbar ? "menu-trigger-close" : "menu-trigger"}`}
-            onClick={handleShowNavbar}
-          >
-            {showNavbar ? <a className=""></a> : <span>Menu</span>}
-          </a>
+          <div className=" theme-toggle">
+            <div className="searchicon" onClick={handleShowSearchTop}>
+              <div className="innersearchicon">
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+            <Themetoggle />
+            <a
+              class={`${showNavbar ? "menu-trigger-close" : "menu-trigger"}`}
+              onClick={handleShowNavbar}
+            >
+              {showNavbar ? <a className=""></a> : <span>Menu</span>}
+            </a>
+          </div>
         </div>
       </header>
     </div>

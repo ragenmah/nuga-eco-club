@@ -10,7 +10,8 @@
     border-top-right-radius: 50px;
     transition: all .3s;
     background-size: cover;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+    margin: 10px;
 }
 
 .service-item .icon {
@@ -54,4 +55,4 @@
     cursor: pointer;
 }
 
-.article-card-header__media img {}
+.scroll-content {display: flex;}

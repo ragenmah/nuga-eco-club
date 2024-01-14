@@ -1,3 +1,40 @@
+
+@media (max-width: 1024px) {
+    .menu-trigger,.menu-trigger-close {
+        display: block;
+        top: 100px;
+    }
+    
+    .nav-elements {
+        position: absolute;
+        right: 0;
+        top: 60px;
+        background-color: var(--bg-color);
+        width: 0px;
+        height: calc(100vh - 60px);
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .nav-elements.active {
+        /* width: 270px; */
+        width: 100%;
+    }
+
+    .nav-elements ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-elements ul li {
+        margin-right: unset;
+        margin-top: 22px;
+    }
+}
+
 @media (max-width: 767px) {
 
     .header-top,
@@ -10,15 +47,15 @@
         margin-left: 0;
         /* margin-right: 0; */
     }
-
-    .menu-trigger {
-        display: block !important;
+    .menu-trigger,.menu-trigger-close {
+        display: block;
+        top: 20px;
     }
 
     .logo__down img {
         padding-bottom: 10px;
-        height: 90px;
-        width: 90px;
+        height: 80px;
+        width: 80px;
         float: left;
     }
 
@@ -33,10 +70,12 @@
         overflow: hidden;
         display: flex;
         align-items: start;
+        justify-content: center;
     }
 
     .nav-elements.active {
-        width: 270px;
+        /* width: 270px; */
+        width: 100%;
     }
 
     .nav-elements ul {
@@ -68,7 +107,7 @@
     }
 
     .qr__code_image img {
-        /* height: 200px; */
+        height: 320px;
         width: 100%;
         display: block;
         position: relative;
@@ -167,4 +206,36 @@
 
         flex-direction: column;
     }
+
+    .stats___container{
+
+    }
+    .leaflet-container{height: 40vh;}
+
+
+    .heritage__container{
+        display: flex;
+    }
+    .scroll-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+        max-width: 100%;
+      }
+      
+      .scroll-content {
+        display: inline-flex; 
+        padding: 10px; 
+      }
+      .scroll-container::-webkit-scrollbar {
+        width: 6px; /* Adjust the width of the scrollbar as needed */
+      }
+      
+      .scroll-container::-webkit-scrollbar-thumb {
+        background-color: transparent; /* Set the thumb color to transparent */
+      }
+      .service-item{
+        margin: 10px;
+      }
+   
 }

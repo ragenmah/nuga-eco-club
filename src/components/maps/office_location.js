@@ -9,7 +9,7 @@ import {
 // import "../../_mock/nepal/nepal.json";
 import nepalGeojson from "../../_mock/nepal/nepal.json";
 import kathmanduGeojson from "../../_mock/nepal/kathmandu.json";
-import { useState, useRef } from "react";
+import { useState, useRef,useEffect } from "react";
 import "./style.css";
 import Leaflet from "leaflet";
 import { Container, Row, Col } from "react-bootstrap";
@@ -56,7 +56,20 @@ export const OfficeLocation = () => {
   const [markerCoordinates, setMarkerCoordinates] = useState(null);
   const [selectedDistrict, setSelectedDistrict] = useState(null);
 
-  const mapRef = useRef();
+  const [width, setWidth] = useState(window.innerWidth);
+
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+}
+useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+        window.removeEventListener('resize', handleWindowSizeChange);
+    }
+}, []);
+
+const isMobile = width <= 768;
+
   /* function determining what should happen onmouseover, this function updates our state*/
   const highlightFeature = (e) => {
     var layer = e.target;
@@ -106,6 +119,7 @@ export const OfficeLocation = () => {
 
     layer.setStyle({
       weight: 1, // Set the border weight
+      fillColor:"red",
       // opacity: 1,         // Set the border opacity
       color: "red", // Set the border color
       // fillOpacity: 0.7,   // Set the fill opacity
@@ -164,7 +178,7 @@ export const OfficeLocation = () => {
     height: "100%",
     width: "100%",
     margin: "0 auto",
-    border: "2px solid black",
+    border: "2px solid black",fillColor:'red',
     // backgroundColor: "var(--bg-color)",
     // zIndex: "-12",
   };
@@ -212,7 +226,7 @@ export const OfficeLocation = () => {
             <div className="">
               <section className="showcase">
                 <MapContainer
-                  zoom={7.5}
+                  zoom={isMobile?2: 7.5}
                   style={mapStyle}
                   center={[28.3949, 84.124]}
                   minZoom={7.5}
@@ -226,6 +240,7 @@ export const OfficeLocation = () => {
                   doubleClickZoom={true}
                   touchZoom={false}
                   boxZoom={true}
+                  dragging={isMobile? true:true}
                 >
                   <FeatureGroup>
                     <GeoJSON
