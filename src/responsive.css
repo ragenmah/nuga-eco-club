@@ -156,15 +156,21 @@
     }
 
     .main-search {
-        padding: 30px 0px;
+        padding: 30px 0px;z-index: 9999999999;
     }
 
     .innerinput {
         flex-direction: column;
+        
     }
 
     .main-search .search_field_bar {
+        padding-left: 10px;
+        padding-right: 10px;
         width: 100%;
+    }
+    .main-search .search_field_bar .btn-search {
+        margin-right: 10px;
     }
 
     .close-btn {

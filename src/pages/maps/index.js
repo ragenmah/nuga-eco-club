@@ -66,9 +66,9 @@ export const Maps = () => {
                     </div>
 
                     <Col className=" playstore_image">
-                      <img src="static/apps/playstore.png" height={90} className="m-2"></img>
+                      <img src="static/apps/playstore.png" height={70} className="m-2"></img>
                       
-                      <img src="static/apps/appstore.png" height={90} className="m-2"></img>
+                      <img src="static/apps/appstore.png" height={70} className="m-2"></img>
                     </Col>
                   </div>
                 </div>

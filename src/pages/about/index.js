@@ -20,7 +20,8 @@ export const About = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         {/* intro_sec */}
-        <div className="intro_sec d-block d-lg-flex align-items-center ">
+       <div className="d-flex flex-column">
+       <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-20 "
             // style={{ backgroundImage: `url(${aboutus.background_img})` }}
@@ -58,10 +59,10 @@ export const About = () => {
               </Row>
             </Container>
           </div>
-        </div>
-      </section>{" "}
-      <Teams />
-      {/* <FooterMain /> */}
+        </div> <Teams />
+       </div>
+      </section>
+     
     </HelmetProvider>
   );
 };
