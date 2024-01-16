@@ -9,8 +9,14 @@
     margin-top: 150px;
     position: relative;
     height: 100vh;
-    animation: fadeInLeaflet 1.5s ease forwards 2s;
+    /* animation: fadeInLeaflet 1.5s ease forwards 2s;    */
     /* filter: var(--map-tiles-filter, none); */
+
+}
+
+.nepalMap .leaflet-container{
+    filter: var(--map-tiles-filter, none);
+
 }
 
 .map-bg-color {

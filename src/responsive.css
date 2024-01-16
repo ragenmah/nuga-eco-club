@@ -237,5 +237,16 @@
       .service-item{
         margin: 10px;
       }
-   
+      .playstore_image{
+        display: flex;
+        flex-direction: column;
+       }
+      .playstore_image img{
+       height: 90;
+       margin-top: 10;
+       }
+       .map_detail{
+        padding: 0;
+        margin:0 ;
+       }
 }
