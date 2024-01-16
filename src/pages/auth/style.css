@@ -319,7 +319,7 @@ a {
 /* Popup Styles*/
 .popupContainer {
     position: absolute;
-    width: 330px;
+    /* width: 330px; */
     height: auto;
     left: 40%;
     top: 20%;
@@ -372,6 +372,7 @@ a {
 
 .popupBody {
     padding: 20px;
+    display: flex;
 }
 
 .social_login .social_box {

@@ -49,7 +49,19 @@ const Headermain = () => {
   useEffect(() => {
     window.addEventListener("scroll", listenScrollEvent);
   }, []);
+  const [width, setWidth] = useState(window.innerWidth);
 
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+}
+useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+        window.removeEventListener('resize', handleWindowSizeChange);
+    }
+}, []);
+
+const isMobile = width <= 768;
   return (
     <div>
       <header className="fixed-top site__header ">
@@ -128,6 +140,15 @@ const Headermain = () => {
                 <li>
                   <div className="d-flex justify-content-center"></div>
                 </li>
+               {isMobile? <li>
+                  <Link
+                    to="/"
+                    className="link"
+                    onClick={showNavbar && handleShowNavbar}
+                  >
+                    Home
+                  </Link>
+                </li>:<></>}
                 <li>
                   <Link
                     to="/discover"
@@ -208,12 +229,12 @@ const Headermain = () => {
             </div>
           </nav>
           <div className=" theme-toggle">
-            <div className="searchicon" onClick={handleShowSearchTop}>
+            {isMobile?<Col className="d-flex justify-content-center align-items-center" style={{right:'100px' ,position:'absolute'}}> <div className="searchicon" onClick={handleShowSearchTop}>
               <div className="innersearchicon">
                 <i class="fas fa-search"></i>
               </div>
             </div>
-            <Themetoggle />
+            <Themetoggle /></Col>:<></>}
             <a
               class={`${showNavbar ? "menu-trigger-close" : "menu-trigger"}`}
               onClick={handleShowNavbar}

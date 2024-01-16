@@ -1,14 +1,26 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import "./style.css";
 const SiginAuth = ({ handleClose, show, children }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
+  const [width, setWidth] = useState(window.innerWidth);
 
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+}
+useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+        window.removeEventListener('resize', handleWindowSizeChange);
+    }
+}, []);
+
+const isMobile = width <= 768;
   return (
     <div
       className={showHideClassName}
       //   class="d-flex align-items-center justify-content-center h-100 w-100"
     >
-      <div class=" popupContainer">
+      <div class=" popupContainer" style={{width:isMobile?"330px":"500px"}}>
         <div class="popupHeader">
           <span class="header_title">Sign In / Register</span>
           <span class="modal_close" onClick={handleClose}>
@@ -16,7 +28,10 @@ const SiginAuth = ({ handleClose, show, children }) => {
           </span>
         </div>
 
-        <section class="popupBody">
+        <section class="popupBody" >
+          <div>
+            {isMobile?<></>:<img src="https://ragenmah.github.io/nuga-eco-club/static/images/logo.png" height={120} className="m-4"></img>}
+          </div>
           <div class="social_login">
             <div class="user_register">
               <form>
