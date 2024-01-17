@@ -19,14 +19,19 @@ export const About = () => {
           </title>
           <meta name="description" content={meta.description} />
         </Helmet>
-        {/* intro_sec */}
-       <div className="d-flex flex-column">
+       
+       {/* <div className="d-flex flex-column">
        <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-20 "
-            // style={{ backgroundImage: `url(${aboutus.background_img})` }}
+      
           >
-            <Container>
+           
+          </div>
+        </div> 
+       </div> */}
+      </section>
+      <Container>
               <Col className="mb-5 mt-3 pt-md-3">
                 <Col lg="4">
                   <h1 className="about_us_title mb-2">ABOUT NUGA</h1>
@@ -58,11 +63,7 @@ export const About = () => {
                 </Col>
               </Row>
             </Container>
-          </div>
-        </div> <Teams />
-       </div>
-      </section>
-     
+      <Teams />
     </HelmetProvider>
   );
 };

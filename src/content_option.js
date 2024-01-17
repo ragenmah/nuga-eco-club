@@ -90,6 +90,12 @@ const teams = [
     img: "https://ragenmah.github.io/nuga-eco-club/static/images/teams/ragen.jpeg",
     date: "",
   },
+  {
+    name: "Smriti Acharya",
+    position: "Researcher",
+    img: "https://ragenmah.github.io/nuga-eco-club/static/images/logo.png",
+    date: "",
+  },
 ];
 const teamData = {
   des1: "Meet the driving force behind NUGA, where John Maharjan and Manisha Maharjan co-found this visionary project. Their leadership is rooted in a shared commitment to environmental preservation and addressing climate change's impact on nature, the environment, and heritage. With a wealth of experience and expertise, they steer NUGA towards its mission of safeguarding the heart of the planet. Alongside them is Ragen Maharjan, the creative designer shaping NUGA's visual identity with an emphasis on sustainability. Together, this dynamic team blends passion, strategic vision, and creative ingenuity to lead NUGA towards a sustainable future, bridging the past, present, and future for the well-being of our planet and its communities. Explore the profiles of our dedicated team members and join us in making a positive impact on our shared environment.",
