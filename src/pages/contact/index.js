@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import * as emailjs from "emailjs-com";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
@@ -11,6 +10,7 @@ import Leaflet from "leaflet";
 import iconUrl from "../../_mock/svgs/marker.svg";
 
 import { useRef } from "react";
+import axios from "axios";
 
 export const newicon = new Leaflet.Icon({
   iconUrl: markerImg,
@@ -36,39 +36,32 @@ export const ContactUs = () => {
     setFormdata({ loading: true });
 
     const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
-      to_name: contactConfig.YOUR_EMAIL,
+      email: formData.email,
+      name: formData.name,
+      phone: formData.phone,
       message: formData.message,
     };
 
-    emailjs
-      .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
-        templateParams,
-        contactConfig.YOUR_USER_ID
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
+    axios
+      .post("http://localhost:4000/api/v1/contactUs", templateParams)
+      .then((response) => {
+        console.log(response.data["err"]);
+        // alert("Thank you for your message.");
+        if (response.data["err"] == true) {
           setFormdata({
-            loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
-            variant: "success",
-            show: true,
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          setFormdata({
-            alertmessage: `Faild to send!,${error.text}`,
+            alertmessage: `Faild to send!,${response.data["msg"]}`,
             variant: "danger",
             show: true,
           });
-          document.getElementsByClassName("co_alert")[0].scrollIntoView();
+        } else {
         }
-      );
+        setFormdata({
+          loading: false,
+          alertmessage: "SUCCESS! ,Thankyou for your messege",
+          variant: "success",
+          show: true,
+        });
+      });
   };
 
   const handleChange = (e) => {
