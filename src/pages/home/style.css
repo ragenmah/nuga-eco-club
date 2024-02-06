@@ -179,12 +179,13 @@
     padding: 0;
     text-transform: uppercase;
     font-size: 16em;
+    font-weight: 500;
     color: rgba(255, 255, 255, .1);
     /* background-image: url(https://image.ibb.co/ciSeac/image.png); */
-    background-image: url(https://images.pexels.com/photos/4028819/pexels-photo-4028819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-image: url(../../../public/static/images/backloader.png);
     background-repeat: repeat-x;
     -webkit-background-clip: text;
-    animation: animate 15s linear infinite;
+    animation: animate 30s linear infinite;
 
 }
 
@@ -223,7 +224,7 @@
     /* background-color: #FE932E; */
     background-color: rgb(49, 48, 48);
     height: 512px;
-    width: 600px;
+    width: 550px;
     position: relative;
     z-index: 1;
     /* border: 10px solid black; */

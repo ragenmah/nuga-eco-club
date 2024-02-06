@@ -9,7 +9,7 @@ import {
 // import "../../_mock/nepal/nepal.json";
 import nepalGeojson from "../../_mock/nepal/nepal.json";
 import kathmanduGeojson from "../../_mock/nepal/kathmandu.json";
-import { useState, useRef,useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import "./style.css";
 import Leaflet from "leaflet";
 import { Container, Row, Col } from "react-bootstrap";
@@ -60,15 +60,15 @@ export const OfficeLocation = () => {
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
-}
-useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
     return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
-    }
-}, []);
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
 
-const isMobile = width <= 768;
+  const isMobile = width <= 768;
 
   /* function determining what should happen onmouseover, this function updates our state*/
   const highlightFeature = (e) => {
@@ -119,9 +119,10 @@ const isMobile = width <= 768;
 
     layer.setStyle({
       weight: 1, // Set the border weight
-      fillColor:"red",
+      fillColor: "red",
       // opacity: 1,         // Set the border opacity
       color: "red", // Set the border color
+
       // fillOpacity: 0.7,   // Set the fill opacity
     });
     layer.on({
@@ -178,7 +179,8 @@ const isMobile = width <= 768;
     height: "100%",
     width: "100%",
     margin: "0 auto",
-    border: "2px solid black",fillColor:'red',
+    border: "2px solid black",
+    fillColor: "red",
     // backgroundColor: "var(--bg-color)",
     // zIndex: "-12",
   };
@@ -226,7 +228,7 @@ const isMobile = width <= 768;
             <div className="">
               <section className="showcase">
                 <MapContainer
-                  zoom={isMobile?2: 7.5}
+                  zoom={isMobile ? 2 : 7.5}
                   style={mapStyle}
                   center={[28.3949, 84.124]}
                   minZoom={7.5}
@@ -236,11 +238,11 @@ const isMobile = width <= 768;
                   maxBoundsViscosity={0.5}
                   attributionControl={false}
                   zoomControl={true}
-                  scrollWheelZoom={true}
-                  doubleClickZoom={true}
+                  scrollWheelZoom={false}
+                  doubleClickZoom={false}
                   touchZoom={false}
                   boxZoom={true}
-                  dragging={isMobile? true:true}
+                  dragging={isMobile ? true : false}
                 >
                   <FeatureGroup>
                     <GeoJSON

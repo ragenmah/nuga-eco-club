@@ -309,7 +309,6 @@
     filter: var(--back-footer-img);
 }
 
-
 /* Media Query For different screens */
 @media (min-width:320px) and (max-width:479px) {
 

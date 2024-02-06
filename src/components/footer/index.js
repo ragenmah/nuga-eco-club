@@ -112,7 +112,7 @@ const FooterMain = () => {
                   {" "}
                   <a
                     class="footer-call-to-action-link"
-                    href="tel:{contactConfig.YOUR_FONE}"
+                    href={contactConfig.telTo}
                     target="_self"
                   >
                     {contactConfig.YOUR_FONE}
@@ -125,7 +125,7 @@ const FooterMain = () => {
                   {" "}
                   <a
                     class="footer-call-to-action-link"
-                    href="tel:{contactConfig.YOUR_FONE}"
+                    href={contactConfig.maitTo}
                     target="_self"
                   >
                     {contactConfig.YOUR_EMAIL}
@@ -216,12 +216,14 @@ const FooterMain = () => {
               </a>
             </div> */}
           </div>
-          <img
-            // src="https://ragenmah.github.io/nuga-eco-club/static/images/footer.png"
-            src="https://ragenmah.github.io/nuga-eco-club/static/images/nuga_footer.svg"
-            height={140}
-            className="pull-right d-flex align-items-end footer-img"
-          ></img>
+          <center>
+            <img
+              // src="https://ragenmah.github.io/nuga-eco-club/static/images/footer.png"
+              src="https://ragenmah.github.io/nuga-eco-club/static/images/nuga_footer.svg"
+              height={140}
+              className="footer-img"
+            ></img>
+          </center>
           <div class="footer-copyright">
             <div class="footer-copyright-wrapper">
               <p class="footer-copyright-text">

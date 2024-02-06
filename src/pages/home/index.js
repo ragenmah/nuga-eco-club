@@ -103,7 +103,6 @@ export const Home = () => {
                 {homePageData.welcomBanner1}
                 {homePageData.welcomBanner2}
               </h6>
-              {/* <span></span> */}
             </div>
 
             {/* <Row>
@@ -195,17 +194,14 @@ export const Home = () => {
               </p>
             </Col>
           </Row>
-          <Col>
+          {/* <Col>
             Quick links
             <p>
               <span>Heritages</span>
               <span>**Climate changes</span>
             </p>
             <span>Guides</span>
-            {/* <Link to="/ContactUs" className="">
-              <h4 className="sign__up">Guides</h4>
-            </Link> */}
-          </Col>
+          </Col> */}
         </Row>
       </Container>
       <div className="let__us__know">

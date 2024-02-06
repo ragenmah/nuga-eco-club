@@ -11,6 +11,7 @@ import iconUrl from "../../_mock/svgs/marker.svg";
 
 import { useRef } from "react";
 import axios from "axios";
+import { contactUs } from "../../services/api";
 
 export const newicon = new Leaflet.Icon({
   iconUrl: markerImg,
@@ -42,26 +43,24 @@ export const ContactUs = () => {
       message: formData.message,
     };
 
-    axios
-      .post("http://localhost:4000/api/v1/contactUs", templateParams)
-      .then((response) => {
-        console.log(response.data["err"]);
-        // alert("Thank you for your message.");
-        if (response.data["err"] == true) {
-          setFormdata({
-            alertmessage: `Faild to send!,${response.data["msg"]}`,
-            variant: "danger",
-            show: true,
-          });
-        } else {
-        }
+    axios.post(contactUs, templateParams).then((response) => {
+      console.log(response.data["err"]);
+      // alert("Thank you for your message.");
+      if (response.data["err"] == true) {
         setFormdata({
-          loading: false,
-          alertmessage: "SUCCESS! ,Thankyou for your messege",
-          variant: "success",
+          alertmessage: `Faild to send!,${response.data["msg"]}`,
+          variant: "danger",
           show: true,
         });
+      } else {
+      }
+      setFormdata({
+        loading: false,
+        alertmessage: "SUCCESS! ,Thankyou for your messege",
+        variant: "success",
+        show: true,
       });
+    });
   };
 
   const handleChange = (e) => {
@@ -218,7 +217,22 @@ export const ContactUs = () => {
             </form>
           </Col>
         </Row>
+        <Row className="mb-5 pt-md-3">
+          {/* <Col lg="8">
+            <h1 className="display-4  about_us_title mb-4">Contact Us</h1>
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col> */}
+          <Col className="faq-container">
+            <Col lg="4">
+              <h1 className=" mb-2">FAQs</h1>
+            </Col>
+            <Col lg="2">
+              <hr className="t_border my-3 ml-0 text-left" />{" "}
+            </Col>
+          </Col>
+        </Row>
       </Container>
+      {/* https://codepen.io/awitam/pen/XWNWObz */}
       <div className={formData.loading ? "loading-bar" : "d-none"}></div>
     </HelmetProvider>
   );

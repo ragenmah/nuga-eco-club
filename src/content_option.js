@@ -33,7 +33,7 @@ const homePageData = {
 };
 
 const introdata = {
-  title: "Find The Best heritage walk in just One click",
+  title: "Find The Best heritage walk in just one click",
   subTitle: "BEST PLACE TO FIND AND EXPLORE THAT ALL YOU NEED",
   animated: {
     first: "Discover",
@@ -68,7 +68,7 @@ const dataabout = {
 const datamaps = {
   title:
     "Get a hands-on experience of our rich features, by downloading our mobile apps ",
-    title2:"from App Store and Google Play Store."
+  title2: "from App Store and Google Play Store.",
 };
 
 const teams = [
@@ -200,6 +200,34 @@ const socialprofils = {
   twitter: "https://twitter.com",
   instagram: "https://www.instagram.com/nuga_nepal/",
 };
+
+const faqs = [
+  {
+    id: 1,
+    question: "Popular Articles",
+    answer:
+      "Suspendisse ipsum elit, hendrerit id eleifend at, condimentum et mauris. Curabitur et libero vel arcu dignissim pulvinar ut ac leo. In sit amet orci et erat accumsan interdum.",
+  },
+  {
+    id: 2,
+    question: "Fix problems & request removals",
+    answer:
+      "Suspendisse ipsum elit, hendrerit id eleifend at, condimentum et mauris. Curabitur et libero vel arcu dignissim pulvinar ut ac leo. In sit amet orci et erat accumsan interdum.",
+  },
+  {
+    id: 3,
+    question: "Browse the web",
+    answer:
+      "Suspendisse ipsum elit, hendrerit id eleifend at, condimentum et mauris. Curabitur et libero vel arcu dignissim pulvinar ut ac leo. In sit amet orci et erat accumsan interdum.",
+  },
+  {
+    id: 4,
+    question: "Search on your phone or tablet",
+    answer:
+      "Suspendisse ipsum elit, hendrerit id eleifend at, condimentum et mauris. Curabitur et libero vel arcu dignissim pulvinar ut ac leo. In sit amet orci et erat accumsan interdum.",
+  },
+];
+
 export {
   meta,
   languageSwitcherData,
@@ -220,4 +248,5 @@ export {
   logoUrl,
   whatWeDoData,
   homePageData,
+  faqs,
 };

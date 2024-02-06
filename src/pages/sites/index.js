@@ -14,7 +14,7 @@ export const Sites = () => {
 
   return (
     <HelmetProvider>
-      <section id="home" className="home">
+      <section id="home" className="sites">
         <Helmet>
           <meta charSet="utf-8" />
           <title> {meta.title}</title>
@@ -48,40 +48,6 @@ export const Sites = () => {
                         )}
                       </div>
                     </div>
-                    {/* <h1 className="fluidz-48 mb-1x">
-                    <Typewriter
-                      options={{
-                        strings: [
-                          introdata.animated.first,
-                          introdata.animated.second,
-                          introdata.animated.third,
-                        ],
-                        autoStart: true,
-                        loop: true,
-                        deleteSpeed: 10,
-                      }}
-                    />
-                  </h1> */}
-                    {/* <p className="mb-1x">{introdata.description}</p>
-                  <p className="mb-1x">{dataabout.title}</p>
-                  <div className="intro_btn-action pb-5">
-                    <Link to="/portfolio" className="text_2">
-                      <div id="button_p" className="ac_btn btn ">
-                        Discover
-                        <div className="ring one"></div>
-                        <div className="ring two"></div>
-                        <div className="ring three"></div>
-                      </div>
-                    </Link>
-                    <Link to="/contact">
-                      <div id="button_h" className="ac_btn btn">
-                        Contact Us
-                        <div className="ring one"></div>
-                        <div className="ring two"></div>
-                        <div className="ring three"></div>
-                      </div>
-                    </Link>
-                  </div> */}
                   </div>
                 </div>
                 <div className="align-self-center w-100 mt-2 shape">
@@ -98,7 +64,7 @@ export const Sites = () => {
             </Row> */}
           </div>
         </div>
-        <HeritageWalkMap />
+        {/* <HeritageWalkMap /> */}
       </section>
     </HelmetProvider>
   );

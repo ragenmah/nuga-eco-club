@@ -53,15 +53,15 @@ const Headermain = () => {
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
-}
-useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
     return () => {
-        window.removeEventListener('resize', handleWindowSizeChange);
-    }
-}, []);
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
 
-const isMobile = width <= 768;
+  const isMobile = width <= 768;
   return (
     <div>
       <header className="fixed-top site__header ">
@@ -93,6 +93,13 @@ const isMobile = width <= 768;
               <li className="head-responsive-right pull-right">
                 <div className="header-top-right">
                   <ul>
+                    <li>
+                      <div className="searchicon" onClick={handleShowSearchTop}>
+                        <div className="innersearchicon">
+                          <i class="fas fa-search"></i>
+                        </div>
+                      </div>
+                    </li>
                     <li>
                       <LanguageSwitcher />
                     </li>
@@ -140,15 +147,19 @@ const isMobile = width <= 768;
                 <li>
                   <div className="d-flex justify-content-center"></div>
                 </li>
-               {isMobile? <li>
-                  <Link
-                    to="/"
-                    className="link"
-                    onClick={showNavbar && handleShowNavbar}
-                  >
-                    Home
-                  </Link>
-                </li>:<></>}
+                {isMobile ? (
+                  <li>
+                    <Link
+                      to="/"
+                      className="link"
+                      onClick={showNavbar && handleShowNavbar}
+                    >
+                      Home
+                    </Link>
+                  </li>
+                ) : (
+                  <></>
+                )}
                 <li>
                   <Link
                     to="/discover"
@@ -203,6 +214,15 @@ const isMobile = width <= 768;
                     {t("header.ContactUs")}
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    to="/ContactUs"
+                    className="link"
+                    onClick={showNavbar && handleShowNavbar}
+                  >
+                    {t("header.Souvenir")}
+                  </Link>
+                </li>
                 {showNavbar && (
                   <li>
                     <div
@@ -213,13 +233,13 @@ const isMobile = width <= 768;
                     </div>
                   </li>
                 )}
-                <li>
+                {/* <li>
                   <div className="searchicon" onClick={handleShowSearchTop}>
                     <div className="innersearchicon">
                       <i class="fas fa-search"></i>
                     </div>
                   </div>
-                </li>
+                </li> */}
                 <li>
                   <div className="px-2 pull-right">
                     {isScrolled && <Themetoggle />}
@@ -229,12 +249,22 @@ const isMobile = width <= 768;
             </div>
           </nav>
           <div className=" theme-toggle">
-            {isMobile?<Col className="d-flex justify-content-center align-items-center" style={{right:'100px' ,position:'absolute'}}> <div className="searchicon" onClick={handleShowSearchTop}>
-              <div className="innersearchicon">
-                <i class="fas fa-search"></i>
-              </div>
-            </div>
-            <Themetoggle /></Col>:<></>}
+            {isMobile ? (
+              <Col
+                className="d-flex justify-content-center align-items-center"
+                style={{ right: "100px", position: "absolute" }}
+              >
+                {" "}
+                <div className="searchicon" onClick={handleShowSearchTop}>
+                  <div className="innersearchicon">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+                <Themetoggle />
+              </Col>
+            ) : (
+              <></>
+            )}
             <a
               class={`${showNavbar ? "menu-trigger-close" : "menu-trigger"}`}
               onClick={handleShowNavbar}
