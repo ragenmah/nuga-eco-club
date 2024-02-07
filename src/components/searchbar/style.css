@@ -133,7 +133,7 @@ input:focus {
     font-weight: 500;
     margin: 0 0 3px;
     padding: 12px 15px;
-    width: 100% !important;
+    width: 91% !important;
 }
 
 .search_field_input::placeholder {

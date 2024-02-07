@@ -20,22 +20,23 @@ export const Discover = () => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
-          <Col className="contact-us-container">
-            <Col lg="8">
-              <div className="d-flex">
-                <h1 className=" mb-2">DISCOVER</h1>{" "}
-              </div>
-            </Col>
-            <Col lg="2">
-              <hr className="t_border my-3 ml-0 text-left" />
-            </Col>
-            <Col className="ng-quote">
-              <h3 className="section-title py-2">{}</h3>
-              <div className="ng-container quote-text">
-                <h5>Discover the Best Sites and Deals for Your Next Trip.</h5>
-              </div>
-            </Col>
-            {/* <Col className="p-2" lg="12">
+          <center>
+            <Col className="contact-us-container">
+              <Col lg="8">
+                <div className="">
+                  <h1 className=" mb-2">DISCOVER</h1>{" "}
+                </div>
+              </Col>
+              <Col lg="2">
+                <hr className="t_border my-3 ml-0 text-left" />
+              </Col>
+              <Col className="ng-quote">
+                <h3 className="section-title py-2">{}</h3>
+                <div className="ng-container quote-text">
+                  <h5>Discover the Best Sites and Deals for Your Next Trip.</h5>
+                </div>
+              </Col>
+              {/* <Col className="p-2" lg="12">
               <div>
                 <SearchBarBody />
                 <br />
@@ -54,7 +55,8 @@ export const Discover = () => {
                 </div>
               </div>
             </Col> */}
-          </Col>
+            </Col>
+          </center>
         </Row>
         <div className="mb-5 po_items_ho">
           {dataportfolio.map((data, i) => {

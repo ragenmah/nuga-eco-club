@@ -94,13 +94,6 @@ const Headermain = () => {
                 <div className="header-top-right">
                   <ul>
                     <li>
-                      <div className="searchicon" onClick={handleShowSearchTop}>
-                        <div className="innersearchicon">
-                          <i class="fas fa-search"></i>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
                       <LanguageSwitcher />
                     </li>
 
@@ -233,18 +226,20 @@ const Headermain = () => {
                     </div>
                   </li>
                 )}
-                {/* <li>
-                  <div className="searchicon" onClick={handleShowSearchTop}>
-                    <div className="innersearchicon">
-                      <i class="fas fa-search"></i>
-                    </div>
-                  </div>
-                </li> */}
                 <li>
+                  {
+                    <div className="searchicon" onClick={handleShowSearchTop}>
+                      <div className="innersearchicon">
+                        <i class="fas fa-search"></i>
+                      </div>
+                    </div>
+                  }
+                </li>
+                {/* <li>
                   <div className="px-2 pull-right">
                     {isScrolled && <Themetoggle />}
                   </div>
-                </li>
+                </li> */}
               </ul>
             </div>
           </nav>

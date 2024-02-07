@@ -4,33 +4,37 @@
 }
 
 .ng-container {
-    margin: 0 auto;
-    max-width: 1640px;
-    padding: 0 32px;
+    /* margin: 0 auto; */
+    /* max-width: 1640px; */
+    /* padding: 0 32px; */
     width: 100%;
 }
 
-.quote-text {
+.quote-text h6 {
     /* max-width: 835px; */
     margin-bottom: 32px;
+    text-align: center;
+    font-size: 2em;
+
 }
 
 .quote-text span,
 marker {
-    font-size: 40px;
+    font-size: 32px;
     /* font-size: 3.4375rem; */
     /* color: rgb(56, 55, 55); */
-    font-weight: 700;
-    letter-spacing: -1.5px;
-    line-height: 55px;
+    /* font-weight: bold; */
+    /* letter-spacing: -1.5px; */
+
+    /* line-height: 38px; */
 }
 
 
 
 
 .quote-text marker {
-    /* background: none; */
-    background-image: linear-gradient(transparent 60%, var(--yellow-color) 0);
+    background: none;
+    /* background-image: linear-gradient(transparent 60%, var(--yellow-color) 0); */
     background-repeat: no-repeat;
     background-size: 0 98%;
     font-style: normal;

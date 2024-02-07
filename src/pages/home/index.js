@@ -134,15 +134,17 @@ export const Home = () => {
       </div>
 
       <Container className="qr_code_container">
-        <Col className="mb-5 d-block mt-5 pt-md-3">
-          <Col lg="12">
-            {/* <h1 className="teams_title mb-2">Latest News and updates</h1> */}
-            <h1 className="teams_title mb-2">QR Code Feature</h1>
+        <center>
+          <Col className="mb-5 d-block mt-5 pt-md-3">
+            <Col lg="12">
+              {/* <h1 className="teams_title mb-2">Latest News and updates</h1> */}
+              <h1 className="teams_title mb-2">QR Code Feature</h1>
+            </Col>
+            <Col lg="2">
+              <hr className="t_border my-3 ml-0 text-left" />{" "}
+            </Col>
           </Col>
-          <Col lg="2">
-            <hr className="t_border my-3 ml-0 text-left" />{" "}
-          </Col>
-        </Col>
+        </center>
         <Row className="justify-content-between align-items-center mt-5 mb-5 mb-lg-7">
           <Col lg={5} className="qr__code_image">
             <Image
@@ -162,11 +164,10 @@ export const Home = () => {
         </Row>
       </Container>
       <HeritageFeatured />
-      <Container>
+      {/* <Container>
         <Row className=" justify-content-between align-items-center mb-5 mb-lg-7">
           <Col className="mb-5 d-block pt-md-3">
             <Col lg="12">
-              {/* <h1 className="teams_title mb-2">Latest News and updates</h1> */}
               <h1 className="teams_title mb-2">
                 Tourism and Climate Action Resources
               </h1>
@@ -177,10 +178,6 @@ export const Home = () => {
           </Col>
 
           <Row className="justify-content-between align-items-center mb-5 mb-lg-7">
-            {/* <Col lg={5} className="qr__code_image">
-              <Col lg={6} className="rounded shadow pt-3"></Col>
-            </Col> */}
-
             <Col lg={8} className="order-lg-2 mb-lg-0">
               <p className="mt-3 mb-4 fw-bold quote-text">
                 <span>
@@ -194,16 +191,16 @@ export const Home = () => {
               </p>
             </Col>
           </Row>
-          {/* <Col>
+          <Col>
             Quick links
             <p>
               <span>Heritages</span>
               <span>**Climate changes</span>
             </p>
             <span>Guides</span>
-          </Col> */}
+          </Col>
         </Row>
-      </Container>
+      </Container> */}
       <div className="let__us__know">
         <Container>
           <h3>Didn't Find What You were looking For? </h3>

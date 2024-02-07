@@ -19,8 +19,8 @@ export const About = () => {
           </title>
           <meta name="description" content={meta.description} />
         </Helmet>
-       
-       {/* <div className="d-flex flex-column">
+
+        {/* <div className="d-flex flex-column">
        <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-20 "
@@ -32,37 +32,40 @@ export const About = () => {
        </div> */}
       </section>
       <Container>
-              <Col className="mb-5 mt-3 pt-md-3">
-                <Col lg="4">
-                  <h1 className="about_us_title mb-2">ABOUT NUGA</h1>
-                </Col>
-                <Col lg="2">
-                  <hr className="t_border my-3 ml-0 text-left" />{" "}
-                </Col>
-              </Col>
-              <Row className="sec_sp">
-                <Col lg="4">
-                  {/* <img src={dataabout.img} width={300}></img> */}
-                  <img
-                    src="https://ragenmah.github.io/nuga-eco-club/static/images/logo.png"
-                    height={300}
-                    // width={120}
-                  ></img>
-                  {/* <img
+        <center>
+          {" "}
+          <Col className="mb-5 mt-3 pt-md-3">
+            <Col lg="4">
+              <h1 className="contact-us-container mb-2">ABOUT NUGA</h1>
+            </Col>
+            <Col lg="2">
+              <hr className="t_border my-3 ml-0 text-left" />{" "}
+            </Col>
+          </Col>
+        </center>
+        <Row className="sec_sp">
+          <Col lg="4">
+            {/* <img src={dataabout.img} width={300}></img> */}
+            <img
+              src="https://ragenmah.github.io/nuga-eco-club/static/images/logo.png"
+              height={300}
+              // width={120}
+            ></img>
+            {/* <img
                     src="https://ragenmah.github.io/nuga-eco-club/static/images/nuga_maps.png"
                     height={280}
                     
                   ></img> */}
-                </Col>
-                <Col lg="8">
-                  <h3 className="section-title py-4">{dataabout.title}</h3>
-                  <div>
-                    <p>{dataabout.aboutus1}</p>
-                    <p>{dataabout.aboutus2}</p>
-                  </div>
-                </Col>
-              </Row>
-            </Container>
+          </Col>
+          <Col lg="8">
+            <h3 className="section-title py-4">{dataabout.title}</h3>
+            <div>
+              <p>{dataabout.aboutus1}</p>
+              <p>{dataabout.aboutus2}</p>
+            </div>
+          </Col>
+        </Row>
+      </Container>
       <Teams />
     </HelmetProvider>
   );

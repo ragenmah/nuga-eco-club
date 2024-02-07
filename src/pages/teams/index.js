@@ -38,56 +38,58 @@ export const Teams = () => {
           </div>
         </div>
       </section> */}
-      <Container><Col className="mb-5  mt-3 pt-md-3">
-                <Col lg="4">
-                  <h1 className="teams_title mb-2">OUR TEAM</h1>
-                </Col>
-                <Col lg="2">
-                  <hr className="t_border my-3 ml-0 text-left" />{" "}
-                </Col>
-              </Col>
-        <div  className="  ">
-        
-              <Row className="sec_sp mt-1 teams-main-container">
-                <Col>
-                  <h3 className="section-title py-2">{}</h3>
-                  <div>
-                    <p> {teamData.des1}</p>
-                    <p> {teamData.des2}</p>
-                  </div>
-                </Col>
-                <div>
-                  <div class="teams-container mt-2">
-                    {teams.map((data, i) => {
-                      return (
-                        <figure key={i}>
-                          <div class="figure-img">
-                            <img
-                              src={data.img}
-                              class="team-img"
-                              alt={data.na}
-                              width={400}
-                            />
-                            <div class="overlay"></div>
-                          </div>
-                          <figcaption>
-                            <h3>{data.name}</h3>
-                            <span>
-                              <h5>{data.position}</h5>
-                            </span>
-                            <span>
-                              <h6>{data.date}</h6>
-                            </span>
-                          </figcaption>
-                        </figure>
-                      );
-                    })}
-                  </div>
-                </div>
-              </Row>
+      <Container>
+        <center>
+          {" "}
+          <Col className="mb-5  mt-3 pt-md-3">
+            <Col lg="4">
+              <h1 className="teams_title mb-2">OUR TEAM</h1>
+            </Col>
+            <Col lg="2">
+              <hr className="t_border my-3 ml-0 text-left" />{" "}
+            </Col>
+          </Col>
+        </center>
+        <div className="  ">
+          <Row className="sec_sp mt-1 teams-main-container">
+            <Col>
+              <h3 className="section-title py-2">{}</h3>
+              <div>
+                <p> {teamData.des1}</p>
+                <p> {teamData.des2}</p>
+              </div>
+            </Col>
+            <div>
+              <div class="teams-container mt-2">
+                {teams.map((data, i) => {
+                  return (
+                    <figure key={i}>
+                      <div class="figure-img">
+                        <img
+                          src={data.img}
+                          class="team-img"
+                          alt={data.na}
+                          width={400}
+                        />
+                        <div class="overlay"></div>
+                      </div>
+                      <figcaption>
+                        <h3>{data.name}</h3>
+                        <span>
+                          <h5>{data.position}</h5>
+                        </span>
+                        <span>
+                          <h6>{data.date}</h6>
+                        </span>
+                      </figcaption>
+                    </figure>
+                  );
+                })}
+              </div>
+            </div>
+          </Row>
         </div>
-              
-            </Container>
+      </Container>
     </>
   );
 };

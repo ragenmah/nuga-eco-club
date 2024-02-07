@@ -1,20 +1,4 @@
 :root {
-  --bg-color: #0c0c0c;
-  --primary-color: #010409;
-  --secondary-color: #f4f1f1;
-  --text-color: #fff;
-  --text-color-2: #fff;
-  --text-color-3: rgb(204, 0, 0);
-  --overlay-color: rgb(12 12 12 / 63%);
-  --bg-div-overlay-color: rgba(255, 255, 255, 0.2);
-  --text-color-search: #0d0d0d;
-  --white-color: #e6e6e6;
-  --map-tiles-filter: brightness(1) invert(0);
-  --yellow-color: #FE932E;
-  --back-footer-img: invert(1);
-}
-
-[data-theme="light"] {
   /* --bg-color: #ffffff;
   --primary-color: #ffffff; */
   --bg-color: #ffffff;
@@ -31,7 +15,22 @@
   --map-tiles-filter: brightness(0.6) invert(1) hue-rotate(200deg) saturate(1) brightness(1);
   --yellow-color: #FE932E;
   --back-footer-img: invert(0) brightness(0.6) hue-rotate(200deg) saturate(1);
+}
 
+[data-theme="dark"] {
+  --bg-color: #0c0c0c;
+  --primary-color: #010409;
+  --secondary-color: #f4f1f1;
+  --text-color: #fff;
+  --text-color-2: #fff;
+  --text-color-3: rgb(204, 0, 0);
+  --overlay-color: rgb(12 12 12 / 63%);
+  --bg-div-overlay-color: rgba(255, 255, 255, 0.2);
+  --text-color-search: #0d0d0d;
+  --white-color: #e6e6e6;
+  --map-tiles-filter: brightness(1) invert(0);
+  --yellow-color: #FE932E;
+  --back-footer-img: invert(1);
 }
 
 @font-face {

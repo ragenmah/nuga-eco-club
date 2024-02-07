@@ -83,14 +83,17 @@ export const ContactUs = () => {
             <h1 className="display-4  about_us_title mb-4">Contact Us</h1>
             <hr className="t_border my-4 ml-0 text-left" />
           </Col> */}
-          <Col className="contact-us-container">
-            <Col lg="4">
-              <h1 className=" mb-2">CONTACT US</h1>
+          <center>
+            {" "}
+            <Col className="contact-us-container">
+              <Col lg="4">
+                <h1 className=" mb-2">CONTACT US</h1>
+              </Col>
+              <Col lg="2">
+                <hr className="t_border my-3 ml-0 text-left" />{" "}
+              </Col>
             </Col>
-            <Col lg="2">
-              <hr className="t_border my-3 ml-0 text-left" />{" "}
-            </Col>
-          </Col>
+          </center>
         </Row>
 
         <Row className="sec_sp">
@@ -218,18 +221,16 @@ export const ContactUs = () => {
           </Col>
         </Row>
         <Row className="mb-5 pt-md-3">
-          {/* <Col lg="8">
-            <h1 className="display-4  about_us_title mb-4">Contact Us</h1>
-            <hr className="t_border my-4 ml-0 text-left" />
-          </Col> */}
-          <Col className="faq-container">
-            <Col lg="4">
-              <h1 className=" mb-2">FAQs</h1>
+          <center>
+            <Col className="faq-container">
+              <Col lg="4">
+                <h1 className=" mb-2">FAQs</h1>
+              </Col>
+              <Col lg="2">
+                <hr className="t_border my-3 ml-0 text-left" />{" "}
+              </Col>
             </Col>
-            <Col lg="2">
-              <hr className="t_border my-3 ml-0 text-left" />{" "}
-            </Col>
-          </Col>
+          </center>
         </Row>
       </Container>
       {/* https://codepen.io/awitam/pen/XWNWObz */}

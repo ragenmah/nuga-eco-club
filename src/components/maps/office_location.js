@@ -216,19 +216,21 @@ export const OfficeLocation = () => {
     <>
       <Container className="interaction_map_container mb-5">
         <Row className=" justify-content-between align-items-center mb-5">
-          <Col className="mb-5  mt-3 ">
-            <Col lg="7">
-              <h1 className="teams_title mb-2">Interaction Map</h1>
+          <center>
+            <Col className="mb-5  mt-3 ">
+              <Col lg="7">
+                <h1 className="teams_title mb-2">Interaction Map</h1>
+              </Col>
+              <Col lg="2">
+                <hr className="t_border my-3 ml-0 text-left" />{" "}
+              </Col>
             </Col>
-            <Col lg="2">
-              <hr className="t_border my-3 ml-0 text-left" />{" "}
-            </Col>
-          </Col>
+          </center>
           <Col lg={6} className=" map___container rounded shadow pt-3 w-100">
             <div className="">
               <section className="showcase">
                 <MapContainer
-                  zoom={isMobile ? 2 : 7.5}
+                  zoom={isMobile ? 2 : 7}
                   style={mapStyle}
                   center={[28.3949, 84.124]}
                   minZoom={7.5}

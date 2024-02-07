@@ -3,9 +3,10 @@
 .teams-container {
     /* margin-top: 300px;
     margin-bottom: 300px; */
-   
+
 }
-.teams-main-container{
+
+.teams-main-container {
     display: flex;
     flex-direction: row;
 }
@@ -26,7 +27,9 @@
 
 
 .teams-container {
-    display: flex; flex-direction: row; justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .team-container>figure {
@@ -44,7 +47,7 @@
 }
 
 .team-img {
-    height: 360px;
+    height: 300px;
     max-width: 270px;
     /* border-radius: 10px; */
     object-fit: cover;
