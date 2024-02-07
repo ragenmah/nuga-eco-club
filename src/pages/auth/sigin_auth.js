@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
+import validator from "validator";
 
 const SiginAuth = ({ handleClose, show, children }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
@@ -9,6 +10,28 @@ const SiginAuth = ({ handleClose, show, children }) => {
 
   const [user, setUser] = useState([]);
   const [profile, setProfile] = useState([]);
+
+  const [emailError, setEmailError] = useState("");
+  const [email, setEmail] = useState("");
+  const [btnEnable, setBtnEnable] = useState(true);
+
+  // Email Validation
+  const validateEmail = (e) => {
+    var email = e.target.value;
+
+    if (validator.isEmail(email)) {
+      setEmailError("");
+      setEmail(email);
+      setBtnEnable(false);
+    } else {
+      setEmailError("Enter valid Email!");
+    }
+  };
+
+  //handle login with email
+  const handleLogiWithEmail = () => {
+    axios.post();
+  };
 
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => setUser(codeResponse),
@@ -81,7 +104,7 @@ const SiginAuth = ({ handleClose, show, children }) => {
           </div>
           <div class="social_login">
             <div class="user_register">
-              <form>
+              <form onSubmit={handleLogiWithEmail}>
                 {/* <label>Email Address</label> */}
                 <h6>Contribute yourself to NUGA</h6>
                 <h6 className="conditons_container">
@@ -90,19 +113,29 @@ const SiginAuth = ({ handleClose, show, children }) => {
                 </h6>
                 <input
                   type="text"
-                  className="search_field_input mt-2"
+                  className="search_field_input w-100 mt-2 "
                   name="term"
+                  required
                   autoComplete="off"
                   aria-label="search"
                   placeholder="Email Address"
-                />
+                  onChange={(e) => validateEmail(e)}
+                />{" "}
+                <span
+                  style={{ fontWeight: "500", fontSize: "12px", color: "red" }}
+                >
+                  {emailError}
+                </span>
+                <div class="action_btns">
+                  <div class="one_half">
+                    <button class="continue-btn" disabled={btnEnable}>
+                      Continue
+                    </button>
+                  </div>
+                </div>
               </form>
             </div>
-            <div class="action_btns">
-              <div class="one_half">
-                <button class="continue-btn">Continue</button>
-              </div>
-            </div>
+
             <div class="centeredText">
               <span>OR</span>
             </div>
@@ -132,22 +165,6 @@ const SiginAuth = ({ handleClose, show, children }) => {
               </a>
             </h6>
           </div>
-
-          {profile ? (
-            <div>
-              <img src={profile.picture} alt="user image" />
-              <h3>User Logged in</h3>
-              <p>Name: {profile.name}</p>
-              <p>Email Address: {profile.email}</p>
-              <br />
-              <br />
-              <button onClick={logOut}>Log out</button>
-            </div>
-          ) : (
-            {
-              /* <button onClick={() => login()}>Sign in with Google 🚀 </button> */
-            }
-          )}
         </section>
       </div>
     </div>

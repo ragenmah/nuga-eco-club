@@ -321,7 +321,7 @@ a {
     position: absolute;
     /* width: 330px; */
     height: auto;
-    left: 40%;
+    left: 32%;
     top: 20%;
 
     background: #FFF;
@@ -342,6 +342,7 @@ a {
     width: 100%;
     color: white;
 }
+
 
 .popupHeader {
     font-size: 16px;
