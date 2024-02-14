@@ -244,7 +244,7 @@ export const OfficeLocation = () => {
                   doubleClickZoom={false}
                   touchZoom={false}
                   boxZoom={true}
-                  dragging={isMobile ? true : false}
+                  dragging={isMobile ? false : false}
                 >
                   <FeatureGroup>
                     <GeoJSON

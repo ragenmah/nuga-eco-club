@@ -145,7 +145,8 @@ export const MapNepal = () => {
       zoomControl={false}
       doubleClickZoom={false}
       touchZoom={false}
-      boxZoom={false}
+      boxZoom={false} 
+      dragging={ false }
       // className=" leaflet-container rounded"
     >
       <FeatureGroup>

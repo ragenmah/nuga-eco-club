@@ -65,7 +65,7 @@ export const Maps = () => {
                       <marker>{datamaps.title2}</marker>
                     </div>
 
-                    <Col className=" playstore_image">
+                    <Col className=" playstore_image mt-3">
                       <img src="static/apps/playstore.png" height={70} className="m-2"></img>
                       
                       <img src="static/apps/appstore.png" height={70} className="m-2"></img>
