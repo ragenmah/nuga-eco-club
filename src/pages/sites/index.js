@@ -8,6 +8,8 @@ import Selectors from "../../components/selectors/selectors";
 import SearchBarBody from "../../components/searchbar/searchbar_body";
 import { HeritageWalkMap } from "../../components/maps/heritage_walk_map";
 
+import heritageWalkImg from "../../assets/heritage-walk.webp";
+
 export const Sites = () => {
   // const [map, setMap] = useState(null);
   const [showSearch, setShowSearch] = useState(false);
@@ -51,10 +53,7 @@ export const Sites = () => {
                   </div>
                 </div>
                 <div className="align-self-center w-100 mt-2 shape">
-                  <img
-                    src="https://images.pexels.com/photos/5952518/pexels-photo-5952518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                    className="heritage-img"
-                  />
+                  <img src={heritageWalkImg} className="heritage-img" />
                 </div>
               </div>
             </div>

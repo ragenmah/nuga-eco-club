@@ -11,7 +11,7 @@ import iconUrl from "../../_mock/svgs/marker.svg";
 
 import { useRef } from "react";
 import axios from "axios";
-import { contactUs } from "../../services/api";
+import { contactUs } from "../../redux/services/api";
 
 export const newicon = new Leaflet.Icon({
   iconUrl: markerImg,
@@ -73,10 +73,10 @@ export const ContactUs = () => {
   const [isActive, setIsActive] = useState(false);
   const [faqId, setFaqId] = useState(false);
 
-  const handleFAQClick = event => {
+  const handleFAQClick = (event) => {
     // 👇️ toggle isActive state on click
-    setFaqId(event.currentTarget.id)
-    setIsActive(current => !current);
+    setFaqId(event.currentTarget.id);
+    setIsActive((current) => !current);
   };
 
   return (
@@ -250,18 +250,27 @@ export const ContactUs = () => {
                 aria-controls="faq-17"
                 aria-expanded="false"
                 data-toggle="collapse"
-                 id="faq-17"
+                id="faq-17"
                 role="button"
                 onClick={handleFAQClick}
               >
                 <div class="position-relative">
                   <h2 class="h4 m-0 pr-3">What if I want custom gear?</h2>
                   <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
-                    <i class={isActive  && faqId=="faq-17"?"fa fa-minus": "fa fa-plus"}></i>
+                    <i
+                      class={
+                        isActive && faqId == "faq-17"
+                          ? "fa fa-minus"
+                          : "fa fa-plus"
+                      }
+                    ></i>
                   </div>
                 </div>
               </a>
-              <div class={isActive && faqId=="faq-17" ? '' : 'collapse'} id="faq-17">
+              <div
+                class={isActive && faqId == "faq-17" ? "" : "collapse"}
+                id="faq-17"
+              >
                 <div class="card card-body border-0 p-0">
                   <p>
                     Custom gear can be ordered through our contact form.
@@ -275,7 +284,8 @@ export const ContactUs = () => {
                 aria-controls="faq-18"
                 aria-expanded="false"
                 data-toggle="collapse"
-                onClick={handleFAQClick}id="faq-18"
+                onClick={handleFAQClick}
+                id="faq-18"
                 role="button"
               >
                 <div class="position-relative">
@@ -283,11 +293,20 @@ export const ContactUs = () => {
                     What is the official mission statement?
                   </h2>
                   <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
-                    <i class={isActive  && faqId=="faq-18"?"fa fa-minus": "fa fa-plus"}></i>
+                    <i
+                      class={
+                        isActive && faqId == "faq-18"
+                          ? "fa fa-minus"
+                          : "fa fa-plus"
+                      }
+                    ></i>
                   </div>
                 </div>
               </a>
-              <div class={isActive && faqId=="faq-18"? '' : 'collapse'} id="faq-17">
+              <div
+                class={isActive && faqId == "faq-18" ? "" : "collapse"}
+                id="faq-17"
+              >
                 <div class="card card-body border-0 p-0">
                   <p>
                     Our official mission statement is lorem ipsum dolor sit.

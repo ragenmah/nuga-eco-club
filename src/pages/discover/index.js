@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
-import SearchBarNav from "../../components/searchbar/searchbar_nav";
-import SearchBarBody from "../../components/searchbar/searchbar_body";
-import Selectors from "../../components/selectors/selectors";
-import { Link } from "react-router-dom";
+import { connect, useDispatch, useSelector } from "react-redux";
 
-export const Discover = () => {
-  const [showSearch, setShowSearch] = useState(false);
+import { Link } from "react-router-dom";
+import { GetAllDiscoverPlaces } from "../../redux/actions/actionCreaters/discoverplacesActionCreater";
+import { base_url, image_baseUrl } from "../../redux/services/api";
+
+const Discover = (props) => {
+  useEffect(() => {
+    props.loadDiscoveries();
+  }, []);
 
   return (
     <HelmetProvider>
@@ -59,27 +62,50 @@ export const Discover = () => {
           </center>
         </Row>
         <div className="mb-5 po_items_ho">
-          {dataportfolio.map((data, i) => {
-            return (
-              <Link to="/discover-search">
-                <div
-                  key={i}
-                  className="po_item"
-                  style={{
-                    backgroundImage: `url(${data.img})`,
-                  }}
-                >
-                  {/* <img src={data.img} alt="" height={270} /> */}
-                  <div className="content">
-                    <p>{data.description}</p>
-                    {/* <a href={data.link}>view now</a> */}
+          {props.discoverState.allList &&
+            props.discoverState.allList.map((data, i) => {
+              return (
+                <Link to="/discover-search">
+                  <div
+                    key={i}
+                    className="po_item"
+                    style={{
+                      backgroundImage: `url(${JSON.stringify(
+                        image_baseUrl + data.category_image
+                      )})`,
+                      // backgroundImage: `url(http://localhost:4000/images/categories/1708165960793_16f52cde-17ce-4e3c-a3e9-62e84b328244Screenshot%202023-12-17%20at%2018.18.00.png)`,
+                    }}
+                  >
+                    {/* <img
+                    key={i}
+                    src={image_baseUrl + data.category_image}
+                    alt=""
+                    height={270}
+                    className="po_item"
+                  /> */}
+
+                    <div className="content">
+                      <p>{data.category_name}</p>
+                      {/* <a href={data.link}>view now</a> */}
+                    </div>
                   </div>
-                </div>
-              </Link>
-            );
-          })}
+                </Link>
+              );
+            })}
         </div>
       </Container>
     </HelmetProvider>
   );
 };
+
+const mapDispatchtoProps = (dispatch) => {
+  return {
+    loadDiscoveries: () => dispatch(GetAllDiscoverPlaces()),
+  };
+};
+const mapStatetoProps = (state) => {
+  return {
+    discoverState: state.discover,
+  };
+};
+export default connect(mapStatetoProps, mapDispatchtoProps)(Discover);

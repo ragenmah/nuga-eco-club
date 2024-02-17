@@ -1,7 +1,0 @@
-const base_url = "http://localhost:4000/api/v1/";
-
-const signIn = base_url + "";
-
-const contactUs = base_url + "contactUs";
-
-export { contactUs };

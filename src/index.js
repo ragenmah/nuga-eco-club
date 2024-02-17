@@ -11,6 +11,8 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 // import i18nBackend from "i18next-http-backend";
 import { GoogleOAuthProvider } from "@react-oauth/google";
+import store from "./redux/store";
+import { Provider } from "react-redux";
 
 const fallbackLng = ["en"];
 const availableLanguages = ["en", "np"];
@@ -29,11 +31,13 @@ i18n
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <GoogleOAuthProvider clientId="407712391583-26hc3mnekkrpv3lsup5kp2ul6vjjouhf.apps.googleusercontent.com">
-    <React.StrictMode>
-      <I18nextProvider i18n={i18next}>
-        <App />
-      </I18nextProvider>
-    </React.StrictMode>
-  </GoogleOAuthProvider>
+  <Provider store={store}>
+    <GoogleOAuthProvider clientId="407712391583-26hc3mnekkrpv3lsup5kp2ul6vjjouhf.apps.googleusercontent.com">
+      <React.StrictMode>
+        <I18nextProvider i18n={i18next}>
+          <App />
+        </I18nextProvider>
+      </React.StrictMode>
+    </GoogleOAuthProvider>
+  </Provider>
 );
