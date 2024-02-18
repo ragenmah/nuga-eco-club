@@ -3,7 +3,7 @@ import { Route, RouterProvider, Routes } from "react-router-dom";
 import withRouter from "../hooks/withRouter";
 import { Home } from "../pages/home";
 import Discover from "../pages/discover";
-import { ContactUs } from "../pages/contact";
+import  ContactUs  from "../pages/contact";
 import { About } from "../pages/about";
 import { Socialicons } from "../components/socialicons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";

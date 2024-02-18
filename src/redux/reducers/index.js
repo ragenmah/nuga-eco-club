@@ -1,6 +1,7 @@
 import { combineReducers } from "redux";
-import discoverReducer from "./discoverReducer";
+import commonReducer from "./discoverReducer";
 
 export default combineReducers({
-  discover: discoverReducer,
+  discover: commonReducer,
+  faq: commonReducer,
 });

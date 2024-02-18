@@ -13,7 +13,7 @@ const initialState = {
   errormessage: "",
 };
 
-function discoverReducer(state = initialState, action) {
+function commonReducer(state = initialState, action) {
   const { type, payload } = action;
 
   switch (type) {
@@ -57,4 +57,4 @@ function discoverReducer(state = initialState, action) {
   }
 }
 
-export default discoverReducer;
+export default commonReducer;
