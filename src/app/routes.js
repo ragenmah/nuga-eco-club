@@ -15,6 +15,7 @@ import { Privacy } from "../pages/privacy";
 import ClimateEmrgency from "../pages/climate";
 import DetailPage from "../pages/discover/detail_page";
 import DiscoverSearch from "../pages/discover/discover_search";
+import { RoutesCustom } from "../routes";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -33,7 +34,10 @@ const AnimatedRoutes = withRouter(({ location }) => (
       <Route path="/maps" element={<Maps />} />
       <Route path="/heritage-walk" element={<Sites />} />
       <Route path="/discover" element={<Discover />} />
-      <Route path="/discover-search" element={<DiscoverSearch />} />
+      <Route
+        path={RoutesCustom.discoverDetail.path}
+        element={<DiscoverSearch />}
+      />
       <Route path="/detail" element={<DetailPage />} />
       <Route path="/ContactUs" element={<ContactUs />} />
       <Route path="/auth/signin" element={<SigIn />} />

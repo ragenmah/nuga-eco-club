@@ -4,16 +4,25 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
 import { dataportfolio, meta } from "../../content_option";
 import { connect, useDispatch, useSelector } from "react-redux";
+import { Navigate, useNavigate } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 import { GetAllDiscoverPlaces } from "../../redux/actions/actionCreaters/discoverplacesActionCreater";
 import { base_url, image_baseUrl } from "../../redux/services/api";
+import { RoutesCustom } from "../../routes";
 
 const Discover = (props) => {
+  let navigate = useNavigate();
+
   useEffect(() => {
     props.loadDiscoveries();
   }, []);
 
+  const handleShowDiscoverList = (id, category_name) => {
+    navigate(RoutesCustom.discoverDetail.path, {
+      state: { category_id: id, category_name: category_name },
+    });
+  };
   return (
     <HelmetProvider>
       <Container className="About-header">
@@ -65,7 +74,11 @@ const Discover = (props) => {
           {props.discoverState.allList &&
             props.discoverState.allList.map((data, i) => {
               return (
-                <Link to="/discover-search">
+                <a
+                  onClick={() =>
+                    handleShowDiscoverList(data.category_id, data.category_name)
+                  }
+                >
                   <div
                     key={i}
                     className="po_item"
@@ -73,7 +86,6 @@ const Discover = (props) => {
                       backgroundImage: `url(${JSON.stringify(
                         image_baseUrl + data.category_image
                       )})`,
-                      // backgroundImage: `url(http://localhost:4000/images/categories/1708165960793_16f52cde-17ce-4e3c-a3e9-62e84b328244Screenshot%202023-12-17%20at%2018.18.00.png)`,
                     }}
                   >
                     {/* <img
@@ -89,7 +101,7 @@ const Discover = (props) => {
                       {/* <a href={data.link}>view now</a> */}
                     </div>
                   </div>
-                </Link>
+                </a>
               );
             })}
         </div>
