@@ -106,6 +106,9 @@ const Discover = (props) => {
             })}
         </div>
       </Container>
+      <div
+        className={props.discoverState.isloading ? "loading-bar" : "d-none"}
+      ></div>
     </HelmetProvider>
   );
 };

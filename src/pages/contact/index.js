@@ -294,7 +294,7 @@ const ContactUs = (props) => {
         </Row>
       </Container>
       {/* https://codepen.io/awitam/pen/XWNWObz */}
-      <div className={formData.loading ? "loading-bar" : "d-none"}></div>
+      <div className={props.faqState.isloading || formData.loading ? "loading-bar" : "d-none"}></div>
     </HelmetProvider>
   );
 };

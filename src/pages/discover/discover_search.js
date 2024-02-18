@@ -5,10 +5,18 @@ import "./style.css";
 import { Link } from "react-router-dom";
 
 const productsData = [
-  { id: 1, name: "Product 1", category: "Category A" },
-  { id: 2, name: "Product 2", category: "Category B" },
-  { id: 3, name: "Product 3", category: "Category A" },
-  { id: 4, name: "Product 4", category: "Category C" },
+  { id: 1, name: "Product 1", category: "Friendly Locals and Areas" },
+  { id: 2, name: "Product 2", category: "Nani, Baha, Bahi" },
+  { id: 3, name: "Product 3", category: "Pati, Pauwa" },
+  { id: 4, name: "Product 4", category: "Hitis" },
+  { id: 1, name: "Product 1", category: "Ponds" },
+  { id: 2, name: "Product 2", category: "Religious Sites" },
+  { id: 3, name: "Product 3", category: "Cultural and Historical Sites" },
+  { id: 4, name: "Product 4", category: "Spiritual and Religious Experiences" },
+  { id: 1, name: "Product 1", category: "Trekking and Adventure Activities" },
+  { id: 2, name: "Product 2", category: "Natural Beauty Sites" },
+  { id: 3, name: "Product 3", category: "Travel Destinations" },
+  { id: 4, name: "Product 4", category: "Intangible Heritages" },
   // Add more products as needed
 ];
 
@@ -24,6 +32,7 @@ const DiscoverSearch = () => {
   const filteredProducts = selectedCategory
     ? productsData.filter((product) => product.category === selectedCategory)
     : productsData;
+    const categories = Array.from(new Set(productsData.map(product => product.category))); // Get unique categories
 
   return (
     <main className="discover_search_container ">
@@ -31,7 +40,7 @@ const DiscoverSearch = () => {
         {/* shadow */}
         <div className="wrapper ">
           <div id="listing " className=" row">
-            <div className="" id="search-filter">
+            {/* <div className="" id="search-filter">
               <div className="advanced-filter d-flex w-100 align-items-center">
                 <span className="menu-title">
                   {location.state.category_name}
@@ -42,38 +51,47 @@ const DiscoverSearch = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div
               class="col-ls-9 col-xs-12 col-sm-6 w-100"
               // style="height: auto !important; min-height: 0px !important;"
             >
               {/* Here are some popular sites */}
 
-              <br />
-              <br />
-              <br />
+             
+              {/* <Heritages />
               <Heritages />
-              <Heritages />
-              <Heritages />
+              <Heritages /> */}
               <div className="discover-container">
                 <div className="filters">
                   <h2>Filters</h2>
-                  <select
+                  {/* <select
                     onChange={(e) => handleCategoryChange(e.target.value)}
                   >
                     <option value="">All Categories</option>
                     <option value="Category A">Category A</option>
                     <option value="Category B">Category B</option>
                     <option value="Category C">Category C</option>
-                    {/* Add more options dynamically based on your categories */}
-                  </select>
+                  
+                  </select> */}
+                   <ul>
+          <li onClick={() => handleCategoryChange('')} className="active">All Categories</li>
+          {categories.map(category => (
+            <li key={category} onClick={() => handleCategoryChange(category)}>{category}</li>
+          ))}
+        </ul>
                 </div>
                 <div className="products">
-                  <h2>Products</h2>
+                  <h2>
+                    <span className="menu-title">
+                      {location.state.category_name}
+                    </span>
+                  </h2>
+                  Friendly Locals and Areas
                   {/* <Heritages /> */}
                   <ul>
                     <li>
-                      <div class="col-lg-4">
+                      <div class="col-lg-12">
                         <div
                           class="service-item "
                           style={{
@@ -92,7 +110,7 @@ const DiscoverSearch = () => {
                       </div>
                     </li>
                     <li>
-                      <div class="col-lg-4">
+                      <div class="">
                         <div
                           class="service-item "
                           style={{
@@ -111,7 +129,26 @@ const DiscoverSearch = () => {
                       </div>
                     </li>
                     <li>
-                      <div class="col-lg-4">
+                      <div class="">
+                        <div
+                          class="service-item "
+                          style={{
+                            backgroundImage: `url(https://images.pexels.com/photos/11734284/pexels-photo-11734284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
+                          }}
+                        >
+                          <div class="icon"></div>
+                          <h4>Kathmandu Durbar Square</h4>
+
+                          <div class="text-button">
+                            <Link to="/detail">
+                              Explore <i class="fa fa-chevron-right"></i>
+                            </Link>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="">
                         <div
                           class="service-item "
                           style={{
@@ -131,13 +168,13 @@ const DiscoverSearch = () => {
                     </li>
                   </ul>
 
-                  <ul>
+                  {/* <ul>
                     {filteredProducts.map((product) => (
                       <li key={product.id}>
                         {product.name} - {product.category}
                       </li>
                     ))}
-                  </ul>
+                  </ul> */}
                 </div>
               </div>
             </div>

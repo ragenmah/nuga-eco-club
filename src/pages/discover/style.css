@@ -268,79 +268,124 @@
 
 /* discover search  */
 .discover-container {
-    display: flex;
-    flex-wrap: wrap;
-}
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .filters {
+        width: 100%;
+        max-width: 300px; /* Limit the max-width to prevent overly wide filters */
+        padding: 20px;
+        background-color: #f2f2f2;
+        /* height: 100vh; Make filters section full height of the viewport */
+        overflow-y: auto; /* Add scrollbar if content exceeds viewport height */
+      }
+      
+      .filters h2 {
+        margin-bottom: 10px;
+      }
+      
+      .filters ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      .filters ul li {
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        color: #555;
+        transition: color 0.3s ease;
+      }
+      
+      .filters  ul li:hover {
+        color: #007bff;
+      }
+      
+      .filters ul li.active {
+        font-weight: bold;
+        color: #007bff;
+      }
+      
+      /* Scrollbar */
+      .filters::-webkit-scrollbar {
+        width: 8px;
+      }
+      
+      .filters::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 123, 255, 0.5);
+        border-radius: 4px;
+      }
+      
 
-.filters {
-    width: 30%;
-    padding: 20px;
-    background-color: #f2f2f2;
-}
-
-.filters h2 {
-    margin-bottom: 10px;
-}
-
-.products {
-    width: 100%;
-    padding: 20px;
-}
-
-.products h2 {
-    margin-bottom: 10px;
-}
-
-.discover-container>ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.discover-container li {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    background-color: #fff;
-}
-
-s.discover-container elect {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-}
-
-/* Style for selected category */
-.discover-container select:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-}
-
-/* Media Query for tablets */
-@media (min-width: 768px) {
-    .discover-container {
-        flex-wrap: nowrap;
-    }
-
-    .filters {
-        width: 30%;
-    }
-
-    .products {
-        width: 70%;
-    }
-}
-
-/* Media Query for desktops */
-@media (min-width: 992px) {
-    .filters {
-        width: 25%;
-    }
-
-    .products {
-        width: 75%;
-    }
-}
+      .products {
+        width: 100%;
+        padding: 20px;
+        /* height: 100vh; Make products section full height of the viewport */
+        overflow-y: auto; /* Add scrollbar if content exceeds viewport height */
+      }
+      
+      .products h2 {
+        margin-bottom: 10px;
+      }
+      
+      .discover-container  ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      .discover-container  li {
+        /* margin-bottom: 10px; */
+        /* padding: 10px; */
+        /* border: 1px solid #ccc;
+        background-color: #fff; */
+      }
+      
+      .discover-container   select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+      }
+      
+      /* Style for selected category */
+      .discover-container  select:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+      }
+      
+      /* Media Query for tablets */
+      @media (min-width: 768px) {
+        .discover-container {
+          flex-wrap: nowrap;
+        }
+      
+        .filters {
+          width: 30%;
+        }
+      
+        .products {
+          width: 70%;
+        }
+      
+        /* Set products to column layout */
+        .products ul {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+          grid-gap: 10px;
+        }
+      }
+      
+      /* Media Query for desktops */
+      @media (min-width: 992px) {
+        .filters {
+          width: 25%;
+        }
+      
+        .products {
+          width: 75%;
+        }
+      }
