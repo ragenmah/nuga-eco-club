@@ -4,4 +4,5 @@ import commonReducer from "./discoverReducer";
 export default combineReducers({
   discover: commonReducer,
   faq: commonReducer,
+  subCategory: commonReducer,
 });

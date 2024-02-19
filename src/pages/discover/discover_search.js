@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Heritages from "../../components/heritages";
 import { useLocation } from "react-router-dom";
 import "./style.css";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { GetSubCategoryByCategoryId } from "../../redux/actions/actionCreaters/subCategoryActionCreater";
 
 const productsData = [
   { id: 1, name: "Product 1", category: "Friendly Locals and Areas" },
@@ -20,19 +22,30 @@ const productsData = [
   // Add more products as needed
 ];
 
-const DiscoverSearch = () => {
+const DiscoverSearch = (props) => {
   const location = useLocation();
 
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleCategoryChange = (category) => {
+    // alert(category.id);
     setSelectedCategory(category);
   };
 
   const filteredProducts = selectedCategory
     ? productsData.filter((product) => product.category === selectedCategory)
     : productsData;
-    const categories = Array.from(new Set(productsData.map(product => product.category))); // Get unique categories
+  const categories = Array.from(
+    new Set(productsData.map((product) => product.category))
+  ); // Get unique categories
+  // const category_id= location.state.category_name
+
+  useEffect(() => {
+    props.loadDiscoveriesByCategoryId(location.state.category_id);
+    if (props.subCategoryState.allList != "") {
+      handleCategoryChange(props.subCategoryState.allList[0]);
+    }
+  }, []);
 
   return (
     <main className="discover_search_container ">
@@ -58,7 +71,6 @@ const DiscoverSearch = () => {
             >
               {/* Here are some popular sites */}
 
-             
               {/* <Heritages />
               <Heritages />
               <Heritages /> */}
@@ -74,20 +86,33 @@ const DiscoverSearch = () => {
                     <option value="Category C">Category C</option>
                   
                   </select> */}
-                   <ul>
-          <li onClick={() => handleCategoryChange('')} className="active">All Categories</li>
-          {categories.map(category => (
-            <li key={category} onClick={() => handleCategoryChange(category)}>{category}</li>
-          ))}
-        </ul>
+                  <ul>
+                    <li
+                      onClick={() => handleCategoryChange("")}
+                      className="active"
+                    >
+                      All Categories
+                    </li>
+
+                    {props.subCategoryState.allList &&
+                      props.subCategoryState.allList.map((category) => (
+                        <li
+                          key={category}
+                          onClick={() => handleCategoryChange(category)}
+                        >
+                          {category.sub_category_name}
+                        </li>
+                      ))}
+                  </ul>
                 </div>
                 <div className="products">
                   <h2>
                     <span className="menu-title">
                       {location.state.category_name}
+                      {/* {location.state.category_id} */}
                     </span>
                   </h2>
-                  Friendly Locals and Areas
+                  {selectedCategory["sub_category_name"]}
                   {/* <Heritages /> */}
                   <ul>
                     <li>
@@ -167,7 +192,6 @@ const DiscoverSearch = () => {
                       </div>
                     </li>
                   </ul>
-
                   {/* <ul>
                     {filteredProducts.map((product) => (
                       <li key={product.id}>
@@ -185,4 +209,15 @@ const DiscoverSearch = () => {
   );
 };
 
-export default DiscoverSearch;
+const mapDispatchtoProps = (dispatch) => {
+  return {
+    loadDiscoveriesByCategoryId: (id) =>
+      dispatch(GetSubCategoryByCategoryId(id)),
+  };
+};
+const mapStatetoProps = (state) => {
+  return {
+    subCategoryState: state.subCategory,
+  };
+};
+export default connect(mapStatetoProps, mapDispatchtoProps)(DiscoverSearch);
