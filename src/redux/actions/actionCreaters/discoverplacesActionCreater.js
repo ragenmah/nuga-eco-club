@@ -38,3 +38,30 @@ export const GetDiscoverPlaceById = (id) => {
       });
   };
 };
+
+export const GetDiscoverPlaceBySlug = (slug) => {
+  return (dispatch) => {
+    dispatch(makeRequest());
+    discoveryService
+      .getDiscoverPlaceDetail(slug)
+      .then((res) => {
+        const _obj = res.data;
+        dispatch(getbyIdSuccess(_obj));
+      })
+      .catch((err) => {
+        dispatch(getAllRequestFail("Failed to fetch the data"));
+      });
+  };
+};
+
+export const addViewCount = (discoverId) => {
+  return (dispatch) => {
+    dispatch(makeRequest());
+    discoveryService
+      .updateVisitCount(discoverId)
+      .then((res) => {})
+      .catch((err) => {
+        dispatch(getAllRequestFail("Failed to fetch the data"));
+      });
+  };
+};

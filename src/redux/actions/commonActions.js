@@ -3,6 +3,7 @@ import {
   RETRIEVE_ALL,
   REQ_GETALL_FAIL,
   REQ_GETBYID_SUCC,
+  RETRIEVE_ALL_SUB_CATEGORY,
 } from "./commonTypes";
 
 export const makeRequest = () => {
@@ -14,6 +15,13 @@ export const makeRequest = () => {
 export const getAllRequestSuccess = (data) => {
   return {
     type: RETRIEVE_ALL,
+    payload: data,
+  };
+};
+
+export const getAllSubCategoryDetailRequestSuccess = (data) => {
+  return {
+    type: RETRIEVE_ALL_SUB_CATEGORY,
     payload: data,
   };
 };

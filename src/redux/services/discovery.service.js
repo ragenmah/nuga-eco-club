@@ -12,6 +12,14 @@ class DiscoveryService {
   getBySubCategoryId(id) {
     return http.get(`/category/sub_category/${id}`);
   }
+
+  getDiscoverPlaceDetail(slug) {
+    return http.get(`/discover/detail/${slug}`);
+  }
+
+  updateVisitCount(id) {
+    return http.put(`/discover/visit/${id}`);
+  }
 }
 
 export default new DiscoveryService();

@@ -1,4 +1,5 @@
 export const RETRIEVE_ALL = "RETRIEVE_ALL";
+export const RETRIEVE_ALL_SUB_CATEGORY = "RETRIEVE_ALL_SUB_CATEGORY";
 export const REQ_GETBYID_SUCC = "REQ_GETBYID_SUCC";
 
 export const MAKE_REQ = "MAKE_REQ";

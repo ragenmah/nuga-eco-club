@@ -3,7 +3,7 @@ import { Route, RouterProvider, Routes } from "react-router-dom";
 import withRouter from "../hooks/withRouter";
 import { Home } from "../pages/home";
 import Discover from "../pages/discover";
-import  ContactUs  from "../pages/contact";
+import ContactUs from "../pages/contact";
 import { About } from "../pages/about";
 import { Socialicons } from "../components/socialicons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
@@ -38,7 +38,7 @@ const AnimatedRoutes = withRouter(({ location }) => (
         path={RoutesCustom.discoverDetail.path}
         element={<DiscoverSearch />}
       />
-      <Route path="/detail" element={<DetailPage />} />
+      <Route path="/detail/:slug" element={<DetailPage />} />
       <Route path="/ContactUs" element={<ContactUs />} />
       <Route path="/auth/signin" element={<SigIn />} />
       <Route path="/climate-emergency" element={<ClimateEmrgency />} />

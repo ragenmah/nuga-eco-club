@@ -3,8 +3,12 @@ import Heritages from "../../components/heritages";
 import { useLocation } from "react-router-dom";
 import "./style.css";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-import { GetSubCategoryByCategoryId } from "../../redux/actions/actionCreaters/subCategoryActionCreater";
+import { connect, useDispatch, useSelector } from "react-redux";
+import {
+  GetSubCategoryByCategoryId,
+  getPlacesBySubCategoryId,
+} from "../../redux/actions/actionCreaters/subCategoryActionCreater";
+import { image_baseUrl } from "../../redux/services/api";
 
 const productsData = [
   { id: 1, name: "Product 1", category: "Friendly Locals and Areas" },
@@ -24,26 +28,27 @@ const productsData = [
 
 const DiscoverSearch = (props) => {
   const location = useLocation();
+  const dispatch = useDispatch();
 
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const handleCategoryChange = (category) => {
-    // alert(category.id);
+    // alert(category);
+    dispatch(getPlacesBySubCategoryId(category));
+
     setSelectedCategory(category);
   };
 
-  const filteredProducts = selectedCategory
-    ? productsData.filter((product) => product.category === selectedCategory)
-    : productsData;
-  const categories = Array.from(
-    new Set(productsData.map((product) => product.category))
-  ); // Get unique categories
   // const category_id= location.state.category_name
+
+  var placesList = useSelector((state) => state.subCategory.subCategoryList);
 
   useEffect(() => {
     props.loadDiscoveriesByCategoryId(location.state.category_id);
+    // dispatch(GetSubCategoryByCategoryId(location.state.category_id));
     if (props.subCategoryState.allList != "") {
-      handleCategoryChange(props.subCategoryState.allList[0]);
+      handleCategoryChange(props.subCategoryState.allList[0].sub_category_id);
+      // alert(props.subCategoryState.allList[0].sub_category_id);
     }
   }, []);
 
@@ -76,7 +81,7 @@ const DiscoverSearch = (props) => {
               <Heritages /> */}
               <div className="discover-container">
                 <div className="filters">
-                  <h2>Filters</h2>
+                  <h2>Filter by</h2>
                   {/* <select
                     onChange={(e) => handleCategoryChange(e.target.value)}
                   >
@@ -86,19 +91,21 @@ const DiscoverSearch = (props) => {
                     <option value="Category C">Category C</option>
                   
                   </select> */}
-                  <ul>
-                    <li
-                      onClick={() => handleCategoryChange("")}
-                      className="active"
-                    >
-                      All Categories
-                    </li>
+                  <ul className="mt-4">
+                    {/* <li>Select Categories</li> */}
 
                     {props.subCategoryState.allList &&
                       props.subCategoryState.allList.map((category) => (
                         <li
                           key={category}
-                          onClick={() => handleCategoryChange(category)}
+                          onClick={() =>
+                            handleCategoryChange(category.sub_category_id)
+                          }
+                          className={
+                            selectedCategory == category.sub_category_id
+                              ? "active"
+                              : ""
+                          }
                         >
                           {category.sub_category_name}
                         </li>
@@ -112,85 +119,44 @@ const DiscoverSearch = (props) => {
                       {/* {location.state.category_id} */}
                     </span>
                   </h2>
-                  {selectedCategory["sub_category_name"]}
+                  {/* {selectedCategory} */}
+                  {/* {selectedCategory["sub_category_name"]} */}
                   {/* <Heritages /> */}
                   <ul>
-                    <li>
-                      <div class="col-lg-12">
-                        <div
-                          class="service-item "
-                          style={{
-                            backgroundImage: `url(https://images.pexels.com/photos/11734284/pexels-photo-11734284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
-                          }}
-                        >
-                          <div class="icon"></div>
-                          <h4>Kathmandu Durbar Square</h4>
+                    {placesList &&
+                      placesList.map((data) => {
+                        {
+                          /* var slugs = data.slugs; */
+                        }
+                        return (
+                          <li key={data.id}>
+                            <div class="col-lg-12">
+                              <div
+                                class="service-item "
+                                style={{
+                                  backgroundImage: `url(${JSON.stringify(
+                                    image_baseUrl + data.image_file_name
+                                  )})`,
+                                }}
+                              >
+                                <div className="item-name">
+                                  <div class="icon"></div>
+                                  <h4>{data.title}</h4>
 
-                          <div class="text-button">
-                            <Link to="/detail">
-                              Explore <i class="fa fa-chevron-right"></i>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="">
-                        <div
-                          class="service-item "
-                          style={{
-                            backgroundImage: `url(https://images.pexels.com/photos/11734284/pexels-photo-11734284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
-                          }}
-                        >
-                          <div class="icon"></div>
-                          <h4>Kathmandu Durbar Square</h4>
-
-                          <div class="text-button">
-                            <Link to="/detail">
-                              Explore <i class="fa fa-chevron-right"></i>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="">
-                        <div
-                          class="service-item "
-                          style={{
-                            backgroundImage: `url(https://images.pexels.com/photos/11734284/pexels-photo-11734284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
-                          }}
-                        >
-                          <div class="icon"></div>
-                          <h4>Kathmandu Durbar Square</h4>
-
-                          <div class="text-button">
-                            <Link to="/detail">
-                              Explore <i class="fa fa-chevron-right"></i>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="">
-                        <div
-                          class="service-item "
-                          style={{
-                            backgroundImage: `url(https://images.pexels.com/photos/11734284/pexels-photo-11734284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
-                          }}
-                        >
-                          <div class="icon"></div>
-                          <h4>Kathmandu Durbar Square</h4>
-
-                          <div class="text-button">
-                            <Link to="/detail">
-                              Explore <i class="fa fa-chevron-right"></i>
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
+                                  <div class="text-button">
+                                    <Link to={`/detail/${data.slugs}`}>
+                                      Explore{" "}
+                                      <i class="fa fa-chevron-right"></i>
+                                    </Link>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </li>
+                        );
+                      })}
+                    <li></li>
+                    <li></li>
                   </ul>
                   {/* <ul>
                     {filteredProducts.map((product) => (
@@ -205,6 +171,9 @@ const DiscoverSearch = (props) => {
           </div>
         </div>
       </section>
+      <div
+        className={props.subCategoryState.isloading ? "loading-bar" : "d-none"}
+      ></div>
     </main>
   );
 };

@@ -10,15 +10,18 @@ import { Link } from "react-router-dom";
 import { GetAllDiscoverPlaces } from "../../redux/actions/actionCreaters/discoverplacesActionCreater";
 import { base_url, image_baseUrl } from "../../redux/services/api";
 import { RoutesCustom } from "../../routes";
+import { GetSubCategoryByCategoryId } from "../../redux/actions/actionCreaters/subCategoryActionCreater";
 
 const Discover = (props) => {
   let navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     props.loadDiscoveries();
   }, []);
 
   const handleShowDiscoverList = (id, category_name) => {
+    // dispatch(GetSubCategoryByCategoryId(id));
     navigate(RoutesCustom.discoverDetail.path, {
       state: { category_id: id, category_name: category_name },
     });
