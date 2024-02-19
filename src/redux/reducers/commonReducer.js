@@ -23,6 +23,8 @@ function commonReducer(state = initialState, action) {
       return {
         ...state,
         isloading: true,
+        subCategoryList: [],
+        // allList: payload,
       };
 
     case REQ_GETBYID_SUCC:

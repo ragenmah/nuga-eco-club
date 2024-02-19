@@ -7,6 +7,7 @@ import { connect, useDispatch, useSelector } from "react-redux";
 import {
   GetSubCategoryByCategoryId,
   getPlacesBySubCategoryId,
+  getPlacesListBySubCategoryId,
 } from "../../redux/actions/actionCreaters/subCategoryActionCreater";
 import { image_baseUrl } from "../../redux/services/api";
 
@@ -34,7 +35,7 @@ const DiscoverSearch = (props) => {
 
   const handleCategoryChange = (category) => {
     // alert(category);
-    dispatch(getPlacesBySubCategoryId(category));
+    dispatch(getPlacesListBySubCategoryId(category));
 
     setSelectedCategory(category);
   };
@@ -46,9 +47,14 @@ const DiscoverSearch = (props) => {
   useEffect(() => {
     props.loadDiscoveriesByCategoryId(location.state.category_id);
     // dispatch(GetSubCategoryByCategoryId(location.state.category_id));
-    if (props.subCategoryState.allList != "") {
-      handleCategoryChange(props.subCategoryState.allList[0].sub_category_id);
+    if (placesList.length > 0) {
+      handleCategoryChange(placesList[0].sub_category_id);
       // alert(props.subCategoryState.allList[0].sub_category_id);
+      // dispatch(
+      //   getPlacesListBySubCategoryId(
+      //     props.subCategoryState.allList[0].sub_category_id
+      //   )
+      // );
     }
   }, []);
 
@@ -142,7 +148,7 @@ const DiscoverSearch = (props) => {
                                 <div className="item-name">
                                   <div class="icon"></div>
                                   <h4>{data.title}</h4>
-
+                                  {/* <h4>{data.sub_category_id}</h4> */}
                                   <div class="text-button">
                                     <Link to={`/detail/${data.slugs}`}>
                                       Explore{" "}
