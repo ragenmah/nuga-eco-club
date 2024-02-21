@@ -315,7 +315,7 @@ nav ul li .link {
     line-height: normal;
     /* padding: 10px 10px 0px 0px; */
 
-    padding-left: 40px;
+    padding-left: 20px;
     /* text-transform: uppercase; */
     /* padding-top: 10px; */
     /* text-align: center; */
@@ -442,7 +442,7 @@ nav ul li ul li:hover>ul {
     /* font-weight: bold; */
     border-bottom: 1px solid transparent;
     padding-top: 10px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .header-top ul {

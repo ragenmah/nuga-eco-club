@@ -32,7 +32,7 @@ const DetailPage = (props) => {
     <>
       {data != null && (
         <>
-          <div className="site__page page">
+          <div className="site__page page row">
             <section
               class="heritage-container container article-story-group mt-5"
               data-stories="8"
@@ -93,7 +93,7 @@ const DetailPage = (props) => {
                       </div>
 
                       <div class="node__content ">
-                        <div class="article-body">
+                        <div class="article-body ">
                           <div
                             dangerouslySetInnerHTML={{
                               __html: data.description,

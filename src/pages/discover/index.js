@@ -73,7 +73,49 @@ const Discover = (props) => {
             </Col>
           </center>
         </Row>
-        <div className="mb-5 po_items_ho">
+        <div class="row d-flex justify-content-start">
+          {props.discoverState.allList &&
+            props.discoverState.allList.map((data, i) => {
+              return (
+                <div class="col-md-4 ">
+                  <a
+                    onClick={() =>
+                      handleShowDiscoverList(
+                        data.category_id,
+                        data.category_name
+                      )
+                    }
+                  >
+                    <div class="item">
+                      <div class="image-container">
+                        {props.discoverState.isloading ? (
+                          <div
+                            className="spinner-border img-fluid rounded"
+                            role="status"
+                          >
+                            {/* <span className="visually-hidden">Loading...</span> */}
+                          </div>
+                        ) : (
+                          <img
+                            src={image_baseUrl + data.category_image}
+                            alt="Image"
+                            class="img-fluid rounded"
+                          />
+                        )}
+                      </div>
+                      <div class="img-description ">
+                        <p class="capitalize">{data.category_name}</p>
+                        {/* <a href="#" class="btn btn-primary">
+                        Learn More
+                      </a> */}
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              );
+            })}
+        </div>
+        {/* <div className="mb-5 po_items_ho">
           {props.discoverState.allList &&
             props.discoverState.allList.map((data, i) => {
               return (
@@ -91,23 +133,14 @@ const Discover = (props) => {
                       )})`,
                     }}
                   >
-                    {/* <img
-                    key={i}
-                    src={image_baseUrl + data.category_image}
-                    alt=""
-                    height={270}
-                    className="po_item"
-                  /> */}
-
                     <div className="content">
                       <p>{data.category_name}</p>
-                      {/* <a href={data.link}>view now</a> */}
                     </div>
                   </div>
                 </a>
               );
             })}
-        </div>
+        </div> */}
       </Container>
       <div
         className={props.discoverState.isloading ? "loading-bar" : "d-none"}

@@ -406,3 +406,54 @@
     width: 75%;
   }
 }
+
+.image-container {
+  text-align: center;
+  height: 270px;
+  overflow: hidden;
+}
+
+.item {
+  position: relative;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.image-container img {
+  height: 100%;
+}
+
+.img-description {
+  /* margin-top: 20px; */
+  position: absolute;
+  bottom: -100%;
+  /* Initially hide the description */
+
+  bottom: 0;
+  background-color: var(--secondary-color);
+  padding: 20px;
+  box-sizing: border-box;
+  transition: height 0.3s ease;
+}
+
+.img-description p {
+  font-size: 1.1rem;
+  /* line-height: 1.2; */
+  color: var(--bg-color);
+
+
+}
+
+.btn-primary {
+  margin-top: 10px;
+}
+
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.item:hover {
+  bottom: 10px;
+  /* Move the description up when hovering over the item */
+}
