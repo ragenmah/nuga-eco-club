@@ -35,7 +35,7 @@ const Discover = (props) => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
-          <center>
+          <center enter>
             <Col className="contact-us-container">
               <Col lg="8">
                 <div className="">
@@ -89,17 +89,26 @@ const Discover = (props) => {
                     <div class="item">
                       <div class="image-container">
                         {props.discoverState.isloading ? (
-                          <div
-                            className="spinner-border img-fluid rounded"
-                            role="status"
+                          <center
+                            className="d-flex justify-content-center align-item-center "
+                            style={{
+                              height: "100%",
+                              width: "100%",
+                              padding: "20px",
+                            }}
                           >
-                            {/* <span className="visually-hidden">Loading...</span> */}
-                          </div>
+                            <div
+                              className="spinner-border img-fluid rounded center m-5"
+                              role="status"
+                            >
+                              {/* <span className="visually-hidden">Loading...</span> */}
+                            </div>
+                          </center>
                         ) : (
                           <img
                             src={image_baseUrl + data.category_image}
                             alt="Image"
-                            class="img-fluid rounded"
+                            class="img-fluid "
                           />
                         )}
                       </div>

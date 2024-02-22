@@ -40,8 +40,8 @@ const DetailPage = (props) => {
               <div class="article-story-group__items mt-5">
                 <div class="article-story-group__item">
                   <article
-                    data-article-id="97758"
-                    about="/news/elneny-warms-afcon-win"
+                    data-article-id={data.discover_id}
+                    about={data.title}
                     class="node node--type-article node--view-mode-full"
                   >
                     <div class="article-card-header card rounded shadow">
@@ -54,7 +54,7 @@ const DetailPage = (props) => {
                             </span> */}
                             <h1
                               class="article-card-header__title"
-                              title="Rato Machhindranath Temple"
+                              title={data.title}
                             >
                               <span class="article-card-header__title-words">
                                 {data.title}

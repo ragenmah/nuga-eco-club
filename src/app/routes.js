@@ -10,12 +10,13 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { SigIn } from "../pages/auth/sigin";
 import { Teams } from "../pages/teams";
 import { Maps } from "../pages/maps";
-import { Sites } from "../pages/sites";
+import Sites from "../pages/sites";
 import { Privacy } from "../pages/privacy";
 import ClimateEmrgency from "../pages/climate";
 import DetailPage from "../pages/discover/detail_page";
 import DiscoverSearch from "../pages/discover/discover_search";
 import { RoutesCustom } from "../routes";
+import HeritageWalkDetail from "../pages/sites/heritage_walk_detail";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -33,6 +34,7 @@ const AnimatedRoutes = withRouter(({ location }) => (
       <Route path="/about" element={<About />} />
       <Route path="/maps" element={<Maps />} />
       <Route path="/heritage-walk" element={<Sites />} />
+      <Route path="/heritage-walk/detail" element={<HeritageWalkDetail />} />
       <Route path="/discover" element={<Discover />} />
       <Route
         path={RoutesCustom.discoverDetail.path}

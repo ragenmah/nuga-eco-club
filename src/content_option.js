@@ -33,7 +33,7 @@ const homePageData = {
 };
 
 const introdata = {
-  title: "Find The Best heritage walk in just one click",
+  title: "Find the best heritage walk in just one click",
   subTitle: "BEST PLACE TO FIND AND EXPLORE THAT ALL YOU NEED",
   animated: {
     first: "Discover",

@@ -275,6 +275,7 @@
   font-size: 40px;
   font-weight: 700;
   display: block;
+  color: var(--secondary-color);
 }
 
 
@@ -408,7 +409,7 @@
 }
 
 .image-container {
-  text-align: center;
+  /* text-align: center; */
   height: 270px;
   overflow: hidden;
 }
@@ -426,9 +427,8 @@
 .img-description {
   /* margin-top: 20px; */
   position: absolute;
-  bottom: -100%;
+  /* bottom: -100%; */
   /* Initially hide the description */
-
   bottom: 0;
   background-color: var(--secondary-color);
   padding: 20px;
@@ -454,6 +454,66 @@
 }
 
 .item:hover {
-  bottom: 10px;
+  bottom: 6px;
   /* Move the description up when hovering over the item */
+}
+
+.item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  padding: 10px;
+
+  /* width: 80%; */
+}
+
+.description p {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  /* max-height: 4em; */
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 800;
+}
+
+.description h6 {
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.description h6 i {
+  font-size: 12px;
+}
+
+.discover-image-container img {
+  height: 180px;
+  /* height: 100%; */
+  /* overflow: hidden; */
+
+}
+
+.favorite-icon {
+  position: absolute;
+  top: 10px;
+  /* Adjust as needed */
+  right: 10px;
+  /* Adjust as needed */
+}
+
+.favorite-icon i {
+  color: var(--secondary-color);
+  font-size: 24px;
 }

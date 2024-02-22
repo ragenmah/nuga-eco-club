@@ -109,8 +109,8 @@ const DiscoverSearch = (props) => {
                           }
                           className={
                             selectedCategory == category.sub_category_id
-                              ? "active"
-                              : ""
+                              ? "capitalize active"
+                              : "capitalize"
                           }
                         >
                           {category.sub_category_name}
@@ -120,7 +120,7 @@ const DiscoverSearch = (props) => {
                 </div>
                 <div className="products">
                   <h2>
-                    <span className="menu-title">
+                    <span className="menu-title capitalize">
                       {location.state.category_name}
                       {/* {location.state.category_id} */}
                     </span>
@@ -128,12 +128,50 @@ const DiscoverSearch = (props) => {
                   {/* {selectedCategory} */}
                   {/* {selectedCategory["sub_category_name"]} */}
                   {/* <Heritages /> */}
-                  <ul>
+
+                  <div class="row mt-5">
                     {placesList &&
                       placesList.map((data) => {
-                        {
-                          /* var slugs = data.slugs; */
-                        }
+                        return (
+                          <div class="col-md-4">
+                            <Link to={`/detail/${data.slugs}`}>
+                              <div class="item">
+                                <div class="favorite-icon">
+                                  <i class="fas fa-bookmark"></i>
+                                </div>
+                                <div class="discover-image-container">
+                                  <img
+                                    src={image_baseUrl + data.image_file_name}
+                                    alt="Image"
+                                    class="img-fluid "
+                                  />
+                                </div>
+                                <div class="description">
+                                  <p class="capitalize">{data.title}</p>
+                                  <h6 class="capitalize">
+                                    <i className="fa fa-map-marker"></i>
+                                    {"  "}
+                                    {data.fullAddress}
+                                  </h6>
+                                  <h6>
+                                    {" "}
+                                    <i className="fa fa-eye"></i>{" "}
+                                    {data.visit_count} views
+                                  </h6>
+                                  {/* <a href="#" class="btn btn-primary">
+                                  Learn More
+                                </a> */}
+                                </div>
+                              </div>
+                            </Link>
+                          </div>
+                        );
+                      })}
+                  </div>
+
+                  {/* <ul>
+                    {placesList &&
+                      placesList.map((data) => {
                         return (
                           <li key={data.id}>
                             <div class="col-lg-12">
@@ -148,7 +186,6 @@ const DiscoverSearch = (props) => {
                                 <div className="item-name">
                                   <div class="icon"></div>
                                   <h4>{data.title}</h4>
-                                  {/* <h4>{data.sub_category_id}</h4> */}
                                   <div class="text-button">
                                     <Link to={`/detail/${data.slugs}`}>
                                       Explore{" "}
@@ -163,7 +200,7 @@ const DiscoverSearch = (props) => {
                       })}
                     <li></li>
                     <li></li>
-                  </ul>
+                  </ul> */}
                   {/* <ul>
                     {filteredProducts.map((product) => (
                       <li key={product.id}>

@@ -7,4 +7,5 @@ export default combineReducers({
   faq: commonReducer,
   subCategory: commonReducer,
   discoverPlaces: subCategoryReducer,
+  heritageWalk: commonReducer,
 });
