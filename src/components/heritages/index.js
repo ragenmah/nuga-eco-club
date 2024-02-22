@@ -19,13 +19,13 @@ const Heritages = () => {
                 src="https://images.pexels.com/photos/5952518/pexels-photo-5952518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 width={100}
               ></img> */}
-              <div class="icon"></div>
-              <h4>Patan Durbar Square</h4>
-              {/* <p></p> */}
-              <div class="text-button">
-                <Link to="/detail">
-                  Explore <i class="fa fa-chevron-right"></i>
-                </Link>
+              <div class="heritage-description">
+                <h4>Kathmandu Durbar Square sadhfjgasd hghasjdg h</h4>
+                <div class="text-button">
+                  <Link to="/detail">
+                    Explore <i class="fa fa-chevron-right"></i>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -36,17 +36,19 @@ const Heritages = () => {
                 backgroundImage: `url(https://images.pexels.com/photos/5952518/pexels-photo-5952518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
               }}
             >
-              <div class="icon"></div>
-              <h4>Kathmandu Durbar Square</h4>
+              <div class="heritage-description">
+                <h4>Kathmandu Durbar Square</h4>
+                <div class="text-button">
+                  <Link to="/detail">
+                    Explore <i class="fa fa-chevron-right"></i>
+                  </Link>
+                </div>
+              </div>
+
               {/* <p>
                 You are allowed to use the Chain App Dev HTML template. Feel
                 free to modify or edit this layout.
               </p> */}
-              <div class="text-button">
-                <Link to="/detail">
-                  Explore <i class="fa fa-chevron-right"></i>
-                </Link>
-              </div>
             </div>
           </div>
 
@@ -57,16 +59,13 @@ const Heritages = () => {
                 backgroundImage: `url(https://images.pexels.com/photos/11734284/pexels-photo-11734284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
               }}
             >
-              <div class="icon"></div>
-              <h4>Kathmandu Durbar Square</h4>
-              {/* <p>
-                Lorem ipsum dolor consectetur adipiscing elit sedder
-                williamsburg photo booth quinoa and fashion axe.
-              </p> */}
-              <div class="text-button">
-                <Link to="/detail">
-                  Explore <i class="fa fa-chevron-right"></i>
-                </Link>
+              <div class="heritage-description">
+                <h4>Kathmandu Durbar Square</h4>
+                <div class="text-button">
+                  <Link to="/detail">
+                    Explore <i class="fa fa-chevron-right"></i>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -77,16 +76,13 @@ const Heritages = () => {
                 backgroundImage: `url(https://images.pexels.com/photos/11734284/pexels-photo-11734284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
               }}
             >
-              <div class="icon"></div>
-              <h4>Kathmandu Durbar Square</h4>
-              {/* <p>
-                Lorem ipsum dolor consectetur adipiscing elit sedder
-                williamsburg photo booth quinoa and fashion axe.
-              </p> */}
-              <div class="text-button">
-                <Link to="/detail">
-                  Explore <i class="fa fa-chevron-right"></i>
-                </Link>
+              <div class="heritage-description">
+                <h4>Kathmandu Durbar Square</h4>
+                <div class="text-button">
+                  <Link to="/detail">
+                    Explore <i class="fa fa-chevron-right"></i>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

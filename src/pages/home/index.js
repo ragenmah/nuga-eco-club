@@ -2,7 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import { introdata, meta, dataabout, homePageData } from "../../content_option";
+import {
+  introdata,
+  meta,
+  dataabout,
+  homePageData,
+  datamaps,
+} from "../../content_option";
 import {
   Col,
   Row,
@@ -126,26 +132,24 @@ export const Home = () => {
         </div>
       </section> */}
       {/* <HowWeDo /> */}
-      <div className="intro_sec d-block d-lg-flex align-items-center ">
+      {/* <div className=" d-block d-lg-flex align-items-center ">
         <div className="h_bg-image order-1 order-lg-2 h-100 animated slideInLeft">
-          {/* <MyMap/> */}
-          <OfficeLocation />
         </div>
-      </div>
+      </div> */}
+      <OfficeLocation />
 
       <Container className="qr_code_container">
-        <center>
+        {/* <center>
           <Col className="mb-5 d-block mt-5 pt-md-3">
             <Col lg="12">
-              {/* <h1 className="teams_title mb-2">Latest News and updates</h1> */}
               <h1 className="teams_title mb-2">QR Code Feature</h1>
             </Col>
             <Col lg="2">
               <hr className="t_border my-3 ml-0 text-left" />{" "}
             </Col>
           </Col>
-        </center>
-        <Row className="justify-content-between align-items-center mt-5 mb-5 mb-lg-7">
+        </center> */}
+        <Row className="justify-content-between align-items-center mb-5 ">
           <Col lg={5} className="qr__code_image">
             <Image
               src="https://ragenmah.github.io/nuga-eco-club//static/qr/nuga_qr_scan.jpg"
@@ -160,6 +164,23 @@ export const Home = () => {
             <p className="mb-4 p-top">
               Experience the convenience of our QR code feature!
             </p>
+            <div className="">
+              <span>{datamaps.title}</span>
+              <span>{datamaps.title2}</span>
+            </div>
+            <Col className=" playstore_image mt-3">
+              <img
+                src="static/apps/playstore.png"
+                height={70}
+                className="m-2"
+              ></img>
+
+              <img
+                src="static/apps/appstore.png"
+                height={70}
+                className="m-2"
+              ></img>
+            </Col>
           </Col>
         </Row>
       </Container>

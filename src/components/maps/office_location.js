@@ -179,7 +179,7 @@ export const OfficeLocation = () => {
     height: "100%",
     width: "100%",
     margin: "0 auto",
-    border: "2px solid black",
+    // border: "2px solid black",
     fillColor: "red",
     // backgroundColor: "var(--bg-color)",
     // zIndex: "-12",
@@ -216,7 +216,7 @@ export const OfficeLocation = () => {
     <>
       <Container className="interaction_map_container mb-5">
         <Row className=" justify-content-between align-items-center mb-5">
-          <center>
+          {/* <center>
             <Col className="mb-5  mt-3 ">
               <Col lg="7">
                 <h1 className="teams_title mb-2">Interaction Map</h1>
@@ -225,8 +225,8 @@ export const OfficeLocation = () => {
                 <hr className="t_border my-3 ml-0 text-left" />{" "}
               </Col>
             </Col>
-          </center>
-          <Col lg={6} className=" map___container rounded shadow pt-3 w-100">
+          </center> */}
+          <Col lg={6} className=" map___container rounded  pt-3 w-100">
             <div className="">
               <section className="showcase">
                 <MapContainer
@@ -239,11 +239,11 @@ export const OfficeLocation = () => {
                   wheelPxPerZoomLevel={120}
                   maxBoundsViscosity={0.5}
                   attributionControl={false}
-                  zoomControl={true}
+                  zoomControl={false}
                   scrollWheelZoom={false}
                   doubleClickZoom={false}
                   touchZoom={false}
-                  boxZoom={true}
+                  boxZoom={false}
                   dragging={isMobile ? false : false}
                 >
                   <FeatureGroup>
