@@ -19,6 +19,8 @@ const Heritages = () => {
                 src="https://images.pexels.com/photos/5952518/pexels-photo-5952518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                 width={100}
               ></img> */}
+              <div className="bottom-background"></div>
+
               <div class="heritage-description">
                 <h4>Kathmandu Durbar Square sadhfjgasd hghasjdg h</h4>
                 <div class="text-button">
@@ -36,6 +38,8 @@ const Heritages = () => {
                 backgroundImage: `url(https://images.pexels.com/photos/5952518/pexels-photo-5952518.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
               }}
             >
+              {" "}
+              <div className="bottom-background" />
               <div class="heritage-description">
                 <h4>Kathmandu Durbar Square</h4>
                 <div class="text-button">
@@ -44,7 +48,6 @@ const Heritages = () => {
                   </Link>
                 </div>
               </div>
-
               {/* <p>
                 You are allowed to use the Chain App Dev HTML template. Feel
                 free to modify or edit this layout.
@@ -59,6 +62,8 @@ const Heritages = () => {
                 backgroundImage: `url(https://images.pexels.com/photos/11734284/pexels-photo-11734284.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)`,
               }}
             >
+              {" "}
+              <div className="bottom-background"></div>
               <div class="heritage-description">
                 <h4>Kathmandu Durbar Square</h4>
                 <div class="text-button">

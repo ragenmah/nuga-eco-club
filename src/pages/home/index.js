@@ -168,7 +168,7 @@ export const Home = () => {
               <span>{datamaps.title}</span>
               <span>{datamaps.title2}</span>
             </div>
-            <Col className=" playstore_image mt-3">
+            <Col className=" playstore_image mt-5">
               <img
                 src="static/apps/playstore.png"
                 height={70}
@@ -185,6 +185,7 @@ export const Home = () => {
         </Row>
       </Container>
       <HeritageFeatured />
+      {/* https://www.smashingmagazine.com/2015/05/creating-responsive-shapes-with-clip-path/ */}
       {/* <Container>
         <Row className=" justify-content-between align-items-center mb-5 mb-lg-7">
           <Col className="mb-5 d-block pt-md-3">

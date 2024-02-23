@@ -1,9 +1,32 @@
+.scroll-content {
+    display: flex;
+}
+
+.scroll-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+
+.scroll-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+
+
 .service-item {
-    /* height: 400px; */
+    height: 400px;
     /* width: 400px; */
     position: relative;
     z-index: 1;
-    padding: 10px;
+    /* padding: 10px; */
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 10px;
@@ -12,7 +35,34 @@
     background-size: cover;
     /* margin-bottom: 30px; */
     margin: 10px;
+    transition: background 0.3s ease;
+    /* Add transition for smooth color change */
+
 }
+
+.service-item:hover {
+    background: #f0f0f0;
+    /* Change background color on hover */
+    /* border-radius: 20px; */
+    /* border-top-right-radius: 30px; */
+
+    /* Add border-radius for rounded corners */
+    /* background-position: right top;
+    background-repeat: no-repeat; */
+    background-size: cover;
+    cursor: pointer;
+}
+
+.service-item:hover img {
+    transform: scale(1.1);
+
+}
+
+/* 
+.service-item:hover .heritage-description {
+    bottom: 0;
+} */
+
 
 .service-item .icon {
     /* margin-left: 0px;
@@ -24,14 +74,46 @@
 }
 
 .service-item .heritage-description {
-    transition: all .3s;
+    position: absolute;
+    /* transition: all .3s; */
+    /* Initially hide the description */
+    /* box-sizing: border-box; */
+    /* width: 100%; */
+    margin: 10px;
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
-    margin-top: 100%;
+    /* margin-top: 100%; */
     /* padding: 10px; */
-    /* bottom: 200px; */
+    bottom: 20px;
     color: white;
+    /* bottom: -100%; */
+    /* transition: bottom 0.3s ease; */
+    /* background-color: var(--secondary-color); */
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+
+}
+
+.bottom-background {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    bottom: -100%;
+    transition: bottom 0.3s ease;
+    background-color: var(--secondary-color);
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%); */
+    clip-path: polygon(0% 100%, 100% 100%, 100% 25%, 50% 0%, 0% 25%);
+
+
+}
+
+
+.service-item:hover .bottom-background {
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    /* transition: all 0.5s ease 0.6s; */
+
 
 }
 
@@ -39,9 +121,9 @@
     transition: all .3s;
     font-size: 15px;
     /* margin-top: 20px; */
-    padding: 10px;
+    /* padding: 10px; */
 
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     color: white;
 }
 
@@ -59,12 +141,5 @@
 
 .service-item:hover {
     /* background-image: url(http://localhost:3000/nuga-eco-club/static/images/service-bg.jpg); */
-    background-position: right top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
-}
 
-.scroll-content {
-    display: flex;
 }
