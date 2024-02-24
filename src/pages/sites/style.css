@@ -67,3 +67,8 @@
 .steps-navigation a:hover {
     background-color: #f0f0f0;
 }
+
+.no-heritage-txt {
+    margin: 20px;
+    font-size: larger;
+}

@@ -12,6 +12,12 @@ class HeritagewalkService {
   getHeritagewalkStepsDetail(slug) {
     return http.get(`/heritage-walk/walk-steps-detail/${slug}`);
   }
+
+  searchHeritageWalk(name, district, municipality, ward) {
+    return http.get(
+      `/search/heritage?name=${name}&district=${district}&municipality=${municipality}&ward=${ward}`
+    );
+  }
 }
 
 export default new HeritagewalkService();

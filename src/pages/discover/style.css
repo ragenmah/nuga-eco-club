@@ -440,8 +440,15 @@
   font-size: 1.1rem;
   /* line-height: 1.2; */
   color: var(--bg-color);
+}
 
+.img-description:hover {
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+}
 
+.img-description p:hover {
+  color: var(--secondary-color);
 }
 
 .btn-primary {

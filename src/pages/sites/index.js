@@ -16,8 +16,6 @@ import { image_baseUrl } from "../../redux/services/api";
 import { Link } from "react-router-dom";
 
 const Sites = (props) => {
-  const [showSearch, setShowSearch] = useState(false);
-
   useEffect(() => {
     props.loadHeritageWalks();
   }, []);
@@ -43,20 +41,6 @@ const Sites = (props) => {
                     {/* <h2 className="mb-1x">{introdata.title}</h2> */}
                     <div className="mt-3">
                       <SearchBarBody />
-                      <br />
-
-                      {showSearch ? <Selectors /> : <></>}
-                      <div
-                        className="show-more-filter"
-                        onClick={() => setShowSearch(!showSearch)}
-                      >
-                        <span>{showSearch ? "Hide" : "More"} Options</span>
-                        {!showSearch ? (
-                          <i className="fas fa-chevron-down m-1" />
-                        ) : (
-                          <i className="fas fa-chevron-up m-1" />
-                        )}
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -90,6 +74,7 @@ const Sites = (props) => {
           </center>
           <div class="row mt-5 d-flex justify-content-start">
             {props.heritageWalkState.allList &&
+              props.heritageWalkState.allList > 0 &&
               props.heritageWalkState.allList.map((data, i) => {
                 return (
                   <div class="col-md-4 ">

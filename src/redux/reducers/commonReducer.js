@@ -5,12 +5,14 @@ import {
   REQ_GETALL_FAIL,
   REQ_GETBYID_SUCC,
   RETRIEVE_ALL_SUB_CATEGORY,
+  SEARCH_RESULT_LIST,
 } from "../actions/commonTypes";
 
 const initialState = {
   isloading: false,
   allList: [],
   subCategoryList: [],
+  searchResultList: [],
   allObj: {},
   errormessage: "",
 };
@@ -46,6 +48,13 @@ function commonReducer(state = initialState, action) {
         ...state,
         isloading: false,
         subCategoryList: payload,
+      };
+
+    case SEARCH_RESULT_LIST:
+      return {
+        ...state,
+        isloading: false,
+        searchResultList: payload,
       };
 
     case REQ_GETALL_FAIL:

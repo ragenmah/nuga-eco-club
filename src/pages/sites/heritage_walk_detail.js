@@ -137,7 +137,10 @@ const HeritageWalkDetail = (props) => {
                                 </h1>
                                 <div class="article-card-header__metadata">
                                   <span class="article-card-header__author">
-                                    <a href="#">
+                                    <a
+                                      href=""
+                                      onClick={(e) => scrollToStep(e, "map_id")}
+                                    >
                                       <i className="fa fa-map-marker"></i>{" "}
                                       {data.heritages[0].province}{" "}
                                       {data.heritages[0].district}{" "}
@@ -238,7 +241,7 @@ const HeritageWalkDetail = (props) => {
                                 </div>
                               </div>
                             </div>
-                            <div class="article-card-header__media">
+                            <div class="article-card-header__media" id="map_id">
                               <LocationMarker
                                 location={[
                                   data.heritages[0].center_longitude,

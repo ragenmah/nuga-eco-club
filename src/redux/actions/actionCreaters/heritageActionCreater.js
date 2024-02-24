@@ -3,6 +3,7 @@ import {
   getAllRequestSuccess,
   getbyIdSuccess,
   makeRequest,
+  searchResultSuccess,
 } from "../commonActions";
 
 import heritageWalkService from "../../services/heritageWalk.service";
@@ -32,6 +33,21 @@ export const GetHeritageWalkStepeBySlug = (slug) => {
       .then((res) => {
         const _obj = res.data;
         dispatch(getbyIdSuccess(_obj));
+      })
+      .catch((err) => {
+        dispatch(getAllRequestFail("Failed to fetch the data"));
+      });
+  };
+};
+
+export const searchHeritageWalks = (name, district, municipality, ward) => {
+  return (dispatch) => {
+    dispatch(makeRequest());
+    heritageWalkService
+      .searchHeritageWalk(name, district, municipality, ward)
+      .then((res) => {
+        const _list = res.data;
+        dispatch(searchResultSuccess(_list));
       })
       .catch((err) => {
         dispatch(getAllRequestFail("Failed to fetch the data"));
