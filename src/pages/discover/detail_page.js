@@ -22,9 +22,7 @@ const DetailPage = (props) => {
   useEffect(() => {
     props.loadDiscoveryPlaceBySlug(slug);
     if (data != null) {
-      // alert("added view");
-      dispatch(addViewCount(data.discover_id));
-      // alert(data.discover_id);
+      // dispatch(addViewCount(data.discover_id));
     }
   }, []);
 

@@ -34,7 +34,10 @@ const AnimatedRoutes = withRouter(({ location }) => (
       <Route path="/about" element={<About />} />
       <Route path="/maps" element={<Maps />} />
       <Route path="/heritage-walk" element={<Sites />} />
-      <Route path="/heritage-walk/detail" element={<HeritageWalkDetail />} />
+      <Route
+        path="/heritage-walk/detail/:slug"
+        element={<HeritageWalkDetail />}
+      />
       <Route path="/discover" element={<Discover />} />
       <Route
         path={RoutesCustom.discoverDetail.path}

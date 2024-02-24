@@ -93,7 +93,7 @@ const Sites = (props) => {
               props.heritageWalkState.allList.map((data, i) => {
                 return (
                   <div class="col-md-4 ">
-                    <Link to={`/heritage-walk/detail`}>
+                    <Link to={`/heritage-walk/detail/${data.slug}`}>
                       <div class="item">
                         <div class="image-container">
                           {props.heritageWalkState.isloading ? (

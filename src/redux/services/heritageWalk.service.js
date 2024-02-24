@@ -9,8 +9,8 @@ class HeritagewalkService {
     return http.get(`/heritage-walk/${id}`);
   }
 
-  getHeritagewalkDetail(slug) {
-    return http.get(`/discover/detail/${slug}`);
+  getHeritagewalkStepsDetail(slug) {
+    return http.get(`/heritage-walk/walk-steps-detail/${slug}`);
   }
 }
 
