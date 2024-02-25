@@ -74,7 +74,6 @@ const Sites = (props) => {
           </center>
           <div class="row mt-5 d-flex justify-content-start">
             {props.heritageWalkState.allList &&
-              props.heritageWalkState.allList > 0 &&
               props.heritageWalkState.allList.map((data, i) => {
                 return (
                   <div class="col-md-4 ">

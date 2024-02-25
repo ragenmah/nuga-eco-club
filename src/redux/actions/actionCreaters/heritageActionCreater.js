@@ -47,7 +47,7 @@ export const searchHeritageWalks = (name, district, municipality, ward) => {
       .searchHeritageWalk(name, district, municipality, ward)
       .then((res) => {
         const _list = res.data;
-        dispatch(searchResultSuccess(_list));
+        dispatch(getAllRequestSuccess(_list));
       })
       .catch((err) => {
         dispatch(getAllRequestFail("Failed to fetch the data"));

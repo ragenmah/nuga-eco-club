@@ -95,10 +95,11 @@
 }
 
 .bottom-background {
-    height: 50%;
+    height: 0%;
     width: 100%;
     position: absolute;
-    bottom: -100%;
+    /* bottom: -100%; */
+
     transition: bottom 0.3s ease;
     background-color: var(--secondary-color);
     /* clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 50% 100%, 0% 75%); */
@@ -112,6 +113,8 @@
     bottom: 0;
     margin: 0;
     padding: 0;
+    height: 50%;
+
     /* transition: all 0.5s ease 0.6s; */
 
 

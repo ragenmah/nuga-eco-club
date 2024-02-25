@@ -15,7 +15,10 @@ const SearchBarBody = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(searchHeritageWalks(name));
-    navigate(RoutesCustom.searchHeritageWalkResult.path);
+
+    navigate(RoutesCustom.searchHeritageWalkResult.path, {
+      state: { name: name },
+    });
   };
 
   return (

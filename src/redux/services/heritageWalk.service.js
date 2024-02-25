@@ -15,7 +15,9 @@ class HeritagewalkService {
 
   searchHeritageWalk(name, district, municipality, ward) {
     return http.get(
-      `/search/heritage?name=${name}&district=${district}&municipality=${municipality}&ward=${ward}`
+      `/heritage-walk/search/heritage?name=${name}&district=${
+        district ?? ""
+      }&municipality=${municipality ?? ""}&ward=${ward ?? ""}`
     );
   }
 }

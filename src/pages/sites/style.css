@@ -72,3 +72,9 @@
     margin: 20px;
     font-size: larger;
 }
+
+.search-container {
+    overflow-y: hidden;
+    display: flex;
+
+}
