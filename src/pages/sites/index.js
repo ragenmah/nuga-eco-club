@@ -76,44 +76,45 @@ const Sites = (props) => {
             {props.heritageWalkState.allList &&
               props.heritageWalkState.allList.map((data, i) => {
                 return (
-                  <div class="col-md-4 ">
-                    <Link to={`/heritage-walk/detail/${data.slug}`}>
-                      <div class="item">
-                        <div class="image-container">
-                          {props.heritageWalkState.isloading ? (
-                            <center
-                              className="d-flex justify-content-center align-item-center "
-                              style={{
-                                height: "100%",
-                                width: "100%",
-                                padding: "20px",
-                              }}
-                            >
-                              <div
-                                className="spinner-border img-fluid rounded center m-5"
-                                role="status"
-                              ></div>
-                            </center>
-                          ) : (
-                            <img
-                              src={
-                                data.place_img != null
-                                  ? image_baseUrl + data.place_img
-                                  : nugaLogo
-                              }
-                              alt="Image"
-                              class="img-fluid "
-                            />
-                          )}
-                        </div>
-                        <div class="img-description ">
-                          <p class="capitalize">{data.place_name}</p>
-                          {/* <a href="#" class="btn btn-primary">
-                        Learn More
-                      </a> */}
+                  <div class="col-lg-4">
+                    {props.heritageWalkState.isloading ? (
+                      <center
+                        className="d-flex justify-content-center align-item-center "
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          padding: "20px",
+                        }}
+                      >
+                        <div
+                          className="spinner-border img-fluid rounded center m-5"
+                          role="status"
+                        ></div>
+                      </center>
+                    ) : (
+                      <div
+                        class="service-item "
+                        style={{
+                          backgroundImage: `url(${
+                            data.place_img != null
+                              ? image_baseUrl + data.place_img
+                              : nugaLogo
+                          })`,
+                        }}
+                      >
+                        <div className="overlay"></div>
+                        <div className="bottom-background" />
+                        <div class="heritage-description">
+                          <h4 class="capitalize">{data.place_name}</h4>
+
+                          <div class="text-button">
+                            <Link to={`/heritage-walk/detail/${data.slug}`}>
+                              Explore <i class="fa fa-chevron-right"></i>
+                            </Link>
+                          </div>
                         </div>
                       </div>
-                    </Link>
+                    )}
                   </div>
                 );
               })}

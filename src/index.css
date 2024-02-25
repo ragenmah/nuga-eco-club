@@ -67,7 +67,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   padding-top: 60px;
 
-  background-image: linear-gradient(to top, var(--yellow-color), #0f52ba);
+  /* background-image: linear-gradient(to top, var(--yellow-color), #0f52ba); */
   background-repeat: repeat;
   background-position: center;
   /* Mode de fusion pour superposer l'image */

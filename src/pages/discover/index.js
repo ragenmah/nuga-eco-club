@@ -51,25 +51,6 @@ const Discover = (props) => {
                   <h5>Discover the Best Sites and Deals for Your Next Trip.</h5>
                 </div>
               </Col>
-              {/* <Col className="p-2" lg="12">
-              <div>
-                <SearchBarBody />
-                <br />
-
-                {showSearch ? <Selectors /> : <></>}
-                <div
-                  className="show-more-filter"
-                  onClick={() => setShowSearch(!showSearch)}
-                >
-                  <span>{showSearch ? "Hide" : "More"} Options</span>
-                  {!showSearch ? (
-                    <i className="fas fa-chevron-down m-1" />
-                  ) : (
-                    <i className="fas fa-chevron-up m-1" />
-                  )}
-                </div>
-              </div>
-            </Col> */}
             </Col>
           </center>
         </Row>
@@ -124,32 +105,6 @@ const Discover = (props) => {
               );
             })}
         </div>
-        {/* <div className="mb-5 po_items_ho">
-          {props.discoverState.allList &&
-            props.discoverState.allList.map((data, i) => {
-              return (
-                <a
-                  onClick={() =>
-                    handleShowDiscoverList(data.category_id, data.category_name)
-                  }
-                >
-                  <div
-                    key={i}
-                    className="po_item"
-                    style={{
-                      backgroundImage: `url(${JSON.stringify(
-                        image_baseUrl + data.category_image
-                      )})`,
-                    }}
-                  >
-                    <div className="content">
-                      <p>{data.category_name}</p>
-                    </div>
-                  </div>
-                </a>
-              );
-            })}
-        </div> */}
       </Container>
       <div
         className={props.discoverState.isloading ? "loading-bar" : "d-none"}

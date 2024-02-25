@@ -185,44 +185,7 @@ export const Home = () => {
         </Row>
       </Container>
       <HeritageFeatured />
-      {/* https://www.smashingmagazine.com/2015/05/creating-responsive-shapes-with-clip-path/ */}
-      {/* <Container>
-        <Row className=" justify-content-between align-items-center mb-5 mb-lg-7">
-          <Col className="mb-5 d-block pt-md-3">
-            <Col lg="12">
-              <h1 className="teams_title mb-2">
-                Tourism and Climate Action Resources
-              </h1>
-            </Col>
-            <Col lg="2">
-              <hr className="t_border my-3 ml-0 text-left" />{" "}
-            </Col>
-          </Col>
 
-          <Row className="justify-content-between align-items-center mb-5 mb-lg-7">
-            <Col lg={8} className="order-lg-2 mb-lg-0">
-              <p className="mt-3 mb-4 fw-bold quote-text">
-                <span>
-                  Promoting tourism and climate action involves providing
-                  resources that educate,
-                </span>
-                <marker>
-                  &nbsp; encourage sustainable practices, and highlight the
-                  impact of tourism on the environment.
-                </marker>
-              </p>
-            </Col>
-          </Row>
-          <Col>
-            Quick links
-            <p>
-              <span>Heritages</span>
-              <span>**Climate changes</span>
-            </p>
-            <span>Guides</span>
-          </Col>
-        </Row>
-      </Container> */}
       <div className="let__us__know">
         <Container>
           <h3>Didn't Find What You were looking For? </h3>

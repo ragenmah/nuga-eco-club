@@ -1,4 +1,10 @@
-import { MapContainer, TileLayer, GeoJSON, FeatureGroup, Popup, } from "react-leaflet";
+import {
+  MapContainer,
+  TileLayer,
+  GeoJSON,
+  FeatureGroup,
+  Popup,
+} from "react-leaflet";
 // import "../../_mock/nepal/nepal.json";
 import nepalGeojson from "../../_mock/nepal/nepal.json";
 import { useState } from "react";
@@ -19,7 +25,8 @@ const style = {
 // };
 
 export const MapNepal = () => {
-  const [onselect, setOnselect] = useState({}); const [districtDetails, setDistrictDetails] = useState({
+  const [onselect, setOnselect] = useState({});
+  const [districtDetails, setDistrictDetails] = useState({
     district: "Kathmandu",
     details: "Details for District A",
   });
@@ -129,48 +136,48 @@ export const MapNepal = () => {
   };
 
   return (
-
-
-    <MapContainer
-      zoom={6.5}
-      scrollWheelZoom={false}
-      style={mapStyle}
-      center={[29.082, 79.1025]}
-      minZoom={2}
-      zoomSnap={0.5}
-      zoomDelta={0.5}
-      wheelPxPerZoomLevel={120}
-      maxBoundsViscosity={0.5}
-      attributionControl={false}
-      zoomControl={false}
-      doubleClickZoom={false}
-      touchZoom={false}
-      boxZoom={false} 
-      dragging={ false }
-      // className=" leaflet-container rounded"
-    >
-      <FeatureGroup>
-        <GeoJSON
-          data={nepalGeojson}
-          style={style}
-          onEachFeature={onEachFeature}
-        > {selectedDistrict && (
-          <Popup
-            position={selectedDistrict.geometry.coordinates[0][0]}
+    <div className="nepalMap">
+      <MapContainer
+        zoom={6.5}
+        scrollWheelZoom={false}
+        style={mapStyle}
+        center={[29.082, 79.1025]}
+        minZoom={2}
+        zoomSnap={0.5}
+        zoomDelta={0.5}
+        wheelPxPerZoomLevel={120}
+        maxBoundsViscosity={0.5}
+        attributionControl={false}
+        zoomControl={false}
+        doubleClickZoom={false}
+        touchZoom={false}
+        boxZoom={false}
+        dragging={false}
+        // className=" leaflet-container rounded"
+      >
+        <FeatureGroup>
+          <GeoJSON
+            data={nepalGeojson}
+            style={style}
+            onEachFeature={onEachFeature}
           >
-            <div>
-              <h3>{selectedDistrict.properties.district}</h3>
-              <p>{selectedDistrict.properties.details}</p>
-            </div>
-          </Popup>
-        )}</GeoJSON>
-      </FeatureGroup>
+            {" "}
+            {selectedDistrict && (
+              <Popup position={selectedDistrict.geometry.coordinates[0][0]}>
+                <div>
+                  <h3>{selectedDistrict.properties.district}</h3>
+                  <p>{selectedDistrict.properties.details}</p>
+                </div>
+              </Popup>
+            )}
+          </GeoJSON>
+        </FeatureGroup>
 
-      <TileLayer
-        url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
-        className="map-bg-color"
-      />
-    </MapContainer>
-   
+        <TileLayer
+          url="https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"
+          className="map-bg-color"
+        />
+      </MapContainer>
+    </div>
   );
 };

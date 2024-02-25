@@ -120,14 +120,18 @@ export const OfficeLocation = () => {
     layer.setStyle({
       weight: 1, // Set the border weight
       fillColor: "red",
-      // opacity: 1,         // Set the border opacity
+      opacity: 1, // Set the border opacity
       color: "red", // Set the border color
-
       // fillOpacity: 0.7,   // Set the fill opacity
     });
     layer.on({
       mouseover: (e) => {
-        layer.setStyle({ fillColor: "orange" });
+        layer.setStyle({
+          weight: 1,
+          fillColor: "white",
+          opacity: 2,
+          color: "white",
+        });
         setDistrictDetails(e.target.feature.properties);
         layer.openTooltip();
       },
@@ -136,7 +140,12 @@ export const OfficeLocation = () => {
           district: "Kathmandu",
           details: "Details for District A",
         });
-        layer.setStyle({ fillColor: "green" });
+        layer.setStyle({
+          weight: 1,
+          fillColor: "green",
+          opacity: 1,
+          color: "white",
+        });
         layer.closeTooltip();
       },
       // resetHighlight,

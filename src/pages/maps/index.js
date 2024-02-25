@@ -60,15 +60,23 @@ export const Maps = () => {
               <Container className=" h-100 w-75 d-flex map_detail">
                 <div className="align-self-center ">
                   <div className="">
-                    <div className=" quote-text text-color">
+                    <div className=" quote-text ">
                       <span>{datamaps.title}</span>
                       <marker>{datamaps.title2}</marker>
                     </div>
 
                     <Col className=" playstore_image mt-3">
-                      <img src="static/apps/playstore.png" height={70} className="m-2"></img>
-                      
-                      <img src="static/apps/appstore.png" height={70} className="m-2"></img>
+                      <img
+                        src="static/apps/playstore.png"
+                        height={70}
+                        className="m-2"
+                      ></img>
+
+                      <img
+                        src="static/apps/appstore.png"
+                        height={70}
+                        className="m-2"
+                      ></img>
                     </Col>
                   </div>
                 </div>
