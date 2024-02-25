@@ -18,6 +18,7 @@ import DiscoverSearch from "../pages/discover/discover_search";
 import { RoutesCustom } from "../routes";
 import HeritageWalkDetail from "../pages/sites/heritage_walk_detail";
 import HeritageSearchResult from "../pages/sites/heritage_search_result";
+import SearchResult from "../pages/search/search_result";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -48,6 +49,7 @@ const AnimatedRoutes = withRouter(({ location }) => (
         path={RoutesCustom.discoverDetail.path}
         element={<DiscoverSearch />}
       />
+      <Route path={RoutesCustom.searchResult.path} element={<SearchResult />} />
       <Route path="/detail/:slug" element={<DetailPage />} />
       <Route path="/ContactUs" element={<ContactUs />} />
       <Route path="/auth/signin" element={<SigIn />} />

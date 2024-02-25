@@ -3,4 +3,5 @@ export const RoutesCustom = {
   discoverDetail: { path: "/discover-detail" },
   heritageWalkDetail: { path: "/heritage-walk/detail" },
   searchHeritageWalkResult: { path: "/heritage-walk/search-result" },
+  searchResult: { path: "/search/search-result" },
 };

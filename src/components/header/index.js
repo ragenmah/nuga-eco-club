@@ -13,6 +13,7 @@ import Modal from "../modal";
 import { SigIn } from "../../pages/auth/sigin";
 import SearchbarTop from "../searchbar/searchbar_top";
 import SiginAuth from "../../pages/auth/sigin_auth";
+import nugaLogo from "../../assets/logo.png";
 
 const Headermain = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -120,17 +121,9 @@ const Headermain = () => {
                 <h2 className="logo__down">
                   {/* Eco-Club */}
                   {isScrolled ? (
-                    <img
-                      src="https://ragenmah.github.io/nuga-eco-club/static/images/logo.png"
-                      height={90}
-                      width={90}
-                    ></img>
+                    <img src={nugaLogo} height={90} width={90}></img>
                   ) : (
-                    <img
-                      src="https://ragenmah.github.io/nuga-eco-club/static/images/logo.png"
-                      height={120}
-                      width={120}
-                    ></img>
+                    <img src={nugaLogo} height={120} width={120}></img>
                   )}
                 </h2>
               </h4>

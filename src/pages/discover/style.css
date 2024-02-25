@@ -442,14 +442,19 @@
   color: var(--bg-color);
 }
 
-.img-description:hover {
+.image-container:hover .img-description {
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+}
+
+/* .img-description:hover {
   background-color: var(--bg-color);
   color: var(--secondary-color);
 }
 
 .img-description p:hover {
   color: var(--secondary-color);
-}
+} */
 
 .btn-primary {
   margin-top: 10px;

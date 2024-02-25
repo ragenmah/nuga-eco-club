@@ -9,7 +9,7 @@ import { image_baseUrl } from "../../redux/services/api";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { searchHeritageWalks } from "../../redux/actions/actionCreaters/heritageActionCreater";
 
-const HeritageSearchResult = () => {
+const SearchResult = () => {
   const searchList = useSelector((state) => state.heritageWalk.allList);
   const isLoading = useSelector((state) => state.heritageWalk.isloading);
   const location = useLocation();
@@ -76,4 +76,4 @@ const HeritageSearchResult = () => {
   );
 };
 
-export default HeritageSearchResult;
+export default SearchResult;
