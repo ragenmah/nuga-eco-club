@@ -314,16 +314,25 @@ a {
     transform: rotate(0);
 }
 
+.sign-in-back-img {
+    /* height: 90%;
+    width: 90%; */
+}
 
+.login-back-color {
+    background-color: var(--secondary-color);
+    height: 100vh;
+}
 
 /* Popup Styles*/
 .popupContainer {
     position: absolute;
     /* width: 330px; */
-    height: auto;
-    left: 32%;
-    top: 20%;
-
+    height: 100%;
+    /* left: 32%;
+    top: 20%; */
+    /* height: 100%;
+    width: 100%; */
     background: #FFF;
     border-radius: 10px;
     border-top-right-radius: 20px;
@@ -350,10 +359,10 @@ a {
 }
 
 .popupHeader {
-    background: #F4F4F2;
+    /* background: #F4F4F2; */
     position: relative;
     padding: 10px 20px;
-    border-bottom: 1px solid #DDD;
+    /* border-bottom: 1px solid #DDD; */
     font-weight: bold;
     border-top-right-radius: 20px;
 
@@ -372,7 +381,7 @@ a {
 }
 
 .popupBody {
-    padding: 20px;
+    /* padding: 20px; */
     display: flex;
 }
 

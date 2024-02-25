@@ -3,6 +3,8 @@ import "./style.css";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import validator from "validator";
+import login_background from "../../assets/login_background.jpg";
+import nugaLogo from "../../assets/logo.png";
 
 const SiginAuth = ({ handleClose, show, children }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
@@ -13,6 +15,8 @@ const SiginAuth = ({ handleClose, show, children }) => {
 
   const [emailError, setEmailError] = useState("");
   const [email, setEmail] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+  const [password, setPassword] = useState("");
   const [btnEnable, setBtnEnable] = useState(true);
 
   // Email Validation
@@ -25,6 +29,19 @@ const SiginAuth = ({ handleClose, show, children }) => {
       setBtnEnable(false);
     } else {
       setEmailError("Enter valid Email!");
+    }
+  };
+
+  // Password Validation
+  const validatePassword = (e) => {
+    var password = e.target.value;
+
+    if (validator.isStrongPassword(password)) {
+      setPasswordError("");
+      setPassword(email);
+      setBtnEnable(false);
+    } else {
+      // setPasswordError("Enter valid Password!");
     }
   };
 
@@ -81,33 +98,41 @@ const SiginAuth = ({ handleClose, show, children }) => {
     >
       <div
         class=" popupContainer"
-        style={{ width: isMobile ? "330px" : "500px" }}
+        style={{ width: isMobile ? "330px" : "100vw" }}
       >
-        <div class="popupHeader">
+        {/* <div class="popupHeader">
           <span class="header_title">Sign In / Register</span>
           <span class="modal_close" onClick={handleClose}>
             <i class="fa fa-times"></i>
           </span>
-        </div>
+        </div> */}
 
         <section class="popupBody">
-          <div>
+          <div className="col-lg-8 login-back-color">
             {isMobile ? (
               <></>
             ) : (
-              <img
-                src="https://ragenmah.github.io/nuga-eco-club/static/images/logo.png"
-                height={120}
-                className="m-4"
-              ></img>
+              <center className="login_detail">
+                <img
+                  src={nugaLogo}
+                  className="sign-in-back-img"
+                  height={180}
+                ></img>
+                <h6>Sigin/Register</h6>
+              </center>
             )}
-          </div>
-          <div class="social_login">
-            <div class="user_register">
+          </div>{" "}
+          <div class="social_login col-lg-4 ">
+            <div class="popupHeader">
+              <span class="modal_close" onClick={handleClose}>
+                <i class="fa fa-times"></i>
+              </span>
+            </div>
+            <div class="user_register m-4 mt-5 ">
               <form onSubmit={handleLogiWithEmail}>
                 {/* <label>Email Address</label> */}
                 <h6>Contribute yourself to NUGA</h6>
-                <h6 className="conditons_container">
+                <h6 className="conditons_container mt-5 mb-3">
                   Enter your email to sigin/register. Verify your email after
                   providing your email.
                 </h6>
@@ -126,7 +151,22 @@ const SiginAuth = ({ handleClose, show, children }) => {
                 >
                   {emailError}
                 </span>
-                <div class="action_btns">
+                <input
+                  type="password"
+                  className="search_field_input w-100 mt-2 "
+                  name="term"
+                  required
+                  autoComplete="off"
+                  aria-label="search"
+                  placeholder="Password"
+                  onChange={(e) => validatePassword(e)}
+                />{" "}
+                <span
+                  style={{ fontWeight: "500", fontSize: "12px", color: "red" }}
+                >
+                  {passwordError}
+                </span>
+                <div class="action_btns mt-4">
                   <div class="one_half">
                     <button class="continue-btn" disabled={btnEnable}>
                       Continue
@@ -134,36 +174,35 @@ const SiginAuth = ({ handleClose, show, children }) => {
                   </div>
                 </div>
               </form>
-            </div>
-
-            <div class="centeredText">
-              <span>OR</span>
-            </div>
-            <div class="">
-              {/* <a href="#" class="social_box fb">
+              <div class="centeredText">
+                <span>OR</span>
+              </div>
+              <div class="">
+                {/* <a href="#" class="social_box fb">
                 <span class="icon">
                   <i class="fab fa-facebook"></i>
                 </span>
                 <span class="icon_title">Connect with Facebook</span>
               </a> */}
 
-              <a href="#" class="social_box google" onClick={() => login()}>
-                <span class="icon">
-                  <i class="fab fa-google"></i>
-                </span>
-                <span class="icon_title">Connect with Google</span>
-              </a>
+                <a href="#" class="social_box google" onClick={() => login()}>
+                  <span class="icon">
+                    <i class="fab fa-google"></i>
+                  </span>
+                  <span class="icon_title">Connect with Google</span>
+                </a>
+              </div>
+              <h6 className="conditons_container">
+                By sigining or registering, you are deemed to have agreed our{" "}
+                <a>
+                  <u>Terms and Conditions</u>
+                </a>{" "}
+                and{" "}
+                <a>
+                  <u>Privacy Policy</u>
+                </a>
+              </h6>
             </div>
-            <h6 className="conditons_container">
-              By sigining or registering, you are deemed to have agreed our{" "}
-              <a>
-                <u>Terms and Conditions</u>
-              </a>{" "}
-              and{" "}
-              <a>
-                <u>Privacy Policy</u>
-              </a>
-            </h6>
           </div>
         </section>
       </div>
