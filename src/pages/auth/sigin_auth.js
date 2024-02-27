@@ -91,6 +91,16 @@ const SiginAuth = ({ handleClose, show, children }) => {
   }, []);
 
   const isMobile = width <= 768;
+
+  const [isActive, setIsActive] = useState(false);
+  const [faqId, setFaqId] = useState(false);
+
+  const handleFAQClick = (event) => {
+    // 👇️ toggle isActive state on click
+    setFaqId(event.currentTarget.id);
+    setIsActive((current) => !current);
+  };
+
   return (
     <div
       className={showHideClassName}
@@ -98,7 +108,7 @@ const SiginAuth = ({ handleClose, show, children }) => {
     >
       <div
         class=" popupContainer"
-        style={{ width: isMobile ? "330px" : "100vw" }}
+        style={{ width: isMobile ? "330px" : "440px" }}
       >
         {/* <div class="popupHeader">
           <span class="header_title">Sign In / Register</span>
@@ -108,7 +118,7 @@ const SiginAuth = ({ handleClose, show, children }) => {
         </div> */}
 
         <section class="popupBody">
-          <div className="col-lg-8 login-back-color">
+          {/* <div className="col-lg-8 login-back-color">
             {isMobile ? (
               <></>
             ) : (
@@ -121,87 +131,133 @@ const SiginAuth = ({ handleClose, show, children }) => {
                 <h6>Sigin/Register</h6>
               </center>
             )}
-          </div>{" "}
-          <div class="social_login col-lg-4 ">
+          </div>{" "} */}
+
+          <div class="social_login ">
             <div class="popupHeader">
               <span class="modal_close" onClick={handleClose}>
                 <i class="fa fa-times"></i>
               </span>
             </div>
-            <div class="user_register m-4 mt-5 ">
-              <form onSubmit={handleLogiWithEmail}>
-                {/* <label>Email Address</label> */}
-                <h6>Contribute yourself to NUGA</h6>
-                <h6 className="conditons_container mt-5 mb-3">
-                  Enter your email to sigin/register. Verify your email after
-                  providing your email.
-                </h6>
-                <input
-                  type="text"
-                  className="search_field_input w-100 mt-2 "
-                  name="term"
-                  required
-                  autoComplete="off"
-                  aria-label="search"
-                  placeholder="Email Address"
-                  onChange={(e) => validateEmail(e)}
-                />{" "}
-                <span
-                  style={{ fontWeight: "500", fontSize: "12px", color: "red" }}
-                >
-                  {emailError}
-                </span>
-                <input
-                  type="password"
-                  className="search_field_input w-100 mt-2 "
-                  name="term"
-                  required
-                  autoComplete="off"
-                  aria-label="search"
-                  placeholder="Password"
-                  onChange={(e) => validatePassword(e)}
-                />{" "}
-                <span
-                  style={{ fontWeight: "500", fontSize: "12px", color: "red" }}
-                >
-                  {passwordError}
-                </span>
-                <div class="action_btns mt-4">
-                  <div class="one_half">
-                    <button class="continue-btn" disabled={btnEnable}>
-                      Continue
-                    </button>
-                  </div>
-                </div>
-              </form>
-              <div class="centeredText">
-                <span>OR</span>
-              </div>
-              <div class="">
-                {/* <a href="#" class="social_box fb">
-                <span class="icon">
-                  <i class="fab fa-facebook"></i>
-                </span>
-                <span class="icon_title">Connect with Facebook</span>
-              </a> */}
 
-                <a href="#" class="social_box google" onClick={() => login()}>
-                  <span class="icon">
-                    <i class="fab fa-google"></i>
-                  </span>
-                  <span class="icon_title">Connect with Google</span>
-                </a>
+            {/* <a
+              class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top"
+              aria-controls="faq-17"
+              aria-expanded="false"
+              data-toggle="collapse"
+              id={"signin"}
+              role="button"
+              onClick={handleFAQClick}
+            >
+              <div class="position-relative">
+                <h2 class="h4 m-0 pr-3">{"Sign in"}</h2>
+                <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                  <i
+                    class={
+                      isActive && faqId == "signin"
+                        ? "fa fa-minus"
+                        : "fa fa-plus"
+                    }
+                  ></i>
+                </div>
               </div>
-              <h6 className="conditons_container">
-                By sigining or registering, you are deemed to have agreed our{" "}
-                <a>
-                  <u>Terms and Conditions</u>
-                </a>{" "}
-                and{" "}
-                <a>
-                  <u>Privacy Policy</u>
-                </a>
-              </h6>
+            </a>
+            <div
+              class={isActive && faqId == "signin" ? "" : "collapse"}
+              id={"signin"}
+            ></div> */}
+
+            <div class="card card-body border-0 p-0">
+              <p>
+                <div class="user_register m-4  ">
+                  <form onSubmit={handleLogiWithEmail}>
+                    {/* <label>Email Address</label> */}
+                    <h6>Contribute yourself to NUGA</h6>
+                    <h6 className="conditons_container mt-5 mb-3">
+                      Enter your email to sigin/register. Verify your email
+                      after providing your email.
+                    </h6>
+                    <input
+                      type="text"
+                      className="search_field_input w-100 mt-2 "
+                      name="term"
+                      required
+                      autoComplete="off"
+                      aria-label="search"
+                      placeholder="Email Address"
+                      onChange={(e) => validateEmail(e)}
+                    />{" "}
+                    <span
+                      style={{
+                        fontWeight: "500",
+                        fontSize: "12px",
+                        color: "red",
+                      }}
+                    >
+                      {emailError}
+                    </span>
+                    <input
+                      type="password"
+                      className="search_field_input w-100 mt-2 "
+                      name="term"
+                      required
+                      autoComplete="off"
+                      aria-label="search"
+                      placeholder="Password"
+                      onChange={(e) => validatePassword(e)}
+                    />{" "}
+                    <span
+                      style={{
+                        fontWeight: "500",
+                        fontSize: "12px",
+                        color: "red",
+                      }}
+                    >
+                      {passwordError}
+                    </span>
+                    <div class="action_btns mt-4">
+                      <div class="one_half">
+                        <button class="continue-btn" disabled={btnEnable}>
+                          Continue
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="centeredText">
+                    <span>OR</span>
+                  </div>
+                  <div class="">
+                    {/* <a href="#" class="social_box fb">
+                        <span class="icon">
+                          <i class="fab fa-facebook"></i>
+                        </span>
+                        <span class="icon_title">Connect with Facebook</span>
+                      </a> */}
+
+                    <a
+                      href="#"
+                      class="social_box google"
+                      onClick={() => login()}
+                    >
+                      <span class="icon">
+                        <i class="fab fa-google"></i>
+                      </span>
+                      <span class="icon_title">Connect with Google</span>
+                    </a>
+                  </div>
+                  <h6 className="conditons_container">
+                    By sigining or registering, you are deemed to have agreed
+                    our{" "}
+                    <a>
+                      <u>Terms and Conditions</u>
+                    </a>{" "}
+                    and{" "}
+                    <a>
+                      <u>Privacy Policy</u>
+                    </a>
+                  </h6>
+                </div>
+              </p>
             </div>
           </div>
         </section>
