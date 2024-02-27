@@ -8,7 +8,7 @@ const meta = {
   description: "NUGA",
 };
 
-const emailAddress = "projectnuganepal@gmail.com";
+const emailAddress = "info@nuganepal.com";
 
 const languageSwitcherData = [
   {
@@ -177,8 +177,8 @@ const dataportfolio = [
 ];
 
 const contactConfig = {
-  YOUR_EMAIL: "projectnuganepal@gmail.com",
-  maitTo: "mailto:projectnuganepal@gmail.com",
+  YOUR_EMAIL: "info@nuganepal.com",
+  maitTo: "mailto:info@nuganepal.com",
   YOUR_FONE: "+977 9843914602",
   telTo: "tel:+9779843914602",
   description: "",

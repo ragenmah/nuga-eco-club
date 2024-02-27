@@ -84,9 +84,7 @@ const Headermain = () => {
                       <a href="tel:+977 9843914602">+977 9843914602</a>
                     </li>
                     <li className="header-top-contact vertical-line">
-                      <a href="mailto:projectnuganepal@gmail.com">
-                        projectnuganepal@gmail.com
-                      </a>
+                      <a href="mailto:info@nuganepal.com">info@nuganepal.com</a>
                     </li>
                   </ul>
                 </div>

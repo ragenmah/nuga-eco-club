@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Heritages from "../../components/heritages";
 import "./style.css";
 const HeritageFeatured = () => {
+  
   return (
     <section className="heritage-container mb-5">
       <div className="mt-5 ">
