@@ -14,6 +14,7 @@ import { SigIn } from "../../pages/auth/sigin";
 import SearchbarTop from "../searchbar/searchbar_top";
 import SiginAuth from "../../pages/auth/sigin_auth";
 import nugaLogo from "../../assets/logo.png";
+import { RoutesCustom } from "../../routes";
 
 const Headermain = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -200,7 +201,7 @@ const Headermain = () => {
                 </li>
                 <li>
                   <Link
-                    to="/ContactUs"
+                    to={RoutesCustom.souvenir.path}
                     className="link"
                     onClick={showNavbar && handleShowNavbar}
                   >

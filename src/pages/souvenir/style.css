@@ -1,0 +1,84 @@
+.souvenir-card {
+    display: flex;
+    flex-direction: column;
+    /* Ensure the image and details stack vertically */
+
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    position: relative;
+    /* Position relative for absolute positioning of heart icon */
+
+}
+
+.heart-icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.image-container {
+    width: 100%;
+    position: relative;
+    /* Position relative for absolute positioning of images */
+}
+
+.souvenir-image,
+.souvenir-image-hover {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+    /* Add transition for smooth opacity change */
+}
+
+.souvenir-image-hover {
+    opacity: 0;
+    /* Initially hidden */
+}
+
+
+.souvenir-details {
+    padding: 10px;
+}
+
+.souvenir-title {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.souvenir-description {
+    font-size: 0.9em;
+}
+
+.souvenir-price {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.buy-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
+.souvenir-card:hover .souvenir-image {
+    opacity: 0;
+    /* Hide first image on hover */
+}
+
+.souvenir-card:hover .souvenir-image-hover {
+    opacity: 1;
+    /* Show second image on hover */
+}
