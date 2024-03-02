@@ -35,7 +35,7 @@ const Discover = (props) => {
           <meta name="description" content={meta.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
-          <center enter>
+          <center>
             <Col className="contact-us-container">
               <Col lg="8">
                 <div className="">

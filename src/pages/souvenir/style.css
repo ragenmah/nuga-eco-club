@@ -3,8 +3,8 @@
     flex-direction: column;
     /* Ensure the image and details stack vertically */
 
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    /* border: 1px solid #ccc; */
+    /* border-radius: 10px; */
     overflow: hidden;
     width: 300px;
     position: relative;
@@ -14,12 +14,23 @@
 
 .heart-icon {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
+    background-color: var(--bg-color);
+    /* Background color for the heart */
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    /* Adjust size as needed */
+    border-radius: 50%;
+    /* Create a circular shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .image-container {
-    width: 100%;
+    /* width: 100%; */
     position: relative;
     /* Position relative for absolute positioning of images */
 }
@@ -42,7 +53,7 @@
 
 
 .souvenir-details {
-    padding: 10px;
+    padding-top: 10px;
 }
 
 .souvenir-title {
@@ -55,13 +66,13 @@
 }
 
 .souvenir-price {
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: bold;
     margin: 10px 0;
 }
 
 .buy-button {
-    background-color: #007bff;
+
     color: white;
     border: none;
     padding: 8px 16px;
@@ -81,4 +92,84 @@
 .souvenir-card:hover .souvenir-image-hover {
     opacity: 1;
     /* Show second image on hover */
+}
+
+.view-product-button {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background */
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease;
+    /* Add transition for smooth appearance */
+}
+
+.image-container:hover .view-product-button {
+    opacity: 1;
+    /* Show button on hover */
+}
+
+
+
+/* banner image  */
+.product-banner-container {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+
+}
+
+.banner-image-container {
+    flex: 1;
+    /* Take up remaining space */
+}
+
+.banner-image-container img {
+    width: 100%;
+    height: 70vh;
+}
+
+.banner-description-container {
+    flex: 1;
+    /* Take up remaining space */
+    padding: 0 20px;
+    /* Add some spacing */
+}
+
+.banner-description-container h2 {
+    margin-top: 0;
+    color: var(--bg-color);
+}
+
+.banner-description-container button {
+    background-color: transparent;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--bg-color);
+    /* text-decoration: overline; */
+
+}
+
+.banner-description-container button:hover {
+    /* background-color: var(--bg-color); */
+    /* text-decoration: none; */
+    /* color: var(--secondary-color); */
+    text-decoration: underline;
+
+}
+
+.featured-container {
+    margin-top: 80px;
 }
