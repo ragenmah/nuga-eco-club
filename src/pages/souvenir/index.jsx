@@ -83,7 +83,7 @@ const Souvenir = () => {
             </p>
             <button>View all products</button>
           </div>
-          <div class="banner-image-container">
+          <div class="banner-image-container shape">
             <img
               src="https://images.pexels.com/photos/2766333/pexels-photo-2766333.jpeg?auto=compress&cs=tinysrgb&w=800"
               alt="Product Banner"
@@ -91,16 +91,6 @@ const Souvenir = () => {
           </div>
         </div>
 
-        {/* <div className="" id="search-filter">
-          <div className="advanced-filter d-flex w-100 align-items-center">
-            <span className="menu-title">FEATURED PRODUCTS</span>
-            <div className="filter-card pull-right">
-              <span className="filter-title">
-                <i className="fa fa-filter"></i> Filter
-              </span>
-            </div>
-          </div>
-        </div> */}
         <center className=" featured-container mb-5 mt-5">
           <Col className="">
             <Col lg="8">
@@ -119,6 +109,16 @@ const Souvenir = () => {
             </Col>
           </Col>
         </center>
+        <div className="" id="search-filter">
+          <div className="advanced-filter d-flex w-100 align-items-center">
+            <span className="menu-title"></span>
+            <div className="filter-card pull-right">
+              <span className="filter-title">
+                <i className="fa fa-filter"></i> Filter
+              </span>
+            </div>
+          </div>
+        </div>
         <div class="souvenir-card mt-4">
           <div class="image-container">
             <img

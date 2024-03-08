@@ -152,8 +152,12 @@ const SiginAuth = ({ handleClose, show, children }) => {
             </h6>
           </center>
           <div
-            className="d-block w-100 position-absolute mt-5"
-            style={{ paddingTop: "90px" }}
+            className="d-block w-100 position-absolute mt-5 "
+            style={{
+              paddingTop: "90px",
+              paddingLeft: "20px",
+              paddingRight: "20px",
+            }}
           >
             <a
               class="py-3 d-block  w-100 position-relative z-index-1 pr-1 text-secondary mt-5  p-2"
@@ -165,7 +169,7 @@ const SiginAuth = ({ handleClose, show, children }) => {
               onClick={handleFAQClick}
             >
               <div class="position-relative  border-top ">
-                <h2 class="h4 m-0 pr-3 mt-3">Sign in</h2>
+                <h2 class="h4 m-0 pr-3 mt-3">Sign In</h2>
                 <div class="position-absolute top-0 right-0 h-100 d-flex mt-3">
                   <i
                     class={
@@ -255,7 +259,7 @@ const SiginAuth = ({ handleClose, show, children }) => {
             </div>
             {/* register  */}
             <a
-              class="py-3 d-block  w-100 position-relative z-index-1 pr-1 text-secondary mt-5  p-2"
+              class="py-3 d-block  w-100 position-relative z-index-1 pr-1 text-secondary mt-2  p-2"
               aria-controls="faq-17"
               aria-expanded="false"
               data-toggle="collapse"

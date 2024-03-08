@@ -278,6 +278,10 @@
   color: var(--secondary-color);
 }
 
+.filter-title {
+  cursor: pointer;
+}
+
 
 /* discover search  */
 .discover-container {

@@ -44,6 +44,24 @@ const DiscoverSearch = (props) => {
 
   var placesList = useSelector((state) => state.subCategory.subCategoryList);
 
+  const [width, setWidth] = useState(window.innerWidth);
+
+  const isMobile = width <= 768;
+
+  const [showModal, setShowModal] = useState(false);
+
+  const showHideClassName = showModal
+    ? "modal display-block"
+    : "modal display-none";
+
+  const handleHideModal = () => {
+    setShowModal(false);
+  };
+
+  const handleShowModal = () => {
+    setShowModal(true);
+  };
+
   useEffect(() => {
     props.loadDiscoveriesByCategoryId(location.state.category_id);
     // dispatch(GetSubCategoryByCategoryId(location.state.category_id));
@@ -59,117 +77,126 @@ const DiscoverSearch = (props) => {
   }, []);
 
   return (
-    <main className="discover_search_container ">
-      <section className="container ">
-        {/* shadow */}
-        <div className="wrapper ">
-          <div id="listing " className=" row">
-            {/* <div className="" id="search-filter">
-              <div className="advanced-filter d-flex w-100 align-items-center">
-                <span className="menu-title">
-                  {location.state.category_name}
-                </span>
-                <div className="filter-card pull-right">
-                  <span className="filter-title">
-                    <i className="fa fa-filter"></i> Filter
-                  </span>
-                </div>
-              </div>
-            </div> */}
-            <div
-              class="col-ls-9 col-xs-12 col-sm-6 w-100"
-              // style="height: auto !important; min-height: 0px !important;"
-            >
-              {/* Here are some popular sites */}
+    <>
+      <div className={showHideClassName}>
+        <div
+          class=" popupContainer "
+          style={{ width: isMobile ? "330px" : "440px" }}
+        >
+          <section class="popupBody">
+            <div class="popupHeader">
+              <span class="modal_close " onClick={handleHideModal}>
+                <i class="fa fa-times"></i>
+              </span>
+            </div>
+            <div className="filters w-100 position-relative">
+              <h2>Filter by</h2>
 
-              {/* <Heritages />
-              <Heritages />
-              <Heritages /> */}
-              <div className="discover-container">
-                <div className="filters">
-                  <h2>Filter by</h2>
-                  {/* <select
-                    onChange={(e) => handleCategoryChange(e.target.value)}
-                  >
-                    <option value="">All Categories</option>
-                    <option value="Category A">Category A</option>
-                    <option value="Category B">Category B</option>
-                    <option value="Category C">Category C</option>
-                  
-                  </select> */}
-                  <ul className="mt-4">
-                    {/* <li>Select Categories</li> */}
+              <ul className="mt-4">
+                {props.subCategoryState.allList &&
+                  props.subCategoryState.allList.map((category) => (
+                    <li
+                      key={category}
+                      onClick={() =>
+                        handleCategoryChange(category.sub_category_id)
+                      }
+                      className={
+                        selectedCategory == category.sub_category_id
+                          ? "capitalize active"
+                          : "capitalize"
+                      }
+                    >
+                      {category.sub_category_name}
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          </section>
+        </div>
+      </div>
 
-                    {props.subCategoryState.allList &&
-                      props.subCategoryState.allList.map((category) => (
-                        <li
-                          key={category}
-                          onClick={() =>
-                            handleCategoryChange(category.sub_category_id)
-                          }
-                          className={
-                            selectedCategory == category.sub_category_id
-                              ? "capitalize active"
-                              : "capitalize"
-                          }
-                        >
-                          {category.sub_category_name}
-                        </li>
-                      ))}
-                  </ul>
-                </div>
-                <div className="products">
-                  <h2>
+      <main class="discover_search_container ">
+        <section className="container ">
+          {/* shadow */}
+          <div className="wrapper ">
+            <div id="listing " className=" row">
+              <div className="" id="search-filter">
+                <div className="advanced-filter d-flex w-100 align-items-center">
+                  <h1>
                     <span className="menu-title capitalize">
                       {location.state.category_name}
-                      {/* {location.state.category_id} */}
                     </span>
-                  </h2>
-                  {/* {selectedCategory} */}
-                  {/* {selectedCategory["sub_category_name"]} */}
-                  {/* <Heritages /> */}
+                  </h1>
+                  <div className="filter-card pull-right">
+                    <a onClick={handleShowModal}>
+                      <span className="filter-title">
+                        <i className="fa fa-filter"></i> Filter
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="col-ls-9 col-xs-12 col-sm-6 w-100"
+                // style="height: auto !important; min-height: 0px !important;"
+              >
+                {/* Here are some popular sites */}
 
-                  <div class="row mt-5">
-                    {placesList &&
-                      placesList.map((data) => {
-                        return (
-                          <div class="col-md-4">
-                            <Link to={`/detail/${data.slugs}`}>
-                              <div class="item">
-                                <div class="favorite-icon">
-                                  <i class="fas fa-bookmark"></i>
-                                </div>
-                                <div class="discover-image-container">
-                                  <img
-                                    src={image_baseUrl + data.image_file_name}
-                                    alt="Image"
-                                    class="img-fluid "
-                                  />
-                                </div>
-                                <div class="description">
-                                  <p class="capitalize">{data.title}</p>
-                                  <h6 class="capitalize">
-                                    <i className="fa fa-map-marker"></i>
-                                    {"  "}
-                                    {data.fullAddress}
-                                  </h6>
-                                  <h6>
-                                    {" "}
-                                    <i className="fa fa-eye"></i>{" "}
-                                    {data.visit_count} views
-                                  </h6>
-                                  {/* <a href="#" class="btn btn-primary">
+                {/* <Heritages />
+              <Heritages />
+              <Heritages /> */}
+                <div className="discover-container">
+                  <div className="products">
+                    {/* <h2>
+                    <span className="menu-title capitalize">
+                      {location.state.category_name}
+                    </span>
+                  </h2> */}
+                    {/* {selectedCategory} */}
+                    {/* {selectedCategory["sub_category_name"]} */}
+                    {/* <Heritages /> */}
+
+                    <div class="row mt-5">
+                      {placesList &&
+                        placesList.map((data) => {
+                          return (
+                            <div class="col-md-4">
+                              <Link to={`/detail/${data.slugs}`}>
+                                <div class="item">
+                                  <div class="favorite-icon">
+                                    <i class="fas fa-bookmark"></i>
+                                  </div>
+                                  <div class="discover-image-container">
+                                    <img
+                                      src={image_baseUrl + data.image_file_name}
+                                      alt="Image"
+                                      class="img-fluid "
+                                    />
+                                  </div>
+                                  <div class="description">
+                                    <p class="capitalize">{data.title}</p>
+                                    <h6 class="capitalize">
+                                      <i className="fa fa-map-marker"></i>
+                                      {"  "}
+                                      {data.fullAddress}
+                                    </h6>
+                                    <h6>
+                                      {" "}
+                                      <i className="fa fa-eye"></i>{" "}
+                                      {data.visit_count} views
+                                    </h6>
+                                    {/* <a href="#" class="btn btn-primary">
                                   Learn More
                                 </a> */}
+                                  </div>
                                 </div>
-                              </div>
-                            </Link>
-                          </div>
-                        );
-                      })}
-                  </div>
+                              </Link>
+                            </div>
+                          );
+                        })}
+                    </div>
 
-                  {/* <ul>
+                    {/* <ul>
                     {placesList &&
                       placesList.map((data) => {
                         return (
@@ -201,23 +228,26 @@ const DiscoverSearch = (props) => {
                     <li></li>
                     <li></li>
                   </ul> */}
-                  {/* <ul>
+                    {/* <ul>
                     {filteredProducts.map((product) => (
                       <li key={product.id}>
                         {product.name} - {product.category}
                       </li>
                     ))}
                   </ul> */}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <div
-        className={props.subCategoryState.isloading ? "loading-bar" : "d-none"}
-      ></div>
-    </main>
+        </section>
+        <div
+          className={
+            props.subCategoryState.isloading ? "loading-bar" : "d-none"
+          }
+        ></div>
+      </main>
+    </>
   );
 };
 
