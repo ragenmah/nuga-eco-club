@@ -92,8 +92,8 @@ const SiginAuth = ({ handleClose, show, children }) => {
 
   const isMobile = width <= 768;
 
-  const [isActive, setIsActive] = useState(false);
-  const [faqId, setFaqId] = useState(false);
+  const [isActive, setIsActive] = useState(true);
+  const [faqId, setFaqId] = useState("createAccount");
 
   const handleFAQClick = (event) => {
     // 👇️ toggle isActive state on click
@@ -132,16 +132,31 @@ const SiginAuth = ({ handleClose, show, children }) => {
               </center>
             )}
           </div>{" "} */}
+          <div class="popupHeader">
+            <span class="modal_close " onClick={handleClose}>
+              <i class="fa fa-times"></i>
+            </span>
+          </div>
 
-          <div class="social_login ">
-            <div class="popupHeader">
-              <span class="modal_close" onClick={handleClose}>
-                <i class="fa fa-times"></i>
-              </span>
-            </div>
-
-            {/* <a
-              class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top"
+          <center className="d-block w-100 mt-5 ">
+            <i
+              className="fas fa-user "
+              style={{ height: "64", fontSize: "2rem" }}
+            ></i>
+            {/* <h5>Have an account?</h5> */}
+            <h4 className="mt-2">Contribute yourself to NUGA</h4>
+            <h6 className="conditons_container ">
+              Enter your email to sigin/register.
+              <br />
+              Verify your email after providing your email.
+            </h6>
+          </center>
+          <div
+            className="d-block w-100 position-absolute mt-5"
+            style={{ paddingTop: "90px" }}
+          >
+            <a
+              class="py-3 d-block  w-100 position-relative z-index-1 pr-1 text-secondary mt-5  p-2"
               aria-controls="faq-17"
               aria-expanded="false"
               data-toggle="collapse"
@@ -149,9 +164,9 @@ const SiginAuth = ({ handleClose, show, children }) => {
               role="button"
               onClick={handleFAQClick}
             >
-              <div class="position-relative">
-                <h2 class="h4 m-0 pr-3">{"Sign in"}</h2>
-                <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+              <div class="position-relative  border-top ">
+                <h2 class="h4 m-0 pr-3 mt-3">Sign in</h2>
+                <div class="position-absolute top-0 right-0 h-100 d-flex mt-3">
                   <i
                     class={
                       isActive && faqId == "signin"
@@ -165,99 +180,194 @@ const SiginAuth = ({ handleClose, show, children }) => {
             <div
               class={isActive && faqId == "signin" ? "" : "collapse"}
               id={"signin"}
-            ></div> */}
-
-            <div class="card card-body border-0 p-0">
-              <p>
-                <div class="user_register m-4  ">
-                  <form onSubmit={handleLogiWithEmail}>
-                    {/* <label>Email Address</label> */}
-                    <h6>Contribute yourself to NUGA</h6>
-                    <h6 className="conditons_container mt-5 mb-3">
-                      Enter your email to sigin/register. Verify your email
-                      after providing your email.
-                    </h6>
-                    <input
-                      type="text"
-                      className="search_field_input w-100 mt-2 "
-                      name="term"
-                      required
-                      autoComplete="off"
-                      aria-label="search"
-                      placeholder="Email Address"
-                      onChange={(e) => validateEmail(e)}
-                    />{" "}
-                    <span
-                      style={{
-                        fontWeight: "500",
-                        fontSize: "12px",
-                        color: "red",
-                      }}
-                    >
-                      {emailError}
-                    </span>
-                    <input
-                      type="password"
-                      className="search_field_input w-100 mt-2 "
-                      name="term"
-                      required
-                      autoComplete="off"
-                      aria-label="search"
-                      placeholder="Password"
-                      onChange={(e) => validatePassword(e)}
-                    />{" "}
-                    <span
-                      style={{
-                        fontWeight: "500",
-                        fontSize: "12px",
-                        color: "red",
-                      }}
-                    >
-                      {passwordError}
-                    </span>
-                    <div class="action_btns mt-4">
-                      <div class="one_half">
-                        <button class="continue-btn" disabled={btnEnable}>
-                          Continue
-                        </button>
+            >
+              <div class="card card-body border-0 p-0">
+                <p>
+                  <div class="m-3  ">
+                    <form onSubmit={handleLogiWithEmail}>
+                      {/* <label>Email Address</label> */}
+                      <input
+                        type="text"
+                        className="search_field_input w-100 mt-2 "
+                        name="term"
+                        required
+                        autoComplete="off"
+                        aria-label="search"
+                        placeholder="Email Address"
+                        onChange={(e) => validateEmail(e)}
+                      />{" "}
+                      <span
+                        style={{
+                          fontWeight: "500",
+                          fontSize: "12px",
+                          color: "red",
+                        }}
+                      >
+                        {emailError}
+                      </span>
+                      <input
+                        type="password"
+                        className="search_field_input w-100 mt-2 "
+                        name="term"
+                        required
+                        autoComplete="off"
+                        aria-label="search"
+                        placeholder="Password"
+                        onChange={(e) => validatePassword(e)}
+                      />{" "}
+                      <span
+                        style={{
+                          fontWeight: "500",
+                          fontSize: "12px",
+                          color: "red",
+                        }}
+                      >
+                        {passwordError}
+                      </span>
+                      <div class="action_btns mt-4">
+                        <div class="one_half">
+                          <button class="continue-btn" disabled={btnEnable}>
+                            Continue
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="centeredText">
+                      <span>OR</span>
+                    </div>
+                    <div class="">
+                      <div class="social_login ">
+                        <a
+                          href="#"
+                          class="social_box google"
+                          onClick={() => login()}
+                        >
+                          <span class="icon">
+                            <i class="fab fa-google"></i>
+                          </span>
+                          <span class="icon_title">Connect with Google</span>
+                        </a>
                       </div>
                     </div>
-                  </form>
-                  <div class="centeredText">
-                    <span>OR</span>
                   </div>
-                  <div class="">
-                    {/* <a href="#" class="social_box fb">
+                </p>
+              </div>
+            </div>
+            {/* register  */}
+            <a
+              class="py-3 d-block  w-100 position-relative z-index-1 pr-1 text-secondary mt-5  p-2"
+              aria-controls="faq-17"
+              aria-expanded="false"
+              data-toggle="collapse"
+              id={"createAccount"}
+              role="button"
+              onClick={handleFAQClick}
+            >
+              <div class="position-relative  border-top ">
+                <h2 class="h4 m-0 pr-3 mt-3">Create Account</h2>
+                <div class="position-absolute top-0 right-0 h-100 d-flex mt-3">
+                  <i
+                    class={
+                      isActive && faqId == "createAccount"
+                        ? "fa fa-minus"
+                        : "fa fa-plus"
+                    }
+                  ></i>
+                </div>
+              </div>
+            </a>
+            <div
+              class={isActive && faqId == "createAccount" ? "" : "collapse"}
+              id={"createAccount"}
+            >
+              <div class="card card-body border-0 p-0">
+                <p>
+                  <div class="m-3  ">
+                    <form onSubmit={handleLogiWithEmail}>
+                      {/* <label>Email Address</label> */}
+                      <input
+                        type="text"
+                        className="search_field_input w-100 mt-2 "
+                        name="term"
+                        required
+                        autoComplete="off"
+                        aria-label="search"
+                        placeholder="Email Address"
+                        onChange={(e) => validateEmail(e)}
+                      />{" "}
+                      <span
+                        style={{
+                          fontWeight: "500",
+                          fontSize: "12px",
+                          color: "red",
+                        }}
+                      >
+                        {emailError}
+                      </span>
+                      <input
+                        type="password"
+                        className="search_field_input w-100 mt-2 "
+                        name="term"
+                        required
+                        autoComplete="off"
+                        aria-label="search"
+                        placeholder="Password"
+                        onChange={(e) => validatePassword(e)}
+                      />{" "}
+                      <span
+                        style={{
+                          fontWeight: "500",
+                          fontSize: "12px",
+                          color: "red",
+                        }}
+                      >
+                        {passwordError}
+                      </span>
+                      <div class="action_btns mt-4">
+                        <div class="one_half">
+                          <button class="continue-btn" disabled={btnEnable}>
+                            Continue
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="centeredText">
+                      <span>OR</span>
+                    </div>
+                    <div class="">
+                      {/* <a href="#" class="social_box fb">
                         <span class="icon">
                           <i class="fab fa-facebook"></i>
                         </span>
                         <span class="icon_title">Connect with Facebook</span>
                       </a> */}
-
-                    <a
-                      href="#"
-                      class="social_box google"
-                      onClick={() => login()}
-                    >
-                      <span class="icon">
-                        <i class="fab fa-google"></i>
-                      </span>
-                      <span class="icon_title">Connect with Google</span>
-                    </a>
+                      <div class="social_login ">
+                        <a
+                          href="#"
+                          class="social_box google"
+                          onClick={() => login()}
+                        >
+                          <span class="icon">
+                            <i class="fab fa-google"></i>
+                          </span>
+                          <span class="icon_title">Connect with Google</span>
+                        </a>
+                      </div>
+                    </div>
+                    <h6 className="conditons_container">
+                      By sigining or registering, you are deemed to have agreed
+                      our{" "}
+                      <a>
+                        <u>Terms and Conditions</u>
+                      </a>{" "}
+                      and{" "}
+                      <a>
+                        <u>Privacy Policy</u>
+                      </a>
+                    </h6>
                   </div>
-                  <h6 className="conditons_container">
-                    By sigining or registering, you are deemed to have agreed
-                    our{" "}
-                    <a>
-                      <u>Terms and Conditions</u>
-                    </a>{" "}
-                    and{" "}
-                    <a>
-                      <u>Privacy Policy</u>
-                    </a>
-                  </h6>
-                </div>
-              </p>
+                </p>
+              </div>
             </div>
           </div>
         </section>
