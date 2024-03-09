@@ -228,6 +228,14 @@ const faqs = [
   },
 ];
 
+const dashboardItems = [{ name: "Favourites" }, { name: "Experiences" }];
+
+const favorites = [
+  { id: 1, name: "Favorite 1", type: "Type A" },
+  { id: 2, name: "Favorite 2", type: "Type B" },
+  { id: 3, name: "Favorite 3", type: "Type A" },
+];
+
 export {
   meta,
   languageSwitcherData,
@@ -249,4 +257,6 @@ export {
   whatWeDoData,
   homePageData,
   faqs,
+  dashboardItems,
+  favorites,
 };

@@ -89,7 +89,7 @@ const DiscoverSearch = (props) => {
                 <i class="fa fa-times"></i>
               </span>
             </div>
-            <div className="filters w-100 position-relative">
+            <div className="filters w-100">
               <h2>Filter by</h2>
 
               <ul className="mt-4">

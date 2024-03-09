@@ -5,6 +5,8 @@ import axios from "axios";
 import validator from "validator";
 import login_background from "../../assets/login_background.jpg";
 import nugaLogo from "../../assets/logo.png";
+import { RoutesCustom } from "../../routes";
+import { useNavigate } from "react-router-dom";
 
 const SiginAuth = ({ handleClose, show, children }) => {
   const showHideClassName = show ? "modal display-block" : "modal display-none";
@@ -18,6 +20,8 @@ const SiginAuth = ({ handleClose, show, children }) => {
   const [passwordError, setPasswordError] = useState("");
   const [password, setPassword] = useState("");
   const [btnEnable, setBtnEnable] = useState(true);
+
+  let navigate = useNavigate();
 
   // Email Validation
   const validateEmail = (e) => {
@@ -47,7 +51,10 @@ const SiginAuth = ({ handleClose, show, children }) => {
 
   //handle login with email
   const handleLogiWithEmail = () => {
-    axios.post();
+    // axios.post();
+    navigate(RoutesCustom.dashboard.path, {
+      // state: { category_id: id, category_name: category_name },
+    });
   };
 
   const login = useGoogleLogin({
@@ -89,6 +96,13 @@ const SiginAuth = ({ handleClose, show, children }) => {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
   }, []);
+
+  const handleSignin = () => {
+    // dispatch(GetSubCategoryByCategoryId(id));
+    navigate(RoutesCustom.dashboard.path, {
+      // state: { category_id: id, category_name: category_name },
+    });
+  };
 
   const isMobile = width <= 768;
 

@@ -148,7 +148,7 @@
 
 .banner-description-container h2 {
     margin-top: 0;
-    color: var(--bg-color);
+    color: var(--secondary-color);
 }
 
 .banner-description-container button {
@@ -157,7 +157,7 @@
     padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
-    color: var(--bg-color);
+    color: var(--secondary-color);
     /* text-decoration: overline; */
 
 }

@@ -290,8 +290,9 @@
 }
 
 .filters {
-  width: 100%;
-  max-width: 300px;
+  /* position: absolute; */
+  /* width: 100%; */
+  /* max-width: 300px; */
   /* Limit the max-width to prevent overly wide filters */
   padding: 20px;
   background-color: #f2f2f2;

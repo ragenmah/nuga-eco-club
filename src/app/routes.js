@@ -20,6 +20,7 @@ import HeritageWalkDetail from "../pages/sites/heritage_walk_detail";
 import HeritageSearchResult from "../pages/sites/heritage_search_result";
 import SearchResult from "../pages/search/search_result";
 import Souvenir from "../pages/souvenir";
+import Dashboard from "../pages/dashboard";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -58,6 +59,7 @@ const AnimatedRoutes = withRouter(({ location }) => (
       <Route path="/privacy-policy" element={<Privacy />} />
       <Route path="/terms-and-condition" element={<Teams />} />
       <Route path={RoutesCustom.souvenir.path} element={<Souvenir />} />
+      <Route path={RoutesCustom.dashboard.path} element={<Dashboard />} />
       <Route path="*" element={<Home />} />
     </Routes>
     {/* </CSSTransition> */}

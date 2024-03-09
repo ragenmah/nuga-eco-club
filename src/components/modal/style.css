@@ -24,3 +24,61 @@
 .display-none {
     display: none;
 }
+
+
+/* ProductDetails.css */
+.close-btn {
+    right: 10;
+}
+
+.product-details-container {
+    display: flex;
+}
+
+.carousel-container {
+    flex: 1;
+}
+
+.description-container {
+    flex: 1;
+    padding-left: 20px;
+    /* Add spacing between carousel and description */
+}
+
+/* ProductImageCarousel.css */
+.carousel-image img {
+    height: 520px;
+    /* Adjust the height as needed */
+}
+
+/* ProductImageCarousel.css */
+.carousel-image .chevron-buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.carousel-image .left-chevron,
+.carousel-image .right-chevron {
+    font-size: 24px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel-image .left-chevron:hover,
+.carousel-image .right-chevron:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.small-img {
+    height: 64px;
+    width: 64px;
+}
+
+.products {
+    overflow-y: scroll;
+    /* overflow-y: hidden; */
+}

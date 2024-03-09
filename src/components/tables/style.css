@@ -1,0 +1,27 @@
+/* FavoriteListTable.css */
+
+.favorite-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.favorite-table th,
+.favorite-table td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+.favorite-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    text-align: left;
+}
+
+.favorite-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.favorite-table tbody tr:hover {
+    background-color: #f0f0f0;
+}
